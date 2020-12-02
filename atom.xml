@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Meeple Life</title>
+  
+  <subtitle>一个桌游玩家，程序猿，足球迷的生活</subtitle>
+  <link href="http://titanxxh.com/atom.xml" rel="self"/>
+  
+  <link href="http://titanxxh.com/"/>
+  <updated>2020-12-01T14:32:37.047Z</updated>
+  <id>http://titanxxh.com/</id>
+  
+  <author>
+    <name>仙雾</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GopherChina2020个人总结</title>
+    <link href="http://titanxxh.com/2020/12/01/2020-gopherchina-review/"/>
+    <id>http://titanxxh.com/2020/12/01/2020-gopherchina-review/</id>
+    <published>2020-12-01T13:41:55.000Z</published>
+    <updated>2020-12-01T14:32:37.047Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;如果你是新入坑的gopher那么建议一定要看一下&lt;a href=&quot;https://www.slideshare.net/haoel/go-programming-patterns&quot;&gt;Go Programming</summary>
+        
+      
+    
+    
+    
+    <category term="软件开发" scheme="http://titanxxh.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="编程语言" scheme="http://titanxxh.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="golang" scheme="http://titanxxh.com/tags/golang/"/>
+    
+    <category term="gopherchina" scheme="http://titanxxh.com/tags/gopherchina/"/>
+    
+    <category term="回顾" scheme="http://titanxxh.com/tags/%E5%9B%9E%E9%A1%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[桌游人生]第七期.农场主的术与道</title>
+    <link href="http://titanxxh.com/2017/05/01/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F-%E7%AC%AC%E4%B8%83%E6%9C%9F-%E5%86%9C%E5%9C%BA%E4%B8%BB%E7%9A%84%E6%9C%AF%E4%B8%8E%E9%81%93/"/>
+    <id>http://titanxxh.com/2017/05/01/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F-%E7%AC%AC%E4%B8%83%E6%9C%9F-%E5%86%9C%E5%9C%BA%E4%B8%BB%E7%9A%84%E6%9C%AF%E4%B8%8E%E9%81%93/</id>
+    <published>2017-05-01T11:08:30.000Z</published>
+    <updated>2020-12-01T14:30:16.945Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;疲劳期&quot;&gt;&lt;a href=&quot;#疲劳期&quot; class=&quot;headerlink&quot; title=&quot;疲劳期&quot;&gt;&lt;/a&gt;疲劳期&lt;/h2&gt;&lt;p&gt;时间永远是最大的敌人，无论曾经多么热爱，不得不承认总是有疲劳的那一天，盛极必衰物极必反也是这个道理。从某种意义上来说，对一件事物的热爱程度我感觉也有点像这个&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%8A%80%E6%9C%AF%E6%88%90%E7%86%9F%E5%BA%A6%E6%9B%B2%E7%BA%BF&quot;&gt;技术成熟度曲线&lt;/a&gt;。&lt;br&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/17-5-1/Gartner-Hype-Cycle-v2.png?imageMogr2/thumbnail/600x&quot;&gt;&lt;br&gt;随着时间的推移，桌游玩家对桌游的热爱程度大致上和这个曲线也差不多。从一开始入坑时看着啥都新鲜，疯狂追逐新游戏；到热情渐渐冷却，发现现在的新桌游设计的套路，玩啥游戏脑海里都是一些经典老游戏的影子；然后就是一个低谷，觉得越来越少有游戏能称得上好玩。不过正是经历了这样的一个过程，洗尽铅华后，玩家反而愿意回头看看那些老游戏，那些当年由于过度追新而未来得及深究的经典——比如&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/31260/agricola&quot;&gt;Agricola（农场主）&lt;/a&gt;。于是今天就让我们来好好聊一聊这款曾经的桌游界扛鼎之作。&lt;/p&gt;
+&lt;p&gt;农场主是一个既需要短期决策也需要长期战略的标准德式游戏，而且在两方面都做得尤为突出。和所有的传统的抽象棋类游戏一样，其实游戏在一开始都是胜负已定的，只不过游戏状态太多，计算机也无法算清每一步的决策，但是这不妨碍一代又一代的棋类大师在钻研棋艺的路上不断探索（当然最近AlphaGo给了人类当头一击）。农场主不是传统的抽象棋类，它有随机元素，也有非公开信息，但是游戏在这两方面都进行了限制，使得游戏增加重玩性的同时又不至于失控，可以说是最大程度上保留了德式游戏的灵魂。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游感悟" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/"/>
+    
+    
+    <category term="感悟" scheme="http://titanxxh.com/tags/%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="感受" scheme="http://titanxxh.com/tags/%E6%84%9F%E5%8F%97/"/>
+    
+    <category term="Agricola" scheme="http://titanxxh.com/tags/Agricola/"/>
+    
+    <category term="农场主" scheme="http://titanxxh.com/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/"/>
+    
+    <category term="Uwe Rosenberg" scheme="http://titanxxh.com/tags/Uwe-Rosenberg/"/>
+    
+    <category term="乌老师" scheme="http://titanxxh.com/tags/%E4%B9%8C%E8%80%81%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>仙雾的2016桌游总结</title>
+    <link href="http://titanxxh.com/2017/01/01/%E4%BB%99%E9%9B%BE%E7%9A%842016%E6%A1%8C%E6%B8%B8%E6%80%BB%E7%BB%93/"/>
+    <id>http://titanxxh.com/2017/01/01/%E4%BB%99%E9%9B%BE%E7%9A%842016%E6%A1%8C%E6%B8%B8%E6%80%BB%E7%BB%93/</id>
+    <published>2017-01-01T13:37:24.000Z</published>
+    <updated>2020-11-30T15:24:31.403Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;BG-stats&quot;&gt;&lt;a href=&quot;#BG-stats&quot; class=&quot;headerlink&quot; title=&quot;BG stats&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.bgstatsapp.com/&quot;&gt;BG stats&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;通过BG stats这个APP可以记录桌游的开局情况，同时还有统计功能，可以说是用来做年终回顾的最好帮手。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/17-1-1/6578014-file_1483248458414_cfc3.png?imageMogr2/thumbnail/600x&quot;&gt;&lt;/p&gt;
+&lt;p&gt;整个2016年我一共开过105个不同的游戏，这个数量还是挺让自己感到惊讶的，不过目前BG stats不能很好的识别游戏和扩展之间的关系，把不能独立游戏的扩展也算成了单独的游戏这一点比较坑，好在我不太玩带扩展的游戏所以这一项数据应该还是比较准确的。同时我的H-index只有6，也就是说只有6个游戏开局次数达到了6次，所以2016年的10*10 challenge妥妥又失败了。不得不说由于近年来新游戏太多，BGG的数据库几乎在以每年1w+的速度增长，Essen展会现场的展厅数量也是逐年增多，追逐新游戏又是自己活动圈内人士（对，说的就是文总）的共识，加上工作后时间大幅减少，种种因素造成了近年来少有游戏能反复开局（怀念当祈祷与工作能开几十盘的大学时光啊）。&lt;/p&gt;
+&lt;p&gt;仔细分解下来，前四个月（入职前）开了158局游戏，当然农场主的网战占据了很大的比例，而入职后开局次数仅占35%，甚至还有5月和9月的0开局记录。。。目测这一情况在2017年会进一步恶化，所以2017年已经不打算进行10&lt;em&gt;10 challenge，而是改为100&lt;/em&gt;1的挑战了。在A社停止开放活动后，自己的活动据点就一直不固定了，目前看下来成山路应该是以后最常去的地方，主要是E大和我自己都比较近。游戏人数上，作为一个标准的德式玩家，4人游戏超过了半壁江山，可以看出国外父母带俩小孩的家庭构成对德式游戏的影响有多深。&lt;/p&gt;
+&lt;p&gt;E大、碗王和主编成为了本年度我的最佳基友（去年是小大、E大和碗王），在这里要感谢他们的陪伴，尤其是主编一人看规则，带我们玩Time story和瘟疫危机 Legacy，不过自从不去A社后也再没见到主编了T_T。。。碗王由于去了香港念书，所以后半年几乎就没见到，论见面最多的应该还是E大，今年在据点无定所的情况下，还在携程总部内进行了一次活动，参观了传说中上班跑步下班逗娃的高层的办公地点是什么样子的。当然也要感谢其他的小伙伴们以及编辑部的诸位，今年还见到了C酱，虽然人家是E大粉丝。。。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    
+    <category term="power grid" scheme="http://titanxxh.com/tags/power-grid/"/>
+    
+    <category term="总结" scheme="http://titanxxh.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="review" scheme="http://titanxxh.com/tags/review/"/>
+    
+    <category term="agricola" scheme="http://titanxxh.com/tags/agricola/"/>
+    
+    <category term="pandemic legacy" scheme="http://titanxxh.com/tags/pandemic-legacy/"/>
+    
+    <category term="great western trail" scheme="http://titanxxh.com/tags/great-western-trail/"/>
+    
+    <category term="codenames" scheme="http://titanxxh.com/tags/codenames/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]8....and then, we held hands游戏概览&amp;开箱&amp;评测</title>
+    <link href="http://titanxxh.com/2016/04/20/essen2015-8-and-then-we-held-hands-rule-intro-opening-box-review/"/>
+    <id>http://titanxxh.com/2016/04/20/essen2015-8-and-then-we-held-hands-rule-intro-opening-box-review/</id>
+    <published>2016-04-19T16:10:06.000Z</published>
+    <updated>2020-12-01T14:31:06.225Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2621938_md.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/153999/and-then-we-held-hands&quot;&gt;…and then, we held hands&lt;/a&gt;（简称为牵小手）是一个非语言的俩人合作游戏，两个玩家在游戏中目标是拯救这段即将破裂的感情。玩家看事物的角度会随着他们所处的位置不断变化，你们需要合作来取得自己内心以及两人之间的情感的平衡，从而修补裂痕。&lt;/p&gt;
+&lt;p&gt;游戏中玩家需要通过在回合结束时站在对应的节点上来完成一系列目标任务，一旦所有任务完成，玩家必须同时进入到中圈来获得最后的胜利。&lt;/p&gt;
+&lt;p&gt;游戏中玩家不允许讨论关于游戏的内容，他们必须独自考虑自己和同伴的卡牌和可能的移动，不让自己和同伴卡住以致于输掉游戏，游戏之外的谈话是允许的。作为一个额外的挑战，游戏可以在双方完全沉默的情况下进行。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="开箱" scheme="http://titanxxh.com/tags/%E5%BC%80%E7%AE%B1/"/>
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
+    
+    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="and then we held hands" scheme="http://titanxxh.com/tags/and-then-we-held-hands/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个人游一座城</title>
+    <link href="http://titanxxh.com/2016/04/18/travelling-beijing-alone/"/>
+    <id>http://titanxxh.com/2016/04/18/travelling-beijing-alone/</id>
+    <published>2016-04-18T09:55:46.000Z</published>
+    <updated>2020-12-02T14:38:34.837Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;想着马上就要正式工作了，于是乎上周就一个人溜去北京玩了。其实早在去年来北京开会的时候就想着要来帝都好好玩一次，因为上一次来北京还是我很小不记事的时候来的，可惜去年那次时间非常有限只去了趟故宫和国家博物馆。作为入职前最后的放松，一个人的旅游自由且惬意。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/dBRUMVsX.jpg&quot;&gt;&lt;br&gt;无耻地盗一张角楼图作来镇帖（好想要超广角镜头）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/x1HtmutZ.jpg&quot;&gt;&lt;br&gt;票根合影&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://titanxxh.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="旅行" scheme="http://titanxxh.com/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/"/>
+    
+    
+    <category term="beijing" scheme="http://titanxxh.com/tags/beijing/"/>
+    
+    <category term="国家大剧院" scheme="http://titanxxh.com/tags/%E5%9B%BD%E5%AE%B6%E5%A4%A7%E5%89%A7%E9%99%A2/"/>
+    
+    <category term="首都博物馆" scheme="http://titanxxh.com/tags/%E9%A6%96%E9%83%BD%E5%8D%9A%E7%89%A9%E9%A6%86/"/>
+    
+    <category term="角楼" scheme="http://titanxxh.com/tags/%E8%A7%92%E6%A5%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]7.Signore介绍&amp;评测</title>
+    <link href="http://titanxxh.com/2016/03/31/essen2015-7-signore-intro-review/"/>
+    <id>http://titanxxh.com/2016/03/31/essen2015-7-signore-intro-review/</id>
+    <published>2016-03-31T11:53:06.000Z</published>
+    <updated>2020-11-30T15:24:31.411Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;游戏介绍&quot;&gt;&lt;a href=&quot;#游戏介绍&quot; class=&quot;headerlink&quot; title=&quot;游戏介绍&quot;&gt;&lt;/a&gt;游戏介绍&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2684003_md.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;15世纪的意大利是一个伟大的国度，同时也充满阴谋。混乱的政治环境孕育了一种新的形式的政府（贵族制），同时许多野心勃勃的贵族家庭也日益壮大。&lt;br&gt;在阴影中酝酿多年之后，时机终于来临，轮到他们来控制城市，同时这也塑造了意大利的未来，他们的故事将被载入史册。&lt;/p&gt;
+&lt;p&gt;在Signorie中，玩家扮演一个贵族势力，你是文艺复兴时期一个著名家族的领主，通过与六个最负盛名的家族联姻来增加自己的影响力同时构建一个强大的王朝。&lt;/p&gt;
+&lt;p&gt;你必须聪明地选择你子嗣的命运，让家族中的男性获得三种之一的锻炼（军事上、宗教上和政治上），并在合适的时机将他们送去合适的城市进行外交任务，或者策略地为他们安排一场政治联姻。&lt;/p&gt;
+&lt;p&gt;每轮会骰5种颜色的20个骰子，每个玩家依次从公共区域选择一个骰子，骰子的颜色决定了玩家可以执行的行动，而数字则表示了执行该行动的折扣，雇佣帮手可以提高玩家执行行动时候的效率。&lt;br&gt;这种骰子的机制简单同时又有些创新，每回合玩家可以最多执行4个行动，游戏中钱总是很紧张，所以高点数骰子总是很有诱惑力，但是拿取的点数大小需要玩家权衡，因为总点数大于13的玩家将会失去本轮的奖励。&lt;/p&gt;
+&lt;p&gt;游戏结束后，获得影响力最多的玩家获胜。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="介绍" scheme="http://titanxxh.com/tags/%E4%BB%8B%E7%BB%8D/"/>
+    
+    <category term="Signore" scheme="http://titanxxh.com/tags/Signore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]6.Mombasa介绍&amp;评测</title>
+    <link href="http://titanxxh.com/2016/03/03/essen2015-6-mombasa-intro-review/"/>
+    <id>http://titanxxh.com/2016/03/03/essen2015-6-mombasa-intro-review/</id>
+    <published>2016-03-03T14:12:06.000Z</published>
+    <updated>2020-11-30T15:24:31.411Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;游戏介绍&quot;&gt;&lt;a href=&quot;#游戏介绍&quot; class=&quot;headerlink&quot; title=&quot;游戏介绍&quot;&gt;&lt;/a&gt;游戏介绍&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2611318_md.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;蒙巴萨（Mombasa）是肯尼亚的第二大城市，风光秀丽，也是非洲东岸的最大港口，郑和下西洋也曾到过此地。不过飞马社的这款游戏的背景却设置在人类历史上一个十分黑暗的时代，以至于规则书中也避开不谈。欧洲人不愿谈，我们还是可以说说的，这黑暗的时代就是殖民主义时代。资本主义国家采取军事、政治和经济手段，占领、奴役和剥削弱小国家、民族和落后地区，将其变为殖民地、半殖民地的侵略政策。&lt;/p&gt;
+&lt;p&gt;游戏中设计师并没有把一些细节的模拟放进游戏中，只是让玩家扮演投资客，在非洲大陆上的四家公司进行投资并购买股份，也让游戏尽量脱离于历史背景，而转变为一个中度的经济游戏。&lt;/p&gt;
+&lt;p&gt;和Nippon一样，游戏的中文规则在一刻馆的群内有玩家翻译，这里就不再赘述。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="Mombasa" scheme="http://titanxxh.com/tags/Mombasa/"/>
+    
+    <category term="介绍" scheme="http://titanxxh.com/tags/%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]5.Nippon介绍&amp;评测</title>
+    <link href="http://titanxxh.com/2016/03/01/essen2015-5-nippon-intro-review/"/>
+    <id>http://titanxxh.com/2016/03/01/essen2015-5-nippon-intro-review/</id>
+    <published>2016-03-01T11:28:46.000Z</published>
+    <updated>2020-11-30T15:24:31.411Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;游戏介绍&quot;&gt;&lt;a href=&quot;#游戏介绍&quot; class=&quot;headerlink&quot; title=&quot;游戏介绍&quot;&gt;&lt;/a&gt;游戏介绍&lt;/h2&gt;&lt;p&gt;日本在明治时期是一个封闭的与世隔绝的封建社会，但是他们渴望改变，希望转变成一个现代化的国家。日本派出使者去国外学习，从西方带回了技术人员和学者，建立了铁路网络，从而以令人惊奇的速度完成了快速的工业革命。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2683981_md.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Nippon这个游戏中玩家扮演了一个明治维新时期的大财阀，通过发展技术、建设新的工厂、运送商品到全国、出口商品至海外来提升自己的影响力，最后取得最多影响力的玩家获得胜利。&lt;/p&gt;
+&lt;p&gt;Nippon的中文规则已经有玩家做过翻译了，所以本文就不做详细的介绍，只谈游戏的感受。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="Nippon" scheme="http://titanxxh.com/tags/Nippon/"/>
+    
+    <category term="介绍" scheme="http://titanxxh.com/tags/%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>祈祷与工作中文版开箱</title>
+    <link href="http://titanxxh.com/2016/02/18/ora-et-labora-chinese-edition-opening-box/"/>
+    <id>http://titanxxh.com/2016/02/18/ora-et-labora-chinese-edition-opening-box/</id>
+    <published>2016-02-17T16:30:21.000Z</published>
+    <updated>2020-11-30T15:24:31.399Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;仙雾最喜欢的游戏，没有之一的祈祷与工作出中文版啦！本文将放出开箱照，同时对比中文版和11年的英文版的配件质量。&lt;/p&gt;
+&lt;h2 id=&quot;开箱照&quot;&gt;&lt;a href=&quot;#开箱照&quot; class=&quot;headerlink&quot; title=&quot;开箱照&quot;&gt;&lt;/a&gt;开箱照&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/3PGNOwhq.jpg&quot;&gt;&lt;br&gt; 盒子正面，下面可以看出获得的奖项&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游开箱照" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/"/>
+    
+    
+    <category term="开箱" scheme="http://titanxxh.com/tags/%E5%BC%80%E7%AE%B1/"/>
+    
+    <category term="ora et labora" scheme="http://titanxxh.com/tags/ora-et-labora/"/>
+    
+    <category term="祈祷与工作" scheme="http://titanxxh.com/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/"/>
+    
+    <category term="对比" scheme="http://titanxxh.com/tags/%E5%AF%B9%E6%AF%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图说坦桑尼亚之旅</title>
+    <link href="http://titanxxh.com/2016/02/17/journey-to-tanzania-with-photos/"/>
+    <id>http://titanxxh.com/2016/02/17/journey-to-tanzania-with-photos/</id>
+    <published>2016-02-17T08:35:46.000Z</published>
+    <updated>2020-12-02T14:38:18.650Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;https://www.ultimatekilimanjaro.com/maps/parkmap1.jpg&quot; class=&quot;&quot; title=&quot;[Safari Map]&quot;&gt;
+
+&lt;p&gt;从乞力马扎罗到曼雅拉湖，从塞伦盖蒂到恩戈罗恩戈罗火山口，不太想用记流水账的方式来回顾这次旅程，所以仙雾从自己拍摄的2000多张照片中精选了37张，本文就随着这37张图来回顾最令自己心动的那些瞬间。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://titanxxh.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="旅行" scheme="http://titanxxh.com/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/"/>
+    
+    
+    <category term="tanzania" scheme="http://titanxxh.com/tags/tanzania/"/>
+    
+    <category term="ngorongoro" scheme="http://titanxxh.com/tags/ngorongoro/"/>
+    
+    <category term="serengeti" scheme="http://titanxxh.com/tags/serengeti/"/>
+    
+    <category term="lake manyara" scheme="http://titanxxh.com/tags/lake-manyara/"/>
+    
+    <category term="kilimanjaro" scheme="http://titanxxh.com/tags/kilimanjaro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]4.Pi mal Pflaumen游戏概览&amp;开箱&amp;评测</title>
+    <link href="http://titanxxh.com/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/"/>
+    <id>http://titanxxh.com/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/</id>
+    <published>2016-01-22T14:00:46.000Z</published>
+    <updated>2020-12-01T14:31:06.205Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2635730_md.jpg&quot;&gt;&lt;br&gt; Pi mal Pflaumen，德语π*李子的意思&lt;/p&gt;
+&lt;p&gt;李子的是一个抽象类游戏，不过还是套了一个背景，但是看完说明书，我必须要吐槽一下这是我看过的最扯淡的背景介绍。&lt;/p&gt;
+&lt;p&gt;说明书上写到，17、18世纪是科学的世纪（简直废话），有两位伟大的人物出现了，他们是莱昂哈德·欧拉（欧拉公式知道吧）和玛丽亚·西比拉·梅里安（一个博物学家naturalist和一个艺术家，见下图），但是说明书对于为何会选取这两个人物完全没提到，反倒是加了一句话说这俩人还真有关系，根据仙雾的搜索，所有的和这俩人相关的网页都指向了这本说明书，只有一个德语的维基百科中提到了说欧拉的第二任妻子是梅里安的外孙女，天真的我还以为会有什么惊天动地的故事。。。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Vea0TCNr.jpg&quot;&gt;&lt;br&gt; Maria Sibylla Merian的作品的特点就是会把毛毛虫进化成蝶的不同时期的不同形态融合进同一张图里&lt;/p&gt;
+&lt;p&gt;游戏分三个阶段（卡牌背面的虫、蛹、蝶），每个阶段玩家打出卡，然后选取卡，通过完成水果的组套任务来得分，最后分数最高的人获胜。游戏支持3-5人，一局时间不长，在半小时左右，是个等人时候的不错之选。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="开箱" scheme="http://titanxxh.com/tags/%E5%BC%80%E7%AE%B1/"/>
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
+    
+    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="Pi mal Pflaumen" scheme="http://titanxxh.com/tags/Pi-mal-Pflaumen/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]3.Codenames游戏概览&amp;评测</title>
+    <link href="http://titanxxh.com/2016/01/19/essen2015-3-codenames-rule-intro-review/"/>
+    <id>http://titanxxh.com/2016/01/19/essen2015-3-codenames-rule-intro-review/</id>
+    <published>2016-01-19T14:00:46.000Z</published>
+    <updated>2020-11-30T15:24:31.403Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2582929_md.jpg&quot;&gt;&lt;br&gt; VC真的是鬼才，什么种类都逃不掉&lt;/p&gt;
+&lt;p&gt;乌老师在中重策工放的道路上越走越远，而Vlaada Chvátil设计的游戏则不论是机制还是重度的多样性上都完爆了其他设计师。从TTA到银河卡车，从MK到Codenames，VC完美展现了自己设计鬼才的实力。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2716212_md.jpg&quot;&gt;&lt;br&gt; 现在都流行设计师Cos封面&lt;/p&gt;
+&lt;p&gt;Codenames是一个猜词游戏，玩家分成两队，分别由一个队长带领，队长每轮会提示一个单词作为“行动代号”，队员则要猜出所有己方的特工代号才能获胜，如果不幸猜到刺客的代号则立即失败。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
+    
+    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="Codenames" scheme="http://titanxxh.com/tags/Codenames/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>祈祷与工作游戏概览&amp;规则介绍</title>
+    <link href="http://titanxxh.com/2016/01/19/ora-et-labora-rule-intro/"/>
+    <id>http://titanxxh.com/2016/01/19/ora-et-labora-rule-intro/</id>
+    <published>2016-01-19T13:30:21.000Z</published>
+    <updated>2020-11-30T15:24:31.399Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;仙雾最喜欢的游戏，没有之一的祈祷与工作出中文版啦！所以这里准备认真介绍一下这款乌老师的集大成之作。&lt;/p&gt;
+&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic1165426_md.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Ora et Labora（拉丁文的祈祷与工作的意思）是一个关于中世纪修道院经济的游戏（乌老师对中世纪背景是真爱啊）。中世纪的修道院中当然有祷告，但更多的是修道院内外艰苦的工作。玩家扮演修道院的管理者，派你的院长和两个助理到生产货物的建筑中工作。游戏一开始玩家只有一块2x5的家园板块，但随着游戏的进行，玩家可以购入扩展的地形。整局游戏会暂停5次，玩家在暂停后可以建造居民点，玩家应该尽可能将其造在周围定居值高的位置。祈祷与工作中提供了2种游戏变体——法国变体和爱尔兰变体，玩家可以自行选择使用哪种。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2707911_md.jpg&quot;&gt;&lt;br&gt; 国外geek Gustav Petru手工制作的牧师&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="ora et labora" scheme="http://titanxxh.com/tags/ora-et-labora/"/>
+    
+    <category term="祈祷与工作" scheme="http://titanxxh.com/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/"/>
+    
+    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]2.7 Wonders: Duel游戏概览&amp;评测</title>
+    <link href="http://titanxxh.com/2015/12/01/essen2015-2-7wonders-duel-rule-intro-review/"/>
+    <id>http://titanxxh.com/2015/12/01/essen2015-2-7wonders-duel-rule-intro-review/</id>
+    <published>2015-12-01T13:05:28.000Z</published>
+    <updated>2020-12-01T14:31:06.165Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2703758_md.jpg&quot;&gt;&lt;br&gt; 先来一发国外geek的cosplay镇帖&lt;/p&gt;
+&lt;p&gt;在忙碌完自己的论文后，第二期的仙雾Essen2015，选择介绍一个在做前瞻时候遗漏掉的但是却很火的游戏——7 Wonders: Duel，也就是我们俗称的七大两人版。总体来说七大两人版有非常多的设计上的优化，并且游戏体验很好，三种胜利方式设置的很不错，军事和科技有些困难却又不是遥不可及，属于两人游戏中的佳作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;  &lt;em&gt;“The beginning does not hint at the end.”&lt;/em&gt;&lt;br&gt;  Herodotus&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;“开始不曾暗示结果。”来自于“历史之父”希罗多德的这句话设计师将其写在了说明书最开始。这似乎是对那些创造了人类历史上伟大奇迹的远古文明下的判词，也似乎是在向玩家传递一个声音——七大对决这款游戏的过程充满了变数。（然而仙雾并没有搜索到这句话的出处，难道是设计师瞎编的？）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2704957_md.jpg&quot;&gt;&lt;br&gt; 设计师Bruno Cathala和Antoine Bauza&lt;/p&gt;
+&lt;p&gt;七大对决的设计师是Antoine Bauza和Bruno Cathala，前者就是七大奇迹原版和东海道的设计师，而后者也设计了Abyss和Five Tribes。可以说双方在设计轻策游戏上还是比较有经验的，这次合作发布两人游戏，效果也很好，期待他们的后续作品。&lt;/p&gt;
+&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;七大对决以七大奇迹原版的世界观为背景，借用了很多其中的机制，但是根据两人游戏的特点进行了改变，增强了竞技性和互动性。&lt;/p&gt;
+&lt;p&gt;玩家扮演一个文明的领袖，在三个时代中，玩家利用卡牌来获取金币、巩固军事、发展科技、建造建筑和奇迹来发展自己的文明。&lt;/p&gt;
+&lt;p&gt;游戏的过程中玩家可以通过军事胜利或者科技胜利来直接赢得游戏，如果在三个时代结束后没有玩家能直接获胜，那么统计分数总和最高的玩家获胜。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
+    
+    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="[object Object]" scheme="http://titanxxh.com/tags/object-Object/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]1.Among Nobles游戏概览&amp;开箱&amp;评测</title>
+    <link href="http://titanxxh.com/2015/11/09/essen2015-1-among-nobles-rule-intro-review/"/>
+    <id>http://titanxxh.com/2015/11/09/essen2015-1-among-nobles-rule-intro-review/</id>
+    <published>2015-11-09T09:36:27.000Z</published>
+    <updated>2020-12-01T14:31:06.149Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;小大的Essen新货终于到货，E大（居然去小大家围堵了，太丧心病狂！）、我和碗王周中就迫不及待地去A社开了几局新游戏，第一期的Essen2015就先详细介绍一下被称为今年最被低估的游戏——Among Nobles。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2393416_md.jpg&quot;&gt;&lt;br&gt; Among Nobles&lt;/p&gt;
+&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;Among Nobles是一个卡牌游戏，玩家在封建欧洲扮演一个家族，通过扩展自己的家族、利用联姻、战争和阴谋来赢取胜利。在游戏中，玩家可以控制欧洲历史上最有影响力和最有代表性的人物，比如拿破仑、查理一世、叶卡捷琳娜二世等等，激活人物卡牌上的一系列能力来进行行动，女性角色在结婚会加入其丈夫的家族，从而作为一对夫妇之后可以被同时激活。正确或错误的婚姻会决定游戏的输赢。游戏结束声望点数最多的玩家获得胜利。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="开箱" scheme="http://titanxxh.com/tags/%E5%BC%80%E7%AE%B1/"/>
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
+    
+    <category term="开箱照" scheme="http://titanxxh.com/tags/%E5%BC%80%E7%AE%B1%E7%85%A7/"/>
+    
+    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="Among Nobles" scheme="http://titanxxh.com/tags/Among-Nobles/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>祈祷与工作量化分析</title>
+    <link href="http://titanxxh.com/2015/11/01/ora-et-labora-quantitative-analysis/"/>
+    <id>http://titanxxh.com/2015/11/01/ora-et-labora-quantitative-analysis/</id>
+    <published>2015-11-01T14:30:27.000Z</published>
+    <updated>2020-11-30T15:24:31.411Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这篇其实是整理的以前篇旧文，那日一人无聊遂开一局solo，在玩的过程中想到了些分析建筑功效的方法，于是又计算了下，得出了一些结论。&lt;/p&gt;
+&lt;p&gt;注1：以下所有的数据都是我估计得来的并不准确，重点是方法。&lt;/p&gt;
+&lt;p&gt;注2：此方法并非只适用于solo，多人局也适用不过数据会有所更改，一般4人局拿一次资源估计只有4个左右。&lt;/p&gt;
+&lt;p&gt;祈祷是一个非典型的工人放置游戏，它注重于构建一个多层的经济系统，让玩家完成一系列的转化从而走向胜利。由于游戏计分方式的多样性，使得对整个游戏的把握变得困难，当然也让玩家有了更多的选择。&lt;/p&gt;
+&lt;p&gt;今天我们要研究的是solo中某个建筑的功效，那么如何评定一个建筑的功效呢？很显然，计算放置工人之后的收益是最简单的方法。为了简化问题，我只分析能直接产出分的建筑，但是正如前面所说，祈祷是一个多层的经济系统，大多数的时候一个建筑并不为你直接带来分数，或者说能带来分数的建筑的转化并不是一步就行的，那怎么办？建筑的效果一般都是付出一定的原料，得到一定的分数。我们统计收集到所有原料所需要的行动数量t，然后用转换后得到的分数除以t，就是使用该建筑的效果后平均一步的收益，再用这个收益和标准收益比较就能看出一个建筑的优劣了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="geek研究" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/geek%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="研究" scheme="http://titanxxh.com/tags/%E7%A0%94%E7%A9%B6/"/>
+    
+    <category term="ora et labora" scheme="http://titanxxh.com/tags/ora-et-labora/"/>
+    
+    <category term="祈祷与工作" scheme="http://titanxxh.com/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/"/>
+    
+    <category term="solo" scheme="http://titanxxh.com/tags/solo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[桌游人生]第六期.浅谈乌老师的游戏设计理念</title>
+    <link href="http://titanxxh.com/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/"/>
+    <id>http://titanxxh.com/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/</id>
+    <published>2015-10-31T16:09:35.000Z</published>
+    <updated>2020-11-30T15:24:31.395Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文首发于去年一刻馆的&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MjM5MjE5Mjk5Mg==&amp;mid=200807065&amp;idx=1&amp;sn=48413c205d9020884676c3420f3e69eb&amp;scene=4#wechat_redirect&quot;&gt;微信公众平台&lt;/a&gt;，也在&lt;a href=&quot;https://tieba.baidu.com/p/3279289468?pid=57030011213&amp;cid=0#57030011213&quot;&gt;桌游吧&lt;/a&gt;发过一遍，不过当时由于洞穴农夫和大农场没怎么玩所以就没怎么写，现在正好来更新一遍。&lt;/p&gt;
+&lt;h2 id=&quot;乌老师！&quot;&gt;&lt;a href=&quot;#乌老师！&quot; class=&quot;headerlink&quot; title=&quot;乌老师！&quot;&gt;&lt;/a&gt;乌老师！&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic537818_md.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Uwe Rosenberg&lt;/strong&gt;，中文翻译BGG上给出的是乌·玫瑰山，但更多中国玩家喜欢亲切地称呼他为乌老师。关于乌老师的简介网上已经有太多，这里仙雾就不过多介绍了，有兴趣的玩家可以去Wiki上自行搜索。每每谈及乌老师设计的游戏，得到的评价往往褒贬不一，不喜欢的玩家往往能列出一个包含各种理由的清单，相信炒冷饭几乎会是所有人这份清单上的交集；而喜欢乌老师的玩家，特别是像仙雾这样的脑残粉，总是能在乌老师的每一款新游戏上看到自己所钟爱的那一部分，同时又对乌老师的每一个设计上的改变带来的惊喜兴奋不已。不论乌老师在玩家心中的地位如何，乌老师在桌游界的地位可以说是不容质疑，看看BGG的榜单，&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/31260/agricola&quot;&gt;Agricola&lt;/a&gt;（农场主）第&lt;strong&gt;6&lt;/strong&gt;，&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/35677/le-havre&quot;&gt;Le Havre&lt;/a&gt;（港口）第&lt;strong&gt;15&lt;/strong&gt;，&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/39683/gates-loyang&quot;&gt;At the Gates of Loyang&lt;/a&gt;（洛阳城外）第190，&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/70149/ora-et-labora&quot;&gt;Ora et Labora&lt;/a&gt;（祈祷与工作）第&lt;strong&gt;47&lt;/strong&gt;，&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/143693/glass-road&quot;&gt;Glass Road&lt;/a&gt;（玻璃之路）第176，&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/102794/caverna-cave-farmers&quot;&gt;Caverna: The Cave Farmers&lt;/a&gt;（洞穴农夫）第&lt;strong&gt;3&lt;/strong&gt;，&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/159675/fields-arle&quot;&gt;Fields of Arle&lt;/a&gt;（两人大农场）第106，甚至是农场主和港口的两人版小游戏都能有不错的排名（108和604），虽然说排名不代表一切，但拥有如此多高排名的作品，至少说明这个设计师拥有着出色的设计理念，并多年来一直保持着极高的设计水准。说到乌老师的设计理念，仙雾一度怀疑他是否对中国的周易有所研究，不变中总是有所改变，而改变中也总蕴藏着某些不变，并且改变的比例总是恰到好处，而许多改变也的确是极大地提高了游戏的品质。&lt;/p&gt;
+&lt;p&gt;纵观乌老师所设计的游戏，不论是一开始的被戏称为“饥饿三部曲”的农场主、港口和洛阳城外，还是后来的祈祷与工作、玻璃之路和洞穴农夫，不论它们的游戏机制如何，每一款都有着鲜明的乌老师的风格：可以进行单人游戏、不同人数时游戏体验良好、多路线选择、同样的经济类主题为背景，可以看出虽然时间过去了7年，乌老师最核心的设计理念其实一直保持不变。但在游戏的细节上，每一款都做出来许多值得称道的改变，接下来让仙雾挑选几款自己比较熟悉的游戏来进行分析。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游感悟" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/"/>
+    
+    
+    <category term="感悟" scheme="http://titanxxh.com/tags/%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="感受" scheme="http://titanxxh.com/tags/%E6%84%9F%E5%8F%97/"/>
+    
+    <category term="Uwe Rosenberg" scheme="http://titanxxh.com/tags/Uwe-Rosenberg/"/>
+    
+    <category term="乌老师" scheme="http://titanxxh.com/tags/%E4%B9%8C%E8%80%81%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]前瞻3——旧爱新作</title>
+    <link href="http://titanxxh.com/2015/10/08/essen2015-preview-3-old-and-new-games/"/>
+    <id>http://titanxxh.com/2015/10/08/essen2015-preview-3-old-and-new-games/</id>
+    <published>2015-10-07T16:36:54.000Z</published>
+    <updated>2020-11-30T15:24:31.399Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;旧爱新作&quot;&gt;&lt;a href=&quot;#旧爱新作&quot; class=&quot;headerlink&quot; title=&quot;旧爱新作&quot;&gt;&lt;/a&gt;旧爱新作&lt;/h2&gt;&lt;p&gt;仙雾的艾森2015前瞻从本期开始，会连续推出几个章节，每个章节都会选取在&lt;a href=&quot;https://titanxxh.com/blog/2015/09/17/xian-wu-de-essen2015-qian-zhan-0-chu-shai-hou-de-51kuan-xin-you-xi/&quot;&gt;之前的文章&lt;/a&gt;中列出的几款游戏进行较为详细的介绍。&lt;/p&gt;
+&lt;p&gt;这一期的前瞻，仙雾介绍的游戏皆为自己偏好的设计师或者出版商的新作。乌老师今年甚是不给力，只有超轻度游戏&lt;em&gt;Hengist&lt;/em&gt;（估计所有时间都花在明年的游戏上了，乌老师的游戏周期真是琢磨不透）；马丁的&lt;em&gt;Ships&lt;/em&gt;和WYG的&lt;em&gt;Nippon&lt;/em&gt;初看则应该保持了较高的水平。&lt;/p&gt;
+&lt;p&gt;受限于各个游戏公开的资料的多寡，某些游戏无法进行详细介绍时，仙雾只能用脑补和文字进行介绍了。下文中，BGG资源一项：&lt;strong&gt;充足&lt;/strong&gt;表示有规则和视频介绍，&lt;strong&gt;一般&lt;/strong&gt;表示缺少规则或者视频，&lt;strong&gt;匮乏&lt;/strong&gt;表示没有规则也没有视频。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="前瞻" scheme="http://titanxxh.com/tags/%E5%89%8D%E7%9E%BB/"/>
+    
+    <category term="Hengist" scheme="http://titanxxh.com/tags/Hengist/"/>
+    
+    <category term="Ships" scheme="http://titanxxh.com/tags/Ships/"/>
+    
+    <category term="Nippon" scheme="http://titanxxh.com/tags/Nippon/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]前瞻2——众人拾柴火焰高</title>
+    <link href="http://titanxxh.com/2015/09/25/essen2015-preview-2-many-hands-make-light-work/"/>
+    <id>http://titanxxh.com/2015/09/25/essen2015-preview-2-many-hands-make-light-work/</id>
+    <published>2015-09-25T11:20:46.000Z</published>
+    <updated>2020-11-30T15:24:31.399Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Kickstarter&quot;&gt;&lt;a href=&quot;#Kickstarter&quot; class=&quot;headerlink&quot; title=&quot;Kickstarter&quot;&gt;&lt;/a&gt;Kickstarter&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/C27wayMD.jpg&quot;&gt;&lt;br&gt; kickstarter的众筹模式&lt;/p&gt;
+&lt;p&gt;仙雾的艾森2015前瞻从本期开始，会连续推出几个章节，每个章节都会选取在&lt;a href=&quot;https://titanxxh.com/blog/2015/09/17/xian-wu-de-essen2015-qian-zhan-0-chu-shai-hou-de-51kuan-xin-you-xi/&quot;&gt;之前的文章&lt;/a&gt;中列出的几款游戏进行较为详细的介绍。&lt;/p&gt;
+&lt;p&gt;随着Kickstarter众筹模式的深入人心，各行各业的人们都通过或支持或发布的方式参与到其中，正如标题所描述的——&lt;strong&gt;众人拾柴火焰高&lt;/strong&gt;。而桌游正是最适合这种模式的行业之一。桌游设计师有好的想法就够了，可以省去募资和市场调查的工作；另一方面阶梯式的解锁也很符合桌游出版的规律，并且更加精致的配件也在一定程度上刺激了新的backer加入。所以这次推出的章节我们主要来关注一下一年来Kickstarter上获得成功的一些桌游。&lt;/p&gt;
+&lt;p&gt;受限于各个游戏公开的资料的多寡，某些游戏无法进行详细介绍时，仙雾只能用脑补和文字进行介绍了。下文中，BGG资源一项：&lt;strong&gt;充足&lt;/strong&gt;表示有规则和视频介绍，&lt;strong&gt;一般&lt;/strong&gt;表示缺少规则或者视频，&lt;strong&gt;匮乏&lt;/strong&gt;表示没有规则也没有视频。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="前瞻" scheme="http://titanxxh.com/tags/%E5%89%8D%E7%9E%BB/"/>
+    
+    <category term="Between Two Cities" scheme="http://titanxxh.com/tags/Between-Two-Cities/"/>
+    
+    <category term="Spirits of the Rice Paddy" scheme="http://titanxxh.com/tags/Spirits-of-the-Rice-Paddy/"/>
+    
+    <category term="Among Nobles" scheme="http://titanxxh.com/tags/Among-Nobles/"/>
+    
+    <category term="Tesla vs Edison War of Currents" scheme="http://titanxxh.com/tags/Tesla-vs-Edison-War-of-Currents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[仙雾的Essen2015]前瞻1——你和我</title>
+    <link href="http://titanxxh.com/2015/09/18/essen2015-preview-1-you-and-me/"/>
+    <id>http://titanxxh.com/2015/09/18/essen2015-preview-1-you-and-me/</id>
+    <published>2015-09-18T10:29:56.000Z</published>
+    <updated>2020-11-30T15:24:31.407Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;两个人，一场戏&quot;&gt;&lt;a href=&quot;#两个人，一场戏&quot; class=&quot;headerlink&quot; title=&quot;两个人，一场戏&quot;&gt;&lt;/a&gt;两个人，一场戏&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/uPIemGBr.jpg&quot;&gt;&lt;br&gt; 纪念中国电影史上的巅峰之作&lt;/p&gt;
+&lt;p&gt;仙雾的艾森2015前瞻从本期开始，会连续推出几个章节，每个章节都会选取在&lt;a href=&quot;https://titanxxh.com/blog/2015/09/17/xian-wu-de-essen2015-qian-zhan-0-chu-shai-hou-de-51kuan-xin-you-xi/&quot;&gt;之前的文章&lt;/a&gt;中列出的几款游戏进行较为详细的介绍。这次推出的章节我们主要来关注一下仙雾本人钟爱的&lt;em&gt;两人&lt;/em&gt;游戏，所以我给本文的标题设计为——&lt;strong&gt;你和我&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;受限于各个游戏公开的资料的多寡，某些游戏无法进行详细介绍时，仙雾只能用脑补和文字进行介绍了。下文中，BGG资源一项：&lt;strong&gt;充足&lt;/strong&gt;表示有规则和视频介绍，&lt;strong&gt;一般&lt;/strong&gt;表示缺少规则或者视频，&lt;strong&gt;匮乏&lt;/strong&gt;表示没有规则也没有视频。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    
+    <category term="前瞻" scheme="http://titanxxh.com/tags/%E5%89%8D%E7%9E%BB/"/>
+    
+    <category term="Haru Ichiban" scheme="http://titanxxh.com/tags/Haru-Ichiban/"/>
+    
+    <category term="Fog of Love" scheme="http://titanxxh.com/tags/Fog-of-Love/"/>
+    
+    <category term="and-then-we-held-hands" scheme="http://titanxxh.com/tags/and-then-we-held-hands/"/>
+    
+  </entry>
+  
+</feed>
