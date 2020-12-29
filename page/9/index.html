@@ -81,7 +81,7 @@
   <script>
     try {
       var typed = new Typed("#subtitle", {
-        strings: ['What I cannot create, I cannot understand.', '', ''],
+        strings: ['What I cannot create I cannot understand.', '', ''],
         startDelay: 0,
         typeSpeed: 50,
         loop: true,
@@ -142,6 +142,162 @@
     
     
     
+    
+    <article
+  id="post-bullet物理引擎学习笔记1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/16/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"
+    >Bullet物理引擎学习笔记1</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/16/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="article-date">
+  <time datetime="2012-01-15T16:00:00.000Z" itemprop="datePublished">2012-01-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/">物理引擎</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>折腾了两天，各种乱七八糟blog还有wiki什么的翻了个遍，从零开始学就是这样的，痛并快乐着。</p>
+
+<p>我是用的是bullet-2.77，因为googlecode上这个版本有编译好的demo，我可以先下下来看，编译的过程很简单，vs打开工程生成一下就行了，不过这里有可能会报个小小的error，转到出错的位置后，只要将PostBuild那个target全注释掉就行了。</p>
+
+<p>一开始我在用不用OgreBullet这个开源项目上纠结了半天，最后我放弃了它，现在想想还是正确的，OgreBullet是一个封装好的项目，实际上不利于像我这样从头开始学习Bullet的人。</p>
+
+<p>由于项目的目的是要做一个躲避球的游戏，我初步的设想就是写一个能控制物体去躲避物体的demo，这里我选用了最简单的物体，也就是bullet里的基本Shape之一的盒子（box）。</p>
+
+<p>要完成这个目标，我计划分步学习实现。</p>
+
+<p>首先让bullet能和ogre结合起来，即能够通过物理引擎的计算将物体的正确位置显示到界面上，能够创建并发射一系列的盒子。</p>
+
+<p>其次，能够检测出盒子的碰撞，并将于指定物体碰撞的盒子进行删除。</p>
+
+<p>然后，能通过鼠标或键盘来控制指定物体进行躲避。</p>
+
+<p>最后，能同过Kinect来控制物体。</p>
+
+<p>其中，前3步不需要Kinect的辅助，可以先完成。做完这些后，就是对游戏的润化和调优，以后再说。</p>
+
+<p>先说第一步吧，首先我们需要在ogre的世界和bullet的物理世界中创建物体，在这之前，我们需要对bullet的世界进行初始化。（不要问我这些是什么意思，我自己也似懂非懂的）
+<pre>btDiscreteDynamicsWorld* m_dynamicsWorld;
+btDefaultCollisionConfiguration* m_collisionConfiguration;
+btCollisionDispatcher* m_dispatcher;
+btBroadphaseInterface* m_overlappingPairCache;
+btSequentialImpulseConstraintSolver* m_solver;
+btAlignedObjectArray m_collisionShapes;</pre></p>
+
+<p>void initPhysics()<br />
+{
+m_collisionConfiguration = new btDefaultCollisionConfiguration();<br />
+m_dispatcher = new btCollisionDispatcher(m_collisionConfiguration);<br />
+m_overlappingPairCache = new btDbvtBroadphase();<br />
+btSequentialImpulseConstraintSolver* sol = new btSequentialImpulseConstraintSolver;<br />
+m_solver = sol;<br />
+m_dynamicsWorld = new btDiscreteDynamicsWorld(m_dispatcher, m_overlappingPairCache, m_solver, m_collisionConfiguration);<br />
+m_dynamicsWorld-&gt;setGravity(btVector3(0, -10, 0));<br />
+}</p>
+
+<p>接下来开始创建物体，NodeInfo是我自己设置的一个类，记录了Ogre中的SceneNode和一些其他信息。
+<pre>
+//in physics
+btCollisionShape* boxShape = new btBoxShape(btVector3(size.x,size.y,size.z));//创建Shape
+float mass = 1.f;//质量，这里要说明的是，如果质量是0的话表示是一个静态物体或者Kinematic物体（不知道怎么翻译），区别可以看UserManual
+btTransform startTransform;
+startTransform.setIdentity();
+startTransform.setOrigin(btVector3(0,5,0));//设置位置
+bool isDynamic = (mass != 0.f);
+btVector3 localInertia(0,0,0);
+if (isDynamic) boxShape->calculateLocalInertia(mass,localInertia);//不知道干什么的
+btDefaultMotionState* myMotionState = new btDefaultMotionState(startTransform);//创建一个MotionState以后会用到
+btRigidBody::btRigidBodyConstructionInfo cInfo(mass,myMotionState,boxShape,localInertia);
+btRigidBody* boxBody = new btRigidBody(cInfo);//创建它
+NodeInfo *nodeInfo = new NodeInfo(node, "KinematicBodyBox", "man");
+boxBody->setUserPointer((void*)nodeInfo);//通过bullet预留的一个指针，记录Ogre中对应node的信息，以便更新位置
+m_dynamicsWorld->addRigidBody(boxBody);
+</pre></p>
+
+<p>bullet通过下面这句话进行模拟，后面的参数是模拟多少时间。
+<pre>
+m_dynamicsWorld->stepSimulation(etime);
+</pre>
+        <br />
+之后我们可以对node的位置等进行更新
+<pre>
+btCollisionObjectArray bodies = m_dynamicsWorld->getCollisionObjectArray();
+btRigidBody *TObject;
+for (int i=0;i<bodies.size();i++)
+{
+    TObject = (btRigidBody *)bodies[i];
+    NodeInfo* nodeInfo = static_cast<NodeInfo*>(TObject->getUserPointer());
+    if (TObject->isStaticOrKinematicObject())
+    {
+        continue;
+    }</pre></p>
+
+<p>    // Set position<br />
+    btVector3 Point = TObject->getCenterOfMassPosition();<br />
+    nodeInfo->node->setPosition(Ogre::Vector3(Point.getX(), Point.getY(), Point.getZ()));</p>
+
+<p>    // Convert the bullet Quaternion to an Ogre quaternion<br />
+    btQuaternion btq = TObject->getOrientation();<br />
+    Ogre::Quaternion quart = Ogre::Quaternion(btq.w(),btq.x(),btq.y(),btq.z());</p>
+
+<p>    // use the quaternion with setOrientation<br />
+    nodeInfo->node->setOrientation(quart);<br />
+}
+</p>
+
+<p>你可以将一个物体的初始高度设为100，然后在每次stepSimulation后输出其高度，可以看到它会落入无底深渊。。。你也可以创建一个平面，阻止其下落。
+<pre>
+//in physics
+btCollisionShape* groundShape = new btStaticPlaneShape(btVector3(0,1,0),0);
+btDefaultMotionState* groundMotionState = new btDefaultMotionState(btTransform(btQuaternion(0,0,0,1),btVector3(0,0,0)));
+btRigidBody::btRigidBodyConstructionInfo groundRigidBodyCI(0,groundMotionState,groundShape,btVector3(0,0,0));
+btRigidBody* groundRigidBody = new btRigidBody(groundRigidBodyCI);
+m_dynamicsWorld->addRigidBody(groundRigidBody, COL_GROUND, groundCollidesWith);
+</pre></p>
+
+<p>最后你可以通过Ogre的FrameListener实现按一下键盘的某个键，就发射一个盒子。</p>
+
+<p>Enjoy yourself in Bullet！</p>
+
+<p></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bullet/" rel="tag">Bullet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kinect/" rel="tag">Kinect</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ogre/" rel="tag">Ogre</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/" rel="tag">物理引擎</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
     
     <article
   id="post-20120108新年首次活动小记"
@@ -723,73 +879,13 @@
 </article>
 
     
-    <article
-  id="post-逍遥游试玩会总结"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2011/11/03/%E9%80%8D%E9%81%A5%E6%B8%B8%E8%AF%95%E7%8E%A9%E4%BC%9A%E6%80%BB%E7%BB%93/"
-    >逍遥游试玩会总结</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2011/11/03/%E9%80%8D%E9%81%A5%E6%B8%B8%E8%AF%95%E7%8E%A9%E4%BC%9A%E6%80%BB%E7%BB%93/" class="article-date">
-  <time datetime="2011-11-02T16:00:00.000Z" itemprop="datePublished">2011-11-03</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8/">桌游活动</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>本来早就应该做个总结的，可是最近实在太忙，作业多到不行，现在才得闲能坐在这里码码字。</p>
-
-<p>这次是上海仙剑后援会组织的活动，说实话，我加了这个群后基本没冒过泡，偶然看见有个试玩的机会，正巧我又是个桌游爱好者，那就没有不参加的道理了。</p>
-
-<p>29号一觉醒来就已经是11点多了，随便弄弄就出门了，运气很好走到一半就有车（难道是一个预示么，我要拿冠军？），13:30分准时到了会场，人数比我想象地要多很多，作为一个谁都不认识的表示压力很大，终于有个人来问我是不是参加比赛的，然后我就被稀里糊涂地带到了另一个房间，原本的抽签分组也变成了先来先组队，于是乎我发现和我一队的是两个mm（后来得知她们也是交大的，不过是高中）。 
-      <a class="article-more-link" href="/2011/11/03/%E9%80%8D%E9%81%A5%E6%B8%B8%E8%AF%95%E7%8E%A9%E4%BC%9A%E6%80%BB%E7%BB%93/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GamePlay/" rel="tag">GamePlay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%8A%E6%B5%B7%E4%BB%99%E5%89%91%E5%90%8E%E6%8F%B4%E4%BC%9A/" rel="tag">上海仙剑后援会</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%94%E6%AF%92%E5%85%BD/" rel="tag">五毒兽</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%99%E5%89%91/" rel="tag">仙剑</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0/" rel="tag">仙剑奇侠传</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%A0%E5%86%9B/" rel="tag">冠军</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8B%87%E6%B0%94/" rel="tag">勇气</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8C%97%E8%BD%AF/" rel="tag">北软</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%8E%E5%BF%86%E5%A6%82/" rel="tag">李忆如</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B2%88%E6%AC%BA%E9%9C%9C/" rel="tag">沈欺霜</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%84%E9%9C%84/" rel="tag">玄霄</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%95%E7%8E%A9%E4%BC%9A/" rel="tag">试玩会</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%8D%E9%81%A5%E6%B8%B8/" rel="tag">逍遥游</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8D%E6%A5%BC/" rel="tag">重楼</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/10/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/10/">下一页</a>
   </nav>
   
 </section>

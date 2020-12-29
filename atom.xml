@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2020-12-01T14:32:37.047Z</updated>
+  <updated>2020-12-29T16:00:09.651Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>压缩算法笔记</title>
+    <link href="http://titanxxh.com/2020/12/26/simple-data-compression/"/>
+    <id>http://titanxxh.com/2020/12/26/simple-data-compression/</id>
+    <published>2020-12-26T15:32:43.000Z</published>
+    <updated>2020-12-29T16:00:09.651Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Know how to solve every problem that has been solved.&lt;/p&gt;
+&lt;p&gt;What I cannot create I do not understand.&lt;/p&gt;
+&lt;p&gt;–Richard P. Feynman&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;上个月因为公司内部的比赛，被迫短时间内了解了一些压缩算法，还动手实现了一些，比如lz77，deflate，bwt，bcm等，不实践不知道，一写代码就发现有些东西你以为你懂了实际上你没懂，加上最近看了已故物理学大师理查德费曼的一系列视频，其中一个细节让我印象深刻，他去世后大家在他办公室的黑板的左上角（这样就可以防止不小心被擦掉）发现他一直保留着上面的两句话。&lt;/p&gt;
+&lt;p&gt;理查德费曼很小的时候就受到他父亲的教育，明白了知道和理解是两个概念，所以他一直能保持好奇的心态去思考每个问题。&lt;br&gt;这两句话的本质是一样的，也就是——只有自己能做出来才算真正理解了，要做到这一点就需要知道每个问题背后是如何真正被解决的，而不是只知道个结论，所以理解一个概念的最高境界就是你能教会别人这个概念。&lt;/p&gt;
+&lt;p&gt;有感于此，特撰此文记录一下这段时间研究压缩算法的过程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="软件开发" scheme="http://titanxxh.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="lz77" scheme="http://titanxxh.com/tags/lz77/"/>
+    
+    <category term="huffman" scheme="http://titanxxh.com/tags/huffman/"/>
+    
+    <category term="paq" scheme="http://titanxxh.com/tags/paq/"/>
+    
+    <category term="modeling" scheme="http://titanxxh.com/tags/modeling/"/>
+    
+    <category term="bwt" scheme="http://titanxxh.com/tags/bwt/"/>
+    
+  </entry>
   
   <entry>
     <title>GopherChina2020个人总结</title>
@@ -670,34 +706,6 @@
     <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
     
     <category term="Codenames" scheme="http://titanxxh.com/tags/Codenames/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>祈祷与工作游戏概览&amp;规则介绍</title>
-    <link href="http://titanxxh.com/2016/01/19/ora-et-labora-rule-intro/"/>
-    <id>http://titanxxh.com/2016/01/19/ora-et-labora-rule-intro/</id>
-    <published>2016-01-19T13:30:21.000Z</published>
-    <updated>2020-11-30T15:24:31.399Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;仙雾最喜欢的游戏，没有之一的祈祷与工作出中文版啦！所以这里准备认真介绍一下这款乌老师的集大成之作。&lt;/p&gt;
-&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic1165426_md.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Ora et Labora（拉丁文的祈祷与工作的意思）是一个关于中世纪修道院经济的游戏（乌老师对中世纪背景是真爱啊）。中世纪的修道院中当然有祷告，但更多的是修道院内外艰苦的工作。玩家扮演修道院的管理者，派你的院长和两个助理到生产货物的建筑中工作。游戏一开始玩家只有一块2x5的家园板块，但随着游戏的进行，玩家可以购入扩展的地形。整局游戏会暂停5次，玩家在暂停后可以建造居民点，玩家应该尽可能将其造在周围定居值高的位置。祈祷与工作中提供了2种游戏变体——法国变体和爱尔兰变体，玩家可以自行选择使用哪种。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2707911_md.jpg&quot;&gt;&lt;br&gt; 国外geek Gustav Petru手工制作的牧师&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
-    
-    
-    <category term="ora et labora" scheme="http://titanxxh.com/tags/ora-et-labora/"/>
-    
-    <category term="祈祷与工作" scheme="http://titanxxh.com/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/"/>
-    
-    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
     
   </entry>
   
