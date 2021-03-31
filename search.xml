@@ -5667,4 +5667,52 @@ m_dynamicsWorld->addRigidBody(groundRigidBody, COL_GROUND, groundCollidesWith);
         <tag>bwt</tag>
       </tags>
   </entry>
+  <entry>
+    <title>golang下反射实例并动态注入</title>
+    <url>/2021/03/31/golang-dynamic-injection/</url>
+    <content><![CDATA[<p>设想一个场景，我们需要和其他团队配合一起开发，并且不想使用源码构建，也就是说最终希望通过集成对方发布的二进制的方式来完成部署。</p>
+<p>那么我们有两种方式可以解决这个问题：</p>
+<ul>
+<li>定义进程间api，各自构建进程，通过进程间调用</li>
+<li>定义接口，实现者编译成动态库，运行时通过某些机制加载动态库然后再想办法获取到对应的实现的实例</li>
+</ul>
+<p>对于c语言来说其实编译成动态库的方式是很自然的，但是golang的话就需要利用<a href="https://golang.org/pkg/plugin/">plugin</a>机制。</p>
+<p>首先我们需要使用<code>go build -buildmode=plugin</code>来将一个包含main包的代码编译成动态链接库。</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">p, _ := plugin.Open(<span class="string">&quot;plugin_name.so&quot;</span>) <span class="comment">// open so</span></span><br><span class="line">f, _ := p.Lookup(<span class="string">&quot;routerFactory&quot;</span>) <span class="comment">// 查找符号</span></span><br></pre></td></tr></table></figure>
+
+<p>注意这里的<code>plugin.Open</code>并不会执行main包，而是仅仅会去调用所有包init函数。</p>
+<p><code>p.Lookup(&quot;routerFactory&quot;)</code>可以查找到名字为routerFactory的全局变量，我们可以要求实现者以一个固定的全局变量来实现我们的接口，接下来我们只需要断言到自己的interface，就可以调用了。注意，只有导出的变量或者函数符号才能被查找到。</p>
+<p>如果我们想更加灵活一些，我们希望能查找未导出的符号，或者通过包名+类型名反射出实例，比如我们需要使用方法而不是全局的函数，那咋办。</p>
+<p>这时候我们就要掏出抄代码大法了，go的reflect包内里面其实有这段代码<a href="https://github.com/golang/go/blob/master/src/reflect/type.go#L1727">typesByString</a>。</p>
+<p>我们可以利用<code>go:linkname</code>来链接到reflect包内的实现，我们只用申明签名即可。注意使用这个需要<code>import unsafe</code>包</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">//go:linkname typesByString reflect.typesByString</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">typesByString</span><span class="params">(s <span class="keyword">string</span>)</span> []*_<span class="title">type</span></span></span><br></pre></td></tr></table></figure>
+
+<p>为了完整的实现，我们还需要从源码里面拷贝一些结构体和方法出来，比如type的定义，pkgpath()方法等，不用完整拷贝，调用的到的片段弄出来就行。</p>
+<p>最后把这些骚代码封装到我们的internal包内，</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">//go:linkname typesByString reflect.typesByString</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">typesByString</span><span class="params">(s <span class="keyword">string</span>)</span> []*_<span class="title">type</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">searchForType</span><span class="params">(pkgPath, typeName <span class="keyword">string</span>)</span> <span class="params">(*_type, error)</span></span> &#123;</span><br><span class="line">	tbs := typesByString(<span class="string">&quot;*&quot;</span> + typeName)</span><br><span class="line">	<span class="keyword">for</span> _, tb := <span class="keyword">range</span> tbs &#123;</span><br><span class="line">		p := (*ptrtype)(unsafe.Pointer(tb))</span><br><span class="line">		path := p.elem.pkgpath()</span><br><span class="line">		<span class="keyword">if</span> path == pkgPath &#123;</span><br><span class="line">			<span class="keyword">return</span> &amp;p.typ, <span class="literal">nil</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span>, fmt.Errorf(<span class="string">&quot;%s, %s not found in executable image&quot;</span>, pkgPath, typeName)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Instantiate</span><span class="params">(pkgPath, typeString <span class="keyword">string</span>, isPtr <span class="keyword">bool</span>)</span> <span class="params">(reflect.Value, error)</span></span> &#123;</span><br><span class="line">	res, err := searchForType(pkgPath, typeString)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> reflect.Value&#123;&#125;, err</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> emptyFace <span class="keyword">interface</span>&#123;&#125;</span><br><span class="line">	ptr := (*eface)(unsafe.Pointer(&amp;emptyFace))</span><br><span class="line">	ptr._type = res</span><br><span class="line">	ty := reflect.ValueOf(emptyFace).Type().Elem()</span><br><span class="line">	<span class="keyword">if</span> isPtr &#123;</span><br><span class="line">		e := reflect.New(ty)</span><br><span class="line">		<span class="keyword">return</span> e, <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line">	e := reflect.New(ty).Elem()</span><br><span class="line">	<span class="keyword">return</span> e, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对外就暴露个api即可。</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Instantiate returns an instance of a given full-package-path type string.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Instantiate</span><span class="params">(typ <span class="keyword">string</span>)</span> <span class="params">(<span class="keyword">interface</span>&#123;&#125;, reflect.Value, error)</span></span> </span><br></pre></td></tr></table></figure>
+
+<p>测试一下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;testing&quot;</span><br><span class="line"></span><br><span class="line">	&quot;github.com&#x2F;titanxxh&#x2F;di&#x2F;example&quot;</span><br><span class="line">	_ &quot;github.com&#x2F;titanxxh&#x2F;di&#x2F;example&#x2F;en&quot;</span><br><span class="line">)</span><br><span class="line">func TestInstantiate(t *testing.T) &#123;</span><br><span class="line">	&#123;</span><br><span class="line">		a, _, err :&#x3D; Instantiate(&quot;github.com&#x2F;titanxxh&#x2F;di&#x2F;example&#x2F;en.english&quot;)</span><br><span class="line">		if err !&#x3D; nil &#123;</span><br><span class="line">			panic(err)</span><br><span class="line">		&#125;</span><br><span class="line">		fmt.Println(a.(example.Greeter).Hello())</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然而并不能正确反射出来，报<code>github.com/titanxxh/di/example/en, en.english not found in executable image</code>，这就很奇怪了，我明明匿名引入了啊。</p>
+<p>最后经过一番调查才发现，go会优化掉没使用的类型，我们需要搞个全局变量引用到自己的类型一下才行。。。比如这样。</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> avoidOpt <span class="keyword">interface</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">// use this symbol to avoid compiler optimization</span></span><br><span class="line">	avoidOpt = english&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>于是我们终于正确获得输出<code>hello</code></p>
+<p>再结合之前的plugin，就是我们的<a href="https://github.com/titanxxh/di/blob/main/README.md">example</a>啦。</p>
+<p>项目地址<a href="https://github.com/titanxxh/di"><strong>在此</strong></a>，求个star呗。</p>
+]]></content>
+      <categories>
+        <category>软件开发</category>
+        <category>golang</category>
+      </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>reflection</tag>
+        <tag>plugin</tag>
+      </tags>
+  </entry>
 </search>

@@ -144,6 +144,74 @@
     
     
     <article
+  id="post-bullet物理引擎学习笔记3碰撞检测"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/17/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/"
+    >Bullet物理引擎学习笔记3(碰撞检测)</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/17/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" class="article-date">
+  <time datetime="2012-01-16T16:00:00.000Z" itemprop="datePublished">2012-01-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/">物理引擎</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>现在我们的物体能够动起来了，并且通过Bullet的计算，我们可以观察到物体会像在真实世界中一样运动碰撞等等。一个自然的想法是，我们如何知道谁和谁进行了碰撞？</p>
+
+<p>关于bullet的碰撞检测，google能搜到一些答案，都是正确的，不过看bullet自己的<a href="https://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers" target="_blank">wiki</a>比较全面。</p>
+
+<p>比如我们可以通过一个回调函数来捕捉碰撞，从wiki中我们可以看到有一种回调函数的原型是：
+<pre>typedef bool (*ContactProcessedCallback)(
+    btManifoldPoint& cp,//重合点的意思吧，用不到可以无视它
+    void* body0,void* body1);//发生碰撞的俩个物体
+</pre></p>
+
+<p>这样我们只需要写好一个符合原型的函数——myContactProcessedCallback，然后将其赋值给bullet全局变量gContactProcessedCallback就行了。
+<pre>
+        gContactProcessedCallback = myContactProcessedCallback;
+</pre></p>
+
+<p>最后需要提一下的是，俩个物体间的碰撞在某一次stepSimulation中会进入多次你的回调函数，所以不要第一次进去的时候就把body给删除，正确的做法是将要删除的指针放进一个set，在stepSimulation结束时删除。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bullet/" rel="tag">Bullet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ogre/" rel="tag">Ogre</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/" rel="tag">物理引擎</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A2%B0%E6%92%9E/" rel="tag">碰撞</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-bullet物理引擎学习笔记1"
   class="article article-type-post"
   itemscope
@@ -822,63 +890,6 @@ m_dynamicsWorld->addRigidBody(groundRigidBody, COL_GROUND, groundCollidesWith);
 </article>
 
     
-    <article
-  id="post-桌游人生第四期-现代艺术-拍卖的智慧"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2011/11/06/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F%E7%AC%AC%E5%9B%9B%E6%9C%9F-%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF-%E6%8B%8D%E5%8D%96%E7%9A%84%E6%99%BA%E6%85%A7/"
-    >[桌游人生]第四期.现代艺术——拍卖的智慧</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2011/11/06/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F%E7%AC%AC%E5%9B%9B%E6%9C%9F-%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF-%E6%8B%8D%E5%8D%96%E7%9A%84%E6%99%BA%E6%85%A7/" class="article-date">
-  <time datetime="2011-11-05T16:00:00.000Z" itemprop="datePublished">2011-11-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/">桌游感悟</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><img src="https://cf.geekdo-images.com/images/pic204183_md.jpg"><br> 现代艺术盒子正面</p>
-<p>现代艺术的盒子背景是一副比较抽象的画（游戏里的画更为抽象。。。），和简洁的名称，还有就是那大名鼎鼎的设计师——Reiner Knizia，现代艺术也是其拍卖三部曲之一（另外两个是Medici和RA）。 
-      <a class="article-more-link" href="/2011/11/06/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F%E7%AC%AC%E5%9B%9B%E6%9C%9F-%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF-%E6%8B%8D%E5%8D%96%E7%9A%84%E6%99%BA%E6%85%A7/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/modern-art/" rel="tag">modern art</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E5%8F%97/" rel="tag">感受</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">感悟</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF/" rel="tag">现代艺术</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
   </article>
   
 
@@ -896,7 +907,7 @@ m_dynamicsWorld->addRigidBody(groundRigidBody, COL_GROUND, groundCollidesWith);
     <ul>
       <li>
         Copyrights &copy;
-        2011-2020
+        2011-2021
         <i class="ri-heart-fill heart_icon"></i> 仙雾
       </li>
     </ul>

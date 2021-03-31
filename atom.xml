@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2020-12-29T16:00:09.651Z</updated>
+  <updated>2021-03-31T15:54:37.357Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>golang下反射实例并动态注入</title>
+    <link href="http://titanxxh.com/2021/03/31/golang-dynamic-injection/"/>
+    <id>http://titanxxh.com/2021/03/31/golang-dynamic-injection/</id>
+    <published>2021-03-31T14:46:59.000Z</published>
+    <updated>2021-03-31T15:54:37.357Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;设想一个场景，我们需要和其他团队配合一起开发，并且不想使用源码构建，也就是说最终希望通过集成对方发布的二进制的方式来完成部署。&lt;/p&gt;
+&lt;p&gt;那么我们有两种方式可以解决这个问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义进程间api，各自构建进程，通过进程间调用&lt;/li&gt;
+&lt;li&gt;定</summary>
+        
+      
+    
+    
+    
+    <category term="软件开发" scheme="http://titanxxh.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="golang" scheme="http://titanxxh.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/golang/"/>
+    
+    
+    <category term="golang" scheme="http://titanxxh.com/tags/golang/"/>
+    
+    <category term="reflection" scheme="http://titanxxh.com/tags/reflection/"/>
+    
+    <category term="plugin" scheme="http://titanxxh.com/tags/plugin/"/>
+    
+  </entry>
   
   <entry>
     <title>压缩算法笔记</title>
@@ -674,38 +709,6 @@
     <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
     
     <category term="Pi mal Pflaumen" scheme="http://titanxxh.com/tags/Pi-mal-Pflaumen/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[仙雾的Essen2015]3.Codenames游戏概览&amp;评测</title>
-    <link href="http://titanxxh.com/2016/01/19/essen2015-3-codenames-rule-intro-review/"/>
-    <id>http://titanxxh.com/2016/01/19/essen2015-3-codenames-rule-intro-review/</id>
-    <published>2016-01-19T14:00:46.000Z</published>
-    <updated>2020-11-30T15:24:31.403Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2582929_md.jpg&quot;&gt;&lt;br&gt; VC真的是鬼才，什么种类都逃不掉&lt;/p&gt;
-&lt;p&gt;乌老师在中重策工放的道路上越走越远，而Vlaada Chvátil设计的游戏则不论是机制还是重度的多样性上都完爆了其他设计师。从TTA到银河卡车，从MK到Codenames，VC完美展现了自己设计鬼才的实力。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2716212_md.jpg&quot;&gt;&lt;br&gt; 现在都流行设计师Cos封面&lt;/p&gt;
-&lt;p&gt;Codenames是一个猜词游戏，玩家分成两队，分别由一个队长带领，队长每轮会提示一个单词作为“行动代号”，队员则要猜出所有己方的特工代号才能获胜，如果不幸猜到刺客的代号则立即失败。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
-    
-    
-    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
-    
-    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
-    
-    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
-    
-    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
-    
-    <category term="Codenames" scheme="http://titanxxh.com/tags/Codenames/"/>
     
   </entry>
   
