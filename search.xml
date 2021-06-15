@@ -5668,7 +5668,7 @@ m_dynamicsWorld->addRigidBody(groundRigidBody, COL_GROUND, groundCollidesWith);
       </tags>
   </entry>
   <entry>
-    <title>golang下反射实例并动态注入</title>
+    <title>golang 下反射 plugin 中的类型实例实现动态注入</title>
     <url>/2021/03/31/golang-dynamic-injection/</url>
     <content><![CDATA[<p>设想一个场景，我们需要和其他团队配合一起开发，并且不想使用源码构建，也就是说最终希望通过集成对方发布的二进制的方式来完成部署。</p>
 <p>那么我们有两种方式可以解决这个问题：</p>
@@ -5713,6 +5713,58 @@ m_dynamicsWorld->addRigidBody(groundRigidBody, COL_GROUND, groundCollidesWith);
         <tag>golang</tag>
         <tag>reflection</tag>
         <tag>plugin</tag>
+        <tag>源码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>golang 下对时间漂移的故障注入</title>
+    <url>/2021/04/26/golang-time-shift-fault-injection/</url>
+    <content><![CDATA[<p>很多时候我们在做测试时候，需要对程序的时间或者定时器进行一些操纵，各个语言对于获取时间和定时器的实现都不尽相同，在网上找了一下，发现有一个<a href="https://github.com/chaos-mesh/chaos-mesh/blob/master/pkg/time/time_linux_amd64.go">chaos-mesh</a>的项目里面提供了一个对golang和rust程序注入故障的方案。</p>
+<p>要想能针对某个进程进行时间漂移的注入，首先要知道这个进程里面对于获取时间的调用是怎么进行的。对于golang程序而言，当我们调用time.Now()时，实际上是利用了<a href="https://en.wikipedia.org/wiki/VDSO">vDSO (virtual dynamic shared object)</a>机制，该机制可以让一些诸如<code>gettimeofday</code>、<code>clock_gettime</code>的系统调用更快，而golang的time.Now()或者golang的定时器实现中维护堆时使用的就是<code>clock_gettime</code>。</p>
+<p>知道了调用的函数，接下来就是需要想办法修改掉它，这里chaos-mesh使用的方案是通过<a href="https://man7.org/linux/man-pages/man2/ptrace.2.html">ptrace</a>去修改对应进程的内存空间，将<code>clock_gettime</code>的跳转改成一个自己的实现。</p>
+<p>chaos-mesh还提供了一个测试程序的封装叫<a href="https://github.com/chaos-mesh/chaos-mesh/blob/master/cmd/watchmaker/main_linux.go">watchmaker</a>，这个程序可以方便我们直接运行，只要直接输入pid和偏移量就可以完成注入。</p>
+<p>主要功能的代码是<a href="https://github.com/chaos-mesh/chaos-mesh/blob/master/pkg/time/time_linux_amd64.go#L72:6">func ModifyTime(pid int, deltaSec int64, deltaNsec int64, clockIdsMask uint64) error</a></p>
+<p>大体流程如下</p>
+<ol>
+<li>   利用runtime.LockOSThread()，将当期goroutine和linux的thread绑定，这个我猜应该是防止该goroutine被切走，ptrace失效。</li>
+<li>   <code>ptrace.Trace(pid)</code>attach到pid上。通过<code>/proc/pid/task</code>获取该进程的所有threads，并通过PtraceAttach syscall attach到每个tid上，同时通过<code>/proc/pid/maps</code>拿到该进程的虚拟内存映射信息。</li>
+<li>   通过关键字<code>[vdso]</code>找到vDSO entry的起始地址。</li>
+<li>   准备好一个<code>fakeImage</code>，里面直接写好了我们的跳转的程序，最后24 bytes是我们的三个参数。这块涉及汇编，没仔细看<code>fakeImage</code>里面的实现。</li>
+<li>   在当前进程查询到是否曾经注入过我们的<code>fakeImage</code>，如果没有那么通过mmap新map进去我们的<code>fakeImage</code>，否则找到我们之前的entry。把最后24 bytes改写为当前设置的参数。</li>
+<li>   找到vDSO entry中的<code>clock_gettime</code>的原始地址，这里需要利用golang的<a href="https://golang.org/pkg/debug/elf/">debug/elf</a>包，来找到对应的symbol address。</li>
+<li>把vDSO entry中的<code>clock_gettime</code>跳转修改掉。 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// JumpToFakeFunc writes jmp instruction to jump to fake function</span></span><br><span class="line">   <span class="function"><span class="keyword">func</span> <span class="params">(p *TracedProgram)</span> <span class="title">JumpToFakeFunc</span><span class="params">(originAddr <span class="keyword">uint64</span>, targetAddr <span class="keyword">uint64</span>)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">       instructions := <span class="built_in">make</span>([]<span class="keyword">byte</span>, <span class="number">16</span>)</span><br><span class="line"></span><br><span class="line">       <span class="comment">// mov rax, targetAddr;</span></span><br><span class="line">       <span class="comment">// jmp rax ;</span></span><br><span class="line">       instructions[<span class="number">0</span>] = <span class="number">0x48</span></span><br><span class="line">       instructions[<span class="number">1</span>] = <span class="number">0xb8</span></span><br><span class="line">       binary.LittleEndian.PutUint64(instructions[<span class="number">2</span>:<span class="number">10</span>], targetAddr)</span><br><span class="line">       instructions[<span class="number">10</span>] = <span class="number">0xff</span></span><br><span class="line">       instructions[<span class="number">11</span>] = <span class="number">0xe0</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> p.PtraceWriteSlice(originAddr, instructions)</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>我们可以写个程序测试下效果</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// go build -o test test.go</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	pid := os.Getpid()</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(os.Args) &gt; <span class="number">1</span> &#123;</span><br><span class="line">		<span class="comment">// normal process</span></span><br><span class="line">		fmt.Println(pid, <span class="string">&quot;start count&quot;</span>, time.Now())</span><br><span class="line">		t := time.NewTicker(time.Second)</span><br><span class="line">		<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">for</span> _ = <span class="keyword">range</span> t.C &#123;</span><br><span class="line">				fmt.Println(pid, <span class="string">&quot;tick&quot;</span>, time.Now())</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="comment">// time shift</span></span><br><span class="line">		fmt.Println(pid, <span class="string">&quot;30s ticker&quot;</span>, time.Now())</span><br><span class="line">		j := <span class="number">0</span></span><br><span class="line">		t := time.NewTicker(time.Second*<span class="number">30</span>)</span><br><span class="line">		<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">for</span> tick := <span class="keyword">range</span> t.C &#123;</span><br><span class="line">				j++</span><br><span class="line">				fmt.Println(pid, <span class="string">&quot;trigger tick&quot;</span>, tick, <span class="string">&quot;now&quot;</span>, time.Now(), j)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">select</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>为了观察方便，同时起两个test进程，一个带参数，一个不带。<br><code>./test &amp; ./test x &amp;</code></p>
+<p>如果正常运行，那么输出结果会是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">99335 start count 2021-04-26 15:14:40.290945165 +0800 CST m&#x3D;+0.000102053</span><br><span class="line">99334 30s ticker 2021-04-26 15:14:40.290987246 +0800 CST m&#x3D;+0.000068288</span><br><span class="line">99335 tick 2021-04-26 15:14:41.291190225 +0800 CST m&#x3D;+1.000347008</span><br><span class="line">99335 tick 2021-04-26 15:14:42.291188665 +0800 CST m&#x3D;+2.000345428</span><br><span class="line">&#x2F;&#x2F; 忽略当中的一些打印</span><br><span class="line">99335 tick 2021-04-26 15:15:10.291344814 +0800 CST m&#x3D;+30.000501519</span><br><span class="line">99334 trigger tick 2021-04-26 15:15:10.291371963 +0800 CST m&#x3D;+30.000452968 now 2021-04-26 15:15:10.291389026 +0800 CST m&#x3D;+30.000470067 1 &#x2F;&#x2F; 这是第一次30s定时器超时</span><br><span class="line">99335 tick 2021-04-26 15:15:11.291317403 +0800 CST m&#x3D;+31.000474367</span><br></pre></td></tr></table></figure>
+
+<p>我们先等到99334进程触发了一次定时器超时之后，我们立刻通过<code>watchmaker</code>工具注入一个30秒的漂移。<br><code>sudo ./bin/watchmaker -pid 99334 -sec_delta 30 -nsec_delta 0 -clk_ids &quot;CLOCK_REALTIME,CLOCK_MONOTONIC&quot;</code></p>
+<p>注意如果我们只是想影响程序中time.Now()，只修改<code>CLOCK_REALTIME</code>就行了。这里我们需要影响定时器的超时，根据golang的<a href="https://github.com/golang/go/blob/master/src/runtime/proc.go#L3435">定时器实现</a>，定时器数据结构中取时间使用的是<code>runtime·nanotime1</code>，而对应的<a href="https://github.com/golang/go/blob/master/src/runtime/sys_linux_amd64.s#L322">汇编实现</a>里面取的是<code>CLOCK_MONOTONIC</code>，所以我们修改的clockid除了<code>CLOCK_REALTIME</code>还需要包含<code>CLOCK_MONOTONIC</code>。</p>
+<p>程序会输出：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">watchmaker Version: version.Info&#123;GitVersion:&quot;master-ge885846a41fd88&quot;, GitCommit:&quot;e885846a41fd88aa3a46f8b318321b8e889312b9&quot;, BuildDate:&quot;2021-04-13T08:09:23Z&quot;, GoVersion:&quot;go1.14.14&quot;, Compiler:&quot;gc&quot;, Platform:&quot;linux&#x2F;amd64&quot;&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    zapr@v0.1.0&#x2F;zapr.go:69  get clock ids mask      &#123;&quot;mask&quot;: 3&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99334&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99337&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99339&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99341&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99343&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99334&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99337&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99339&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99341&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99343&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  Successfully detach and rerun process   &#123;&quot;pid&quot;: 99334&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这里也可以看到，一个普通的go程序也会启动很多线程。。。</p>
+<p>然后回去看我们测试进程的输出变成了这样：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">99335 tick 2021-04-26 15:15:10.291344814 +0800 CST m&#x3D;+30.000501519</span><br><span class="line">99334 trigger tick 2021-04-26 15:15:10.291371963 +0800 CST m&#x3D;+30.000452968 now 2021-04-26 15:15:10.291389026 +0800 CST m&#x3D;+30.000470067 1 &#x2F;&#x2F; 这是上面第一次30s定时器超时</span><br><span class="line">99335 tick 2021-04-26 15:15:11.291317403 +0800 CST m&#x3D;+31.000474367</span><br><span class="line">99335 tick 2021-04-26 15:15:12.291291676 +0800 CST m&#x3D;+32.000448352</span><br><span class="line">99335 tick 2021-04-26 15:15:13.291336311 +0800 CST m&#x3D;+33.000493035</span><br><span class="line">99335 tick 2021-04-26 15:15:14.291333735 +0800 CST m&#x3D;+34.000490470</span><br><span class="line">99335 tick 2021-04-26 15:15:15.29133939 +0800 CST m&#x3D;+35.000496121</span><br><span class="line">99335 tick 2021-04-26 15:15:16.291349531 +0800 CST m&#x3D;+36.000506260</span><br><span class="line">99335 tick 2021-04-26 15:15:17.291232264 +0800 CST m&#x3D;+37.000389035</span><br><span class="line">99335 tick 2021-04-26 15:15:18.291307312 +0800 CST m&#x3D;+38.000464034</span><br><span class="line">99334 trigger tick 2021-04-26 15:15:48.765121761 +0800 CST m&#x3D;+68.474202738 now 2021-04-26 15:15:48.765129654 +0800 CST m&#x3D;+68.474210641 2 &#x2F;&#x2F; 由于我们修改了时间，里面触发了第二次的30s定时器超时</span><br><span class="line">99335 tick 2021-04-26 15:15:19.291362269 +0800 CST m&#x3D;+39.000519076 &#x2F;&#x2F; 这里可以看见99335对比进程中的时间还是正常的</span><br></pre></td></tr></table></figure>
+<p>注意golang的默认的time这个数据结构的打印，m=+后面的数字就是进程启动后的monotinic时间，这里99334进程的monotinic时间一下子从38变成了68，所以立马触发了第二次超时。</p>
+<p>至此，我们就完成了对一个golang进程的时间漂移的注入，赶快去测试下生产代码中是否有问题吧，据chaos-mesh团队的分享中所说，很多开源项目均有或大或小的问题哦。</p>
+]]></content>
+      <categories>
+        <category>软件开发</category>
+        <category>golang</category>
+      </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>源码</tag>
+        <tag>chaos-mesh</tag>
+        <tag>vDSO</tag>
+        <tag>time</tag>
+        <tag>ptrace</tag>
+        <tag>fault-injection</tag>
       </tags>
   </entry>
 </search>

@@ -144,6 +144,98 @@
     
     
     <article
+  id="post-bullet物理引擎学习笔记2motionstate"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/17/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02motionstate/"
+    >Bullet物理引擎学习笔记2(MotionState)</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/17/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02motionstate/" class="article-date">
+  <time datetime="2012-01-16T16:00:00.000Z" itemprop="datePublished">2012-01-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/">物理引擎</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>上一次说道更新物体位置信息的时候，是通过遍历所有物体的方法来更新的。然后这种方法会做很多无用功，因为有些物体根本就没动。</p>
+
+<p>为了解决这个问题，我们就需要利用MotionStae。我们可以看到，在上次的文章中，我们也使用了MotionState，只不过是bullet提供的默认的MotionState，现在我们自己创建一个来代替它。
+<pre>#include "linearmath/btMotionState.h"
+#include <ogrescenenode.h /></pre></p>
+
+<p>class MyMotionState : public btMotionState {<br />
+public:<br />
+    MyMotionState(const btTransform &initialpos, Ogre::SceneNode *node) {//初始化的时候将初始位置和node设置好<br />
+        mVisibleobj = node;<br />
+        mPos1 = initialpos;<br />
+    }</p>
+
+<p>    virtual ~MyMotionState() {<br />
+    }</p>
+
+<p>    void setNode(Ogre::SceneNode *node) {<br />
+        mVisibleobj = node;<br />
+    }</p>
+
+<p>    virtual void getWorldTransform(btTransform &worldTrans) const {<br />
+        worldTrans = mPos1;<br />
+    }</p>
+
+<p>    virtual void setWorldTransform(const btTransform &worldTrans) {<br />
+        if(NULL == mVisibleobj)<br />
+            return; // silently return before we set a node<br />
+        btQuaternion rot = worldTrans.getRotation();//更新物体在Ogre中的位置信息<br />
+        mVisibleobj->setOrientation(rot.w(), rot.x(), rot.y(), rot.z());<br />
+        btVector3 pos = worldTrans.getOrigin();<br />
+        mVisibleobj->setPosition(pos.x(), pos.y(), pos.z());<br />
+    }</p>
+
+<p>protected:<br />
+    Ogre::SceneNode *mVisibleobj;<br />
+    btTransform mPos1;<br />
+};
+</p>
+
+<p>这样在bullet每次调用setWorldTransform的时候，就会设置对应node的位置，那些不会动的物体就不会更新了。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bullet/" rel="tag">Bullet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MotionState/" rel="tag">MotionState</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ogre/" rel="tag">Ogre</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/" rel="tag">物理引擎</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-bullet物理引擎学习笔记3碰撞检测"
   class="article article-type-post"
   itemscope
@@ -817,79 +909,6 @@ m_dynamicsWorld->addRigidBody(groundRigidBody, COL_GROUND, groundCollidesWith);
 </article>
 
     
-    <article
-  id="post-dsdv学习笔记"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2011/11/11/dsdv%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-    >DSDV学习笔记</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2011/11/11/dsdv%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2011-11-10T16:00:00.000Z" itemprop="datePublished">2011-11-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>正好网络作业是模拟一下DSDV的路由算法，光棍节没事就写一个总结吧。</p>
-
-<p>DSDV（Destination-Sequenced Distance Vector）</p>
-
-<p>普通的DV在连接断掉时容易出现循环，使得cost越来越大，DSDV通过巧妙地引入一个SequenceNumber解决了这个问题。</p>
-
-<p>和DV一样每个节点维护的路由表里面有destination,next_hop,cost，还有一个就是seq，这个值只会在路由信息改变时增加，比如有节点断开或者cost改变，这样在下次广播的时候邻居就能更新到最新的值，如果发现是链接断开，则需要将此邻居的seq加1，这样邻居就会强制更新为无穷大。
-<pre>解析命令行参数
-绑定socket到本机的某个端口
-开辟一个新线程进行监听
-在主循环内：
-1.从文件读取数据，如果不是第一次读取数据则有可能会要更新某些数据。如果有更新，则将自己的seq+2，如果是更新成一条断路，则需要将这个邻居的seq+1，此外还需要处理路由表中以此邻居为下跳的某些记录。
-2.将自己的路由表发给自己的邻居。
-3.sleep10秒。
-4.输出自己路由表信息。</pre></p>
-
-<p>监听线程内：<br />
-接收到一条记录<br />
-通过信息长度判断是否是合法的记录（因为有可能有其他同学也在发。。。）<br />
-如果发现接收到的该记录是自己路由表内没有的则将其加入到路由表内（因为一开始每个人的路由表内只有自己和自己的邻居的信息，不知道整个网络的其他节点）<br />
-如果该记录的目的地是自己，看看他的seq是否比我自己维护的还大，如果是则说明他到我断了，并且自己的路由表还没更新（我这里的文件更新的比他慢），需要强行将自己的seq加到比他大，否则路由表信息要出错。<br />
-如果该记录的seq比我维护的路由表中对应记录的要大，则改变。<br />
-如果该记录的seq和我维护的路由表中对应记录一样大，且如果我以其为下跳比我当前的路径断，则改变</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
   </article>
   
 
@@ -980,6 +999,10 @@ m_dynamicsWorld->addRigidBody(groundRigidBody, COL_GROUND, groundCollidesWith);
     
     <li class="nav-item">
       <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/slides">Slides</a>
     </li>
     
     <li class="nav-item">

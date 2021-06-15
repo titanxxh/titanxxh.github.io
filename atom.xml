@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2021-03-31T15:54:37.357Z</updated>
+  <updated>2021-04-26T12:54:46.077Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -17,11 +17,50 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>golang下反射实例并动态注入</title>
+    <title>golang 下对时间漂移的故障注入</title>
+    <link href="http://titanxxh.com/2021/04/26/golang-time-shift-fault-injection/"/>
+    <id>http://titanxxh.com/2021/04/26/golang-time-shift-fault-injection/</id>
+    <published>2021-04-26T12:43:40.000Z</published>
+    <updated>2021-04-26T12:54:46.077Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;很多时候我们在做测试时候，需要对程序的时间或者定时器进行一些操纵，各个语言对于获取时间和定时器的实现都不尽相同，在网上找了一下，发现有一个&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="软件开发" scheme="http://titanxxh.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="golang" scheme="http://titanxxh.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/golang/"/>
+    
+    
+    <category term="golang" scheme="http://titanxxh.com/tags/golang/"/>
+    
+    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+    <category term="chaos-mesh" scheme="http://titanxxh.com/tags/chaos-mesh/"/>
+    
+    <category term="vDSO" scheme="http://titanxxh.com/tags/vDSO/"/>
+    
+    <category term="time" scheme="http://titanxxh.com/tags/time/"/>
+    
+    <category term="ptrace" scheme="http://titanxxh.com/tags/ptrace/"/>
+    
+    <category term="fault-injection" scheme="http://titanxxh.com/tags/fault-injection/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>golang 下反射 plugin 中的类型实例实现动态注入</title>
     <link href="http://titanxxh.com/2021/03/31/golang-dynamic-injection/"/>
     <id>http://titanxxh.com/2021/03/31/golang-dynamic-injection/</id>
     <published>2021-03-31T14:46:59.000Z</published>
-    <updated>2021-03-31T15:54:37.357Z</updated>
+    <updated>2021-04-05T03:15:18.640Z</updated>
     
     
       
@@ -48,6 +87,8 @@
     <category term="reflection" scheme="http://titanxxh.com/tags/reflection/"/>
     
     <category term="plugin" scheme="http://titanxxh.com/tags/plugin/"/>
+    
+    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
@@ -674,41 +715,6 @@
     <category term="lake manyara" scheme="http://titanxxh.com/tags/lake-manyara/"/>
     
     <category term="kilimanjaro" scheme="http://titanxxh.com/tags/kilimanjaro/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[仙雾的Essen2015]4.Pi mal Pflaumen游戏概览&amp;开箱&amp;评测</title>
-    <link href="http://titanxxh.com/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/"/>
-    <id>http://titanxxh.com/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/</id>
-    <published>2016-01-22T14:00:46.000Z</published>
-    <updated>2020-12-01T14:31:06.205Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/images/pic2635730_md.jpg&quot;&gt;&lt;br&gt; Pi mal Pflaumen，德语π*李子的意思&lt;/p&gt;
-&lt;p&gt;李子的是一个抽象类游戏，不过还是套了一个背景，但是看完说明书，我必须要吐槽一下这是我看过的最扯淡的背景介绍。&lt;/p&gt;
-&lt;p&gt;说明书上写到，17、18世纪是科学的世纪（简直废话），有两位伟大的人物出现了，他们是莱昂哈德·欧拉（欧拉公式知道吧）和玛丽亚·西比拉·梅里安（一个博物学家naturalist和一个艺术家，见下图），但是说明书对于为何会选取这两个人物完全没提到，反倒是加了一句话说这俩人还真有关系，根据仙雾的搜索，所有的和这俩人相关的网页都指向了这本说明书，只有一个德语的维基百科中提到了说欧拉的第二任妻子是梅里安的外孙女，天真的我还以为会有什么惊天动地的故事。。。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Vea0TCNr.jpg&quot;&gt;&lt;br&gt; Maria Sibylla Merian的作品的特点就是会把毛毛虫进化成蝶的不同时期的不同形态融合进同一张图里&lt;/p&gt;
-&lt;p&gt;游戏分三个阶段（卡牌背面的虫、蛹、蝶），每个阶段玩家打出卡，然后选取卡，通过完成水果的组套任务来得分，最后分数最高的人获胜。游戏支持3-5人，一局时间不长，在半小时左右，是个等人时候的不错之选。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="桌面游戏" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
-    
-    
-    <category term="开箱" scheme="http://titanxxh.com/tags/%E5%BC%80%E7%AE%B1/"/>
-    
-    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
-    
-    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
-    
-    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
-    
-    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
-    
-    <category term="Pi mal Pflaumen" scheme="http://titanxxh.com/tags/Pi-mal-Pflaumen/"/>
     
   </entry>
   
