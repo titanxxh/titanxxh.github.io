@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="boardgame, programming, football" />
+       
+      <meta name="description" content="titanxxh&#39;s blog | boardgame | programming" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>小小世界简单量化分析——技能篇 |  Meeple Life</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-小小世界简单量化分析-技能篇"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  小小世界简单量化分析——技能篇
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/02/04/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E7%AE%80%E5%8D%95%E9%87%8F%E5%8C%96%E5%88%86%E6%9E%90-%E6%8A%80%E8%83%BD%E7%AF%87/" class="article-date">
+  <time datetime="2012-02-03T16:00:00.000Z" itemprop="datePublished">2012-02-04</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/geek%E7%A0%94%E7%A9%B6/">geek研究</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">7 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>回了一趟厦门，和两个弟弟开了几次小小世界，又在ipad上和电脑对战了很多盘（诅咒扩+女权扩），对于种族和技能的搭配有了新的理解。这里我以一种比较直观的量化方式来分析一下种族间以及技能间的不同。</p>
+
+<p>以下分析皆基于2人版图。</p>
+
+<p><img src="https://cf.geekdo-images.com/images/pic455934_md.jpg"><br> 小小世界两人地图</p>
+<p><a id="more"></a></p>
+
+<p>先分析技能，总体上技能可以分成3类，一类是拿钱型，一类是进攻辅助型，一类是其他。。。</p>
+
+<p>拿钱型：Alchemist（炼金）,Forest（森林）,Hill（山丘）,Swamp（湿地）,Wealthy（富豪）他们提供的兵力支援都是4。Merchant（商人）兵力支援为2</p>
+
+<p>由于<span style="color: #0000ff;">炼金</span>就是稳定的每回合钱+2，所以我们<strong><span style="color: #ff0000;">以它作为标准</span></strong>。</p>
+
+<p>在2人地图中，<span style="color: #0000ff;">森林山丘湿地</span>都有4块，很明显当玩家能占领3块及以上时，他们的收益才优于炼金，但是我们可以看到版图中，这些区域并非连在一起的，也就是说在你占领到第三块的过程中，你还会占领一些其他的区域，这就会分散你的兵力，削弱防守，一旦造成兵力损失，很可能就无力再占领第三块加成区域了。</p>
+
+<p>关于<span style="color: #0000ff;">富豪</span>，它是一次性拿7元钱，看上去是炼金3.5倍，也就是说你选择完后就退场效率会极高，但是我们要注意的是，大多数情况下，你的第一回合的征服只能征服3-4块区域，如果3-4块区域就退场，而人家是5-7片区域退场，后面的回合你的收益将是-2，所以一般不会立即退场，这样一来当前你每回合富豪所带来的优势收益会-2，两者如何平衡就看玩家对当时情况的分析了，如果接近尾声可以抢选富豪，或是找一波流开荒能力强的选完富豪，一波退场，效果还行。</p>
+
+<p>最后一个是<span style="color: #0000ff;">商人</span>，毫无疑问这是游戏中最imba的技能，所以设计者给予了其最少的兵力支援，不过当商人一旦能占领到3块区域他们的收入就有6，已经达到平均水准，可见其imba之处，不过防守的薄弱注定了它只能在一边自我发展不能陷入缠斗，否则越打越穷啊。</p>
+
+<p>总体上，拿钱型的都比较imba，因为普通为了多拿钱都需要多攻下一块地，这样带来的兵力消耗会是2-3，更重要的是战线过长防守不易，不过如果能将对方进攻路线封住，那防守就可以有所侧重。拿钱型的劣势在于兵力上的劣势，注定了他们退场后的区域少。</p>
+
+<p>进攻辅助型：Commando（指挥）,Berserk（狂暴）,Seafaring（远洋）,Flying（飞行）,Underworld（穴居）,DragonMaster（驭龙）,Mounted（骑乘）</p>
+
+<p>同样滴，<span style="color: #0000ff;">指挥</span>的作用是每次进攻时需要的兵力少一，我们也可以将其作为标准。由于需要的兵力少了，可以占领的区域就变多了，如果假设你有10个兵力，征服一块区域需要2.5个兵，那么现在只需要1.5个兵，本来可以征服4个区域现在可以是6个多，基本上多出2块，可以看到和炼金的效果的差不多的。但是如果你想要攻击玩家的区域，往往是不可能只花费1.5个兵的。</p>
+
+<p><span style="color: #0000ff;">狂暴</span>可以先扔骰子再决定打哪里，非常适合有多种进攻选择的时候用，不过切记他的平均期望还是一，和指挥没什么区别。</p>
+
+<p>后面5个进攻辅助类技能所能提供的兵力支援都是5，比狂暴和指挥多1。</p>
+
+<p><span style="color: #0000ff;">远洋</span>保证了你有3块不可侵犯的区域，但是往往需要3个回合才能把它们占领，有时候对方还会拦在一片海面前，让你最终只能占领2块海，不过好处是在你退场之后水上区域仍然有效，这点很imba，所以我认为远洋比以上技能都略强。</p>
+
+<p><span style="color: #0000ff;">飞行</span>提供了一种满世界乱打的途径，可以用来躲避另一名玩家的追击（有点类似吉普赛人），但是并没有带来任何加成，即时你占领空地也就只能占领5块，所以我认为飞行较弱。</p>
+
+<p><span style="color: #0000ff;">穴居</span>和<span style="color: #0000ff;">骑乘</span>都能对对应的区域需要的兵力减一，不过只有4个地洞却又8块农田或山丘，尽管地洞也提供了一种逃离战场的方法，但是总体还是不如骑乘。</p>
+
+<p><span style="color: #0000ff;">驭龙</span>是一个特殊的技能，他可以用来攻打对手的心腹位置，并且保证不会被夺回，这一点很关键，对于防守很重要，因为你有更多的兵力布防给其他地方（如同远洋一样）。这样就相当于每回合你有免费的一块地，鉴于他还能提供5兵力，实际收益应该和平均水准差不多。</p>
+
+<p>其他类型：Bivouacking（聚居）,Heroic（英勇）,Diplomat（外交）,Spirit（灵魂）,Stout（刚烈），Pillaging（掠夺）,Fortified（防御）</p>
+
+<p>这一类技能并没有直接的收益，或是多种类型的综合，很难和平均水准进行比较，所以统归为其他。这类技能往往是为了战局的需要才被玩家选择，战略意义较大。</p>
+
+<p><span style="color: #0000ff;">聚居</span>提供5个防御点，在第一回合毫无作用，不过在战线拉开后几乎是为你提供了一道坚不可摧的屏障，这点之前也提过，防御的重要性不只在于不被对手夺取一块区域和避免伤亡，而是要拦住对手的进攻意图，降低对手的敛财效率。</p>
+
+<p><span style="color: #0000ff;">英勇</span>和聚居一样也是防御性技能，不过范围更小，但效果更彻底（不怕鼠人，骷髅，驭龙），是真正意义上的英雄无敌。</p>
+
+<p><span style="color: #0000ff;">外交</span>的防御性在2人模式体现的不是很好，除非你的种族特别不想对手攻击你，比如对方是骷髅、巫师、兽人或者有掠夺什么的。</p>
+
+<p><span style="color: #0000ff;">灵魂</span>是最典型的战略技能，并且已经不仅限于战场上，而是要求玩家对于全局游戏有所把握，选择了灵魂意味着玩家放弃了“一停”（即退场一次）策略，你的目标是以多一个退场种族的优势来弥补多退场一次带来的行动缺失引起的劣势。</p>
+
+<p><span style="color: #0000ff;">刚烈</span>和灵魂类似影响着玩家的退场策略，通过选择刚烈来加快自己的退场，从而抢拿新种族是一个常见的策略。</p>
+
+<p><span style="color: #0000ff;">掠夺</span>是一个和兽人特性一样的技能，配合好战的种族才能发挥威力巨人鱼人亚马逊都是不错的，不过先手被对手打了很可能就废掉了。</p>
+
+<p><span style="color: #0000ff;">防御</span>是游戏中第二imba的技能，同样它提供的兵力也是次少的（仅为3），作为一个拿钱型和聚居的综合技能，选择防御的玩家需要做到绝对的防御，停留在场上够长的时间，来建造一座座防御塔，所以巨魔精灵都是很好的选择，或者选兵力多的鼠人骷髅之类，如果你能放下第三座防御塔，那你就成功了。有一次出去玩，一位第一次接触小小世界的女生用精灵加防御的“零进站”策略赢得胜利令我印象深刻。</p>
+
+<p>至此基础版所有20个技能都做了简略的分析，一个4兵力技能的单回合收益应该是2，5兵力的话应该比一要大（参考驭龙）。</p>
+
+<p>****************************我是分割线****************************</p>
+
+<p>PS：喜欢，有可能是一时冲动或一见钟情，但爱，是坚持，是用心分析。对桌游如此，对人亦是。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://titanxxh.com/2012/02/04/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E7%AE%80%E5%8D%95%E9%87%8F%E5%8C%96%E5%88%86%E6%9E%90-%E6%8A%80%E8%83%BD%E7%AF%87/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/small-world/" rel="tag">small world</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" rel="tag">小小世界</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%94%E7%A9%B6/" rel="tag">研究</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2012/02/10/20120208%E9%AB%98%E4%B8%AD%E8%81%9A%E4%BC%9A%E6%B4%BB%E5%8A%A8%E5%B0%8F%E8%AE%B0/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            20120208高中聚会活动小记
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2012/01/18/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04%E7%A2%B0%E6%92%9E%E8%BF%87%E6%BB%A4/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Bullet物理引擎学习笔记4(碰撞过滤)</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "ia41cglQCxRedIwdOc67NiAX-gzGzoHsz",
+    app_key: "KOnLtQoHltrMsr9EtJsXFGYU",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2022
+        <i class="ri-heart-fill heart_icon"></i> 仙雾
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/meeple.png" alt="Meeple Life"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh/">Instagram</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Links</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

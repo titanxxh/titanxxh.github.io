@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="boardgame, programming, football" />
+       
+      <meta name="description" content="titanxxh&#39;s blog | boardgame | programming" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> Meeple Life</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover2.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Meeple Life</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['What I cannot create I cannot understand.', '', ''],
+        startDelay: 0,
+        typeSpeed: 50,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  <ul class="ads">
+    
+        <li>
+            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
+                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5ccc.jpg" width="300" alt="云服务器限时秒杀">
+            </a>
+        </li>
+    
+        <li>
+            <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8630075">
+                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5cd7.png" width="300" alt="vultr优惠vps">
+            </a>
+        </li>
+    
+</ul>
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-小小世界简单量化分析-技能篇"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/02/04/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E7%AE%80%E5%8D%95%E9%87%8F%E5%8C%96%E5%88%86%E6%9E%90-%E6%8A%80%E8%83%BD%E7%AF%87/"
+    >小小世界简单量化分析——技能篇</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/02/04/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E7%AE%80%E5%8D%95%E9%87%8F%E5%8C%96%E5%88%86%E6%9E%90-%E6%8A%80%E8%83%BD%E7%AF%87/" class="article-date">
+  <time datetime="2012-02-03T16:00:00.000Z" itemprop="datePublished">2012-02-04</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/geek%E7%A0%94%E7%A9%B6/">geek研究</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>回了一趟厦门，和两个弟弟开了几次小小世界，又在ipad上和电脑对战了很多盘（诅咒扩+女权扩），对于种族和技能的搭配有了新的理解。这里我以一种比较直观的量化方式来分析一下种族间以及技能间的不同。</p>
+
+<p>以下分析皆基于2人版图。</p>
+
+<p><img src="https://cf.geekdo-images.com/images/pic455934_md.jpg"><br> 小小世界两人地图</p>
+<p> 
+      <a class="article-more-link" href="/2012/02/04/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E7%AE%80%E5%8D%95%E9%87%8F%E5%8C%96%E5%88%86%E6%9E%90-%E6%8A%80%E8%83%BD%E7%AF%87/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/small-world/" rel="tag">small world</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" rel="tag">小小世界</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%94%E7%A9%B6/" rel="tag">研究</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-bullet物理引擎学习笔记4碰撞过滤"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/18/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04%E7%A2%B0%E6%92%9E%E8%BF%87%E6%BB%A4/"
+    >Bullet物理引擎学习笔记4(碰撞过滤)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/18/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04%E7%A2%B0%E6%92%9E%E8%BF%87%E6%BB%A4/" class="article-date">
+  <time datetime="2012-01-17T16:00:00.000Z" itemprop="datePublished">2012-01-18</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/">物理引擎</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>有时候我们会想让俩个物体不发生碰撞而是穿过对方，比如打砖块游戏里的Unstoppable形态的小球。通过查看Bullet的wiki我们可以看到几种方法，有在碰撞添加时防止的，也有碰撞时防止的。我个人最喜欢的是wiki中的第一种，通过位运算的实现的Filter。</p>
+
+<p><pre>#define BIT(x) (1<<(x))//一个宏
+enum collisiontypes {
+    COL_NOTHING = 0, //<Collide with nothing
+    COL_GROUND = BIT(0), //<Collide with ground
+    COL_AIRBOX = BIT(1), //<Collide with airbox
+    COL_KINEMATICBOX = BIT(2) //<Collide with kinematicbox
+};</pre></p>
+
+<p>const int groundCollidesWith = COL_AIRBOX;<br />
+const int airboxCollidesWith = COL_GROUND | COL_KINEMATICBOX;<br />
+const int kinematicboxCollidesWith = COL_AIRBOX;
+
+<p>定义好以上之后只需要在addrigidbody是加入2个参数就能实现碰撞过滤了。</p>
+<pre>m_dynamicsWorld->addRigidBody(boxBody, COL_AIRBOX, airboxCollidesWith);
+</pre>
+<p>要说明的是，在最新版本的Bullet中，只有当物体A可碰撞物体中有物体B，并且物体B可碰撞物体中也有物体A，AB才会发生碰撞。</p></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bullet/" rel="tag">Bullet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/" rel="tag">物理引擎</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A2%B0%E6%92%9E/" rel="tag">碰撞</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A2%B0%E6%92%9E%E8%BF%87%E6%BB%A4/" rel="tag">碰撞过滤</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-bullet物理引擎学习笔记2motionstate"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/17/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02motionstate/"
+    >Bullet物理引擎学习笔记2(MotionState)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/17/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02motionstate/" class="article-date">
+  <time datetime="2012-01-16T16:00:00.000Z" itemprop="datePublished">2012-01-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/">物理引擎</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>上一次说道更新物体位置信息的时候，是通过遍历所有物体的方法来更新的。然后这种方法会做很多无用功，因为有些物体根本就没动。</p>
+
+<p>为了解决这个问题，我们就需要利用MotionStae。我们可以看到，在上次的文章中，我们也使用了MotionState，只不过是bullet提供的默认的MotionState，现在我们自己创建一个来代替它。
+<pre>#include "linearmath/btMotionState.h"
+#include <ogrescenenode.h /></pre></p>
+
+<p>class MyMotionState : public btMotionState {<br />
+public:<br />
+    MyMotionState(const btTransform &initialpos, Ogre::SceneNode *node) {//初始化的时候将初始位置和node设置好<br />
+        mVisibleobj = node;<br />
+        mPos1 = initialpos;<br />
+    }</p>
+
+<p>    virtual ~MyMotionState() {<br />
+    }</p>
+
+<p>    void setNode(Ogre::SceneNode *node) {<br />
+        mVisibleobj = node;<br />
+    }</p>
+
+<p>    virtual void getWorldTransform(btTransform &worldTrans) const {<br />
+        worldTrans = mPos1;<br />
+    }</p>
+
+<p>    virtual void setWorldTransform(const btTransform &worldTrans) {<br />
+        if(NULL == mVisibleobj)<br />
+            return; // silently return before we set a node<br />
+        btQuaternion rot = worldTrans.getRotation();//更新物体在Ogre中的位置信息<br />
+        mVisibleobj->setOrientation(rot.w(), rot.x(), rot.y(), rot.z());<br />
+        btVector3 pos = worldTrans.getOrigin();<br />
+        mVisibleobj->setPosition(pos.x(), pos.y(), pos.z());<br />
+    }</p>
+
+<p>protected:<br />
+    Ogre::SceneNode *mVisibleobj;<br />
+    btTransform mPos1;<br />
+};
+</p>
+
+<p>这样在bullet每次调用setWorldTransform的时候，就会设置对应node的位置，那些不会动的物体就不会更新了。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bullet/" rel="tag">Bullet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MotionState/" rel="tag">MotionState</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ogre/" rel="tag">Ogre</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/" rel="tag">物理引擎</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-bullet物理引擎学习笔记3碰撞检测"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/17/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/"
+    >Bullet物理引擎学习笔记3(碰撞检测)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/17/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" class="article-date">
+  <time datetime="2012-01-16T16:00:00.000Z" itemprop="datePublished">2012-01-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/">物理引擎</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>现在我们的物体能够动起来了，并且通过Bullet的计算，我们可以观察到物体会像在真实世界中一样运动碰撞等等。一个自然的想法是，我们如何知道谁和谁进行了碰撞？</p>
+
+<p>关于bullet的碰撞检测，google能搜到一些答案，都是正确的，不过看bullet自己的<a href="https://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers" target="_blank">wiki</a>比较全面。</p>
+
+<p>比如我们可以通过一个回调函数来捕捉碰撞，从wiki中我们可以看到有一种回调函数的原型是：
+<pre>typedef bool (*ContactProcessedCallback)(
+    btManifoldPoint& cp,//重合点的意思吧，用不到可以无视它
+    void* body0,void* body1);//发生碰撞的俩个物体
+</pre></p>
+
+<p>这样我们只需要写好一个符合原型的函数——myContactProcessedCallback，然后将其赋值给bullet全局变量gContactProcessedCallback就行了。
+<pre>
+        gContactProcessedCallback = myContactProcessedCallback;
+</pre></p>
+
+<p>最后需要提一下的是，俩个物体间的碰撞在某一次stepSimulation中会进入多次你的回调函数，所以不要第一次进去的时候就把body给删除，正确的做法是将要删除的指针放进一个set，在stepSimulation结束时删除。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bullet/" rel="tag">Bullet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ogre/" rel="tag">Ogre</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/" rel="tag">物理引擎</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A2%B0%E6%92%9E/" rel="tag">碰撞</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-bullet物理引擎学习笔记1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/16/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"
+    >Bullet物理引擎学习笔记1</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/16/bullet%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="article-date">
+  <time datetime="2012-01-15T16:00:00.000Z" itemprop="datePublished">2012-01-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/">物理引擎</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>折腾了两天，各种乱七八糟blog还有wiki什么的翻了个遍，从零开始学就是这样的，痛并快乐着。</p>
+
+<p>我是用的是bullet-2.77，因为googlecode上这个版本有编译好的demo，我可以先下下来看，编译的过程很简单，vs打开工程生成一下就行了，不过这里有可能会报个小小的error，转到出错的位置后，只要将PostBuild那个target全注释掉就行了。</p>
+
+<p>一开始我在用不用OgreBullet这个开源项目上纠结了半天，最后我放弃了它，现在想想还是正确的，OgreBullet是一个封装好的项目，实际上不利于像我这样从头开始学习Bullet的人。</p>
+
+<p>由于项目的目的是要做一个躲避球的游戏，我初步的设想就是写一个能控制物体去躲避物体的demo，这里我选用了最简单的物体，也就是bullet里的基本Shape之一的盒子（box）。</p>
+
+<p>要完成这个目标，我计划分步学习实现。</p>
+
+<p>首先让bullet能和ogre结合起来，即能够通过物理引擎的计算将物体的正确位置显示到界面上，能够创建并发射一系列的盒子。</p>
+
+<p>其次，能够检测出盒子的碰撞，并将于指定物体碰撞的盒子进行删除。</p>
+
+<p>然后，能通过鼠标或键盘来控制指定物体进行躲避。</p>
+
+<p>最后，能同过Kinect来控制物体。</p>
+
+<p>其中，前3步不需要Kinect的辅助，可以先完成。做完这些后，就是对游戏的润化和调优，以后再说。</p>
+
+<p>先说第一步吧，首先我们需要在ogre的世界和bullet的物理世界中创建物体，在这之前，我们需要对bullet的世界进行初始化。（不要问我这些是什么意思，我自己也似懂非懂的）
+<pre>btDiscreteDynamicsWorld* m_dynamicsWorld;
+btDefaultCollisionConfiguration* m_collisionConfiguration;
+btCollisionDispatcher* m_dispatcher;
+btBroadphaseInterface* m_overlappingPairCache;
+btSequentialImpulseConstraintSolver* m_solver;
+btAlignedObjectArray m_collisionShapes;</pre></p>
+
+<p>void initPhysics()<br />
+{
+m_collisionConfiguration = new btDefaultCollisionConfiguration();<br />
+m_dispatcher = new btCollisionDispatcher(m_collisionConfiguration);<br />
+m_overlappingPairCache = new btDbvtBroadphase();<br />
+btSequentialImpulseConstraintSolver* sol = new btSequentialImpulseConstraintSolver;<br />
+m_solver = sol;<br />
+m_dynamicsWorld = new btDiscreteDynamicsWorld(m_dispatcher, m_overlappingPairCache, m_solver, m_collisionConfiguration);<br />
+m_dynamicsWorld-&gt;setGravity(btVector3(0, -10, 0));<br />
+}</p>
+
+<p>接下来开始创建物体，NodeInfo是我自己设置的一个类，记录了Ogre中的SceneNode和一些其他信息。
+<pre>
+//in physics
+btCollisionShape* boxShape = new btBoxShape(btVector3(size.x,size.y,size.z));//创建Shape
+float mass = 1.f;//质量，这里要说明的是，如果质量是0的话表示是一个静态物体或者Kinematic物体（不知道怎么翻译），区别可以看UserManual
+btTransform startTransform;
+startTransform.setIdentity();
+startTransform.setOrigin(btVector3(0,5,0));//设置位置
+bool isDynamic = (mass != 0.f);
+btVector3 localInertia(0,0,0);
+if (isDynamic) boxShape->calculateLocalInertia(mass,localInertia);//不知道干什么的
+btDefaultMotionState* myMotionState = new btDefaultMotionState(startTransform);//创建一个MotionState以后会用到
+btRigidBody::btRigidBodyConstructionInfo cInfo(mass,myMotionState,boxShape,localInertia);
+btRigidBody* boxBody = new btRigidBody(cInfo);//创建它
+NodeInfo *nodeInfo = new NodeInfo(node, "KinematicBodyBox", "man");
+boxBody->setUserPointer((void*)nodeInfo);//通过bullet预留的一个指针，记录Ogre中对应node的信息，以便更新位置
+m_dynamicsWorld->addRigidBody(boxBody);
+</pre></p>
+
+<p>bullet通过下面这句话进行模拟，后面的参数是模拟多少时间。
+<pre>
+m_dynamicsWorld->stepSimulation(etime);
+</pre>
+        <br />
+之后我们可以对node的位置等进行更新
+<pre>
+btCollisionObjectArray bodies = m_dynamicsWorld->getCollisionObjectArray();
+btRigidBody *TObject;
+for (int i=0;i<bodies.size();i++)
+{
+    TObject = (btRigidBody *)bodies[i];
+    NodeInfo* nodeInfo = static_cast<NodeInfo*>(TObject->getUserPointer());
+    if (TObject->isStaticOrKinematicObject())
+    {
+        continue;
+    }</pre></p>
+
+<p>    // Set position<br />
+    btVector3 Point = TObject->getCenterOfMassPosition();<br />
+    nodeInfo->node->setPosition(Ogre::Vector3(Point.getX(), Point.getY(), Point.getZ()));</p>
+
+<p>    // Convert the bullet Quaternion to an Ogre quaternion<br />
+    btQuaternion btq = TObject->getOrientation();<br />
+    Ogre::Quaternion quart = Ogre::Quaternion(btq.w(),btq.x(),btq.y(),btq.z());</p>
+
+<p>    // use the quaternion with setOrientation<br />
+    nodeInfo->node->setOrientation(quart);<br />
+}
+</p>
+
+<p>你可以将一个物体的初始高度设为100，然后在每次stepSimulation后输出其高度，可以看到它会落入无底深渊。。。你也可以创建一个平面，阻止其下落。
+<pre>
+//in physics
+btCollisionShape* groundShape = new btStaticPlaneShape(btVector3(0,1,0),0);
+btDefaultMotionState* groundMotionState = new btDefaultMotionState(btTransform(btQuaternion(0,0,0,1),btVector3(0,0,0)));
+btRigidBody::btRigidBodyConstructionInfo groundRigidBodyCI(0,groundMotionState,groundShape,btVector3(0,0,0));
+btRigidBody* groundRigidBody = new btRigidBody(groundRigidBodyCI);
+m_dynamicsWorld->addRigidBody(groundRigidBody, COL_GROUND, groundCollidesWith);
+</pre></p>
+
+<p>最后你可以通过Ogre的FrameListener实现按一下键盘的某个键，就发射一个盒子。</p>
+
+<p>Enjoy yourself in Bullet！</p>
+
+<p></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bullet/" rel="tag">Bullet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kinect/" rel="tag">Kinect</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ogre/" rel="tag">Ogre</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E/" rel="tag">物理引擎</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-20120108新年首次活动小记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/08/20120108%E6%96%B0%E5%B9%B4%E9%A6%96%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%B0%8F%E8%AE%B0/"
+    >20120108新年首次活动小记</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/08/20120108%E6%96%B0%E5%B9%B4%E9%A6%96%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%B0%8F%E8%AE%B0/" class="article-date">
+  <time datetime="2012-01-07T16:00:00.000Z" itemprop="datePublished">2012-01-08</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8/">桌游活动</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>7人行本来准备打球的，无奈天公不作美，于是改变计划开始寻找桌游店。</p>
+
+<p>普通桌游店一般营业结束都较晚，所以开门时间也就比较晚，我们在找了3家都无人应答正郁闷往哪走的绝望之时，睡眼朦胧的老板开门啦，谢天谢地啊。（店名是FF桌面游戏）</p>
+
+<p>人数受限，很难开出一桌，纠结之下开了七大奇迹，（PS：老板此处不断确认我们是否要玩这个，什么意思。。。），实验局D哥蛋帝猛拼军事，事实证明是赢不了滴，教学局我和伟男同积57分并列第一，伟男紫卡（工会牌）至少拿了25分。。。，我科技拿了比较多的分，军事惨败，还好只输一点。第二局貌似大家都玩的比较熟练了，开始思考如何卡下家，hjj被我和D哥卡得造不出2级奇迹这样巴比伦空中花园威力大减，我得益于早造出了金字塔的三级奇迹，并且左右两边都不发展军事，靠2张军事卡偷得10+分，最后积52分一分险胜。伟男最后没卡好我，不过我第三时代一开始也失误了，应该拿6分的建筑，不应该造3军事的，毕竟后面还有机会。</p>
+
+<p>午饭过后，开了几个欢乐游戏，（小小世界underground规则没看啊，怨念），一个貌似是店员的女生加入了游戏，不过第一个需要美国常识的游戏实在太乏味了（作为裁判的我名字我都不知道）。之后店员mm介绍了赌马的游戏，蛋帝的“一”马当先，赢了100元，小受3个注分别押对一二三名排名第二，我的“最后一搏”在重点线前一格输了，没排到名次，否则我就翻盘了，其实只要再轮到我我就能靠新摸到的牌将自己的马拉过终点的啊，不过还好没垫底。感觉结束的比较快，大家来不及下注，还是我们玩的有问题？</p>
+
+<p>余下3局三国杀8人局就不表了。</p>
+
+<p>&nbsp;</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/7-wonders/" rel="tag">7 wonders</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GamePlay/" rel="tag">GamePlay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/long-shot/" rel="tag">long shot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9/" rel="tag">七大奇迹</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%89%E5%9B%BD%E6%9D%80/" rel="tag">三国杀</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-20111231桌游活动小记卡坦岛只言片语"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/02/20111231%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8%E5%B0%8F%E8%AE%B0%E5%8D%A1%E5%9D%A6%E5%B2%9B%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"
+    >20111231桌游活动小记(卡坦岛&amp;只言片语)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/02/20111231%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8%E5%B0%8F%E8%AE%B0%E5%8D%A1%E5%9D%A6%E5%B2%9B%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/" class="article-date">
+  <time datetime="2012-01-01T16:00:00.000Z" itemprop="datePublished">2012-01-02</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8/">桌游活动</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>31号终于考完了最后一门全是选择题的编译原理，终于能松口气了，恰逢D哥同学到交大来玩，加上wzh和竟仔还有东哥，一共6个人从21点玩到了第二天8点，爽是爽，不过回家路上就顶不住了。。。</p>
+
+<p>由于都是新手，为了不让大家产生畏惧感，我只介绍了最简单的卡坦岛，还特意强调这是个人品游戏，规则很快介绍完后，由D哥（白色）、wzh（蓝色）、东哥（橙色）、D哥同学（红色）4人进行了第一局。整局游戏骰运很不平均，8和6总是扎堆出现，而东哥的11只出现过1次。。。前期wzh虽然拥有羊港，但是2和3的两块地盘限制了它的发展；D哥中心2城要不是他同学和东哥手软，早就要被限制到死；Dong哥骰运不佳；而D哥的同学潜力巨大。关键的转折点在于D哥成功突围，并且强行造出了木港，其实个人认为先造6、9、11那个点更好，其间D哥同学试图兵王路王速胜但是失败了，之后就进入了D哥疯狂拿资源建大城的情况，期间D哥一度有连造3路偷路王的机会，所有人都看出来了他自己还蒙在鼓里。。。不过不影响他最后的胜利，最后形势如下图。</p>
+
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/BoardGamePlay/20111231GamePlay/IMG_0522.jpg"><br> 第一局，教学局，D哥胜出</p>
+<p>第二局由于人比较多，加入了5-6人扩展，看上去大大的版图，在12个村庄放下后就拥挤的可怕。我作为最后一个动的人，已经没什么位置给我选了，只能2连动选了砖港+6、11的砖地，这样稀缺资源能被换出来，也控制了不多的砖块，发展不会太受限。</p>
+
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/BoardGamePlay/20111231GamePlay/IMG_0523.jpg"><br> 第二局，加了扩展6人局，开始的样子</p>
+<p>（蓝色：我，橙色：竟仔，红色：东哥，白色：D哥，绿色：wzh，棕色：D哥同学）/*色弱轻拍*/</p>
+
+<p>开始后让我没想到的是，前面的人不停地扔7，都来抢我（如下图），我还没动，3个资源都被抢了，整一个郁闷了得。。。</p>
+
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/BoardGamePlay/20111231GamePlay/IMG_0525.jpg"><br> 一开始都把我的资源抢完了</p>
+<p>之后wzh妄图和我换砖块造村庄，被我识破，并且很快我造出了这个村庄，让他2条路浪费了。我和D哥同学垄断砖块，抬高价码取得了快速的发展。</p>
+
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/BoardGamePlay/20111231GamePlay/IMG_0526.jpg"><br> 我抢到了关键的村庄</p>
+<p>之后领跑者不断更换，竟仔，D哥同学，wzh先后成为被压制的对象，我则慢慢发展，但是不知怎么回事，大家觉得我要赢了又都来卡我，不和我换资源，我又点背2次自己在10资源的时候扔出7,排到了竟仔的后面，竟仔由于路王不可动摇加之大城起得早，资源出得多，而且没人能扔出7，而牢牢把握着第一的位置，最终获得胜利。</p>
+
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/BoardGamePlay/20111231GamePlay/IMG_0528.jpg"><br> 竟仔掏出一个胜利分，宣告胜利</p>
+<p>之后玩了两局3V3，和一局十分纠结的双将国战。</p>
+
+<p>最后开了只言片语，出乎我意料的是，大家竟然对只言片语十分喜爱，我一直以为女生会比较喜欢这个的。。。现在想想可能是只言片语简单的规则和轻松的氛围让它倍受青睐（毕竟后半夜还是蛮累的）。第一局D哥获胜，之后他就摆脱不了倒数的命运了。。。第二局我赢了，第三局D哥同学赢了。感觉利用某些人知识的盲区，或者说利用和某人的共同知识来出题能起到比较好的压制效果，总体来说还是个欢乐游戏，没必要太在意。</p>
+
+<p>最后需要指出的是wzh同学，拿不到第一也不让别人赢的桌游思想我很不赞同。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D%E5%93%A5/" rel="tag">D哥</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GamePlay/" rel="tag">GamePlay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/catan/" rel="tag">catan</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dixit/" rel="tag">dixit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wzh/" rel="tag">wzh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%A1%E5%9D%A6%E5%B2%9B/" rel="tag">卡坦岛</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/" rel="tag">只言片语</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%9D%E5%AE%A4/" rel="tag">寝室</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-星杯传说开箱照"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2012/01/02/%E6%98%9F%E6%9D%AF%E4%BC%A0%E8%AF%B4%E5%BC%80%E7%AE%B1%E7%85%A7/"
+    >星杯传说开箱照</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2012/01/02/%E6%98%9F%E6%9D%AF%E4%BC%A0%E8%AF%B4%E5%BC%80%E7%AE%B1%E7%85%A7/" class="article-date">
+  <time datetime="2012-01-01T16:00:00.000Z" itemprop="datePublished">2012-01-02</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/">桌游开箱照</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>星杯传说是国产桌游中口碑较好的一款，职业设计得精致，目标明确，试玩后感觉的确不错，一个普通的职业想要用好也很难。</p>
+
+<p>&nbsp;</p>
+
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail1.jpg"><br> 盒子正面，大家应该知道画风了吧</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail2.jpg"><br> 说明书正面是天使</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail3.jpg"><br> 阵营卡，记录星杯和战绩</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail4.jpg"><br> 魔剑闪卡，这年头都爱送闪卡</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail5.jpg"><br> 内部结构，满拥挤的</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail6.jpg"><br> 12个骰子</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail13.jpg"><br> 5种魔法牌</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail7.jpg"><br> 6种攻击牌</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail8.jpg"><br> 星石和水晶</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail9.jpg"><br> 治疗卡</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail10.jpg"><br> 两种指示物，有些角色会用到</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail11.jpg"><br> 星杯卡</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Asteriated-Grail/Asteriated-Grail12.jpg"><br> 红蓝阵营</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Asteriated-Grail/" rel="tag">Asteriated Grail</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%98%9F%E6%9D%AF%E4%BC%A0%E8%AF%B4/" rel="tag">星杯传说</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-20111208桌游活动小记两河流域农场主"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2011/12/09/20111208%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8%E5%B0%8F%E8%AE%B0%E4%B8%A4%E6%B2%B3%E6%B5%81%E5%9F%9F%E5%86%9C%E5%9C%BA%E4%B8%BB/"
+    >20111208桌游活动小记(两河流域&amp;农场主)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2011/12/09/20111208%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8%E5%B0%8F%E8%AE%B0%E4%B8%A4%E6%B2%B3%E6%B5%81%E5%9F%9F%E5%86%9C%E5%9C%BA%E4%B8%BB/" class="article-date">
+  <time datetime="2011-12-08T16:00:00.000Z" itemprop="datePublished">2011-12-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8/">桌游活动</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>编译和oo小作业搞完后，就兴致冲冲地跑到楼上准备开两河了，无奈wzh和pp都在忙，拖了好久才开战。</p>
+
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/BoardGamePlay/20111208GamePlay/IMG_0391.jpg"><br> 两河最后的战局</p>
+<p>讲解完规则后，wzh拿了瓶子王朝，pp几经犹豫拿了公牛王朝，我则选了弓手。一上来，pp求战心切，就和wzh开战，而我在一边发展，很快wzh败下阵来开始转移阵地，pp则建起了第一座纪念碑，我苦于没有蓝色的农庄卡片拿不到蓝色得分，于是乎两家都针对pp。进入中期我赢了2次外部冲突，蓝色和绿色得分暴涨，黑色则拖了后腿，之后pp用语言诱导wzh来打我，很快pp起了第二座纪念碑，并且每回合稳定的有红绿分，我领袖皆毗邻2做神殿，手中神殿也不少，wzh用灾难卡片断路后进攻成效不大，反倒是让我拿足够了红分，期间我曾想和pp争夺一大片河流的左部区域，也因为wzh的骚扰而计划流产，不得不放弃手中4块蓝色卡片，换取神殿。之后我用灾难卡断开wzh的“一字长蛇阵”，通过内部冲突解决掉他的黑色领袖，并且最后成功造出2黑分，在自己的回合内结束游戏（最后形势如上图）。挡板移除，谜底揭晓，我和pp最低项和次低项都相等，倒数第三低的我赢了一分（如下图），而wzh分太低就没拍他的。大家都是第一次玩，感觉决定比较草率，下次开，估计某人就要一直陷入长考了（坏笑）。</p>
+
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/BoardGamePlay/20111208GamePlay/IMG_0392.jpg"><br> pp得分9+9+9+10</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/BoardGamePlay/20111208GamePlay/IMG_0393.jpg"><br> 我的得分9+9+10+好多</p>
+<p> 
+      <a class="article-more-link" href="/2011/12/09/20111208%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8%E5%B0%8F%E8%AE%B0%E4%B8%A4%E6%B2%B3%E6%B5%81%E5%9F%9F%E5%86%9C%E5%9C%BA%E4%B8%BB/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Agricola/" rel="tag">Agricola</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Euphrates/" rel="tag">Euphrates</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GamePlay/" rel="tag">GamePlay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tigris/" rel="tag">Tigris</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pp/" rel="tag">pp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wzh/" rel="tag">wzh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%A4%E6%B2%B3%E6%B5%81%E5%9F%9F/" rel="tag">两河流域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/" rel="tag">农场主</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%88%98%E6%8A%A5/" rel="tag">战报</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-两河流域开箱照"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2011/12/08/%E4%B8%A4%E6%B2%B3%E6%B5%81%E5%9F%9F%E5%BC%80%E7%AE%B1%E7%85%A7/"
+    >两河流域开箱照</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2011/12/08/%E4%B8%A4%E6%B2%B3%E6%B5%81%E5%9F%9F%E5%BC%80%E7%AE%B1%E7%85%A7/" class="article-date">
+  <time datetime="2011-12-07T16:00:00.000Z" itemprop="datePublished">2011-12-08</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/">桌游开箱照</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>乌尔、尼尼微、巴比伦——在圣经中这些城市已然成为了人类起源的标志。而科学上的观点也与此一致：文明的源头位于富饶的两河流域，幼发拉底河和底格里斯河之间。</p>
+
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/TigrisANDEuphrates/IMG_0369.jpg"><br> 两河流域的盒子正面</p>
+<p> 
+      <a class="article-more-link" href="/2011/12/08/%E4%B8%A4%E6%B2%B3%E6%B5%81%E5%9F%9F%E5%BC%80%E7%AE%B1%E7%85%A7/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Euphrates/" rel="tag">Euphrates</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tigris/" rel="tag">Tigris</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%A4%E6%B2%B3%E6%B5%81%E5%9F%9F/" rel="tag">两河流域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/10/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2022
+        <i class="ri-heart-fill heart_icon"></i> 仙雾
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/meeple.png" alt="Meeple Life"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh/">Instagram</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Links</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

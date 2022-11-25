@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="boardgame, programming, football" />
+       
+      <meta name="description" content="titanxxh&#39;s blog | boardgame | programming" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>小世界，大世界 |  Meeple Life</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-small-world-big-world"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  小世界，大世界
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/10/30/small-world-big-world/" class="article-date">
+  <time datetime="2021-10-30T14:00:07.000Z" itemprop="datePublished">2021-10-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">3.4k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">11 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>题记：小朋友的大世界对大人而言可能只是一个小世界，但希望每个大人都可以在这个世界里找到乐趣，和小朋友共同开心。</p>
+</blockquote>
+<h2 id="出生之前"><a href="#出生之前" class="headerlink" title="出生之前"></a>出生之前</h2><p>他和她刚刚结束蜜月长假，一起开心地制定着未来的世界奇观巡礼计划，仿佛全世界都在脚下。没过多久她怀孕了，在那一刻他还不清楚将要面对的是什么，因为他几乎没有自己小时候的任何记忆，或许迎来一个小生命不会对自己的生活有太大的改变吧，他侥幸地想。</p>
+<p>孕期的她没有特别大的反应，每一次孕检都很正常，可能你就是小红书上晒的天使宝宝吧，他们仍然像往常一样可以吃吃喝喝逛逛，顶着大肚子还去旅游，去法喜寺许愿。</p>
+<p>然而这个世界并不总是按照他愿意的方式运行，此刻的他还不知道接下来的几天他的世界将发生巨变，活动空间将局限在小小的病房内，不分白天与黑夜。</p>
+<p>本来大家一致以为应该延后的产期由于羊水破裂不得不提前送进产房，他在外面焦急地踱步，产房外的丈夫数量从十几个变成几个，最后只剩下他一个。夜已经深了，突然被告知需要转剖，还有点懵的他对于医生之后的话只记住了几个关键词，然后颤颤巍巍签下了自己的名字，小窗的门就合上了，他赶到手术室门外，看着显示屏上那唯一的名字，他试图打开wiki搜索相关信息来平复自己的心情，然而他失败了，眼泪终究是无可抑制地流了下来。手术其实进行的很快，但是对于他而言那段时间似乎特别漫长，直到护士出现在窗口，告诉他大人小孩一切正常，他才松了一口气，是的，他成为一个爸爸了。</p>
+<h2 id="头五天"><a href="#头五天" class="headerlink" title="头五天"></a>头五天</h2><p>由于需要观察妈妈的盐水是否结束，所以爸爸一直没有睡觉，同时一直等啊等，直到早上六点多你才结束观察送到妈妈身旁，爸爸盯着你小小的脸庞看了许久，实在是没找出什么地方像自己，直到许多天以后爸爸回到家翻看自己刚出生的照片一对比才发现什么叫神似。</p>
+<p>说实话，你刚出生的样子真的有点丑，但是护士都说你很厉害，一出生就会哭出眼泪了，而且非常会喝奶，趴在妈妈身上很快就掌握了诀窍，也没有把妈妈搞痛。都说小宝宝出生后头几天体重会下降，但是你第二天体重就不再下降了，真厉害！</p>
+<p>由于疫情的原因，只允许一位家属陪护不允许更换，爸爸记得那几天的睡眠时间完全是挤出来的，感觉自己一度被搞的神经衰弱。但是到了出院的那天反而很兴奋，看着你一点一点被小包被包起来，抱着你走出医院大门的那一刻，爸爸感觉自己有望成为妈妈之后你最依靠的人了。</p>
+<h2 id="头三月"><a href="#头三月" class="headerlink" title="头三月"></a>头三月</h2><p>然而还是要相信科学，那么小的小朋友是完全不认识人的。一开始的两个月里，你的世界就局限在小床里，视线30cm的范围内，妈妈、外婆、月嫂阿姨才是你最亲近的人，爸爸很快就排不上号了。</p>
+<p>到了三个月时候你好动的天性慢慢显露出来，抬头翻身均先人一步，你的世界已经不满足于小床了，无论在哪你都跃跃欲试。这个时候的你还很小只，爸爸可以把你放在大腿上给你做四肢的被动操，而你会用杠铃般的笑声和爸爸进行很简单的互动，由于之前剃了光头，从某些角度看你简直和爸爸小时候一模一样，以至于爸爸发了ins。</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world-big-world/power-of-gene.jpeg" alt="基因的力量"></p>
+<p>回顾这百天，爸爸发现你样样都好，只是有一个问题阻碍了你成为小红书里面的天使宝宝，那就是——睡渣，爸爸貌似只成功哄睡了你一次，但是那次你睡得很好，以至于爸爸奔走相告，激动万分。但是考虑到这时期的宝宝本身就无法避免夜奶，睡眠一般都是不太行，此时的爸爸妈妈还并不觉得有太大的问题。</p>
+<h2 id="会走之前"><a href="#会走之前" class="headerlink" title="会走之前"></a>会走之前</h2><p>大运动超前的你很快就可以向前爬了，所以妈妈给你打造了一个自己的小天地，但是爸爸只想唱“柚子，柚子，你真了不得，小小围栏困不住你，爬出个运动员。”从一开始你就想往外走，还记得你第一次尝试往外爬的时候，你小短手小短腿腾在半空中，脸着地，非常不体面的完成越狱，奶奶竟然在旁边就眼睁睁的看着你，还在一边录像。</p>
+<p>为了让你在围栏里的小世界有点乐趣，爸爸开始教你玩玩具，但是你总是掌握不了重点，所以爸爸也就开始想办法自己找乐子，比如用套圈圈的玩具教连大小都不知道的你排序算法，反而你听的很认真的样子，也不知道你长大以后还能不能从记忆深处捞出这些知识。</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world-big-world/sort.jpeg" alt="排序"></p>
+<p>你这个时候已经会无意识的叫爸爸妈妈，但是你最喜欢的还是是模仿一些没名堂的东西，比如爸爸妈妈在教你某些东西时候嘴里的一些拟声词你学得最快，一开始妈妈还不清楚这个基因是哪里来的，后来等到你姑婆们来家里，看到她们的口技的表演才知道原来这是许家祖传艺能。</p>
+<p>和头三个月一样，你仍然是个睡渣，可是爸爸和妈妈都是睡觉高手，怎么也想不通，于是爸爸进入了焦虑期（口头上的），整天在家“你还不能睡整觉，怎么办哟”，直到十一的时候，你突然睡了几天整觉，爸爸以为你终于觉醒了，正要庆祝，结果发现这只是偶然现象，从此彻底接受你是个睡渣的事实，你爱咋地咋地吧。</p>
+<h2 id="学会走"><a href="#学会走" class="headerlink" title="学会走"></a>学会走</h2><p>由于爬爬垫有围栏，你8个多月的时候就能自己扶着围栏站起来，然后大人们再给你一些双手才能拿的东西，你就会无意识的双脱手，渐渐的就学会自己独立站立了；同时你扶着围栏的行动速度已经很快，不需要几秒钟就可以绕围栏一圈；而且根据爸爸长时间的观察，你的腿部力量已经足够，并且爷爷也直呼小脚蹬得有力量，完爆路上见到的软绵绵的小朋友，所有的一切都说明你已经具备了独立行走的前置条件。这个时候爸爸在围栏里面通过快速从一个角落移动到对角，就可以利用你想要过来找爸爸的特点训练你独立走路，一开始的时候你只走一两步马上就会意识到危险，然后去找最近的围栏扶住，这时候爸爸可以重新换一个角，你又会再试一次，没过两天，你已经可以几乎可以走一个完整的对角，只是由于心太贪，最后几步不愿意走，而是会直接扑到爸爸的怀里。</p>
+<p>其实学会走路之前，小小的围栏世界就已经不太能满足你的探索欲望了，在学会走路之后你更是满屋飞奔，爷爷整天跟在你屁股后面怕你摔了，但是其实你走的很稳，防摔小书包买回来根本没用过几次，完全就可以走的很好。现在回想起来，爸爸妈妈似乎从来没有在你学走期间叮嘱你慢慢走，导致你就是比同龄的小朋友心大，没学会走就想跑说的就是你。</p>
+<h2 id="“一起”玩"><a href="#“一起”玩" class="headerlink" title="“一起”玩"></a>“一起”玩</h2><p>不得不说小朋友看世界的方式真的和大人不一样，在妈妈为你打造的小世界里摆了各种经典的玩具，但是你一开始从来不按照大人们设想的方式去玩，而是有自己的理解。所以虽然说是一起玩，其实很多时候都是爸爸在你的小世界里玩自己的，然后你在旁边玩自己的，直到某个瞬间你可能会发现爸爸玩的有些意思才会来和爸爸互动。</p>
+<p>比如家里的积木，在一开始爸爸试图教你如何搭形状，刚刚搭了一两块，你总是要来推倒，后来爸爸也放弃了，就开始自己想其他的玩法，有一次爸爸把各种形状的积木铺一层在圆形边框的积木盒的盖子上，目的是尽可能的利用空间在一层内多放置积木，你在旁边看爸爸是如何调整现有的积木位置再增加一块进去的过程，然后等到爸爸放第二层的时候你似乎也有点理解了，可以参与进来，自己进行这个过程。</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world-big-world/pu.jpeg" alt="最密堆积"></p>
+<p>还有就是妈妈给你买了一个六面都有常见的和旋转概念相关的物件（钥匙开锁、指尖陀螺、螺丝螺帽）的“忙碌块”，本意是希望在飞机和高铁上keep you busy，然而可能是你对这些物件的正确使用方式完全不能理解或者不理解这些行为的后果有什么意义，只会用蛮力，所以自然也得不到什么乐趣，至于那个keep you busy的意图也失败了。后来爸爸自己在玩这个忙碌块，倾斜忙碌块，让旋转的指尖陀螺打击到垂下来的钥匙，你可能观察到钥匙弹飞再落下来又弹飞，觉得很意思，于是你也开始来用手打击指尖陀螺让它保持旋转，之后理解了旋转概念的你，又学会了用一只手不停地拍打螺帽可以让它向上转出来，然后用另一只手拍打可以让它向下转进去。</p>
+<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world-big-world/busy-block.jpeg" alt="忙碌块"></p>
+<p>当然更多的是那些无论如何也无法教会的玩具，比如教了你六个月的形状配对，不过现在回想起来，可能是爸爸自己也没有从中发现乐趣吧。</p>
+<h2 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h2><p>转眼间这边文章拖到了你快18个月的时候才发，实在是因为爸爸太懒了。回想这18个月的旅程，爸爸对养育一个新生命到底对一个人意味着什么这个问题有了更多的思考，在陪着你、看着你的世界从小变大、和你“一起玩”的过程中，爸爸感觉仿佛自己也在一起长大，找到了童年的乐趣，真正的乐趣。</p>
+<h2 id="写在在爸爸三十岁生日到来之际"><a href="#写在在爸爸三十岁生日到来之际" class="headerlink" title="写在在爸爸三十岁生日到来之际"></a>写在在爸爸三十岁生日到来之际</h2><p>爸爸最近在整理自己和妈妈小时候的照片时，脑海中总是浮现一个有趣的父女对话场景。</p>
+<p>女儿在看见爸爸小时候的照片时，好奇的问爸爸这个小男孩的故事，爸爸可能会这样诉说：</p>
+<p>“有一个小男孩，小学的时候，他的世界是一个小小的足球场，即使中暑也要在球场上挥汗如雨。02年有他最完美的足球记忆，中国队第一次进入世界杯，巴西队七战功成，罗纳尔多8球金靴王者归来。 </p>
+<p>到了初中，他来到了大城市，小小屏幕上的算法题成为了他的另一个兴趣，即使题目做不出来被罚跑圈也愿意在机房刷oj，并乐此不疲。这时候的他有了自己的决策，并主动探索课本外更大的世界。 </p>
+<p>再后来，他进入了大学，各种各样的桌游成为了他新的兴趣，他从此走出了那个只能一个人玩电子游戏的孤独的小世界，可以在RK老师的拍卖游戏里体验勾心斗角，也可以在乌老师的农场里饿着肚子刷分；可以在权力的游戏的世界里尔虞我诈君临天下，也可以铁路游戏里一边经营铁路路线一边操纵公司股价体验商海沉浮。 </p>
+<p>之后他遇上了他一生的挚爱，他的兴趣就是和她一起做一切事情，话剧、音乐剧、画展、做陶艺，还有旅游：去香港坐天星小轮，在世界杯决赛的校园一起淋成落汤鸡，去伊比利亚度一个超长蜜月。”</p>
+<p>“再然后呢？”</p>
+<p>再然后的故事就回到了这篇文章的开头。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://titanxxh.com/2021/10/30/small-world-big-world/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%B2%E5%AD%90/" rel="tag">亲子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E6%9F%9A%E5%AD%90/" rel="tag">小柚子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%88%90%E9%95%BF/" rel="tag">成长</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%82%B2%E5%84%BF/" rel="tag">育儿</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2022/11/21/from-boy-to-father-only-a-few-world-cups/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            从男孩到父亲，不过几届世界杯
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/04/26/golang-time-shift-fault-injection/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">golang 下对时间漂移的故障注入</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "ia41cglQCxRedIwdOc67NiAX-gzGzoHsz",
+    app_key: "KOnLtQoHltrMsr9EtJsXFGYU",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2022
+        <i class="ri-heart-fill heart_icon"></i> 仙雾
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/meeple.png" alt="Meeple Life"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh/">Instagram</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Links</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

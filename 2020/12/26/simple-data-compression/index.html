@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="boardgame, programming, football" />
+       
+      <meta name="description" content="titanxxh&#39;s blog | boardgame | programming" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>压缩算法笔记 |  Meeple Life</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-simple-data-compression"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  压缩算法笔记
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/12/26/simple-data-compression/" class="article-date">
+  <time datetime="2020-12-26T15:32:43.000Z" itemprop="datePublished">2020-12-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.7k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">9 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>Know how to solve every problem that has been solved.</p>
+<p>What I cannot create I do not understand.</p>
+<p>–Richard P. Feynman</p>
+</blockquote>
+<p>上个月因为公司内部的比赛，被迫短时间内了解了一些压缩算法，还动手实现了一些，比如lz77，deflate，bwt，bcm等，不实践不知道，一写代码就发现有些东西你以为你懂了实际上你没懂，加上最近看了已故物理学大师理查德费曼的一系列视频，其中一个细节让我印象深刻，他去世后大家在他办公室的黑板的左上角（这样就可以防止不小心被擦掉）发现他一直保留着上面的两句话。</p>
+<p>理查德费曼很小的时候就受到他父亲的教育，明白了知道和理解是两个概念，所以他一直能保持好奇的心态去思考每个问题。<br>这两句话的本质是一样的，也就是——只有自己能做出来才算真正理解了，要做到这一点就需要知道每个问题背后是如何真正被解决的，而不是只知道个结论，所以理解一个概念的最高境界就是你能教会别人这个概念。</p>
+<p>有感于此，特撰此文记录一下这段时间研究压缩算法的过程。</p>
+<a id="more"></a>
+
+<p>首先介绍一个很好的关于压缩算法的综述性网站<a target="_blank" rel="noopener" href="http://mattmahoney.net/dc/dce.html">Data Compression Explained</a>，这里从最简单的压缩算法一直讲到了state-of-art的压缩算法，其中<a target="_blank" rel="noopener" href="http://mattmahoney.net/dc/dce.html#Section_14">Compression is an Artificial Intelligence Problem</a>这一小节很值得一读。</p>
+<p>其次是一个实现了超多压缩算法的开源库，<a target="_blank" rel="noopener" href="https://github.com/flanglet/kanzi-go">kanzi-go</a>，这个原版应该是用java实现的，不知道为啥作者又用go全部重写了一遍。<br>这个库最大的好处就是，你可以任意组合前端的transform和后端的entropy算法，来测试不同的组合对你文件的压缩效果。</p>
+<h2 id="deflate-lz77-huffman-coding"><a href="#deflate-lz77-huffman-coding" class="headerlink" title="deflate=lz77+huffman coding"></a>deflate=lz77+huffman coding</h2><p>这个应该是最简单的压缩算法了，很多语言都内置了它的实现，因为他对于文本而言是十分快速有效的，对于我们比赛中用到的数据文件deflate大致能有0.37的压缩率。</p>
+<p>lz77算法解释起来非常简单，就是用已经编码部分作为“字典”来继续编码后续的内容。</p>
+<p>用<code>mississippi</code>举个例子，假设我们已经编码了<code>miss</code>，这个时候我们要继续往后面编码的时候可以用二元组(jumpBack, matchLen)来尝试减少重复从而压缩数据，其中jumpBack表示需要跳回去多少个字符，matchLen表示匹配多少个字符。</p>
+<p>比如此时输出的二元组就可以是(3, 3)，因为我们可以跳回3个字符匹配长度为3的<code>iss</code>，当然也可以是(3, 4)，因为我们可以跳回3个字符匹配长度为4的<code>issi</code>，注意这里的前一个<code>issi</code>的最后一个i和当前新匹配的<code>issi</code>的第一个i实际上是同一个i，这是被允许的。<br>对于lz77算法而言，目的就是尽可能的让matchLen大，所以这里正确的输出是(3, 4)。</p>
+<p>当然考虑到一般不太可能有太长的连续匹配，这里的maxMatchLen可以只设置到256的长度，也就是占用一个byte，同时maxJumpBack也可以根据需要来设置，假设我们用2个byte来存储maxJumpBack，也就是最多在2^16位范围内查找最大匹配。</p>
+<p>这样一来，我们用来3个byte去表示一个二元组，那么很显然如果我们表达的matchLen&lt;=3那么这种替换是无效的，不如使用原始长度的字符。所以一般在实现的时候都会直接去找&gt;=4的长度的匹配。</p>
+<p>另一方面如果要在2^16位范围内查找最大匹配，普通的字符串匹配效率肯定是很低的，所以我们可以缓存连续4个字符的hash值最近出现的位置，形成一个链表，这样每次要查找最大匹配的时候，先算当前的4字符hash值，然后直接找刚刚维护的链表看看有没有，这样可以大大提升查找效率。</p>
+<p>huffman coding这里就不多介绍了，大概思路就是统计词频，然后按词频的降序给予相应的编码长度，保证高频的词语获得较低的编码长度。</p>
+<p>OK！我其实看到这里当时就开始写代码了，因为当时的我认为自己已经理解了两个算法，但是当我把第一版代码写完的时候发现，无论如何我都无法获得和golang标准库中实现相同压缩率的结果，而是比0.37要高很多。</p>
+<p>这里主要的问题就在于我们混编jumpBack matchLen literal（普通字符）输入到huffman编码中的时候，matchlen和jumpBack会干扰literal的词频统计，同时matchlen和jumpBack本身的词频统计特点本身也和literal不一样。</p>
+<p>matchLen的特点是长度短的出现特别多，越长的长度出现的会很少。比如长度为4,5,6,7的matchLen会比长度为8,9的多很多。</p>
+<p>而jumpBack又呈现出很大的随机性，因为2^16位范围实在太大了，huffman对于平均词频的文本其实是没啥优势的。</p>
+<p>我由于没有直接看deflate的RFC，等我我真正找到这些问题的解决方案，是在对比标准库中的实现——debug调试比较它的matchlen和jumpBack的编码结果之后，这就浪费了很多时间。</p>
+<p>其实在deflate的<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc1951#page-12">RFC</a>很明确的写到，对于matchlen和jumpBack的编码可以使用一种变长的编码手段，比如将matchLen的范围4-258映射为0-31，长度为4,5,6,7出现的最多，可以分别占据一个值比如映射为0,1,2,3，而8,9可以统一映射为4，再用1个extrabit来表示到底是8还是9。</p>
+<p>这么一通类似于预先设计的按频率编码的操作之后，我们在大部分情况下都不需要完整的8个bit来表示matchLen。对于范围更大的jumpBack也是同理，压缩到0-255的范围，再结合extrabit。</p>
+<p>此外为了避免huffman coding时matchlen和jumpBack干扰literal的词频统计的问题，我们可以把他们分开用huffman编码。具体操作上是将0-255分配给ascii码的literal，256分配给eof表示文件结束，257-288分配给matchLen，这样对0-288进行词频统计。</p>
+<p>解码时候如果发现是257-288，先减去256，再根据具体是多少，先读取extrabit恢复出真正的matchLen，再往后读取jumpBack的编码，这样就恢复了二元组(jumpBack, matchLen)，然后再根据二元组继续解码。</p>
+<p>通过这样一通操作，终于能达到和golang标准库中实现相同压缩率了。</p>
+<p>当然deflate还有其实进一步减少压缩大小的骚操作，比如由于一般的压缩过程是一个block一个block进行的，而每个block都需要有自己的huffman coding的字典写在前面，这累积起来也有一定的开销，我们可以通过一个叫做正则huffman coding的方案，这样词典部分就可以进一步减少体积。</p>
+<h2 id="算术编码"><a href="#算术编码" class="headerlink" title="算术编码"></a>算术编码</h2><p>很显然deflate这种古董级别的压缩算法是无法和别人竞争压缩率的，所以我们需要研究更先进的压缩算法。</p>
+<p>一般而言，压缩算法根据原理可以分为transform和entropy两大类。一般市面上的压缩算法都会用多个transform阶段最后加上一个entropy阶段组成，可以使用前面提到的kanzi-go库自己搭配一下看看效果。</p>
+<p>lz77就是一种transform，其他包括字典、BWT等都是transform。</p>
+<p>而huffman coding就是基于entropy，也就是信息熵的压缩算法。huffman算法的问题在于，他无法达到信息论上理论最优。</p>
+<p>比如我们有一段bit流streamA，其中每个位置上0的概率是0.99；另一段bit流streamB，其中每个位置上的0的概率是0.51。很明显我们要用huffman coding来表示的话，最终构造的字典是一样的。</p>
+<p>站在信息论的角度，streamA明显包含了更少的信息，应该更容易被压缩，试想一下极端情况0出现的概率是1，那么其实我们可以取得无限的压缩率，因为我们只需要输出个长度数据就行了。</p>
+<p>而算术编码就很好的解决了以上问题，他的方法就是把输入映射为一个0-1之间的子区间，其中每编码一位，就按照当前bit的值，按照该值的概率缩小当前的区间，直到所有bit编码完，我们会得到一个很小的区间，事实上我们可以输出这个区间上的任意一个数字来作为最后的编码结果。</p>
+<p>最终解码时逆向这个过程，就可以一位一位还原输入。</p>
+<p>由于算术编码可以达到理论上的最佳压缩率，所以最先进的压缩算法在最后的entropy阶段几乎都是算术编码。</p>
+<h2 id="state-of-art的压缩算法"><a href="#state-of-art的压缩算法" class="headerlink" title="state-of-art的压缩算法"></a>state-of-art的压缩算法</h2><p>虽然算术编码本身不复杂，但是如何更好的估计概率却是一个十分复杂的事情，理论上来说，如果你能根据已有的内容更准确地估计后续内容出现的概率那么就可以达到更高的压缩率，同时动态调整概率可以在在线处理压缩时效果也更好。</p>
+<p>这就是<a target="_blank" rel="noopener" href="http://mattmahoney.net/dc/dce.html#Section_4">modeling</a>的作用了。而对于不同的输入源，也有不同的modeling可以选择，比如图像就需要二维的model。</p>
+<p>最新的压缩算法往往是运用了更复杂modeling的方法，包括一些机器学习的model（比如PAQ8之后），甚至是多种方案的mixing modeling。但这就是另一个复杂的话题了，我也没有足够的时间去理解PAQ算法中全部的model，最终我们的选择的是Burrows-Wheelter Transform变换（PS这个变换也是理解很简单，自己写起来就是很复杂的典型）加上只考虑order0、order1、前两个字符是否相等的一个mix model下的算数编码，感兴趣的话可以看那个网站，有一些简单的介绍。</p>
+<p>最后吐槽下，压缩这块真的资料很少，找来找去最后都到一个俄罗斯人的<a target="_blank" rel="noopener" href="https://encode.su/forum.php">论坛</a>，里面有各路大神发布自己的代码，不得不感叹毛子的数学基础就是强。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://titanxxh.com/2020/12/26/simple-data-compression/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bwt/" rel="tag">bwt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/huffman/" rel="tag">huffman</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lz77/" rel="tag">lz77</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/modeling/" rel="tag">modeling</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/paq/" rel="tag">paq</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/" rel="tag">压缩算法</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/03/31/golang-dynamic-injection/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            golang 下反射 plugin 中的类型实例实现动态注入
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2020/12/01/2020-gopherchina-review/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">GopherChina2020个人总结</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "ia41cglQCxRedIwdOc67NiAX-gzGzoHsz",
+    app_key: "KOnLtQoHltrMsr9EtJsXFGYU",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2022
+        <i class="ri-heart-fill heart_icon"></i> 仙雾
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/meeple.png" alt="Meeple Life"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh/">Instagram</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Links</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="boardgame, programming, football" />
+       
+      <meta name="description" content="titanxxh&#39;s blog | boardgame | programming" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>[桌游人生]第五期.简论桌游的策略度 |  Meeple Life</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-boardgame-life-5-the-strategy-of-a-boardgame"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  [桌游人生]第五期.简论桌游的策略度
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2015/06/30/boardgame-life-5-the-strategy-of-a-boardgame/" class="article-date">
+  <time datetime="2015-06-30T15:46:28.000Z" itemprop="datePublished">2015-06-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/">桌游感悟</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.7k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">9 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>本文首发于<a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/3713806304?pn=1">桌游吧</a>，起因比较复杂，这里就略去了。</p>
+<p>提到策略度，本人虽然玩得桌游比不上吧内一干大神，敢说玩得精的桌游也没有几个，但是相信自己还是有能力来总结一下的。<br>这里就着我昨天的回帖拓展开说一下。</p>
+<p>一款游戏的策略度可不可以量化？我个人认为是可以的，但是比较复杂，具体详述的话写一篇论文我觉得都不够。<br>首先，必须指出的是，不同类型的游戏之间的策略度很难进行直接比较（但是可以间接比较），为了不让本文写得过于冗长而重点缺失，所以下面我说的都是同类型的游戏的比较。</p>
+<p>游戏的策略度，可以定性的分成<strong>深度</strong>和<strong>广度</strong>。</p>
+<p>先说广度，简单来说就是每回合玩家在当前的状态（自己的玩家面板/手牌，若有公开信息的话再加上其他玩家的情况）下可以做的<strong>有效决策</strong>。由于是桌游，所以一般而言设计师不会像设计电子游戏那样去设计一款桌游，因此每次玩家做决策的时候有效选择其实是不多的（一般来说0-10个），而有些weight分比较高的游戏，则可能把这个数量有一定程度的提高。这里需要强调的一点是，在广度上，玩家的决策更多的是受到设计师的设计说提供的选项的影响，结合游戏规则来最终做出决策。举一个比较简单的例子，农场主，农场主的工人摆放位其实就是设计好的那些个（每回合会增加新的），玩家在执行行动的时候根据规则需要支付一些资源/满足一些条件，如果要提升这款游戏的策略广度的话怎么办呢？很简单，添加更多的行动位/增加更多的资源种类（比如祈祷与工作）/条件限制。然而这种广度上的拓展是有一个度的，之前我也提到了桌游设计不比电子游戏，一味的增加选项/提升限制条件并非一件好事，这一点从许多设计师的设计师笔记上我们就可以看到，很多游戏的雏形刚有的时候内容是很具象而丰富的，随着设计进程的推进，设计师会慢慢精炼自己的设计。<br>总结一下就是，广度作为游戏策略度的一方面，很大程度上取决于设计师的设计，而玩家需要在游戏的时候做的思考在这里是占得比较低的比重的（玩家只需要check自己的当前状态满不满足一些条件，事实上有计算机的辅助的话这个步骤甚至可以跳过）。</p>
+<p>然而另一方面，也就是深度，我认为才是决定一个桌游的策略度的影响更大的那一方。深度的定义不像是广度那样直观，总的来说，深度决定了玩家在决策时候需要考虑的层次。注意这里的层次含义就很丰富了，一般来说包括不限于以下几个方面：</p>
+<ul>
+<li>玩家自身的中/长期规划；</li>
+</ul>
+<p>这个在大多数游戏中都有很好的体现，玩家需要通过建立起一个中/长期的规划，比如很多游戏是需要建立自己的刷分引擎的（比如玛雅日历），策略度强的游戏，在游戏的过程中，一个对自己有规划的玩家一般都比没有规划每回合独立行动的玩家，或者更容易取得优势，或者思考得更为有效率。如果一款游戏相对于另一款游戏，玩家更难地清晰地建立起自己的规划，那么我们可以说这款游戏的策略度相对更深。</p>
+<ul>
+<li>矛盾出现时如何权衡；</li>
+</ul>
+<p>在许多有资源争夺（德式游戏中为数不多的玩家互动的形式之一）的游戏中，很容易出现，鱼和熊掌不可兼得的情况，而获取资源上的矛盾也会进一步影响到玩家的短期甚至长期规划，这里的资源包含了能帮助玩家取得胜利的一切具体或者抽象的事物，比如资源矛盾体现在可以是农场主中的木头/石头；也可以是祈祷与工作中你居民点的取舍（这里详述一下，不同的居民点选择可能会导致后续的策略重心完全不同）；甚至可以是嘴炮游戏中盟友的缔交/仇敌的结识。如果一款游戏中，需要权衡的矛盾越多，权衡所依据判断越难以决定，那么我们可以说这款游戏的策略度相对更深。</p>
+<ul>
+<li>随机因素如何控制；</li>
+</ul>
+<p>许多带有公共牌库，或者布袋子抽板块，或者投骰子这种元素的游戏中，会引入随机因素，然而并未随机因素的多寡直接影响一个游戏的策略度。设计的好的游戏，即使有一定的随机因素，也可以让玩家通过游戏内的一些机制来对其进行一些控制，典型的游戏比如勃艮第/特鲁瓦，而设计的不好的游戏，玩家在随机因素面前更多的是一种人算不如天算的无力感，具体例子我就不举了（怕犯众怒）。如果一款游戏的随机因素的出现，可以通过某些机制使得影响到玩家的状态不至于引起较大的波动，那么我们可以说这款游戏的策略度相对更深。</p>
+<ul>
+<li>确认你的主要对手（有非公开信息的话）；</li>
+</ul>
+<p>一般性这种问题出现在游戏的胜利信息或者其他关键信息不公开或者不完全公开的情况下，玩家需要确认自己的对手。然而需要强调的是，对于某些信息完全公开的游戏，确认对手也并非是一件简单的工作。要体会这两点其实几个例子就够了，三国杀就是一个有隐藏信息而确认对手身份比较简单的游戏，往往在一个回合后大多数玩家身份就明朗了，并且不会随着游戏的进程而改变；现代艺术就是一个由于游戏的关键资源——金钱/其他玩家的手牌种类的隐藏，而确认对手的比较困难的游戏，并且对手会随着游戏的推进而不断进行变化；另一个例子是祈祷与工作，这是一个0随机信息完全公开的游戏，但是即使是我玩过40多局后，仍然很难在游戏的D阶段之前清晰地分析出和我水平相当的其他玩家的当前局势到底是略优于我还是略逊于我。如果一款游戏，玩家确认对手的难度越高，对手变换的频率越高，那么我们可以说这款游戏的策略度相对更深。</p>
+<ul>
+<li>如何限制你的对手；</li>
+</ul>
+<p>传统意义上的美式游戏，限制对手的方式往往较为直接，而传统意义上的德式游戏，限制对手的方式往往比较不那么直接，并且从游戏设计的角度也更加倾向于不希望玩家过度重视去干扰对手的发展而忽略自身的发展。这一条事实上和上面的一条是有很大关系，你如果确认对手出错，或者是主要对手已经更换而你没有察觉，你对错误的人进行了错误的干扰，不仅对对手的游戏体验造成了不好的影响，更严重的甚至会让整个游戏失去平衡。总的来说，如果一个游戏限制对手的方式更不直观，限制对手的代价越大，确认对手的难度越大，那么我们可以说这款游戏的策略度相对更深。</p>
+<ul>
+<li>如何防止被对手限制/如何让自己被限制后的次优决策不至于过差（提高下限）等等。</li>
+</ul>
+<p>最后这一条，也是我列出的这些条目中唯一的一个需要揣测他人的条目，俗话说的好，知人知面不知心，人心难测啊。同样地，这一条也和上面的一条有联动，你是如何去思考限制你的对手的，很大程度上也决定了你的对手会如何思考来限制你，但是这一点实在过于复杂，我很难来阐述清楚，因为这涉及到你对你对手的思维层级上的判定。但是后面的一点——如何让自己被限制后的次优决策不至于过差（提高下限），我还是比较有心得的，本科时候我有一个玩得比较好的基友，如果单论游戏决策的精算，我自认不如他（当然他陷入长考的次数比我多多啦），但是他往往会过多得关注了自己的发展，而忽略了他人可能对他的影响，这一点在2人游戏中还不是非常明显，在多人游戏中体现的就比较突出了，有时候他的行动取决于其他2/3位玩家会不会卡掉他的行动，一旦卡掉，他立马整个计划会崩盘，但是没有人去卡，则他能够顺利实施一个最优的决策。这里需要注意的是，你是在和人玩游戏，你很难清楚每位玩家的思维，也无法将他人全部定义为一个纯理性的决策者，所以当你做决策时，提高自己后续可能状态的平均值的同时，减小方差也是一个很必要的考量。最后对于这一条我就不评判什么游戏策略度高了。。。</p>
+<p>由上可以看出，游戏的策略度分析其实是一个十分困难的工作（即使是定性分析），可以说只有当你将一个游戏精通后（这往往意味着大量的时间的付出），才敢完全地将其定量分析。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://titanxxh.com/2015/06/30/boardgame-life-5-the-strategy-of-a-boardgame/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E5%8F%97/" rel="tag">感受</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">感悟</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AD%96%E7%95%A5/" rel="tag">策略</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2015/07/01/answer-to-zhihu-question-is-boardgame-doomed-to-failure-in-china/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            答知乎问——桌游在中国是不是注定要走向穷途末路？
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2015/06/30/essen2014-6-fields-of-arle-rule-intro-opening-box/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">[仙雾的Essen2014]游戏概览6&amp;开箱——Fields of Arle</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "ia41cglQCxRedIwdOc67NiAX-gzGzoHsz",
+    app_key: "KOnLtQoHltrMsr9EtJsXFGYU",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2022
+        <i class="ri-heart-fill heart_icon"></i> 仙雾
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/meeple.png" alt="Meeple Life"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh/">Instagram</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Links</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

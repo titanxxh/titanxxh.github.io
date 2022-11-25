@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="boardgame, programming, football" />
+       
+      <meta name="description" content="titanxxh&#39;s blog | boardgame | programming" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>[桌游人生]第六期.浅谈乌老师的游戏设计理念 |  Meeple Life</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-boardgame-life-6-the-design-concept-of-uwe-rosenberg"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  [桌游人生]第六期.浅谈乌老师的游戏设计理念
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/" class="article-date">
+  <time datetime="2015-10-31T16:09:35.000Z" itemprop="datePublished">2015-11-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/">桌游感悟</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4.7k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">15 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>本文首发于去年一刻馆的<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MjM5MjE5Mjk5Mg==&mid=200807065&idx=1&sn=48413c205d9020884676c3420f3e69eb&scene=4#wechat_redirect">微信公众平台</a>，也在<a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/3279289468?pid=57030011213&cid=0#57030011213">桌游吧</a>发过一遍，不过当时由于洞穴农夫和大农场没怎么玩所以就没怎么写，现在正好来更新一遍。</p>
+<h2 id="乌老师！"><a href="#乌老师！" class="headerlink" title="乌老师！"></a>乌老师！</h2><p><img src="https://cf.geekdo-images.com/images/pic537818_md.jpg"></p>
+<p><strong>Uwe Rosenberg</strong>，中文翻译BGG上给出的是乌·玫瑰山，但更多中国玩家喜欢亲切地称呼他为乌老师。关于乌老师的简介网上已经有太多，这里仙雾就不过多介绍了，有兴趣的玩家可以去Wiki上自行搜索。每每谈及乌老师设计的游戏，得到的评价往往褒贬不一，不喜欢的玩家往往能列出一个包含各种理由的清单，相信炒冷饭几乎会是所有人这份清单上的交集；而喜欢乌老师的玩家，特别是像仙雾这样的脑残粉，总是能在乌老师的每一款新游戏上看到自己所钟爱的那一部分，同时又对乌老师的每一个设计上的改变带来的惊喜兴奋不已。不论乌老师在玩家心中的地位如何，乌老师在桌游界的地位可以说是不容质疑，看看BGG的榜单，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/31260/agricola">Agricola</a>（农场主）第<strong>6</strong>，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/35677/le-havre">Le Havre</a>（港口）第<strong>15</strong>，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/39683/gates-loyang">At the Gates of Loyang</a>（洛阳城外）第190，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/70149/ora-et-labora">Ora et Labora</a>（祈祷与工作）第<strong>47</strong>，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/143693/glass-road">Glass Road</a>（玻璃之路）第176，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/102794/caverna-cave-farmers">Caverna: The Cave Farmers</a>（洞穴农夫）第<strong>3</strong>，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/159675/fields-arle">Fields of Arle</a>（两人大农场）第106，甚至是农场主和港口的两人版小游戏都能有不错的排名（108和604），虽然说排名不代表一切，但拥有如此多高排名的作品，至少说明这个设计师拥有着出色的设计理念，并多年来一直保持着极高的设计水准。说到乌老师的设计理念，仙雾一度怀疑他是否对中国的周易有所研究，不变中总是有所改变，而改变中也总蕴藏着某些不变，并且改变的比例总是恰到好处，而许多改变也的确是极大地提高了游戏的品质。</p>
+<p>纵观乌老师所设计的游戏，不论是一开始的被戏称为“饥饿三部曲”的农场主、港口和洛阳城外，还是后来的祈祷与工作、玻璃之路和洞穴农夫，不论它们的游戏机制如何，每一款都有着鲜明的乌老师的风格：可以进行单人游戏、不同人数时游戏体验良好、多路线选择、同样的经济类主题为背景，可以看出虽然时间过去了7年，乌老师最核心的设计理念其实一直保持不变。但在游戏的细节上，每一款都做出来许多值得称道的改变，接下来让仙雾挑选几款自己比较熟悉的游戏来进行分析。</p>
+<a id="more"></a>
+
+<h2 id="农场主"><a href="#农场主" class="headerlink" title="农场主"></a>农场主</h2><p><img src="https://cf.geekdo-images.com/images/pic769153_md.jpg"></p>
+<p>虽然农场主不是乌老师的开山之作，但是相信许多玩家都是通过农场主认识到乌老师的。作为乌老师的成名之作，在遥远的2007年，这款游戏的问世一举打破了波多黎各多年的统治，在将其赶下榜首的同时，也把自己送上了神坛。至今每当谈及农场主的时候，相信只要是老玩家，无一会不给出极高的评价。农场主作为一个经典的工人放置游戏，其中融入了一些比较新颖的细节设计，使得整个游戏的游戏性得到了极大的提升，比如可选行动会随着游戏的进程越来越多，独特的职业卡和次要发展卡，资源每回合都会累积等等。这些细节的设计相互之间也互有牵连，使得游戏整体上看上去没有突兀的感觉。举例来说，随着游戏进程的推进而加入的行动对玩家而言理应更加具有吸引力，但是为了保证前期的行动不至于变成鸡肋的废行动，资源的累积就显得非常必要；为了使玩家之间资源的争夺不至于过于凶猛，职业卡和次要发展卡的加入就让大家能够选择适合自己的游戏思路；最值得称赞的就是资源累积的方式，正是由于这样的设计使得游戏的平衡性设计大大简化，因为资源累积的设计本身就是自平衡的，当一个行动格上的资源不够有吸引力的时候玩家自然不会选择，而它总会累积到足够有吸引力的时候，另一方面，玩家可能并不会仅仅因为这个资源数量没有达到自己的期望而不选择它，而是考虑到下回合它的增长会使得其对其他玩家有相当大的吸引力，而仍然提前选择拿走资源，你很难等到完美的时机拿走合适的资源，这就让整个游戏中充满了一种不完美的美，我们的生活不也是如此么？成也萧何，败也萧何，固然职业卡和次要发展卡的加入使得游戏可重玩性大大提升，但是一些过于强大的单卡，或者是combo不可避免地破坏了游戏的平衡性，并且将大量抉择堆在游戏的初期的做法（类似于四季物语）也引起了较大的争议，对新玩家不够友好；喂养的设计似乎令玩家感到略为紧张，惩罚又过于严厉，让玩家感到沮丧；资源累积的设计虽然出色，但是在游戏的后期每回合补充的时候显得又过于繁琐，相信不少玩家都遇到过多名玩家一起帮忙补充资源以加快速度，反而重复添加或者是遗漏了某种资源的情景。总体来说，农场主仍然是许多玩家中不可超越的神作，更是乌老师所有作品的奠基之作，也是后世众多其他设计师借鉴的源泉。</p>
+<h2 id="港口"><a href="#港口" class="headerlink" title="港口"></a>港口</h2><p><img src="https://cf.geekdo-images.com/images/pic392682_md.jpg"></p>
+<p>到了2008年，乌老师更进一步，推出了自己的丰收三部曲的第二部——港口。曾几何时，农场主港口双双杀入BGG榜单的前五，成为许多乌粉口中津津乐道的光辉事迹。港口中很明显地能看到农场主的影子，但同样有值得一提的诸多改变。工人的数量被减少到了只有一个；玩家主要的资源——金钱可以向银行贷款；建筑是在一定范围内随机被翻出等等。乌老师自己似乎也觉察到了农场主存在的一些明显不足，并在港口中进了一些优化，比如喂养不再像农场主那么令人紧张，再不济还有贷款这种途径。此外，最明显的改变是资源补充的方式，将回合初始的大量资源一次性补充，平摊到每位玩家回合开始时候固定的补充两个资源，这就避免了农场主的重复/遗漏补充，同时这个补充资源的行动变相地成为了游戏的一个节拍器，并且由于这个节拍器是七个节拍的，每位玩家的喂养节奏是一样的而行动次数却不尽相同，也就造就了每个玩家的节奏其实是不一样的，正是这样的设计帮助玩家错开了自己的行动思路。同样的，这种固定的资源补充节拍设计也有自己的缺陷，比如无法添加新的资源种类，资源累积的速度其实是个常量等等。也因此，港口在一些玩家心目中的地位能高于农场主，而另一些玩家却认为远不如农场主。</p>
+<h2 id="祈祷与工作"><a href="#祈祷与工作" class="headerlink" title="祈祷与工作"></a>祈祷与工作</h2><p><img src="https://cf.geekdo-images.com/images/pic1602653_md.jpg"></p>
+<p>之后的2009年，乌老师以洛阳城外这样一款略显轻量级的游戏结束了自己的丰收三部曲，这里仙雾不过多详述。在沉寂了两年之后，乌老师带着一款新的作品出现在了展会上，这就是仙雾个人最喜欢的Ora et Labora，仙雾和朋友们更喜欢把它叫做祈祷。如果要用两个字来概括祈祷与工作的设计的话，仙雾认为一定是优雅。在推新时，很多没有之前玩过乌老师游戏的玩家或许看到那个不大的轮盘时最多也就是好奇，甚至有些不解，但是对于乌老师的老玩家而言，一定会为这个天才设计而拍案叫绝，圆形真的是一个很完美的图形，人在经过世事的打磨后学会了圆通处世，而这个轮盘的设计似乎也受到了乌老师多年的打磨，最终形成了一个如此优雅的解决方案，只要轻轻拨动指针，一切都已完成（后来的卓尔金历或多或少也借鉴了这个思想吧）。这个设计很好地解决了农场主补充资源的繁琐，同时也结合了港口中节拍器的功能，并且使得在游戏中引入新的资源变得十分简单，诚然，这种轮盘式的设计也有自身的缺陷，比如农场主中同种类的资源可以有不同的增长速度，而这里就不行，但这不妨碍我们赞美这个优雅的设计。除了对资源增长做出了大的改进以外，在祈祷中，乌老师将建筑的相对位置这一概念引入了游戏，并在很大程度上改变了游戏的计分方式，同时也提升了玩家思考的层次，玩家除了要思考何时应当购买何种建筑还需要规划自己的建筑位置的摆放，以提高自己居民点的得分，这就要求玩家有更高的全局战略，也可能正是因为这个复杂性的提升，让乌老师摒弃了任何的随机因素，也同时控制了所有建筑的数量，以减轻玩家的思考负担。同样值得一提的是在以往乌老师游戏中常见的喂养阶段被取消，取而代之的是一个更为巧妙且更为灵活的居民点建造阶段，玩家再也不用因为喂养阶段的不足而感到沮丧，而且玩家在建造居民点的时候可以有所选择，即使暂时无法建造高分的居民点，也可以选择建造分数略低的居民点从而节省资源，转而提前为后面的游戏做准备，由于居民点得分主要还是看周围的建筑，因此该居民点本身并不会太过于影响最后的得分，这个设计就显得对玩家更为友好。祈祷与工作的另一个优点在于玩家互动上，在一个建筑被其他玩家抢先建造后，对你而言并非是一件坏事，因为你仍然可以使用该建筑，甚至可以在该玩家之前就享受到这个建筑的好处，此外你还能节省下建造该建筑的资源，但另一方面，你会让对手更快地完成工人的轮换同时也降低自己工人轮换的速度。最后，我个人认为祈祷最出彩的一点就是对落后玩家友好，前期发展不顺的时候（比如建筑被抢，发展路线受扰），很多游戏该玩家基本就退出了竞争，但是在本游戏中，在最后的阶段之前，你仍然有机会将手中的资源合理地分配，兑换成分数并迎头赶上。正是因为各种各样的原因，祈祷与工作成为了仙雾最喜欢的游戏、开局时间最多的游戏（没有之一），也是仙雾在BGG上少数几个给满分的游戏之一，一个游戏得高分可能是设计新颖、机制完善、游戏体验好等等的理由，但是若是一个游戏给满分，我想只有一个原因，那就是这位玩家深深的爱，如果说在对的时间爱上了对的人称之为幸福，那么我想在对的时间遇上对的人玩到对的游戏那可以说是另一种幸福吧。</p>
+<h2 id="玻璃之路"><a href="#玻璃之路" class="headerlink" title="玻璃之路"></a>玻璃之路</h2><p><img src="https://cf.geekdo-images.com/images/pic1818805_md.jpg"></p>
+<p>之后的一年，乌老师推出了农场主和港口的两人版小游戏，精简了原游戏的同时仍然不失策略，是和另一半闲暇时候开一局的好选择。2013年，乌老师一下子推出了两款作品，玻璃之路和洞穴农夫，其中玻璃之路由于游戏时长较短，仙雾和好友开了较多的局数。玻璃之路中，乌老师采用了和祈祷与工作中类似的建筑物建造的设计理念，并进行了简化，将建筑归为三类：转换型建筑、一次性建筑、得分建筑，并沿用了祈祷与工作的资源转换的思想，推动游戏进程。玻璃之路的新意在于，每个玩家不再需要将自己的资源一摞摞地放在自己面前，而是使用了类似于祈祷与工作中的轮盘来记录自己的资源数量，采用这一设计的更深层次原因是，游戏中高级资源的获取需要消耗基础资源各一个，而这恰好由指针转动一格这个动作来代替，是不是很优雅？此外玩家打出人物卡的规则设计也很巧妙，由于玩家每回合需要从15张人物卡中选择5张，但是只能主动打出其中的三张，而另外两张需要借助别人的行动打出，否则就浪费了，这就要求玩家合理选择自己所需要的人物的同时，要考虑其他玩家可能的选择，并在出人物卡的先后顺序上要注意；这一设计的另一个好处在于，先打出人物卡的玩家虽然有先手优势，可以优先选择自己想要的建筑，但是有更大的概率被被对手蹭到行动而降低行动的收益。玻璃之路的设计十分简明（可能乌老师的精力主要在洞穴农夫上吧），策略深度也不算太高，这个轻口味的游戏对于新玩家而言的确可以算是认识乌老师设计风格的入门作品。</p>
+<h2 id="洞穴农夫"><a href="#洞穴农夫" class="headerlink" title="洞穴农夫"></a>洞穴农夫</h2><p><img src="https://cf.geekdo-images.com/images/pic1799027_md.jpg"></p>
+<p>第三！第三！虽然我不是一个排名控，但是看着乌老师的洞穴农夫一路往上冲，心里还是有点小激动的。洞穴农夫的设计基本上是以农场主为基础，去除了职业和次要发展卡，加入了很多的建筑一开始就直接可以让玩家购买（如同祈祷）；很多细节方面也简化了，比如圈地和喂养；同时使用打猎这样一个新设定，相当于玩家能有一个百搭一些的行动格，同时为了防止打猎过于不平衡，限制必须让武器等级最低的矮人先行动；此外得分其实也更为爽快，农场主又上限的得分被摒弃，偏门的发展同样可以刷出高分，也有利于区分玩家的策略路线。从这些细节可以看出，洞穴农夫的设计是沿袭了乌老师之前的游戏设计思路，真正的集大成者，所以就不奇怪它能够代替了农场主的位置成为现在乌老师排名最高的游戏了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在本文即将结束的时候，我想引用我以前看到的一句话来表达我对乌老师游戏设计的感受。“游戏设计是一种艺术，所有的艺术都有其特有的语言。在游戏设计中，机制中的元素是这个语言的主要部分，他们就像单词一样，对我们普通人而言，我们只能用它们写出平常的文章，但对于莎士比亚（之于文学）、乌老师SF等（之于桌游）而言，他们却能使用之创造出杰作。”乌老师更加难能可贵的是，他不断地精益求精，将一个简单的机制逐步提炼、创新，逐渐变得完美而优雅，当我们回头看去，虽然它早已不再是最初的构想，却总能追根溯源。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>很早就想写一篇关于乌老师的游戏的文章，但是始终没有付诸行动，一是我的确没有深入地玩过每一个乌老师的游戏，比如洛阳城外只是看过介绍，我根本没玩过，自己也并不是什么桌游圈名人，只是个普通玩家，总觉得自己不够格；二是乌老师的游戏的确自成一派，写得不好容易引起两方面的炮轰。上个月看到一刻馆的寻人启事，思前想后还是决定尝试一下，但是由于之前家里搬家，也不是很有空来写文章，不过看着新书房里自己的桌游墙，总算是有了点动力，决定就写一写自己对乌老师游戏的浅见。此外我刻意省略了祈祷与工作的缺点部分，因为实在不忍心批评自己最爱的游戏，我要感谢在我最空余的大三大四的时候遇到了同样喜爱祈祷的朋友们，我还记得许多次我们游戏结束时，竟然都是平分，在一个得分达到几百的游戏中多次同分的确让人惊讶，同时我也为没有错过这样一个好游戏而感到幸运（<del>据我所知祈祷没有再版过，现在也几乎买不到。</del>好消息！祈祷与工作已经由游人代理中文版，预计明年初就能买到了，质量是像德文第二版那样有过提升的应该）。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://titanxxh.com/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Uwe-Rosenberg/" rel="tag">Uwe Rosenberg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B9%8C%E8%80%81%E5%B8%88/" rel="tag">乌老师</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E5%8F%97/" rel="tag">感受</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">感悟</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2015/11/01/ora-et-labora-quantitative-analysis/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            祈祷与工作量化分析
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2015/10/08/essen2015-preview-3-old-and-new-games/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">[仙雾的Essen2015]前瞻3——旧爱新作</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "ia41cglQCxRedIwdOc67NiAX-gzGzoHsz",
+    app_key: "KOnLtQoHltrMsr9EtJsXFGYU",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2022
+        <i class="ri-heart-fill heart_icon"></i> 仙雾
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/meeple.png" alt="Meeple Life"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh/">Instagram</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Links</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
