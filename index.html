@@ -1,1293 +1,577 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Meeple Life - 一个桌游玩家，程序猿，足球迷的生活</title><meta name="keywords" content="boardgame, programming, football"><meta name="author" content="仙雾"><meta name="copyright" content="仙雾"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Meeple Life"><meta name="application-name" content="Meeple Life"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="website"><meta property="og:title" content="Meeple Life"><meta property="og:url" content="http://titanxxh.com/index.html"><meta property="og:site_name" content="Meeple Life"><meta property="og:description" content="titanxxh&amp;#39;s blog | boardgame | programming | football"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta property="article:author" content="仙雾"><meta property="article:tag" content="boardgame, programming, football"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta name="description" content="titanxxh&amp;#39;s blog | boardgame | programming | football"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://titanxxh.com/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: {"skills":["桌游老司机","巴西死忠","ISTJ"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Meeple Life',
+  title: 'Meeple Life',
+  postAI: '',
+  pageFillDescription: '',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-27 04:49:10',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-
-<html lang="en">
-  
-
-    <head>
-      <meta charset="utf-8" />
-       
-      <meta name="keywords" content="boardgame, programming, football" />
-       
-      <meta name="description" content="titanxxh&#39;s blog | boardgame | programming" />
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
       
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
-      <title> Meeple Life</title>
-  <meta name="generator" content="hexo-theme-ayer">
+        get: key => {
+          const itemStr = localStorage.getItem(key)
       
-      <link rel="shortcut icon" href="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/favicon.ico" />
-       
-<link rel="stylesheet" href="/dist/main.css">
-
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
       
-<link rel="stylesheet" href="/css/fonts/remixicon.css">
-
-      
-<link rel="stylesheet" href="/css/custom.css">
- 
-      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
-       
- 
-
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
-      <!-- mermaid -->
-      
-      <style>
-        .swal2-styled.swal2-confirm {
-          font-size: 1.6rem;
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
-      </style>
-    <link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
-</head>
-  </html>
-</html>
-
-
-<body>
-  <div id="app">
+      }
     
-      
-    <main class="content on">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover2.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">Meeple Life</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-
-
-<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
-
-
-<!-- Subtitle -->
-
-  <script>
-    try {
-      var typed = new Typed("#subtitle", {
-        strings: ['What I cannot create I cannot understand.', '', ''],
-        startDelay: 0,
-        typeSpeed: 50,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-      });
-    } catch (err) {
-      console.log(err)
-    }
-  </script>
-  
-<div id="main">
-  <section class="outer">
-  
-  <ul class="ads">
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5ccc.jpg" width="300" alt="云服务器限时秒杀">
-            </a>
-        </li>
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8630075">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5cd7.png" width="300" alt="vultr优惠vps">
-            </a>
-        </li>
-    
-</ul>
-  
-  
-  
-
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
-</div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
         })
-        .catch(console.error)
-</script>
 
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
-  
-  <article class="articles">
-    
-    
-    
-    
-    <article
-  id="post-from-boy-to-father-only-a-few-world-cups"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/11/21/from-boy-to-father-only-a-few-world-cups/"
-    >从男孩到父亲，不过几届世界杯</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/11/21/from-boy-to-father-only-a-few-world-cups/" class="article-date">
-  <time datetime="2022-11-21T07:40:07.000Z" itemprop="datePublished">2022-11-21</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="童年"><a href="#童年" class="headerlink" title="童年"></a>童年</h2><p>作为一个晚熟的男孩，对初中前的记忆都很模糊，尤其是02年之后来了上海这座新城市读初中，一下子把自己的童年都切割了，但是自始至终有一件事情的记忆无比清晰，那就是足球。</p>
-<p>小学那会儿还是中国足球氛围最浓的时候，和同学放学后的活动就是在球场上踢球玩，还记得我妈给我报了足球班，中暑了之后仍然说要去，踢球反复蹭破膝盖导致伤口化脓还是要继续踢；作为一个语文渣，甚至一个人在家玩球，还写了小作文——左右脚足球赛上了报纸。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/2002-final.jpeg" alt="2002韩日世界杯决赛，横滨国际体育场，巴西2-0德国，罗纳尔多补射破门"></p>
-<p><strong>02年韩日世界杯</strong>是我有印象的第一届世界杯，中国队第一次进入世界杯决赛圈，所有学校都停课看比赛。后来的事情大家都知道了，本以为只是国足辉煌的开始，没想到已是巅峰。也是那个时候，我有了自己的足球主队——巴西，最终3R组合威风八面，巴西队7战全胜，第五次加冕。毫不夸张的说，当年真的是满城尽是黄衫9号（字面意义上），所有人都被罗纳尔多给征服。时至今日，罗尼也成了我唯一追过的球星。</p>
-<p>到上海之后，这边的同学没人踢球，一下子失去了环境，毕竟还在读书，看电视的机会也不多，只能通过买足球周刊、看足球之夜、天下足球来了解比赛，按现在的话来说，慢慢地变成了一个云球迷。其实在02年的时候自己还是小城市里的小朋友，没有信息渠道，对球星知道的非常少，但是通过足球周刊、足球节目了解了更大范围的足球世界，比如知道了罗尼的传奇，才知道他02年世界杯前的几年因为连续重伤根本就没打几场球，没有人看好巴西队，也很少人会猜到他能够单届世界杯进8球。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/2006-quad.jpeg" alt="2006德国世界杯，巴西队的7号8号9号和10号，纸面实力爆炸"></p>
-<p>到了<strong>06年德国世界杯</strong>，正好轮到我中考结束，所以可以毫无顾忌的看球。那一年的巴西真的是纸面实力无敌，罗纳尔多+罗纳尔迪尼奥+卡卡+阿德里亚诺的魔幻四重奏，再加上前一年联合会杯和美洲杯的夺冠，所有人都认为巴西能连续四届世界杯进入决赛，第六次捧杯，罗纳尔多将比肩贝利的时候，巴西再一次倒在了法国脚下。我还记得那一年我一个人在小房间郁闷了很久，那也是我第一次也是唯一一次为足球落泪，更让我没想到的是这场比赛竟然就是罗尼的国家队绝唱。</p>
-<p>渐渐发福的罗尼职业生涯也彻底走上了下坡路，所有人都在或感叹巴西天才集体早衰、抨击他们不自律，作为一个热血少年当时也和现在很多小朋友一样，喜欢在贴吧和人对喷。虽然嘴巴上不承认，但是不得不接受的事实就是巴西队的天才球员越来越少了，而且世界足坛的中心已经彻底到了欧洲，欧冠联赛的重要性越来越大，所有球员必须接受欧化的踢球思路。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/2009-final.jpeg" alt="2009联合会杯决赛，巴西3-2逆转美国，队长卢西奥打入反超进球激动不已"></p>
-<h2 id="大学"><a href="#大学" class="headerlink" title="大学"></a>大学</h2><p>到了<strong>10年南非世界杯</strong>巴西的核心是踢球风格很欧洲的卡卡，而主教练是老顽固邓加，邓加虽然带领巴西拿了前一年的联合会杯，记得联合会杯决赛巴西0比2落后，最后连追3球时我激动不已。不过总体上来说，邓加太过务实的风格实在是让人喜欢不起来，并且他没有带上当时已经在巴西国内出名的内马尔，我心里是骂了他一万遍。最终这支想欧欧不动的球队同样在8强被淘汰，而那场比赛也和四年前一样完全让人摸不着头脑，上半场巴西基本上压着荷兰打，梅洛一脚妙到毫巅的直塞帮助巴西取得领先，没想到下半场他就变成了罪人，巴西被一个乌龙和角球破门送回了家，邓加随即下课。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/2010-melo-red-card.jpeg" alt="2010南非世界杯，巴西1-2荷兰，梅洛被红牌罚下"></p>
-<p>邓加固执的用人没有让年轻球员的得到充分的锻炼，这也让巴西足球在很长一段时间内经历了人员荒，11美洲杯淘汰赛伊始就输给巴拉圭，巴西进入了彻底的低谷，不过看了多年球的我已经能够平静地接受这一事实。直到13年联合会杯，巴西只能凭借东道主的身份勉强参加，我都不是很看好这支年轻的桑巴军团能夺冠，然而我又被啪啪打脸了，不过决赛场上3-0完爆江河日下的西班牙，事后看来或许只是助长了二进宫的大菲尔对落后的战术体系的坚持。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/2013-final.jpeg" alt="2013联合会杯决赛，巴西3-0西班牙，内马尔爆射进球"></p>
-<p>大学里由于时间相对自由，所以也是我看球最多的一段时间，绝代双骄的同场竞技固然精彩，可能因为我是巴西球迷，比赛看的越多，就越找不回曾经的看球激情。直到内马尔登录欧洲，纯正的桑巴风格真的让人眼前一亮，敢在场上做动作，当然受到对手的“照顾”也多，欧洲人自然是不喜欢这种风格，但正所谓千金难买爷乐意，喜欢巴西的人看球不就是好这口吗？</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/all-games.png"></p>
-<p>在大学校园可以用校园网，而校园网有个好处就是PT下载非常快，所以当时我加各种PT站，开始慢慢搜集历年来巴西国家队的比赛视频，到了14年巴西世界杯前夕，<strong>我基本上收集齐了94年世界杯以来每一届大赛的比赛资源，巴迷社区论坛里的人应该都下过我共享的资源。</strong></p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/2014-17.jpeg" alt="2014巴西世界杯，巴西1-7德国赛后的金杯爷爷"></p>
-<p><strong>14年巴西本土世界杯</strong>，所有巴西球迷都很期待内马尔的第一届世界杯表现如何，但是说实话，我还是预期不高的，没想到小组赛内马尔就整进去四个球，而且竟然突破了8强，半决赛对阵德国，虽然当时内马尔和队长蒂亚戈席尔瓦都上不了，我还是觉得只要保守一点应该有机会，最后上半场0-5的时候我气得砸桌子，砸到小拇指都受伤了。那场比赛之后很长一段时间都没缓过来，比赛视频也不收集了。</p>
-<p>到了工作之后，空闲时间大幅减少，兴趣爱好必须精简，而半夜看球实在是个奢侈的爱好，尤其是西甲和欧冠那阴间的开球时间，只能看几场英超或者第二天找回放看看。梅西受伤，内马尔带队踢了10几场球那段时间的比赛看了不少，感觉这小伙儿能成大器，有球无球都能打，只可惜内马尔最灵动最巅峰的日子里没有遇到最好的巴西。俄罗斯世界杯南美区预选赛，前六场打完，踢得不知道什么东西（好像就赢了1场球），好在换帅蒂特之后一波连胜提前出线。</p>
-<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p><strong>18年俄罗斯世界杯</strong>是我离世界杯最近的一次，因为我去了现场，而且是和最爱的人一起！（参考这篇——<a href="/2018/09/11/russia-2018/" title="2018俄罗斯世界杯vlog">2018俄罗斯世界杯vlog</a>）我记得FIFA刚刚开始售票，连小组抽签都没有开始的时候，我就第一时间盲买了半决赛的票（从理性的角度分析来看，买的半区不对，因为东道主固定是A1，所以种子球队和他在同一个半区的概率是3/8），然后又买到了3-4名决赛的票，提前请了长假。后来出了抽签结果，我看见我的半决赛的票正好是巴西队的半区，兴奋了半天。    </p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/2018-bitter-sweet.jpeg" alt="Beloved Brazil cannot enter final, Beloved girl will still marry me!"></p>
-<p>踏上俄罗斯的飞机前我已经穿上了巴西球衣，没想到“落地成盒”，刚一落地手机还没信号的时候，后座小伙已经告知我比利时淘汰了巴西的消息，顿时整个人都不好了，只能当来俄罗斯旅游了。不过有一说一，俄罗斯粗中有细的气质还是很令人着迷，而且物价低，非常值得去。世界杯决赛我们为了进莫斯科大学的fanfest，绕着走了很长很长的路，最后和一群重体味的欧洲老爷们摩肩擦踵的在广场上看完了决赛，只记得决赛一结束，就下起了倾盆大雨，那味道真的酸爽。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/2018-stadium.jpg" alt="2018俄罗斯世界杯，天空被渲染成各种颜色的圣彼得堡体育场"></p>
-<h2 id="生娃"><a href="#生娃" class="headerlink" title="生娃"></a>生娃</h2><p>2020年是一个有特殊意义的年份，因为新冠疫情的开始改变了世界上所有人的生活，也因为小柚子的出生，让我变成了一个父亲。没有人能料到2020之后的世界线会变成现在这般模样，现在想想18年和老婆去了俄罗斯，19年去了西葡自己还是很幸运的。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/2019-camp-nou.jpg" alt="at 诺坎普"></p>
-<p>有了小柚子之后，爸爸的自由时间更是直接归零。既然这样，未竟的足球事业就交给她来做了，记得在小柚子很小的时候，家里就给她球玩，而且作为一个大运动发展超前的小朋友，很早就会走路跑步和踢球了，正好家楼下有大片草地可以带她跑一跑，每次看见别的小姑娘都穿着裙子在草地上玩，妈妈都会吐槽我们像个男孩子一样。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/molly-in-brasil.jpeg" alt="穿上巴西球衣的小柚子"></p>
-<p>到了2022年上海更是被封了几个月之久，既然去不了卡塔尔现场，那就在家看吧，世界杯氛围必须整起来，早早地在nike官网预定了巴西队22-23新款球衣和儿童版球衣，不得不说一家人穿着球衣走在路上那是相当的拉风。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/4-jerseys.jpeg"></p>
-<p><strong>20年的时间，巴西队从神坛跌落，最低的时候世界排名跌出过前十，又从低谷崛起，重新回到第一。</strong></p>
-<p><strong>20年的时间，一代人心中的足球情人宣布退役，而看着他踢球长大的巴西孩子已经成为了新生代巴西球员心中的偶像。</strong></p>
-<p><strong>20年的时间，天天在泥巴地里踢球的小男孩变成了带着一个小姑娘在草坪上奔跑的父亲。</strong></p>
-<p><strong>回首望去，20年不过5届世界杯，只要看球热情还在，那个心中的小男孩也就还在。</strong></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%96%E7%95%8C%E6%9D%AF/" rel="tag">世界杯</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%B2%E5%AD%90/" rel="tag">亲子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E6%9F%9A%E5%AD%90/" rel="tag">小柚子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%B4%E8%A5%BF/" rel="tag">巴西</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%88%90%E9%95%BF/" rel="tag">成长</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B6%B3%E7%90%83/" rel="tag">足球</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-small-world-big-world"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/10/30/small-world-big-world/"
-    >小世界，大世界</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/10/30/small-world-big-world/" class="article-date">
-  <time datetime="2021-10-30T14:00:07.000Z" itemprop="datePublished">2021-10-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <blockquote>
-<p>题记：小朋友的大世界对大人而言可能只是一个小世界，但希望每个大人都可以在这个世界里找到乐趣，和小朋友共同开心。</p>
-</blockquote>
-<h2 id="出生之前"><a href="#出生之前" class="headerlink" title="出生之前"></a>出生之前</h2><p>他和她刚刚结束蜜月长假，一起开心地制定着未来的世界奇观巡礼计划，仿佛全世界都在脚下。没过多久她怀孕了，在那一刻他还不清楚将要面对的是什么，因为他几乎没有自己小时候的任何记忆，或许迎来一个小生命不会对自己的生活有太大的改变吧，他侥幸地想。</p>
-<p>孕期的她没有特别大的反应，每一次孕检都很正常，可能你就是小红书上晒的天使宝宝吧，他们仍然像往常一样可以吃吃喝喝逛逛，顶着大肚子还去旅游，去法喜寺许愿。</p>
-<p>然而这个世界并不总是按照他愿意的方式运行，此刻的他还不知道接下来的几天他的世界将发生巨变，活动空间将局限在小小的病房内，不分白天与黑夜。</p>
-<p>本来大家一致以为应该延后的产期由于羊水破裂不得不提前送进产房，他在外面焦急地踱步，产房外的丈夫数量从十几个变成几个，最后只剩下他一个。夜已经深了，突然被告知需要转剖，还有点懵的他对于医生之后的话只记住了几个关键词，然后颤颤巍巍签下了自己的名字，小窗的门就合上了，他赶到手术室门外，看着显示屏上那唯一的名字，他试图打开wiki搜索相关信息来平复自己的心情，然而他失败了，眼泪终究是无可抑制地流了下来。手术其实进行的很快，但是对于他而言那段时间似乎特别漫长，直到护士出现在窗口，告诉他大人小孩一切正常，他才松了一口气，是的，他成为一个爸爸了。</p>
-<h2 id="头五天"><a href="#头五天" class="headerlink" title="头五天"></a>头五天</h2><p>由于需要观察妈妈的盐水是否结束，所以爸爸一直没有睡觉，同时一直等啊等，直到早上六点多你才结束观察送到妈妈身旁，爸爸盯着你小小的脸庞看了许久，实在是没找出什么地方像自己，直到许多天以后爸爸回到家翻看自己刚出生的照片一对比才发现什么叫神似。</p>
-<p>说实话，你刚出生的样子真的有点丑，但是护士都说你很厉害，一出生就会哭出眼泪了，而且非常会喝奶，趴在妈妈身上很快就掌握了诀窍，也没有把妈妈搞痛。都说小宝宝出生后头几天体重会下降，但是你第二天体重就不再下降了，真厉害！</p>
-<p>由于疫情的原因，只允许一位家属陪护不允许更换，爸爸记得那几天的睡眠时间完全是挤出来的，感觉自己一度被搞的神经衰弱。但是到了出院的那天反而很兴奋，看着你一点一点被小包被包起来，抱着你走出医院大门的那一刻，爸爸感觉自己有望成为妈妈之后你最依靠的人了。</p>
-<h2 id="头三月"><a href="#头三月" class="headerlink" title="头三月"></a>头三月</h2><p>然而还是要相信科学，那么小的小朋友是完全不认识人的。一开始的两个月里，你的世界就局限在小床里，视线30cm的范围内，妈妈、外婆、月嫂阿姨才是你最亲近的人，爸爸很快就排不上号了。</p>
-<p>到了三个月时候你好动的天性慢慢显露出来，抬头翻身均先人一步，你的世界已经不满足于小床了，无论在哪你都跃跃欲试。这个时候的你还很小只，爸爸可以把你放在大腿上给你做四肢的被动操，而你会用杠铃般的笑声和爸爸进行很简单的互动，由于之前剃了光头，从某些角度看你简直和爸爸小时候一模一样，以至于爸爸发了ins。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world-big-world/power-of-gene.jpeg" alt="基因的力量"></p>
-<p>回顾这百天，爸爸发现你样样都好，只是有一个问题阻碍了你成为小红书里面的天使宝宝，那就是——睡渣，爸爸貌似只成功哄睡了你一次，但是那次你睡得很好，以至于爸爸奔走相告，激动万分。但是考虑到这时期的宝宝本身就无法避免夜奶，睡眠一般都是不太行，此时的爸爸妈妈还并不觉得有太大的问题。</p>
-<h2 id="会走之前"><a href="#会走之前" class="headerlink" title="会走之前"></a>会走之前</h2><p>大运动超前的你很快就可以向前爬了，所以妈妈给你打造了一个自己的小天地，但是爸爸只想唱“柚子，柚子，你真了不得，小小围栏困不住你，爬出个运动员。”从一开始你就想往外走，还记得你第一次尝试往外爬的时候，你小短手小短腿腾在半空中，脸着地，非常不体面的完成越狱，奶奶竟然在旁边就眼睁睁的看着你，还在一边录像。</p>
-<p>为了让你在围栏里的小世界有点乐趣，爸爸开始教你玩玩具，但是你总是掌握不了重点，所以爸爸也就开始想办法自己找乐子，比如用套圈圈的玩具教连大小都不知道的你排序算法，反而你听的很认真的样子，也不知道你长大以后还能不能从记忆深处捞出这些知识。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world-big-world/sort.jpeg" alt="排序"></p>
-<p>你这个时候已经会无意识的叫爸爸妈妈，但是你最喜欢的还是是模仿一些没名堂的东西，比如爸爸妈妈在教你某些东西时候嘴里的一些拟声词你学得最快，一开始妈妈还不清楚这个基因是哪里来的，后来等到你姑婆们来家里，看到她们的口技的表演才知道原来这是许家祖传艺能。</p>
-<p>和头三个月一样，你仍然是个睡渣，可是爸爸和妈妈都是睡觉高手，怎么也想不通，于是爸爸进入了焦虑期（口头上的），整天在家“你还不能睡整觉，怎么办哟”，直到十一的时候，你突然睡了几天整觉，爸爸以为你终于觉醒了，正要庆祝，结果发现这只是偶然现象，从此彻底接受你是个睡渣的事实，你爱咋地咋地吧。</p>
-<h2 id="学会走"><a href="#学会走" class="headerlink" title="学会走"></a>学会走</h2><p>由于爬爬垫有围栏，你8个多月的时候就能自己扶着围栏站起来，然后大人们再给你一些双手才能拿的东西，你就会无意识的双脱手，渐渐的就学会自己独立站立了；同时你扶着围栏的行动速度已经很快，不需要几秒钟就可以绕围栏一圈；而且根据爸爸长时间的观察，你的腿部力量已经足够，并且爷爷也直呼小脚蹬得有力量，完爆路上见到的软绵绵的小朋友，所有的一切都说明你已经具备了独立行走的前置条件。这个时候爸爸在围栏里面通过快速从一个角落移动到对角，就可以利用你想要过来找爸爸的特点训练你独立走路，一开始的时候你只走一两步马上就会意识到危险，然后去找最近的围栏扶住，这时候爸爸可以重新换一个角，你又会再试一次，没过两天，你已经可以几乎可以走一个完整的对角，只是由于心太贪，最后几步不愿意走，而是会直接扑到爸爸的怀里。</p>
-<p>其实学会走路之前，小小的围栏世界就已经不太能满足你的探索欲望了，在学会走路之后你更是满屋飞奔，爷爷整天跟在你屁股后面怕你摔了，但是其实你走的很稳，防摔小书包买回来根本没用过几次，完全就可以走的很好。现在回想起来，爸爸妈妈似乎从来没有在你学走期间叮嘱你慢慢走，导致你就是比同龄的小朋友心大，没学会走就想跑说的就是你。</p>
-<h2 id="“一起”玩"><a href="#“一起”玩" class="headerlink" title="“一起”玩"></a>“一起”玩</h2><p>不得不说小朋友看世界的方式真的和大人不一样，在妈妈为你打造的小世界里摆了各种经典的玩具，但是你一开始从来不按照大人们设想的方式去玩，而是有自己的理解。所以虽然说是一起玩，其实很多时候都是爸爸在你的小世界里玩自己的，然后你在旁边玩自己的，直到某个瞬间你可能会发现爸爸玩的有些意思才会来和爸爸互动。</p>
-<p>比如家里的积木，在一开始爸爸试图教你如何搭形状，刚刚搭了一两块，你总是要来推倒，后来爸爸也放弃了，就开始自己想其他的玩法，有一次爸爸把各种形状的积木铺一层在圆形边框的积木盒的盖子上，目的是尽可能的利用空间在一层内多放置积木，你在旁边看爸爸是如何调整现有的积木位置再增加一块进去的过程，然后等到爸爸放第二层的时候你似乎也有点理解了，可以参与进来，自己进行这个过程。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world-big-world/pu.jpeg" alt="最密堆积"></p>
-<p>还有就是妈妈给你买了一个六面都有常见的和旋转概念相关的物件（钥匙开锁、指尖陀螺、螺丝螺帽）的“忙碌块”，本意是希望在飞机和高铁上keep you busy，然而可能是你对这些物件的正确使用方式完全不能理解或者不理解这些行为的后果有什么意义，只会用蛮力，所以自然也得不到什么乐趣，至于那个keep you busy的意图也失败了。后来爸爸自己在玩这个忙碌块，倾斜忙碌块，让旋转的指尖陀螺打击到垂下来的钥匙，你可能观察到钥匙弹飞再落下来又弹飞，觉得很意思，于是你也开始来用手打击指尖陀螺让它保持旋转，之后理解了旋转概念的你，又学会了用一只手不停地拍打螺帽可以让它向上转出来，然后用另一只手拍打可以让它向下转进去。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world-big-world/busy-block.jpeg" alt="忙碌块"></p>
-<p>当然更多的是那些无论如何也无法教会的玩具，比如教了你六个月的形状配对，不过现在回想起来，可能是爸爸自己也没有从中发现乐趣吧。</p>
-<h2 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h2><p>转眼间这边文章拖到了你快18个月的时候才发，实在是因为爸爸太懒了。回想这18个月的旅程，爸爸对养育一个新生命到底对一个人意味着什么这个问题有了更多的思考，在陪着你、看着你的世界从小变大、和你“一起玩”的过程中，爸爸感觉仿佛自己也在一起长大，找到了童年的乐趣，真正的乐趣。</p>
-<h2 id="写在在爸爸三十岁生日到来之际"><a href="#写在在爸爸三十岁生日到来之际" class="headerlink" title="写在在爸爸三十岁生日到来之际"></a>写在在爸爸三十岁生日到来之际</h2><p>爸爸最近在整理自己和妈妈小时候的照片时，脑海中总是浮现一个有趣的父女对话场景。</p>
-<p>女儿在看见爸爸小时候的照片时，好奇的问爸爸这个小男孩的故事，爸爸可能会这样诉说：</p>
-<p>“有一个小男孩，小学的时候，他的世界是一个小小的足球场，即使中暑也要在球场上挥汗如雨。02年有他最完美的足球记忆，中国队第一次进入世界杯，巴西队七战功成，罗纳尔多8球金靴王者归来。 </p>
-<p>到了初中，他来到了大城市，小小屏幕上的算法题成为了他的另一个兴趣，即使题目做不出来被罚跑圈也愿意在机房刷oj，并乐此不疲。这时候的他有了自己的决策，并主动探索课本外更大的世界。 </p>
-<p>再后来，他进入了大学，各种各样的桌游成为了他新的兴趣，他从此走出了那个只能一个人玩电子游戏的孤独的小世界，可以在RK老师的拍卖游戏里体验勾心斗角，也可以在乌老师的农场里饿着肚子刷分；可以在权力的游戏的世界里尔虞我诈君临天下，也可以铁路游戏里一边经营铁路路线一边操纵公司股价体验商海沉浮。 </p>
-<p>之后他遇上了他一生的挚爱，他的兴趣就是和她一起做一切事情，话剧、音乐剧、画展、做陶艺，还有旅游：去香港坐天星小轮，在世界杯决赛的校园一起淋成落汤鸡，去伊比利亚度一个超长蜜月。”</p>
-<p>“再然后呢？”</p>
-<p>再然后的故事就回到了这篇文章的开头。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%B2%E5%AD%90/" rel="tag">亲子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E6%9F%9A%E5%AD%90/" rel="tag">小柚子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%88%90%E9%95%BF/" rel="tag">成长</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%82%B2%E5%84%BF/" rel="tag">育儿</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-golang-time-shift-fault-injection"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/04/26/golang-time-shift-fault-injection/"
-    >golang 下对时间漂移的故障注入</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/04/26/golang-time-shift-fault-injection/" class="article-date">
-  <time datetime="2021-04-26T12:43:40.000Z" itemprop="datePublished">2021-04-26</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/golang/">golang</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>很多时候我们在做测试时候，需要对程序的时间或者定时器进行一些操纵，各个语言对于获取时间和定时器的实现都不尽相同，在网上找了一下，发现有一个<a target="_blank" rel="noopener" href="https://github.com/chaos-mesh/chaos-mesh/blob/master/pkg/time/time_linux_amd64.go">chaos-mesh</a>的项目里面提供了一个对golang和rust程序注入故障的方案。</p>
-<p>要想能针对某个进程进行时间漂移的注入，首先要知道这个进程里面对于获取时间的调用是怎么进行的。对于golang程序而言，当我们调用time.Now()时，实际上是利用了<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/VDSO">vDSO (virtual dynamic shared object)</a>机制，该机制可以让一些诸如<code>gettimeofday</code>、<code>clock_gettime</code>的系统调用更快，而golang的time.Now()或者golang的定时器实现中维护堆时使用的就是<code>clock_gettime</code>。</p>
-<p>知道了调用的函数，接下来就是需要想办法修改掉它，这里chaos-mesh使用的方案是通过<a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man2/ptrace.2.html">ptrace</a>去修改对应进程的内存空间，将<code>clock_gettime</code>的跳转改成一个自己的实现。</p>
-<p>chaos-mesh还提供了一个测试程序的封装叫<a target="_blank" rel="noopener" href="https://github.com/chaos-mesh/chaos-mesh/blob/master/cmd/watchmaker/main_linux.go">watchmaker</a>，这个程序可以方便我们直接运行，只要直接输入pid和偏移量就可以完成注入。</p>
-<p>主要功能的代码是<a target="_blank" rel="noopener" href="https://github.com/chaos-mesh/chaos-mesh/blob/master/pkg/time/time_linux_amd64.go#L72:6">func ModifyTime(pid int, deltaSec int64, deltaNsec int64, clockIdsMask uint64) error</a></p>
-<p>大体流程如下</p>
-<ol>
-<li>   利用runtime.LockOSThread()，将当期goroutine和linux的thread绑定，这个我猜应该是防止该goroutine被切走，ptrace失效。</li>
-<li>   <code>ptrace.Trace(pid)</code>attach到pid上。通过<code>/proc/pid/task</code>获取该进程的所有threads，并通过PtraceAttach syscall attach到每个tid上，同时通过<code>/proc/pid/maps</code>拿到该进程的虚拟内存映射信息。</li>
-<li>   通过关键字<code>[vdso]</code>找到vDSO entry的起始地址。</li>
-<li>   准备好一个<code>fakeImage</code>，里面直接写好了我们的跳转的程序，最后24 bytes是我们的三个参数。这块涉及汇编，没仔细看<code>fakeImage</code>里面的实现。</li>
-<li>   在当前进程查询到是否曾经注入过我们的<code>fakeImage</code>，如果没有那么通过mmap新map进去我们的<code>fakeImage</code>，否则找到我们之前的entry。把最后24 bytes改写为当前设置的参数。</li>
-<li>   找到vDSO entry中的<code>clock_gettime</code>的原始地址，这里需要利用golang的<a target="_blank" rel="noopener" href="https://golang.org/pkg/debug/elf/">debug/elf</a>包，来找到对应的symbol address。</li>
-<li>把vDSO entry中的<code>clock_gettime</code>跳转修改掉。 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JumpToFakeFunc writes jmp instruction to jump to fake function</span></span><br><span class="line">   <span class="function"><span class="keyword">func</span> <span class="params">(p *TracedProgram)</span> <span class="title">JumpToFakeFunc</span><span class="params">(originAddr <span class="keyword">uint64</span>, targetAddr <span class="keyword">uint64</span>)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">       instructions := <span class="built_in">make</span>([]<span class="keyword">byte</span>, <span class="number">16</span>)</span><br><span class="line"></span><br><span class="line">       <span class="comment">// mov rax, targetAddr;</span></span><br><span class="line">       <span class="comment">// jmp rax ;</span></span><br><span class="line">       instructions[<span class="number">0</span>] = <span class="number">0x48</span></span><br><span class="line">       instructions[<span class="number">1</span>] = <span class="number">0xb8</span></span><br><span class="line">       binary.LittleEndian.PutUint64(instructions[<span class="number">2</span>:<span class="number">10</span>], targetAddr)</span><br><span class="line">       instructions[<span class="number">10</span>] = <span class="number">0xff</span></span><br><span class="line">       instructions[<span class="number">11</span>] = <span class="number">0xe0</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> p.PtraceWriteSlice(originAddr, instructions)</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>我们可以写个程序测试下效果</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// go build -o test test.go</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	pid := os.Getpid()</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(os.Args) &gt; <span class="number">1</span> &#123;</span><br><span class="line">		<span class="comment">// normal process</span></span><br><span class="line">		fmt.Println(pid, <span class="string">&quot;start count&quot;</span>, time.Now())</span><br><span class="line">		t := time.NewTicker(time.Second)</span><br><span class="line">		<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">for</span> _ = <span class="keyword">range</span> t.C &#123;</span><br><span class="line">				fmt.Println(pid, <span class="string">&quot;tick&quot;</span>, time.Now())</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="comment">// time shift</span></span><br><span class="line">		fmt.Println(pid, <span class="string">&quot;30s ticker&quot;</span>, time.Now())</span><br><span class="line">		j := <span class="number">0</span></span><br><span class="line">		t := time.NewTicker(time.Second*<span class="number">30</span>)</span><br><span class="line">		<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">for</span> tick := <span class="keyword">range</span> t.C &#123;</span><br><span class="line">				j++</span><br><span class="line">				fmt.Println(pid, <span class="string">&quot;trigger tick&quot;</span>, tick, <span class="string">&quot;now&quot;</span>, time.Now(), j)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">select</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>为了观察方便，同时起两个test进程，一个带参数，一个不带。<br><code>./test &amp; ./test x &amp;</code></p>
-<p>如果正常运行，那么输出结果会是这样的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">99335 start count 2021-04-26 15:14:40.290945165 +0800 CST m&#x3D;+0.000102053</span><br><span class="line">99334 30s ticker 2021-04-26 15:14:40.290987246 +0800 CST m&#x3D;+0.000068288</span><br><span class="line">99335 tick 2021-04-26 15:14:41.291190225 +0800 CST m&#x3D;+1.000347008</span><br><span class="line">99335 tick 2021-04-26 15:14:42.291188665 +0800 CST m&#x3D;+2.000345428</span><br><span class="line">&#x2F;&#x2F; 忽略当中的一些打印</span><br><span class="line">99335 tick 2021-04-26 15:15:10.291344814 +0800 CST m&#x3D;+30.000501519</span><br><span class="line">99334 trigger tick 2021-04-26 15:15:10.291371963 +0800 CST m&#x3D;+30.000452968 now 2021-04-26 15:15:10.291389026 +0800 CST m&#x3D;+30.000470067 1 &#x2F;&#x2F; 这是第一次30s定时器超时</span><br><span class="line">99335 tick 2021-04-26 15:15:11.291317403 +0800 CST m&#x3D;+31.000474367</span><br></pre></td></tr></table></figure>
-
-<p>我们先等到99334进程触发了一次定时器超时之后，我们立刻通过<code>watchmaker</code>工具注入一个30秒的漂移。<br><code>sudo ./bin/watchmaker -pid 99334 -sec_delta 30 -nsec_delta 0 -clk_ids &quot;CLOCK_REALTIME,CLOCK_MONOTONIC&quot;</code></p>
-<p>注意如果我们只是想影响程序中time.Now()，只修改<code>CLOCK_REALTIME</code>就行了。这里我们需要影响定时器的超时，根据golang的<a target="_blank" rel="noopener" href="https://github.com/golang/go/blob/master/src/runtime/proc.go#L3435">定时器实现</a>，定时器数据结构中取时间使用的是<code>runtime·nanotime1</code>，而对应的<a target="_blank" rel="noopener" href="https://github.com/golang/go/blob/master/src/runtime/sys_linux_amd64.s#L322">汇编实现</a>里面取的是<code>CLOCK_MONOTONIC</code>，所以我们修改的clockid除了<code>CLOCK_REALTIME</code>还需要包含<code>CLOCK_MONOTONIC</code>。</p>
-<p>程序会输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">watchmaker Version: version.Info&#123;GitVersion:&quot;master-ge885846a41fd88&quot;, GitCommit:&quot;e885846a41fd88aa3a46f8b318321b8e889312b9&quot;, BuildDate:&quot;2021-04-13T08:09:23Z&quot;, GoVersion:&quot;go1.14.14&quot;, Compiler:&quot;gc&quot;, Platform:&quot;linux&#x2F;amd64&quot;&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    zapr@v0.1.0&#x2F;zapr.go:69  get clock ids mask      &#123;&quot;mask&quot;: 3&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99334&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99337&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99339&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99341&#125;</span><br><span class="line">2021-04-26T15:15:18.764+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  attach successfully     &#123;&quot;tid&quot;: 99343&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99334&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99337&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99339&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99341&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  detaching       &#123;&quot;tid&quot;: 99343&#125;</span><br><span class="line">2021-04-26T15:15:18.765+0800    INFO    ptrace  zapr@v0.1.0&#x2F;zapr.go:69  Successfully detach and rerun process   &#123;&quot;pid&quot;: 99334&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>这里也可以看到，一个普通的go程序也会启动很多线程。。。</p>
-<p>然后回去看我们测试进程的输出变成了这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">99335 tick 2021-04-26 15:15:10.291344814 +0800 CST m&#x3D;+30.000501519</span><br><span class="line">99334 trigger tick 2021-04-26 15:15:10.291371963 +0800 CST m&#x3D;+30.000452968 now 2021-04-26 15:15:10.291389026 +0800 CST m&#x3D;+30.000470067 1 &#x2F;&#x2F; 这是上面第一次30s定时器超时</span><br><span class="line">99335 tick 2021-04-26 15:15:11.291317403 +0800 CST m&#x3D;+31.000474367</span><br><span class="line">99335 tick 2021-04-26 15:15:12.291291676 +0800 CST m&#x3D;+32.000448352</span><br><span class="line">99335 tick 2021-04-26 15:15:13.291336311 +0800 CST m&#x3D;+33.000493035</span><br><span class="line">99335 tick 2021-04-26 15:15:14.291333735 +0800 CST m&#x3D;+34.000490470</span><br><span class="line">99335 tick 2021-04-26 15:15:15.29133939 +0800 CST m&#x3D;+35.000496121</span><br><span class="line">99335 tick 2021-04-26 15:15:16.291349531 +0800 CST m&#x3D;+36.000506260</span><br><span class="line">99335 tick 2021-04-26 15:15:17.291232264 +0800 CST m&#x3D;+37.000389035</span><br><span class="line">99335 tick 2021-04-26 15:15:18.291307312 +0800 CST m&#x3D;+38.000464034</span><br><span class="line">99334 trigger tick 2021-04-26 15:15:48.765121761 +0800 CST m&#x3D;+68.474202738 now 2021-04-26 15:15:48.765129654 +0800 CST m&#x3D;+68.474210641 2 &#x2F;&#x2F; 由于我们修改了时间，里面触发了第二次的30s定时器超时</span><br><span class="line">99335 tick 2021-04-26 15:15:19.291362269 +0800 CST m&#x3D;+39.000519076 &#x2F;&#x2F; 这里可以看见99335对比进程中的时间还是正常的</span><br></pre></td></tr></table></figure>
-<p>注意golang的默认的time这个数据结构的打印，m=+后面的数字就是进程启动后的monotinic时间，这里99334进程的monotinic时间一下子从38变成了68，所以立马触发了第二次超时。</p>
-<p>至此，我们就完成了对一个golang进程的时间漂移的注入，赶快去测试下生产代码中是否有问题吧，据chaos-mesh团队的分享中所说，很多开源项目均有或大或小的问题哦。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chaos-mesh/" rel="tag">chaos-mesh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fault-injection/" rel="tag">fault-injection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang/" rel="tag">golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ptrace/" rel="tag">ptrace</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/time/" rel="tag">time</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vDSO/" rel="tag">vDSO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-golang-dynamic-injection"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/03/31/golang-dynamic-injection/"
-    >golang 下反射 plugin 中的类型实例实现动态注入</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/03/31/golang-dynamic-injection/" class="article-date">
-  <time datetime="2021-03-31T14:46:59.000Z" itemprop="datePublished">2021-03-31</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/golang/">golang</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>设想一个场景，我们需要和其他团队配合一起开发，并且不想使用源码构建，也就是说最终希望通过集成对方发布的二进制的方式来完成部署。</p>
-<p>那么我们有两种方式可以解决这个问题：</p>
-<ul>
-<li>定义进程间api，各自构建进程，通过进程间调用</li>
-<li>定义接口，实现者编译成动态库，运行时通过某些机制加载动态库然后再想办法获取到对应的实现的实例</li>
-</ul>
-<p>对于c语言来说其实编译成动态库的方式是很自然的，但是golang的话就需要利用<a target="_blank" rel="noopener" href="https://golang.org/pkg/plugin/">plugin</a>机制。</p>
-<p>首先我们需要使用<code>go build -buildmode=plugin</code>来将一个包含main包的代码编译成动态链接库。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p, _ := plugin.Open(<span class="string">&quot;plugin_name.so&quot;</span>) <span class="comment">// open so</span></span><br><span class="line">f, _ := p.Lookup(<span class="string">&quot;routerFactory&quot;</span>) <span class="comment">// 查找符号</span></span><br></pre></td></tr></table></figure>
-
-<p>注意这里的<code>plugin.Open</code>并不会执行main包，而是仅仅会去调用所有包init函数。</p>
-<p><code>p.Lookup(&quot;routerFactory&quot;)</code>可以查找到名字为routerFactory的全局变量，我们可以要求实现者以一个固定的全局变量来实现我们的接口，接下来我们只需要断言到自己的interface，就可以调用了。注意，只有导出的变量或者函数符号才能被查找到。</p>
-<p>如果我们想更加灵活一些，我们希望能查找未导出的符号，或者通过包名+类型名反射出实例，比如我们需要使用方法而不是全局的函数，那咋办。</p>
-<p>这时候我们就要掏出抄代码大法了，go的reflect包内里面其实有这段代码<a target="_blank" rel="noopener" href="https://github.com/golang/go/blob/master/src/reflect/type.go#L1727">typesByString</a>。</p>
-<p>我们可以利用<code>go:linkname</code>来链接到reflect包内的实现，我们只用申明签名即可。注意使用这个需要<code>import unsafe</code>包</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//go:linkname typesByString reflect.typesByString</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">typesByString</span><span class="params">(s <span class="keyword">string</span>)</span> []*_<span class="title">type</span></span></span><br></pre></td></tr></table></figure>
-
-<p>为了完整的实现，我们还需要从源码里面拷贝一些结构体和方法出来，比如type的定义，pkgpath()方法等，不用完整拷贝，调用的到的片段弄出来就行。</p>
-<p>最后把这些骚代码封装到我们的internal包内，</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//go:linkname typesByString reflect.typesByString</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">typesByString</span><span class="params">(s <span class="keyword">string</span>)</span> []*_<span class="title">type</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">searchForType</span><span class="params">(pkgPath, typeName <span class="keyword">string</span>)</span> <span class="params">(*_type, error)</span></span> &#123;</span><br><span class="line">	tbs := typesByString(<span class="string">&quot;*&quot;</span> + typeName)</span><br><span class="line">	<span class="keyword">for</span> _, tb := <span class="keyword">range</span> tbs &#123;</span><br><span class="line">		p := (*ptrtype)(unsafe.Pointer(tb))</span><br><span class="line">		path := p.elem.pkgpath()</span><br><span class="line">		<span class="keyword">if</span> path == pkgPath &#123;</span><br><span class="line">			<span class="keyword">return</span> &amp;p.typ, <span class="literal">nil</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span>, fmt.Errorf(<span class="string">&quot;%s, %s not found in executable image&quot;</span>, pkgPath, typeName)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Instantiate</span><span class="params">(pkgPath, typeString <span class="keyword">string</span>, isPtr <span class="keyword">bool</span>)</span> <span class="params">(reflect.Value, error)</span></span> &#123;</span><br><span class="line">	res, err := searchForType(pkgPath, typeString)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> reflect.Value&#123;&#125;, err</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> emptyFace <span class="keyword">interface</span>&#123;&#125;</span><br><span class="line">	ptr := (*eface)(unsafe.Pointer(&amp;emptyFace))</span><br><span class="line">	ptr._type = res</span><br><span class="line">	ty := reflect.ValueOf(emptyFace).Type().Elem()</span><br><span class="line">	<span class="keyword">if</span> isPtr &#123;</span><br><span class="line">		e := reflect.New(ty)</span><br><span class="line">		<span class="keyword">return</span> e, <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line">	e := reflect.New(ty).Elem()</span><br><span class="line">	<span class="keyword">return</span> e, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>对外就暴露个api即可。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Instantiate returns an instance of a given full-package-path type string.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Instantiate</span><span class="params">(typ <span class="keyword">string</span>)</span> <span class="params">(<span class="keyword">interface</span>&#123;&#125;, reflect.Value, error)</span></span> </span><br></pre></td></tr></table></figure>
-
-<p>测试一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;testing&quot;</span><br><span class="line"></span><br><span class="line">	&quot;github.com&#x2F;titanxxh&#x2F;di&#x2F;example&quot;</span><br><span class="line">	_ &quot;github.com&#x2F;titanxxh&#x2F;di&#x2F;example&#x2F;en&quot;</span><br><span class="line">)</span><br><span class="line">func TestInstantiate(t *testing.T) &#123;</span><br><span class="line">	&#123;</span><br><span class="line">		a, _, err :&#x3D; Instantiate(&quot;github.com&#x2F;titanxxh&#x2F;di&#x2F;example&#x2F;en.english&quot;)</span><br><span class="line">		if err !&#x3D; nil &#123;</span><br><span class="line">			panic(err)</span><br><span class="line">		&#125;</span><br><span class="line">		fmt.Println(a.(example.Greeter).Hello())</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然而并不能正确反射出来，报<code>github.com/titanxxh/di/example/en, en.english not found in executable image</code>，这就很奇怪了，我明明匿名引入了啊。</p>
-<p>最后经过一番调查才发现，go会优化掉没使用的类型，我们需要搞个全局变量引用到自己的类型一下才行。。。比如这样。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> avoidOpt <span class="keyword">interface</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">// use this symbol to avoid compiler optimization</span></span><br><span class="line">	avoidOpt = english&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>于是我们终于正确获得输出<code>hello</code></p>
-<p>再结合之前的plugin，就是我们的<a target="_blank" rel="noopener" href="https://github.com/titanxxh/di/blob/main/README.md">example</a>啦。</p>
-<p>项目地址<a target="_blank" rel="noopener" href="https://github.com/titanxxh/di"><strong>在此</strong></a>，求个star呗。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang/" rel="tag">golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reflection/" rel="tag">reflection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-simple-data-compression"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/12/26/simple-data-compression/"
-    >压缩算法笔记</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/12/26/simple-data-compression/" class="article-date">
-  <time datetime="2020-12-26T15:32:43.000Z" itemprop="datePublished">2020-12-26</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <blockquote>
-<p>Know how to solve every problem that has been solved.</p>
-<p>What I cannot create I do not understand.</p>
-<p>–Richard P. Feynman</p>
-</blockquote>
-<p>上个月因为公司内部的比赛，被迫短时间内了解了一些压缩算法，还动手实现了一些，比如lz77，deflate，bwt，bcm等，不实践不知道，一写代码就发现有些东西你以为你懂了实际上你没懂，加上最近看了已故物理学大师理查德费曼的一系列视频，其中一个细节让我印象深刻，他去世后大家在他办公室的黑板的左上角（这样就可以防止不小心被擦掉）发现他一直保留着上面的两句话。</p>
-<p>理查德费曼很小的时候就受到他父亲的教育，明白了知道和理解是两个概念，所以他一直能保持好奇的心态去思考每个问题。<br>这两句话的本质是一样的，也就是——只有自己能做出来才算真正理解了，要做到这一点就需要知道每个问题背后是如何真正被解决的，而不是只知道个结论，所以理解一个概念的最高境界就是你能教会别人这个概念。</p>
-<p>有感于此，特撰此文记录一下这段时间研究压缩算法的过程。</p> 
-      <a class="article-more-link" href="/2020/12/26/simple-data-compression/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bwt/" rel="tag">bwt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/huffman/" rel="tag">huffman</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lz77/" rel="tag">lz77</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/modeling/" rel="tag">modeling</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/paq/" rel="tag">paq</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/" rel="tag">压缩算法</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-2020-gopherchina-review"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/12/01/2020-gopherchina-review/"
-    >GopherChina2020个人总结</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/12/01/2020-gopherchina-review/" class="article-date">
-  <time datetime="2020-12-01T13:41:55.000Z" itemprop="datePublished">2020-12-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a> / <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>如果你是新入坑的gopher那么建议一定要看一下<a target="_blank" rel="noopener" href="https://www.slideshare.net/haoel/go-programming-patterns">Go Programming Patterns</a>这个演讲。本次大会讲框架的比较多，听下来感觉go-zero做的比较完善，也更适合小公司或者个人上手，而且作者比较有激情。然后推荐那个Go编译器的、TiDB遇到的问题的、还有探探的。最水的是一个老外的Go in the Cloud - Why People Choose Go for Cloud Computing。。。</p>
-<p>由于大会第二天分了两个会场，所以一个人只能听到部分的演讲，所以我在会场1和2反复横跳，挑着听了一些。比较遗憾的是阿里的那个EDAS的没听到，据说讲的比较好。</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/tree/master/2020">大会的PPT可以在这个git仓库找到</a></p>
-<p><em>现场偶遇了前同事666，一开始带着口罩还没太确认，后来坐下来发微信才确认。</em></p>
-<ol>
-<li><p>探探 <a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/1.2%20%E6%8E%A2%E6%8E%A2%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E7%9A%84%E5%AE%9E%E8%B7%B5.pdf">ttdb</a><br> 探探是本次大会的联合主办方，是一个年轻人社交的app，呃，其实他们的现场的宣传片里面好像还有60多岁的使用者。如果让你设计一个系统，扫描两个人经过的地理位置，从而进行匹配出擦肩而过的人，你会怎么设计？<br> 他们介绍了自己的数据库的一些实践经验：</p>
-<ul>
-<li>   sql解析上的优化，比如做谓词下推等</li>
-<li>   列存储，selection阶段利用cache coherence提升性能</li>
-<li>   故障检测没有选择去中心化的gossip，而是使用的中心化的超时检测，故障恢复时候避免所有请求打到一个新的从节点导致峰值，而是偶尔将请求给从节点，保持热数据。</li>
-<li>   利用<a target="_blank" rel="noopener" href="http://github.com/uber-go/goleak">这个库</a>来进行goroutine的泄漏检测。</li>
-</ul>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.slideshare.net/haoel/go-programming-patterns">Go Programming Patterns</a><br> 这个演讲里面的内容其实是我们平时代码里面都常会用到的一些小技巧还有一些控制反转等理念，尤其建议新接触Golang的同学都可以听一下，重点体会一下看开源代码学习好的编程模式的这种理念。另外，作者应该是比较熟悉各种语言的特性，所以对Golang也有很多吐槽。</p>
-<ul>
-<li>   functional option，这个应该应用是最为广泛的pattern了，几乎各大开源项目里面都用，很好地解决了可选参数必选参数区分，内部结构封装不破坏，使用时自注释等一系列问题。</li>
-<li>   go generation，因为不支持泛型（至少在2021年之前），所以很多时候利用好go generation是很必要的。</li>
-<li>   错误处理，这里他提到rob pike的一个上古文章建议大家看看，但是我不确定他指的是哪一篇，不过go1.13新增加了<code>errors.Is</code> 和 <code>As</code> 两个用来帮助处理函数，同时<code>fmt.Errorf</code>里面支持通过<code>%w</code>来wrap一下error了。</li>
-<li>   kubernetes visitor、装饰器、pipeline等就看ppt吧，讲的比较清楚。</li>
-</ul>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/1.4%20Golang%20%20in%20GrabFood%20%20Discovery%20System.pdf">Grab Food</a><br> Grab也是GopherChina的老赞助商了，Grab是东南亚的超级巨无霸，可以理解为美团+支付宝+滴滴+高德地图。<br> 他们先是介绍了他们的Grab-Kit服务框架，和其他框架一样，支持各种middleware，validate、trace、throttling等，还支持chaos来模拟失败（捣乱猴？）<br> 然后介绍了Grab Food内部的ML Pipeline：</p>
-<ol>
-<li>   候选集合</li>
-<li>   过滤</li>
-<li>   重排序</li>
-<li>后排序<br>先引用Google的文章列了下当前机器学习的痛点，介绍了他们的chimera系统是如何做到持续集成、持续训练、持续交付的自动化的，做到了ML-ops。并提到了他们用了一种multi arm bandit AB test来解决模型的适应性问题。</li>
-</ol>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/1.5%20%E5%8D%8E%E4%B8%BA%E4%BA%91%E7%9A%84go%E8%AF%AD%E8%A8%80%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E6%88%98%E7%BB%8F%E9%AA%8C.pdf">go-chassis</a><br> 这个是我司的人讲的，略过。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/1.6%20Functional%20options%20and%20config%20for%20APIs.pdf">Functional options and config for APIs</a><br> 这个演讲内容和前面第二个撞车了，看前面那个就行。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/2.1.1%20%E7%99%BE%E5%BA%A6%E4%B8%87%E4%BA%BF%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91%E5%B9%B3%E5%8F%B0%E8%83%8C%E5%90%8E%E7%9A%84%E6%95%85%E4%BA%8B.pdf">百度BFE</a><br> 这个老兄的因为主要不是什么技术型的演讲，所以我没怎么听就跑了，里面介绍了一些做技术管理的东西。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/2.2.2%20%E4%BA%91%E5%8E%9F%E7%94%9Fgo-zero%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83.pdf">go-zero</a><br> 又是一个搞框架的，不过这个老兄挺有意思，他说自己70后还在笔耕不辍的写代码。他这个go-zero是他们公司内部使用过程中迭代出来的东西，不是其他一些框架可能是脱离具体业务的产物。听下来感觉go-zero的功能还是很完善的，的确一站式解决了一些开发上的boilplate代码，而且他上来就是说我希望自己团队里面风格尽量统一，所以才有的这个东西。除了这个框架本身，我印象比较深的是他其中加入的一些自己产品中的解决问题方案。</p>
-<ul>
-<li>   面向故障编程。</li>
-<li>   不要join！</li>
-<li>   如何正确的设计缓存，防止缓存穿透、击穿、雪崩。</li>
-<li>   负载均衡上他提到了<code>Power of Two Choices</code>算法，这样既可以保证尽量多的就近选择，又动态控制不会把附近的服务处理时长搞得太长。基于这两篇文章<a target="_blank" rel="noopener" href="https://www.nginx.com/blog/nginx-power-of-two-choices-load-balancing-algorithm/">1</a>、<a target="_blank" rel="noopener" href="https://linkerd.io/2016/03/16/beyond-round-robin-load-balancing-for-latency/">2</a>可以仔细研究下。</li>
-<li>   自适应熔断，放弃了Netflix的Hystrix，介绍了他们用的Google SRE算法，支持自定义触发条件等。</li>
-<li>   自适应降载。</li>
-</ul>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/2.2.3%20Go%2B%E6%BC%94%E8%BF%9B%E4%B9%8B%E8%B7%AF.pdf">Go+</a><br> 由于布道师许式伟本人没来，找了个人临时讲，效果就不好，没有讲清楚为Go+替代Python搞数据科学的必要性，虽然堆了一堆PPT。。。Go+的运行可以使用转换成Go语言编译运行，也可以转换成字节码直接运行，性能差一点，感觉这个很鸡肋直接python不好么。而且当前不支持interface，没有runtime优化。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/2.1.4%20PingCAP-Go%20runtime%20related%20problems%20in%20TiDB%20production%20environment.pdf">PingCAP-Go runtime related problems in TiDB production environment</a><br> 这个演讲中提到的问题其实在我们工作中也遇到了，演讲者是golang internals的作者。<br> 第一个问题是golang的goroutine调度导致时延变大，其实这个我理解并不算是问题，或者说golang的goroutine调度实现就是如此，golang不像别的语言是原生支持了协程，同时也就绑定了他的实现，很多其他语言是通过库的方式来做的协程，调度器其实是可以根据需求来换实现的。所以如果要在go里面解决调度问题，要么就只能把高优先级的给绑核了。<br> 第三个问题是GC的<a target="_blank" rel="noopener" href="https://github.com/golang/go/commit/08bf64a81e4c3e2199d0e879089880f538fafbb9">bug</a>，<br> 第四个是NUMA的使用的建议，GC不是NUMA aware的，在allocation里面的帮助扫描触发之后，在众核环境下表现很差。这个现在版本已经优化了。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/2.1.5%20Go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%99%A8%E7%AE%80%E4%BB%8B.pdf">Go语言编译器简介 史斌</a><br>这个老兄就很硬核了，是给golang提交代码最多的50人之一，拥有Go的git库的提交权限，也年年收到go官方的邀请去美国开会。<br>他提到了Go语言其实用的是自举，而不是走LLVM这种通用的方案，所以很多在LLVM那边做的优化，golang的编译器都没有，需要添加（大佬你的提交就是这样来的吧）。golang从源码到汇编有48道工序，他讲的话估计三天都不够。最后他选了前端、中端、后端的优化讲了一下自己的patch，还是挺有意思。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/gopherchina/conference/blob/master/2020/2.2.7%20GORM%20%E5%89%96%E6%9E%90%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.pdf">GORM 剖析与最佳实践</a><br>这个应该是国内做的最好的golang开源项目了，作者介绍了GORM2.0的重构和设计和一些最佳实践，感兴趣的可以仔细看下，当前暂时没用之后用了再回头看看。</p>
-</li>
-</ol>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang/" rel="tag">golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gopherchina/" rel="tag">gopherchina</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%9E%E9%A1%BE/" rel="tag">回顾</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-iberia-honeymoon-barcelona"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/07/iberia-honeymoon-barcelona/"
-    >[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Barcelona</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/07/iberia-honeymoon-barcelona/" class="article-date">
-  <time datetime="2020-06-06T23:07:07.000Z" itemprop="datePublished">2020-06-07</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=710892871&bvid=BV1bQ4y1P7BC&cid=199317177&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vlog/" rel="tag">vlog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/" rel="tag">伊比利亚</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9C%A3%E5%AE%B6%E5%A0%82/" rel="tag">圣家堂</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%B4%E5%A1%9E%E7%BD%97%E9%82%A3/" rel="tag">巴塞罗那</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%9C%9C%E6%9C%88/" rel="tag">蜜月</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/" rel="tag">西班牙</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%BA%E5%9D%8E%E6%99%AE/" rel="tag">诺坎普</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%AB%98%E8%BF%AA/" rel="tag">高迪</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-iberia-honeymoon-granada"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/06/iberia-honeymoon-granada/"
-    >[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Granada</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/06/iberia-honeymoon-granada/" class="article-date">
-  <time datetime="2020-06-05T17:55:46.000Z" itemprop="datePublished">2020-06-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=710878974&bvid=BV1iQ4y1P7p8&cid=199603861&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>
-
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vlog/" rel="tag">vlog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/" rel="tag">伊比利亚</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8F%A4%E5%A0%A1%E9%85%92%E5%BA%97/" rel="tag">古堡酒店</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A0%BC%E6%8B%89%E7%BA%B3%E8%BE%BE/" rel="tag">格拉纳达</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%9C%9C%E6%9C%88/" rel="tag">蜜月</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/" rel="tag">西班牙</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%98%BF%E5%B0%94%E7%BD%95%E5%B8%83%E6%8B%89%E5%AE%AB/" rel="tag">阿尔罕布拉宫</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-iberia-honeymoon-seville-ronda"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/01/29/iberia-honeymoon-seville-ronda/"
-    >[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Seville + Ronda</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/01/29/iberia-honeymoon-seville-ronda/" class="article-date">
-  <time datetime="2020-01-29T14:55:46.000Z" itemprop="datePublished">2020-01-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=85634784&bvid=BV1A741167e2&cid=146371522&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>
-
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vlog/" rel="tag">vlog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/" rel="tag">伊比利亚</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A1%9E%E7%BB%B4%E5%88%A9%E4%BA%9A/" rel="tag">塞维利亚</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%9C%9C%E6%9C%88/" rel="tag">蜜月</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/" rel="tag">西班牙</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%BE%99%E8%BE%BE/" rel="tag">龙达</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-my-year-2019"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/01/24/my-year-2019/"
-    >My Year 2019</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/01/24/my-year-2019/" class="article-date">
-  <time datetime="2020-01-24T09:55:46.000Z" itemprop="datePublished">2020-01-24</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=84859719&bvid=BV157411Y7Lm&cid=145122355&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vlog/" rel="tag">vlog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%9E%E9%A1%BE/" rel="tag">回顾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A9%9A%E7%A4%BC/" rel="tag">婚礼</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%91%A1%E8%90%84%E7%89%99/" rel="tag">葡萄牙</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%9C%9C%E6%9C%88/" rel="tag">蜜月</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/" rel="tag">西班牙</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-  </article>
-  
-
-  
-  <nav class="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
-  </nav>
-  
-</section>
-</div>
-
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2011-2022
-        <i class="ri-heart-fill heart_icon"></i> 仙雾
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        
-        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-        <span class="division">|</span>
-        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-      </li>
-    </ul>
-  </div>
-</footer>    
-    </main>
-    <div class="float_btns">
-      <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-    </div>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" alt="Meeple Life"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/friends">友链</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh/">Instagram</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/friends">Links</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="Search">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-3.6.0.min.js"></script>
- 
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
-
-<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
-/>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
- <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
             }
-        })
-    }
-    viewer_init()
-</script> 
-<!-- MathJax -->
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
-
-<!-- ClickLove -->
-
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
- 
-<link rel="stylesheet" href="/css/clipboard.css">
- <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
         }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
- 
-<!-- CanvasBackground -->
-
-<script>
-  if (window.mermaid) {
-    mermaid.initialize({ theme: "forest" });
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
   }
-</script>
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
 
-
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><script>function initMourn() {
+    const date = new Date();
+    const today = (date.getMonth() + 1) + "-" + date.getDate()
+    const mourn_days = ["4-5","5-12","7-7","9-18","12-13"]
+    if (mourn_days.includes(today)) {
+        document.documentElement.style.filter = "grayscale(1)";
+    }}
+initMourn();</script><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">旅游</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/" title="伊比利亚蜜月"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="伊比利亚蜜月"/><span class="back-menu-item-text">伊比利亚蜜月</span></a><a class="back-menu-item" href="https://titanxxh.com/2018/09/11/russia-2018/" title="俄罗斯世界杯"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="俄罗斯世界杯"/><span class="back-menu-item-text">俄罗斯世界杯</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Meeple Life</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Birthday/" style="font-size: 1.05rem;">Birthday<sup>1</sup></a><a href="/tags/D%E5%93%A5/" style="font-size: 1.05rem;">D哥<sup>2</sup></a><a href="/tags/GamePlay/" style="font-size: 1.05rem;">GamePlay<sup>11</sup></a><a href="/tags/Ronaldo/" style="font-size: 1.05rem;">Ronaldo<sup>1</sup></a><a href="/tags/carcassonne/" style="font-size: 1.05rem;">carcassonne<sup>1</sup></a><a href="/tags/chinatown/" style="font-size: 1.05rem;">chinatown<sup>2</sup></a><a href="/tags/modern-art/" style="font-size: 1.05rem;">modern art<sup>2</sup></a><a href="/tags/small-world/" style="font-size: 1.05rem;">small world<sup>6</sup></a><a href="/tags/%E4%B8%89%E5%9B%BD%E6%9D%80/" style="font-size: 1.05rem;">三国杀<sup>3</sup></a><a href="/tags/%E4%B8%8A%E6%B5%B7%E4%BB%99%E5%89%91%E5%90%8E%E6%8F%B4%E4%BC%9A/" style="font-size: 1.05rem;">上海仙剑后援会<sup>1</sup></a><a href="/tags/%E4%BA%94%E6%AF%92%E5%85%BD/" style="font-size: 1.05rem;">五毒兽<sup>1</sup></a><a href="/tags/%E4%BB%99%E5%89%91/" style="font-size: 1.05rem;">仙剑<sup>1</sup></a><a href="/tags/%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0/" style="font-size: 1.05rem;">仙剑奇侠传<sup>6</sup></a><a href="/tags/%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0%E4%BA%94/" style="font-size: 1.05rem;">仙剑奇侠传五<sup>4</sup></a><a href="/tags/%E5%88%9D%E7%8E%A9%E6%84%9F%E5%8F%97/" style="font-size: 1.05rem;">初玩感受<sup>1</sup></a><a href="/tags/%E5%8D%A1%E5%8D%A1%E9%A2%82/" style="font-size: 1.05rem;">卡卡颂<sup>1</sup></a><a href="/tags/%E5%94%90%E4%BA%BA%E8%A1%97/" style="font-size: 1.05rem;">唐人街<sup>2</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 1.05rem;">回忆<sup>1</sup></a><a href="/tags/%E5%9B%9E%E6%94%BE/" style="font-size: 1.05rem;">回放<sup>1</sup></a><a href="/tags/%E5%B0%8F%E5%8F%97/" style="font-size: 1.05rem;">小受<sup>1</sup></a><a href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" style="font-size: 1.05rem;">小小世界<sup>6</sup></a><a href="/tags/%E6%83%85%E4%BA%BA%E8%8A%82/" style="font-size: 1.05rem;">情人节<sup>1</sup></a><a href="/tags/%E6%84%9F%E5%8F%97/" style="font-size: 1.05rem;">感受<sup>7</sup></a><a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 1.05rem;">感悟<sup>8</sup></a><a href="/tags/%E6%88%98%E6%96%97/" style="font-size: 1.05rem;">战斗<sup>1</sup></a><a href="/tags/%E6%88%AA%E5%9B%BE/" style="font-size: 1.05rem;">截图<sup>2</sup></a><a href="/tags/%E6%90%9E%E7%AC%91/" style="font-size: 1.05rem;">搞笑<sup>1</sup></a><a href="/tags/%E6%96%87%E6%98%8E/" style="font-size: 1.05rem;">文明<sup>6</sup></a><a href="/tags/%E6%96%87%E6%98%8E5/" style="font-size: 1.05rem;">文明5<sup>3</sup></a><a href="/tags/%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF/" style="font-size: 1.05rem;">现代艺术<sup>2</sup></a><a href="/tags/%E7%94%9F%E6%97%A5/" style="font-size: 1.05rem;">生日<sup>1</sup></a><a href="/tags/%E7%99%BE%E6%B8%B8/" style="font-size: 1.05rem;">百游<sup>1</sup></a><a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 1.05rem;">统计<sup>1</sup></a><a href="/tags/%E7%BD%97%E5%B0%BC/" style="font-size: 1.05rem;">罗尼<sup>1</sup></a><a href="/tags/%E7%BD%97%E7%BA%B3%E5%B0%94%E5%A4%9A/" style="font-size: 1.05rem;">罗纳尔多<sup>1</sup></a><a href="/tags/%E8%91%A3%E5%8D%93/" style="font-size: 1.05rem;">董卓<sup>1</sup></a><a href="/tags/%E8%B6%A3%E9%97%BB/" style="font-size: 1.05rem;">趣闻<sup>1</sup></a><a href="/tags/%E9%80%80%E5%BD%B9/" style="font-size: 1.05rem;">退役<sup>1</sup></a><a href="/tags/%E9%81%93%E5%90%AC%E9%80%94%E8%AF%B4/" style="font-size: 1.05rem;">道听途说<sup>1</sup></a><a href="/tags/%E9%A2%84%E5%94%AE/" style="font-size: 1.05rem;">预售<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div id="home_top"><div class="swiper_container_card" style="height: auto;width: 100%"><div id="bannerGroup"><div id="random-banner"><canvas id="peoplecanvas"></canvas><a id="random-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-paper-plane"></i><div class="bannerText">随便逛逛<i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div></a></div><div class="categoryGroup"><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-blue)"><a class="categoryButton blue" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"><span class="categoryButtonText">桌游</span><i class="anzhiyufont anzhiyu-icon-dove"></i></a></div><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-red)"><a class="categoryButton red" href="/categories/%E6%97%85%E8%A1%8C/"><span class="categoryButtonText">旅行</span><i class="anzhiyufont anzhiyu-icon-fire"></i></a></div><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-green)"><a class="categoryButton green" href="/categories/%E7%94%9F%E6%B4%BB/"><span class="categoryButtonText">生活</span><i class="anzhiyufont anzhiyu-icon-book"></i></a></div></div></div><div class="topGroup"><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2011/09/18/time-to-say-goodbye/&quot;)"><div class="post_cover left_radius"><a href="2011/09/18/time-to-say-goodbye/" title="time to say goobye"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2011/09/18/time-to-say-goodbye/" title="time to say goobye">time to say goobye</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2011/09/18/%E4%BB%99%E9%9B%BE%E7%8E%A9%E4%BB%99%E4%BA%94%E4%B8%80-%E5%9D%91%E7%88%B9%E7%9A%84%E9%A2%84%E5%94%AE%E4%B8%80%E5%B0%8F%E6%97%B6%E5%88%9D%E4%BD%93%E9%AA%8C/&quot;)"><div class="post_cover left_radius"><a href="2011/09/18/仙雾玩仙五一-坑爹的预售一小时初体验/" title="[仙雾玩仙五]一.坑爹的预售&amp;一小时初体验"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2011/09/18/仙雾玩仙五一-坑爹的预售一小时初体验/" title="[仙雾玩仙五]一.坑爹的预售&amp;一小时初体验">[仙雾玩仙五]一.坑爹的预售&amp;一小时初体验</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2011/09/18/%E4%B8%80%E5%85%A5%E4%BE%AF%E9%97%A8%E6%B7%B1%E4%BC%BC%E6%B5%B7/&quot;)"><div class="post_cover left_radius"><a href="2011/09/18/一入侯门深似海/" title="[桌游人生]第一期.一入侯门深似海"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2011/09/18/一入侯门深似海/" title="[桌游人生]第一期.一入侯门深似海">[桌游人生]第一期.一入侯门深似海</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2011/09/18/%E4%BB%99%E9%9B%BE%E7%8E%A9%E4%BB%99%E4%BA%94%E4%B8%89-%E4%B8%80%E4%BA%9B%E5%80%BC%E5%BE%97%E5%9B%9E%E5%BF%86%E7%9A%84%E7%9E%AC%E9%97%B4%E8%B6%A3%E9%97%BB%E9%81%93%E5%90%AC%E9%80%94%E8%AF%B4/&quot;)"><div class="post_cover left_radius"><a href="2011/09/18/仙雾玩仙五三-一些值得回忆的瞬间趣闻道听途说/" title="[仙雾玩仙五]三.一些值得回忆的瞬间&amp;趣闻&amp;道听途说"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2011/09/18/仙雾玩仙五三-一些值得回忆的瞬间趣闻道听途说/" title="[仙雾玩仙五]三.一些值得回忆的瞬间&amp;趣闻&amp;道听途说">[仙雾玩仙五]三.一些值得回忆的瞬间&amp;趣闻&amp;道听途说</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2011/09/18/%E4%BB%99%E9%9B%BE%E7%8E%A9%E4%BB%99%E4%BA%94%E4%BA%8C-%E9%82%A3%E4%BA%9B%E6%90%9E%E6%80%AA%E7%9A%84%E5%9C%B0%E6%96%B9/&quot;)"><div class="post_cover left_radius"><a href="2011/09/18/仙雾玩仙五二-那些搞怪的地方/" title="[仙雾玩仙五]二.那些搞怪的地方"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2011/09/18/仙雾玩仙五二-那些搞怪的地方/" title="[仙雾玩仙五]二.那些搞怪的地方">[仙雾玩仙五]二.那些搞怪的地方</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2011/09/18/%E6%96%87%E6%98%8E5-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE%E7%9C%9F%E5%AE%9E%E8%B5%B7%E5%A7%8B%E4%BD%8D%E7%BD%AE-%E5%9C%B0%E5%9B%BE%E5%9B%9E%E6%94%BE/&quot;)"><div class="post_cover left_radius"><a href="2011/09/18/文明5-第一次世界地图真实起始位置-地图回放/" title="文明5 第一次世界地图真实起始位置 地图回放"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2011/09/18/文明5-第一次世界地图真实起始位置-地图回放/" title="文明5 第一次世界地图真实起始位置 地图回放">文明5 第一次世界地图真实起始位置 地图回放</a></div></div><a class="todayCard" id="todayCard" target="_blank" rel="noopener" href="https://boardgamearena.com/player?id=91204276" style="z-index: 1;"><div class="todayCard-info"><div class="todayCard-tips">来BGA和我一起玩桌游吧</div><div class="todayCard-title">桌游老司机</div></div><img class="todayCard-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Agricola%20Revised%20Edition.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="封面"><div class="banner-button-group"><div class="banner-button" onclick="event.stopPropagation();event.preventDefault();anzhiyu.hideTodayCard();"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i><span class="banner-button-text">更多推荐</span></div></div></a></div><link rel="stylesheet"></div></div><div class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div id="categoryBar"><div class="category-bar" id="category-bar"><div id="catalog-bar"><div id="catalog-list"><div class="catalog-list-item" id="首页"><a href="/">首页</a></div>
+    <div class="catalog-list-item" id="/categories/巴西/">
+      <a href="/categories/巴西/">
+        巴西
+      </a>
+    </div>
     
+    <div class="catalog-list-item" id="/categories/游戏/">
+      <a href="/categories/游戏/">
+        游戏
+      </a>
+    </div>
     
+    <div class="catalog-list-item" id="/categories/桌面游戏/">
+      <a href="/categories/桌面游戏/">
+        桌面游戏
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/巴西/罗纳尔多/">
+      <a href="/categories/巴西/罗纳尔多/">
+        罗纳尔多
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游感悟/">
+      <a href="/categories/桌面游戏/桌游感悟/">
+        桌游感悟
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/生活/">
+      <a href="/categories/生活/">
+        生活
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游活动/">
+      <a href="/categories/桌面游戏/桌游活动/">
+        桌游活动
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/">
+      <a href="/categories/软件开发/">
+        软件开发
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游开箱照/">
+      <a href="/categories/桌面游戏/桌游开箱照/">
+        桌游开箱照
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/geek研究/">
+      <a href="/categories/桌面游戏/geek研究/">
+        geek研究
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/计算机网络/">
+      <a href="/categories/软件开发/计算机网络/">
+        计算机网络
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/生活/灵光一现/">
+      <a href="/categories/生活/灵光一现/">
+        灵光一现
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/物理引擎/">
+      <a href="/categories/软件开发/物理引擎/">
+        物理引擎
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/生活/旅行/">
+      <a href="/categories/生活/旅行/">
+        旅行
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游介绍/">
+      <a href="/categories/桌面游戏/桌游介绍/">
+        桌游介绍
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/编程语言/">
+      <a href="/categories/软件开发/编程语言/">
+        编程语言
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/golang/">
+      <a href="/categories/软件开发/golang/">
+        golang
+      </a>
+    </div>
+    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/2022/11/21/from-boy-to-father-only-a-few-world-cups/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><span class="article-meta sticky-warp"><i class="anzhiyufont anzhiyu-icon-thumbtack sticky"></i><span class="sticky">置顶</span></span><div class="article-categories-original">生活</div><span class="newPost">最新</span><a class="unvisited-post" href="/2022/11/21/from-boy-to-father-only-a-few-world-cups/" title="从男孩到父亲，不过几届世界杯">未读</a></div><a class="article-title" href="/2022/11/21/from-boy-to-father-only-a-few-world-cups/" title="从男孩到父亲，不过几届世界杯">从男孩到父亲，不过几届世界杯</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-21T07:40:07.000Z" title="发表于 2022-11-21 15:40:07" time="2022-11-21 15:40:07">2022-11-21</time><time class="time_hidden" datetime="2024-10-26T18:48:35.748Z" title="更新于 2024-10-27 02:48:35" time="2024-10-27 02:48:35">2024-10-27</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%B7%B4%E8%A5%BF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>巴西</span></a><a class="article-meta__tags" href="/tags/%E8%B6%B3%E7%90%83/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>足球</span></a><a class="article-meta__tags" href="/tags/%E4%B8%96%E7%95%8C%E6%9D%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>世界杯</span></a><a class="article-meta__tags" href="/tags/%E4%BA%B2%E5%AD%90/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>亲子</span></a><a class="article-meta__tags" href="/tags/%E6%88%90%E9%95%BF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>成长</span></a><a class="article-meta__tags" href="/tags/%E5%B0%8F%E6%9F%9A%E5%AD%90/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>小柚子</span></a></span></div><div class="content">童年作为一个晚熟的男孩，对初中前的记忆都很模糊，尤其是02年之后来了上海这座新城市读初中，一下子把自己的童年都切割了，但是自始至终有一件事情的记忆无比清晰，那就是足球。
+小学那会儿还是中国足球氛围最浓的时候，和同学放学后的活动就是在球场上踢球玩，还记得我妈给我报了足球班，中暑了之后仍然说要去，踢球反复蹭破膝盖导致伤口化脓还是要继续踢；作为一个语文渣，甚至一个人在家玩球，还写了小作文——左右脚足球赛上了报纸。
 
-  </div>
-</body>
+02年韩日世界杯是我有印象的第一届世界杯，中国队第一次进入世界杯决赛圈，所有学校都停课看比赛。后来的事情大家都知道了，本以为只是国足辉煌的开始，没想到已是巅峰。也是那个时候，我有了自己的足球主队——巴西，最终3R组合威风八面，巴西队7战全胜，第五次加冕。毫不夸张的说，当年真的是满城尽是黄衫9号（字面意义上），所有人都被罗纳尔多给征服。时至今日，罗尼也成了我唯一追过的球星。
+到上海之后，这边的同学没人踢球，一下子失去了环境，毕竟还在读书，看电视的机会也不多，只能通过买足球周刊、看足球之夜、天下足球来了解比赛，按现在的话来说，慢慢地变成了一个云球迷。其实在02年的时候自己还是小城市里 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2011/11/06/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F%E7%AC%AC%E5%9B%9B%E6%9C%9F-%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF-%E6%8B%8D%E5%8D%96%E7%9A%84%E6%99%BA%E6%85%A7/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><span class="article-meta sticky-warp"><i class="anzhiyufont anzhiyu-icon-thumbtack sticky"></i><span class="sticky">置顶</span></span><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游感悟</div><a class="unvisited-post" href="/2011/11/06/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F%E7%AC%AC%E5%9B%9B%E6%9C%9F-%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF-%E6%8B%8D%E5%8D%96%E7%9A%84%E6%99%BA%E6%85%A7/" title="[桌游人生]第四期.现代艺术——拍卖的智慧">未读</a></div><a class="article-title" href="/2011/11/06/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F%E7%AC%AC%E5%9B%9B%E6%9C%9F-%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF-%E6%8B%8D%E5%8D%96%E7%9A%84%E6%99%BA%E6%85%A7/" title="[桌游人生]第四期.现代艺术——拍卖的智慧">[桌游人生]第四期.现代艺术——拍卖的智慧</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2011-11-05T16:00:00.000Z" title="发表于 2011-11-06 00:00:00" time="2011-11-06 00:00:00">2011-11-06</time><time class="time_hidden" datetime="2024-10-26T18:49:11.164Z" title="更新于 2024-10-27 02:49:11" time="2024-10-27 02:49:11">2024-10-27</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%84%9F%E6%82%9F/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>感悟</span></a><a class="article-meta__tags" href="/tags/%E6%84%9F%E5%8F%97/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>感受</span></a><a class="article-meta__tags" href="/tags/modern-art/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>modern art</span></a><a class="article-meta__tags" href="/tags/%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>现代艺术</span></a></span></div><div class="content"> 现代艺术盒子正面
+现代艺术的盒子背景是一副比较抽象的画（游戏里的画更为抽象。。。），和简洁的名称，还有就是那大名鼎鼎的设计师——Reiner Knizia，现代艺术也是其拍卖三部曲之一（另外两个是Medici和RA）。
 
-</html>
+ 现代艺术的配件
+游戏的目的是通过卖画来赚钱，借机炒作，在每一轮结束后按市场价格将买到的画出售给银行，4轮过后拥有现金最多的人获得胜利。
+
+一开始每个人会有一部分的起始资金和手牌，玩家依次进行自己的回合，在自己回合内，他必须打出一张手牌（画）进行拍卖，拍卖的方式按照画上标明的来，有以下4种：
+
+公开叫价：顾名思义，就是大家随便叫，价高者得，和普通拍卖行类似。
+
+一轮价：也很简单，从自己的下家开始，依次出价，可以不出，最后自己也要决定是否出价。
+
+定价：自己定一个价格，从下家开始决定买不买，最后如果轮到自己都没人买的话，你自己必须买下。
+
+暗标价：所有人将筹码捏在手里，一起摊开，价高者得。
+
+此外还有第五种拍卖方式——联合竞拍，玩家可以讲同一颜色的两张牌一起打出，其中一张的拍卖方式就是联合竞拍，具体的拍卖方式按照另一张上面的来（所以另一张不能也是联合竞拍），要注意此时 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2021/10/30/small-world-big-world/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">生活</div><a class="unvisited-post" href="/2021/10/30/small-world-big-world/" title="小世界，大世界">未读</a></div><a class="article-title" href="/2021/10/30/small-world-big-world/" title="小世界，大世界">小世界，大世界</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-30T14:00:07.000Z" title="发表于 2021-10-30 22:00:07" time="2021-10-30 22:00:07">2021-10-30</time><time class="time_hidden" datetime="2022-11-25T13:01:09.460Z" title="更新于 2022-11-25 21:01:09" time="2022-11-25 21:01:09">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E4%BA%B2%E5%AD%90/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>亲子</span></a><a class="article-meta__tags" href="/tags/%E6%88%90%E9%95%BF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>成长</span></a><a class="article-meta__tags" href="/tags/%E5%B0%8F%E6%9F%9A%E5%AD%90/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>小柚子</span></a><a class="article-meta__tags" href="/tags/%E8%82%B2%E5%84%BF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>育儿</span></a></span></div><div class="content">
+题记：小朋友的大世界对大人而言可能只是一个小世界，但希望每个大人都可以在这个世界里找到乐趣，和小朋友共同开心。
+
+出生之前他和她刚刚结束蜜月长假，一起开心地制定着未来的世界奇观巡礼计划，仿佛全世界都在脚下。没过多久她怀孕了，在那一刻他还不清楚将要面对的是什么，因为他几乎没有自己小时候的任何记忆，或许迎来一个小生命不会对自己的生活有太大的改变吧，他侥幸地想。
+孕期的她没有特别大的反应，每一次孕检都很正常，可能你就是小红书上晒的天使宝宝吧，他们仍然像往常一样可以吃吃喝喝逛逛，顶着大肚子还去旅游，去法喜寺许愿。
+然而这个世界并不总是按照他愿意的方式运行，此刻的他还不知道接下来的几天他的世界将发生巨变，活动空间将局限在小小的病房内，不分白天与黑夜。
+本来大家一致以为应该延后的产期由于羊水破裂不得不提前送进产房，他在外面焦急地踱步，产房外的丈夫数量从十几个变成几个，最后只剩下他一个。夜已经深了，突然被告知需要转剖，还有点懵的他对于医生之后的话只记住了几个关键词，然后颤颤巍巍签下了自己的名字，小窗的门就合上了，他赶到手术室门外，看着显示屏上那唯一的名字，他试图打开wiki搜索相关信息来平复自己的 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2021/04/26/golang-time-shift-fault-injection/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">软件开发</div><div class="article-categories-original">golang</div><a class="unvisited-post" href="/2021/04/26/golang-time-shift-fault-injection/" title="golang 下对时间漂移的故障注入">未读</a></div><a class="article-title" href="/2021/04/26/golang-time-shift-fault-injection/" title="golang 下对时间漂移的故障注入">golang 下对时间漂移的故障注入</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-26T12:43:40.000Z" title="发表于 2021-04-26 20:43:40" time="2021-04-26 20:43:40">2021-04-26</time><time class="time_hidden" datetime="2022-11-25T07:24:18.910Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/golang/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>golang</span></a><a class="article-meta__tags" href="/tags/%E6%BA%90%E7%A0%81/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>源码</span></a><a class="article-meta__tags" href="/tags/chaos-mesh/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>chaos-mesh</span></a><a class="article-meta__tags" href="/tags/vDSO/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>vDSO</span></a><a class="article-meta__tags" href="/tags/time/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>time</span></a><a class="article-meta__tags" href="/tags/ptrace/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ptrace</span></a><a class="article-meta__tags" href="/tags/fault-injection/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>fault-injection</span></a></span></div><div class="content">很多时候我们在做测试时候，需要对程序的时间或者定时器进行一些操纵，各个语言对于获取时间和定时器的实现都不尽相同，在网上找了一下，发现有一个chaos-mesh的项目里面提供了一个对golang和rust程序注入故障的方案。
+要想能针对某个进程进行时间漂移的注入，首先要知道这个进程里面对于获取时间的调用是怎么进行的。对于golang程序而言，当我们调用time.Now()时，实际上是利用了vDSO (virtual dynamic shared object)机制，该机制可以让一些诸如gettimeofday、clock_gettime的系统调用更快，而golang的time.Now()或者golang的定时器实现中维护堆时使用的就是clock_gettime。
+知道了调用的函数，接下来就是需要想办法修改掉它，这里chaos-mesh使用的方案是通过ptrace去修改对应进程的内存空间，将clock_gettime的跳转改成一个自己的实现。
+chaos-mesh还提供了一个测试程序的封装叫watchmaker，这个程序可以方便我们直接运行，只要直接输入pid和偏移量就可以完成注入。
+主要 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2021/03/31/golang-dynamic-injection/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">软件开发</div><div class="article-categories-original">golang</div><a class="unvisited-post" href="/2021/03/31/golang-dynamic-injection/" title="golang 下反射 plugin 中的类型实例实现动态注入">未读</a></div><a class="article-title" href="/2021/03/31/golang-dynamic-injection/" title="golang 下反射 plugin 中的类型实例实现动态注入">golang 下反射 plugin 中的类型实例实现动态注入</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-31T14:46:59.000Z" title="发表于 2021-03-31 22:46:59" time="2021-03-31 22:46:59">2021-03-31</time><time class="time_hidden" datetime="2022-11-25T07:24:18.910Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/golang/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>golang</span></a><a class="article-meta__tags" href="/tags/reflection/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>reflection</span></a><a class="article-meta__tags" href="/tags/plugin/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>plugin</span></a><a class="article-meta__tags" href="/tags/%E6%BA%90%E7%A0%81/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>源码</span></a></span></div><div class="content">设想一个场景，我们需要和其他团队配合一起开发，并且不想使用源码构建，也就是说最终希望通过集成对方发布的二进制的方式来完成部署。
+那么我们有两种方式可以解决这个问题：
+
+定义进程间api，各自构建进程，通过进程间调用
+定义接口，实现者编译成动态库，运行时通过某些机制加载动态库然后再想办法获取到对应的实现的实例
+
+对于c语言来说其实编译成动态库的方式是很自然的，但是golang的话就需要利用plugin机制。
+首先我们需要使用go build -buildmode=plugin来将一个包含main包的代码编译成动态链接库。
+12p, _ := plugin.Open(&quot;plugin_name.so&quot;) // open sof, _ := p.Lookup(&quot;routerFactory&quot;) // 查找符号
+
+注意这里的plugin.Open并不会执行main包，而是仅仅会去调用所有包init函数。
+p.Lookup(&quot;routerFactory&quot;)可以查找到名字为routerFactory的全局变量，我们可以要求实现者以一个固定的全 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2020/12/26/simple-data-compression/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">软件开发</div><a class="unvisited-post" href="/2020/12/26/simple-data-compression/" title="压缩算法笔记">未读</a></div><a class="article-title" href="/2020/12/26/simple-data-compression/" title="压缩算法笔记">压缩算法笔记</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-26T15:32:43.000Z" title="发表于 2020-12-26 23:32:43" time="2020-12-26 23:32:43">2020-12-26</time><time class="time_hidden" datetime="2022-11-25T07:24:18.909Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>压缩算法</span></a><a class="article-meta__tags" href="/tags/lz77/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>lz77</span></a><a class="article-meta__tags" href="/tags/huffman/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>huffman</span></a><a class="article-meta__tags" href="/tags/paq/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>paq</span></a><a class="article-meta__tags" href="/tags/modeling/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>modeling</span></a><a class="article-meta__tags" href="/tags/bwt/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>bwt</span></a></span></div><div class="content">
+Know how to solve every problem that has been solved.
+What I cannot create I do not understand.
+–Richard P. Feynman
+
+上个月因为公司内部的比赛，被迫短时间内了解了一些压缩算法，还动手实现了一些，比如lz77，deflate，bwt，bcm等，不实践不知道，一写代码就发现有些东西你以为你懂了实际上你没懂，加上最近看了已故物理学大师理查德费曼的一系列视频，其中一个细节让我印象深刻，他去世后大家在他办公室的黑板的左上角（这样就可以防止不小心被擦掉）发现他一直保留着上面的两句话。
+理查德费曼很小的时候就受到他父亲的教育，明白了知道和理解是两个概念，所以他一直能保持好奇的心态去思考每个问题。这两句话的本质是一样的，也就是——只有自己能做出来才算真正理解了，要做到这一点就需要知道每个问题背后是如何真正被解决的，而不是只知道个结论，所以理解一个概念的最高境界就是你能教会别人这个概念。
+有感于此，特撰此文记录一下这段时间研究压缩算法的过程。
+
+
+首先介绍一个很好的关于压缩算法的综述性网 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2020/12/01/2020-gopherchina-review/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">软件开发</div><div class="article-categories-original">编程语言</div><a class="unvisited-post" href="/2020/12/01/2020-gopherchina-review/" title="GopherChina2020个人总结">未读</a></div><a class="article-title" href="/2020/12/01/2020-gopherchina-review/" title="GopherChina2020个人总结">GopherChina2020个人总结</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-01T13:41:55.000Z" title="发表于 2020-12-01 21:41:55" time="2020-12-01 21:41:55">2020-12-01</time><time class="time_hidden" datetime="2022-11-25T07:24:18.909Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%9B%9E%E9%A1%BE/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>回顾</span></a><a class="article-meta__tags" href="/tags/golang/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>golang</span></a><a class="article-meta__tags" href="/tags/gopherchina/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>gopherchina</span></a></span></div><div class="content">如果你是新入坑的gopher那么建议一定要看一下Go Programming Patterns这个演讲。本次大会讲框架的比较多，听下来感觉go-zero做的比较完善，也更适合小公司或者个人上手，而且作者比较有激情。然后推荐那个Go编译器的、TiDB遇到的问题的、还有探探的。最水的是一个老外的Go in the Cloud - Why People Choose Go for Cloud Computing。。。
+由于大会第二天分了两个会场，所以一个人只能听到部分的演讲，所以我在会场1和2反复横跳，挑着听了一些。比较遗憾的是阿里的那个EDAS的没听到，据说讲的比较好。
+大会的PPT可以在这个git仓库找到
+现场偶遇了前同事666，一开始带着口罩还没太确认，后来坐下来发微信才确认。
+
+   探探 ttdb  探探是本次大会的联合主办方，是一个年轻人社交的app，呃，其实他们的现场的宣传片里面好像还有60多岁的使用者。如果让你设计一个系统，扫描两个人经过的地理位置，从而进行匹配出擦肩而过的人，你会怎么设计？  他们介绍了自己的数据库的一些实践经验：
+
+   sql解析上的优化，比如做谓词下推 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2020/06/07/iberia-honeymoon-barcelona/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">生活</div><div class="article-categories-original">旅行</div><a class="unvisited-post" href="/2020/06/07/iberia-honeymoon-barcelona/" title="[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Barcelona">未读</a></div><a class="article-title" href="/2020/06/07/iberia-honeymoon-barcelona/" title="[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Barcelona">[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Barcelona</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-06T23:07:07.000Z" title="发表于 2020-06-07 07:07:07" time="2020-06-07 07:07:07">2020-06-07</time><time class="time_hidden" datetime="2022-11-25T07:24:18.909Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/vlog/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>vlog</span></a><a class="article-meta__tags" href="/tags/%E8%9C%9C%E6%9C%88/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>蜜月</span></a><a class="article-meta__tags" href="/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>伊比利亚</span></a><a class="article-meta__tags" href="/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>西班牙</span></a><a class="article-meta__tags" href="/tags/%E5%B7%B4%E5%A1%9E%E7%BD%97%E9%82%A3/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>巴塞罗那</span></a><a class="article-meta__tags" href="/tags/%E8%AF%BA%E5%9D%8E%E6%99%AE/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>诺坎普</span></a><a class="article-meta__tags" href="/tags/%E9%AB%98%E8%BF%AA/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>高迪</span></a><a class="article-meta__tags" href="/tags/%E5%9C%A3%E5%AE%B6%E5%A0%82/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>圣家堂</span></a></span></div><div class="content">
+ 
+
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2020/06/06/iberia-honeymoon-granada/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">生活</div><div class="article-categories-original">旅行</div><a class="unvisited-post" href="/2020/06/06/iberia-honeymoon-granada/" title="[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Granada">未读</a></div><a class="article-title" href="/2020/06/06/iberia-honeymoon-granada/" title="[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Granada">[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Granada</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-05T17:55:46.000Z" title="发表于 2020-06-06 01:55:46" time="2020-06-06 01:55:46">2020-06-06</time><time class="time_hidden" datetime="2022-11-25T07:24:18.908Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/vlog/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>vlog</span></a><a class="article-meta__tags" href="/tags/%E8%9C%9C%E6%9C%88/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>蜜月</span></a><a class="article-meta__tags" href="/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>伊比利亚</span></a><a class="article-meta__tags" href="/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>西班牙</span></a><a class="article-meta__tags" href="/tags/%E6%A0%BC%E6%8B%89%E7%BA%B3%E8%BE%BE/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>格拉纳达</span></a><a class="article-meta__tags" href="/tags/%E9%98%BF%E5%B0%94%E7%BD%95%E5%B8%83%E6%8B%89%E5%AE%AB/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>阿尔罕布拉宫</span></a><a class="article-meta__tags" href="/tags/%E5%8F%A4%E5%A0%A1%E9%85%92%E5%BA%97/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>古堡酒店</span></a></span></div><div class="content">
+ 
+
+
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2020/01/29/iberia-honeymoon-seville-ronda/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">生活</div><div class="article-categories-original">旅行</div><a class="unvisited-post" href="/2020/01/29/iberia-honeymoon-seville-ronda/" title="[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Seville + Ronda">未读</a></div><a class="article-title" href="/2020/01/29/iberia-honeymoon-seville-ronda/" title="[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Seville + Ronda">[Hao&amp;Jie] Honeymoon Journey- Iberia 2019 —— Seville + Ronda</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2020-01-29T14:55:46.000Z" title="发表于 2020-01-29 22:55:46" time="2020-01-29 22:55:46">2020-01-29</time><time class="time_hidden" datetime="2022-11-25T07:24:18.908Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/vlog/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>vlog</span></a><a class="article-meta__tags" href="/tags/%E8%9C%9C%E6%9C%88/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>蜜月</span></a><a class="article-meta__tags" href="/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>伊比利亚</span></a><a class="article-meta__tags" href="/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>西班牙</span></a><a class="article-meta__tags" href="/tags/%E5%A1%9E%E7%BB%B4%E5%88%A9%E4%BA%9A/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>塞维利亚</span></a><a class="article-meta__tags" href="/tags/%E9%BE%99%E8%BE%BE/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>龙达</span></a></span></div><div class="content">
+ 
+
+
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#content-inner">11</a><a class="extend next" rel="next" href="/page/2/#content-inner"><div class="pagination_tips_next">下页</div><i style="font-weight: inherit; font-size: 1rem;" class="anzhiyufont anzhiyu-icon-chevron-right fa-fw"></i></a><div class="toPageGroup"><input id="toPageText" oninput="value=value.replace(/[^0-9]/g,'')" maxlength="3" onkeyup="this.value=this.value.replace(/[^u4e00-u9fa5w]/g,'')" aria-label="toPage"><a id="toPageButton" onclick="anzhiyu.toPage()"><i class="anzhiyufont anzhiyu-icon-angles-right" style="font-weight: inherit; font-size: 1rem;"></i></a></div></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">一个桌游玩家，程序猿，足球迷</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><h1 class="author-info__name">仙雾</h1><div class="author-info__desc">一个桌游玩家，程序猿，足球迷的生活</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/titanxxh" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/2617080" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="anzhiyufont anzhiyu-icon-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%B4%E8%A5%BF/"><span class="card-category-list-name">巴西</span><span class="card-category-list-count">4</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%B4%E8%A5%BF/%E7%BD%97%E7%BA%B3%E5%B0%94%E5%A4%9A/"><span class="card-category-list-name">罗纳尔多</span><span class="card-category-list-count">2</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">桌面游戏</span><span class="card-category-list-count">63</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/geek%E7%A0%94%E7%A9%B6/"><span class="card-category-list-name">geek研究</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"><span class="card-category-list-name">桌游介绍</span><span class="card-category-list-count">22</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/"><span class="card-category-list-name">桌游开箱照</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/"><span class="card-category-list-name">桌游感悟</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8/"><span class="card-category-list-name">桌游活动</span><span class="card-category-list-count">12</span></a></li></ul></li>
+            </ul></div><div class="sticky_layout"><div class="card-widget"><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/><div class="card-webinfo"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-file-lines"></i><div class="item-name">文章总数 :</div></div><div class="item-count">105</div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-stopwatch"></i><div class="item-name">建站天数 :</div></div><div class="item-count" id="runtimeshow" data-publishDate="2021-03-31T16:00:00.000Z"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-font"></i><div class="item-name">全站字数 :</div></div><div class="item-count">125.5k</div></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:titanxxh@gmail.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.facebook.com/xxhxxh" title="facebook"><i class="anzhiyufont anzhiyu-icon-facebook1"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/titanxxh" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/2617080" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh?igsh=MmVlMjlkMTBhMg==" title="Instagram"><i class="anzhiyufont anzhiyu-icon-instagram"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAA8fxaGlIMqjTGijfwkLpQKuWByJEu6zxpw9P9KrZ0JMc?from_tab_name=main" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2011 - 2024 By <a class="footer-bar-link" href="/" title="仙雾" target="_blank">仙雾</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">105</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">267</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">17</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">旅游</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/" title="伊比利亚蜜月"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="伊比利亚蜜月"/><span class="back-menu-item-text">伊比利亚蜜月</span></a><a class="back-menu-item" href="https://titanxxh.com/2018/09/11/russia-2018/" title="俄罗斯世界杯"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="俄罗斯世界杯"/><span class="back-menu-item-text">俄罗斯世界杯</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span></div></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("09/18/2011 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2011 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 仙雾 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><script>if (typeof gsap === "object") {
+  getScript("/js/anzhiyu/people.js", {defer:true})
+} else {
+  getScript("https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/gsap/gsap.min.js").then(()=>{
+    getScript("/js/anzhiyu/people.js", {defer:true})
+  });
+}</script><input type="hidden" name="page-type" id="page-type" value="anzhiyu"></div><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script>"use strict";if("serviceWorker"in navigator){navigator.serviceWorker.register("service-worker.js").then((function(reg){reg.onupdatefound=function(){var installingWorker=reg.installing;installingWorker.onstatechange=function(){switch(installingWorker.state){case"installed":if(navigator.serviceWorker.controller){console.log("New or updated content is available.")}else{console.log("Content is now available offline!")}break;case"redundant":console.error("The installing service worker became redundant.");break}}}}))["catch"]((function(e){console.error("Error during service worker registration:",e)}))}</script></body></html>

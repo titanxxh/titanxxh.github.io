@@ -1,1185 +1,691 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Meeple Life - 一个桌游玩家，程序猿，足球迷的生活</title><meta name="keywords" content="boardgame, programming, football"><meta name="author" content="仙雾"><meta name="copyright" content="仙雾"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Meeple Life"><meta name="application-name" content="Meeple Life"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="website"><meta property="og:title" content="Meeple Life"><meta property="og:url" content="http://titanxxh.com/page/7/index.html"><meta property="og:site_name" content="Meeple Life"><meta property="og:description" content="titanxxh&amp;#39;s blog | boardgame | programming | football"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta property="article:author" content="仙雾"><meta property="article:tag" content="boardgame, programming, football"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta name="description" content="titanxxh&amp;#39;s blog | boardgame | programming | football"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://titanxxh.com/page/7/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: {"skills":["桌游老司机","巴西死忠","ISTJ"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Meeple Life',
+  title: 'Meeple Life',
+  postAI: '',
+  pageFillDescription: '',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-27 04:49:10',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-
-<html lang="en">
-  
-
-    <head>
-      <meta charset="utf-8" />
-       
-      <meta name="keywords" content="boardgame, programming, football" />
-       
-      <meta name="description" content="titanxxh&#39;s blog | boardgame | programming" />
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
       
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
-      <title> Meeple Life</title>
-  <meta name="generator" content="hexo-theme-ayer">
+        get: key => {
+          const itemStr = localStorage.getItem(key)
       
-      <link rel="shortcut icon" href="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/favicon.ico" />
-       
-<link rel="stylesheet" href="/dist/main.css">
-
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
       
-<link rel="stylesheet" href="/css/fonts/remixicon.css">
-
-      
-<link rel="stylesheet" href="/css/custom.css">
- 
-      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
-       
- 
-
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
-      <!-- mermaid -->
-      
-      <style>
-        .swal2-styled.swal2-confirm {
-          font-size: 1.6rem;
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
-      </style>
-    <link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
-</head>
-  </html>
-</html>
-
-
-<body>
-  <div id="app">
+      }
     
-      
-    <main class="content on">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover2.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">Meeple Life</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-
-
-<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
-
-
-<!-- Subtitle -->
-
-  <script>
-    try {
-      var typed = new Typed("#subtitle", {
-        strings: ['What I cannot create I cannot understand.', '', ''],
-        startDelay: 0,
-        typeSpeed: 50,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-      });
-    } catch (err) {
-      console.log(err)
-    }
-  </script>
-  
-<div id="main">
-  <section class="outer">
-  
-  <ul class="ads">
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5ccc.jpg" width="300" alt="云服务器限时秒杀">
-            </a>
-        </li>
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8630075">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5cd7.png" width="300" alt="vultr优惠vps">
-            </a>
-        </li>
-    
-</ul>
-  
-  
-  
-
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
-</div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
         })
-        .catch(console.error)
-</script>
 
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
-  
-  <article class="articles">
-    
-    
-    
-    
-    <article
-  id="post-小小世界地下开箱照"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/07/15/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E5%9C%B0%E4%B8%8B%E5%BC%80%E7%AE%B1%E7%85%A7/"
-    >小小世界地下开箱照</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/07/15/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E5%9C%B0%E4%B8%8B%E5%BC%80%E7%AE%B1%E7%85%A7/" class="article-date">
-  <time datetime="2012-07-14T16:00:00.000Z" itemprop="datePublished">2012-07-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/">桌游开箱照</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>老妈从美国带回来的东西第二弹。。。小小世界全制霸好难啊。</p>
-
-<p>没看过规则，据说可以和原版一起玩，真爽啊，30个种族哈哈，再加三个小扩展，就有40多个种族了，50多种能力。。。加上隧道后，难道支持10人地图？</p>
-
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world/IMG_23.jpg"><br> 未拆封膜属性</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world/IMG_24.jpg"><br> 盒子正面，和原版一样一堆种族在一起</p>
-<p> 
-      <a class="article-more-link" href="/2012/07/15/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E5%9C%B0%E4%B8%8B%E5%BC%80%E7%AE%B1%E7%85%A7/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/expansion/" rel="tag">expansion</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/small-world/" rel="tag">small world</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/underground/" rel="tag">underground</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9C%B0%E4%B8%8B/" rel="tag">地下</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" rel="tag">小小世界</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%89%A9%E5%B1%95/" rel="tag">扩展</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-小小世界三个小扩展开箱照"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/07/07/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E4%B8%89%E4%B8%AA%E5%B0%8F%E6%89%A9%E5%B1%95%E5%BC%80%E7%AE%B1%E7%85%A7/"
-    >小小世界三个小扩展开箱照</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/07/07/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E4%B8%89%E4%B8%AA%E5%B0%8F%E6%89%A9%E5%B1%95%E5%BC%80%E7%AE%B1%E7%85%A7/" class="article-date">
-  <time datetime="2012-07-06T16:00:00.000Z" itemprop="datePublished">2012-07-07</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/">桌游开箱照</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>妈妈从美国带回来的桌游之一，撒花！</p>
-
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world/IMG_1.jpg"><br> 诅咒-盒子正面</p>
-<p> 
-      <a class="article-more-link" href="/2012/07/07/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E4%B8%89%E4%B8%AA%E5%B0%8F%E6%89%A9%E5%B1%95%E5%BC%80%E7%AE%B1%E7%85%A7/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/expansion/" rel="tag">expansion</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/small-world/" rel="tag">small world</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" rel="tag">小小世界</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%89%A9%E5%B1%95/" rel="tag">扩展</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-微软实习两周初体验"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/07/07/%E5%BE%AE%E8%BD%AF%E5%AE%9E%E4%B9%A0%E4%B8%A4%E5%91%A8%E5%88%9D%E4%BD%93%E9%AA%8C/"
-    >微软实习两周初体验</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/07/07/%E5%BE%AE%E8%BD%AF%E5%AE%9E%E4%B9%A0%E4%B8%A4%E5%91%A8%E5%88%9D%E4%BD%93%E9%AA%8C/" class="article-date">
-  <time datetime="2012-07-06T16:00:00.000Z" itemprop="datePublished">2012-07-07</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>人生中的第一次总是让人兴奋，本来这篇应当是上周发的，可是上周boss出差，周五又搬家，几乎就是装了装软件熟悉了一下环境，认识认识同事（其实到现在还没认全，没办法我们这个组太大了），打打酱油就过去了。</p>
-
-<p>进入第二周，boss回来了，我们搬到了一个新环境，本来看上去空空的办公室在两天之内被填满了，不得不佩服微软招人的速度。。。</p>
-
-<p>进入正题，先说一下微软的环境。所有办公都在Building01，一共有5楼，每一楼都分long wing和short wing，然后每个wing都有两片办公区域，中间有休息的地方，茶水间里面提供各种饮料食品，这些应该说大公司都会有。我就说几个我觉得比较让我满意的地方，首先是所有洗手的地方又有再生纸可以吸干水，然后就是卫生间居然是香的。。。马桶有一次性的垫子，另外很多墙壁上市可以写字的，看到有些墙上还注明不要擦，最让我感到满意的是工作人员的负责，清洁工会巡逻一样几乎看到脏了就会擦干净，你要是有什么需求他们响应也很快。再说用餐环境，说实话微软人实在太多，餐厅在高峰期还是有点拥挤的，员工也很有素质，用餐完毕后会把椅子移回去。食物的质量只能说一般，价格的话大荤略贵，其他都很便宜，可是菜量就比学校少了，汤还是可以的。不过晚餐居然就只有一个窗口了！！！</p>
-
-<p>我所在的是STB中的HPC组，组内人员有很多，张恒虽说和我在一起，但是做的东西完全无关。。。雄哥的话是test，基本也和我无关。。。本周一，由于有新的正式员工来，正好大boss出差回来，于是乎就请了新员工一起出去吃饭，而我和另一个实习生也很幸运的被邀请了，由于饭店没有大桌子，只能分桌，我和大boss和我们的PM在同一桌，听了很多他们的谈话，只有一个感觉，就是我们的PM懂得好多，他们聊到了日本人的特性、优缺点，还有就是我们组的一些工作，我在一旁听着感觉到人生阅历的欠缺啊。。。另一件事就是下周招我的面试官要去美国总部了，这周五是他最后一天在公司上班，离愁别绪在办公室中蔓延，感觉员工们感情还是很好的。</p>
-
-<p>最后说一下我的任务（其实也不好细说），我貌似算是幸运了，进去以后就加入了一个新的项目，想要做一个云的marketplace，连续开了几次会，能够从一个项目的开始体验微软的运作流程还是很好的。第一次开会的时候，boss给我的任务我听上去还算简单，等到这周五的会开完，我就感觉这个不是那么简单了，PM列了项目中的5种persona，介绍了一下每个persona的stroy，给项目的goal定了一个性，然后在两个问题上和大boss展开了讨论。不过这还不算一个细化了的正式会议，许多问题都还在探索中。</p>
-
-<p>现在干的事就是看各种开发文档，熟悉api，搭建环境跑例子，自己玩一下，等UX的mockup，不过估计还有再来一次细化的会议。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Microsoft/" rel="tag">Microsoft</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/intern/" rel="tag">intern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E4%B9%A0/" rel="tag">实习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E8%BD%AF/" rel="tag">微软</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-20120704权力的游戏战报"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/07/06/20120704%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E6%88%98%E6%8A%A5/"
-    >20120704权力的游戏战报</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/07/06/20120704%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E6%88%98%E6%8A%A5/" class="article-date">
-  <time datetime="2012-07-05T16:00:00.000Z" itemprop="datePublished">2012-07-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8/">桌游活动</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>话说天下大事合久必分，分久必合。在战争平息了多年之后，王国内部已经出现了些许隐忧，而旧王之死更是意味着维斯特洛大陆又将掀起一场血雨腥风。这一次，六位列王同时揭竿而起，参与到这一场权力的游戏中来。</p>
-
-<p>他们是：</p>
-
-<p>来自龙石岛的黄色宝冠雄鹿家族，起始拥有政权与秩序的象征铁王座，王权暂代者暨原风暴王国之主 —— 笑诚·拜拉席恩</p>
-
-<p>来自派克岛的黑色凶猛海怪家族，起始拥有战争与力量的象征瓦雷利亚钢剑，铁民湾群枭之首 —— 仙雾·葛雷乔伊</p>
-
-<p>来自兰尼斯港的红色狡诈雄狮家族，起始拥有情报与阴谋的象征信鸦，西境守护凯岩王国之主 —— 紫晗·兰尼斯特</p>
-
-<p>来自临冬城的白色冰原奔狼家族，北境守护北境王国之主 —— D哥·史塔克</p>
-
-<p>来自高庭的绿色黄金玫瑰家族，南境守护河湾王国之主 —— 冀尔·提利尔</p>
-
-<p>来自阳戟城的橙色长枪贯日家族，多恩王国之主 —— 小受·马泰尔</p>
-
-<p>其中兰尼斯特、提利尔、史塔克家族皆为新登基的国王，没有经过上一次战争的洗礼。</p>
-
-<p>在开战前的列王会议中，六位国王一起向新旧诸神起誓，谁能首先控制七座要塞或城堡，其他列王就应当立即臣服，偃旗息鼓，刀剑入库。或者，十年期限一到，则各位也再不劳民伤财，止干戈而尊城邦广袤、物产丰饶者为全境守护。</p>
-
-<p>接下来以我，也就是葛雷乔伊家族视角，来叙述这场战争。 起始拥有绝对武力的黑色海怪，秉持着强取胜于苦耕的家族箴言，在第一年开始便修书一封：</p>
-
-<p>尊敬的兰尼斯特大人：</p>
-
-<p>你我两家族坐拥物产最为丰富的地域，并且亦是最近的邻居，我希望你勿要轻信他人的挑拨，我保证不先对你进攻，同样作为提议的交换，你需将奔流城让出，如有必要吾愿意在你即将胜利之时将其奉还。此外若有提利尔或是拜拉席恩胆敢侵犯你的领地吾亦将无条件驰援你发生的战斗。 愿红黑两家世代交好，共抗外敌。</p>
-
-<p>派克岛和铁民湾的统治者，北境之王（没错是同一个人）——仙雾·葛雷乔伊敬上 
-      <a class="article-more-link" href="/2012/07/06/20120704%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E6%88%98%E6%8A%A5/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/a-game-of-thrones/" rel="tag">a game of thrones</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%88%98%E6%8A%A5/" rel="tag">战报</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F/" rel="tag">权力的游戏</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-席德梅尔的文明桌游开箱"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/06/05/%E5%B8%AD%E5%BE%B7%E6%A2%85%E5%B0%94%E7%9A%84%E6%96%87%E6%98%8E%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1/"
-    >席德梅尔的文明桌游开箱</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/06/05/%E5%B8%AD%E5%BE%B7%E6%A2%85%E5%B0%94%E7%9A%84%E6%96%87%E6%98%8E%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1/" class="article-date">
-  <time datetime="2012-06-04T16:00:00.000Z" itemprop="datePublished">2012-06-05</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/">桌游开箱照</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>作为一个文明爱好者和桌游爱好者，入手这货简直是一定的，可是错过了团购，就只能等二手了。。。收了个南京大学的人的二手，质量还不错。不过最近是没空看规则了。。。</p>
-
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/civilization-boardgame/IMG_1.jpg"><br> 照例 先上全家福</p>
-<p> 
-      <a class="article-more-link" href="/2012/06/05/%E5%B8%AD%E5%BE%B7%E6%A2%85%E5%B0%94%E7%9A%84%E6%96%87%E6%98%8E%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/civilization/" rel="tag">civilization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E6%98%8E/" rel="tag">文明</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-权力的游戏详尽开箱"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/05/19/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E8%AF%A6%E5%B0%BD%E5%BC%80%E7%AE%B1/"
-    >权力的游戏详尽开箱</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/05/19/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E8%AF%A6%E5%B0%BD%E5%BC%80%E7%AE%B1/" class="article-date">
-  <time datetime="2012-05-18T16:00:00.000Z" itemprop="datePublished">2012-05-19</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/">桌游开箱照</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>上一篇的开箱过于简略。。。这游戏配件实在太多，所以为了让徘徊在入坑边缘的同学不再犹豫，我将把几乎所有的细节都拍一遍。</p>
-
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/a-game-of-thrones/IMG_40.jpg"><br> 所有东西全家福（真够多的）</p>
-<p> 
-      <a class="article-more-link" href="/2012/05/19/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E8%AF%A6%E5%B0%BD%E5%BC%80%E7%AE%B1/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/a-game-of-thrones/" rel="tag">a game of thrones</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C/" rel="tag">冰与火之歌</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F/" rel="tag">权力的游戏</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%88%E5%9B%BE/" rel="tag">版图</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-权力的游戏版图版开箱照（期待开一局啊）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/05/15/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E7%89%88%E5%9B%BE%E7%89%88%E5%BC%80%E7%AE%B1%E7%85%A7%EF%BC%88%E6%9C%9F%E5%BE%85%E5%BC%80%E4%B8%80%E5%B1%80%E5%95%8A%EF%BC%89/"
-    >权力的游戏版图版开箱照（期待开一局啊）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/05/15/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E7%89%88%E5%9B%BE%E7%89%88%E5%BC%80%E7%AE%B1%E7%85%A7%EF%BC%88%E6%9C%9F%E5%BE%85%E5%BC%80%E4%B8%80%E5%B1%80%E5%95%8A%EF%BC%89/" class="article-date">
-  <time datetime="2012-05-14T16:00:00.000Z" itemprop="datePublished">2012-05-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/">桌游开箱照</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>作为一个版图控和新的冰与火的粉丝，一直就很想入冰与火的游戏，无奈听说第二版的版图有点渣，一直憋着，直到听说官方补发了新版图，恰逢上周心情大好，就毫不犹豫的入了一套，顺带还买了两件T恤（格雷乔伊和兰尼斯特）。</p>
-
-<p>简单介绍下吧（粗粗地看过一遍规则），这是一个嘴炮游戏，外交是十分重要的，尤其是开始就处于夹击下的兰尼斯特和拜拉席恩，同盟的建立是基于口头的约定，同盟的瓦解则不需要任何理由，backstab是完全允许的，不过看重荣誉的人未必不能赢的胜利。游戏分10个回合，结束后拥有要塞或城堡最多的玩家获胜，当游戏过程中有玩家控制7个要塞或城堡时就立即获胜。</p>
-
-<p>由于这游戏最完美是6人局，所以估计要推的难度颇大，估计退而求其次能找到4人就不错了，最好能有是冰与火的粉丝，否则估计会郁闷。附送一篇精彩的战报：<a title="游家冰与火战报" href="https://www.gamerhome.net/bbs/forum.php?mod=viewthread&amp;tid=354183&amp;extra=page%3D1" target="_blank">传送门</a></p>
-
-<p>&nbsp;</p>
-
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/a-game-of-thrones/IMG_1.jpg"><br> 盒子正面</p>
-<p> 
-      <a class="article-more-link" href="/2012/05/15/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E7%89%88%E5%9B%BE%E7%89%88%E5%BC%80%E7%AE%B1%E7%85%A7%EF%BC%88%E6%9C%9F%E5%BE%85%E5%BC%80%E4%B8%80%E5%B1%80%E5%95%8A%EF%BC%89/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/a-game-of-thrones/" rel="tag">a game of thrones</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C/" rel="tag">冰与火之歌</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F/" rel="tag">权力的游戏</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%88%E5%9B%BE/" rel="tag">版图</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-否极泰来？"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/05/08/%E5%90%A6%E6%9E%81%E6%B3%B0%E6%9D%A5%EF%BC%9F/"
-    >否极泰来？</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/05/08/%E5%90%A6%E6%9E%81%E6%B3%B0%E6%9D%A5%EF%BC%9F/" class="article-date">
-  <time datetime="2012-05-07T16:00:00.000Z" itemprop="datePublished">2012-05-08</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>话说前几星期是各种不顺，作业还多到吐血，不过一切都似乎在6号停止了，最后的郁闷是自信满满的二面结束后却被微软HR姐姐告知让我等通知，昨天上课的时候突然收到微软HR电话，心里有一些小激动，在被告知可以去实习后似乎前几个星期的阴霾一扫而空，轻松了许多。然后好好地玩了一天，刚刚又和wzh玩了3局领土，难道这就是传说中的否极泰来？或许吧。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Microsoft/" rel="tag">Microsoft</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/intern/" rel="tag">intern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wzh/" rel="tag">wzh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E4%B9%A0/" rel="tag">实习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E8%BD%AF/" rel="tag">微软</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A2%86%E5%9C%9F/" rel="tag">领土</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-一些想法20120501"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/05/02/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%9520120501/"
-    >一些想法20120501</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/05/02/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%9520120501/" class="article-date">
-  <time datetime="2012-05-01T16:00:00.000Z" itemprop="datePublished">2012-05-02</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/%E7%81%B5%E5%85%89%E4%B8%80%E7%8E%B0/">灵光一现</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>我发现自己洗澡的时候思维各种活跃啊，难道这就是传说中的27分钟思考3分钟洗干净么？</p>
-
-<p>1.最近在看分词 突然想到一个问题 既然验证码能帮助识别识别字母  为什么我们不能用验证码来帮助建立分词数据库呢 群众的力量是伟大的啊
-<div>2.当一个系统设计出来之后，如果100个错误中只有一个是因为系统bug引起的，其他都是因为一些不可控因素引起的，那么这个bug还有必要解决么？
-<div>如果需要的话，看下面这个例子
-<div>例如，某种语言，当一个人请求别人重说一遍刚刚的话，100次中只有一次是因为歧义造成的，其他99次都是因为说话人口齿不清、语速太快或者是听的人走神了之类的原因，那这个语言需要被修正么？</div>
-<div>如果不需要，为什么呢？</div>
-</div>
-<div></div>
-<div>
-<div>3.人应当尽量避免陷入储存、搜索、调用的思维模式，这种模式对人的创造性杀伤巨大</div>
-</div>
-</div></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/thoughts/" rel="tag">thoughts</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">感悟</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-战报之庆祝wzh考g结束"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2012/05/01/%E6%88%98%E6%8A%A5%E4%B9%8B%E5%BA%86%E7%A5%9Dwzh%E8%80%83g%E7%BB%93%E6%9D%9F/"
-    >战报之庆祝wzh考G结束</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2012/05/01/%E6%88%98%E6%8A%A5%E4%B9%8B%E5%BA%86%E7%A5%9Dwzh%E8%80%83g%E7%BB%93%E6%9D%9F/" class="article-date">
-  <time datetime="2012-04-30T16:00:00.000Z" itemprop="datePublished">2012-05-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8/">桌游活动</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>最近事情略多，面试笔试作业项目各种坑，拖了很久才有空写一篇战报。</p>
-
-<p>wzh隐忍了很久没玩桌游，就为了一次G，据说分数是个不上不下的蛋疼成绩，不过好消息是GRE貌似以后不会看全部成绩了，可以选个最好的送过去。</p>
-
-<p>首先开了一局四人农场主，规则都快忘了的我自然毫无悬念地垫底，不过最后时刻的爆脑还是很有意思，当时cjr已经一路领先，直奔4人最高分去了，而我则还有多达7片空地没填满，最后一轮，我先犁地并播种，然后通过职业卡连盖2做房屋并建马厩，当中还被鄙视了智商，因为忘记可以支付刚刚得到的蔬菜再换资源。。。最后奇迹般地只留下一块空地，话说本来是算好没空地的啊。。。 
-      <a class="article-more-link" href="/2012/05/01/%E6%88%98%E6%8A%A5%E4%B9%8B%E5%BA%86%E7%A5%9Dwzh%E8%80%83g%E7%BB%93%E6%9D%9F/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Agricola/" rel="tag">Agricola</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GRE/" rel="tag">GRE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GamePlay/" rel="tag">GamePlay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ora-amp-Labora/" rel="tag">Ora&amp;Labora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cjr/" rel="tag">cjr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ora-et-labora/" rel="tag">ora et labora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wzh/" rel="tag">wzh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/" rel="tag">农场主</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%88%98%E6%8A%A5/" rel="tag">战报</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/" rel="tag">祈祷与工作</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-  </article>
-  
-
-  
-  <nav class="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/6/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/8/">下一页</a>
-  </nav>
-  
-</section>
-</div>
-
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2011-2022
-        <i class="ri-heart-fill heart_icon"></i> 仙雾
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        
-        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-        <span class="division">|</span>
-        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-      </li>
-    </ul>
-  </div>
-</footer>    
-    </main>
-    <div class="float_btns">
-      <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-    </div>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" alt="Meeple Life"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/friends">友链</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh/">Instagram</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/friends">Links</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="Search">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-3.6.0.min.js"></script>
- 
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
-
-<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
-/>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
- <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
             }
-        })
-    }
-    viewer_init()
-</script> 
-<!-- MathJax -->
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
-
-<!-- ClickLove -->
-
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
- 
-<link rel="stylesheet" href="/css/clipboard.css">
- <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
         }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
- 
-<!-- CanvasBackground -->
-
-<script>
-  if (window.mermaid) {
-    mermaid.initialize({ theme: "forest" });
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
   }
-</script>
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
 
-
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">旅游</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/" title="伊比利亚蜜月"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="伊比利亚蜜月"/><span class="back-menu-item-text">伊比利亚蜜月</span></a><a class="back-menu-item" href="https://titanxxh.com/2018/09/11/russia-2018/" title="俄罗斯世界杯"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="俄罗斯世界杯"/><span class="back-menu-item-text">俄罗斯世界杯</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Meeple Life</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Birthday/" style="font-size: 1.05rem;">Birthday<sup>1</sup></a><a href="/tags/D%E5%93%A5/" style="font-size: 1.05rem;">D哥<sup>2</sup></a><a href="/tags/GamePlay/" style="font-size: 1.05rem;">GamePlay<sup>11</sup></a><a href="/tags/Ronaldo/" style="font-size: 1.05rem;">Ronaldo<sup>1</sup></a><a href="/tags/carcassonne/" style="font-size: 1.05rem;">carcassonne<sup>1</sup></a><a href="/tags/chinatown/" style="font-size: 1.05rem;">chinatown<sup>2</sup></a><a href="/tags/modern-art/" style="font-size: 1.05rem;">modern art<sup>2</sup></a><a href="/tags/small-world/" style="font-size: 1.05rem;">small world<sup>6</sup></a><a href="/tags/%E4%B8%89%E5%9B%BD%E6%9D%80/" style="font-size: 1.05rem;">三国杀<sup>3</sup></a><a href="/tags/%E4%B8%8A%E6%B5%B7%E4%BB%99%E5%89%91%E5%90%8E%E6%8F%B4%E4%BC%9A/" style="font-size: 1.05rem;">上海仙剑后援会<sup>1</sup></a><a href="/tags/%E4%BA%94%E6%AF%92%E5%85%BD/" style="font-size: 1.05rem;">五毒兽<sup>1</sup></a><a href="/tags/%E4%BB%99%E5%89%91/" style="font-size: 1.05rem;">仙剑<sup>1</sup></a><a href="/tags/%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0/" style="font-size: 1.05rem;">仙剑奇侠传<sup>6</sup></a><a href="/tags/%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0%E4%BA%94/" style="font-size: 1.05rem;">仙剑奇侠传五<sup>4</sup></a><a href="/tags/%E5%88%9D%E7%8E%A9%E6%84%9F%E5%8F%97/" style="font-size: 1.05rem;">初玩感受<sup>1</sup></a><a href="/tags/%E5%8D%A1%E5%8D%A1%E9%A2%82/" style="font-size: 1.05rem;">卡卡颂<sup>1</sup></a><a href="/tags/%E5%94%90%E4%BA%BA%E8%A1%97/" style="font-size: 1.05rem;">唐人街<sup>2</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 1.05rem;">回忆<sup>1</sup></a><a href="/tags/%E5%9B%9E%E6%94%BE/" style="font-size: 1.05rem;">回放<sup>1</sup></a><a href="/tags/%E5%B0%8F%E5%8F%97/" style="font-size: 1.05rem;">小受<sup>1</sup></a><a href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" style="font-size: 1.05rem;">小小世界<sup>6</sup></a><a href="/tags/%E6%83%85%E4%BA%BA%E8%8A%82/" style="font-size: 1.05rem;">情人节<sup>1</sup></a><a href="/tags/%E6%84%9F%E5%8F%97/" style="font-size: 1.05rem;">感受<sup>7</sup></a><a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 1.05rem;">感悟<sup>8</sup></a><a href="/tags/%E6%88%98%E6%96%97/" style="font-size: 1.05rem;">战斗<sup>1</sup></a><a href="/tags/%E6%88%AA%E5%9B%BE/" style="font-size: 1.05rem;">截图<sup>2</sup></a><a href="/tags/%E6%90%9E%E7%AC%91/" style="font-size: 1.05rem;">搞笑<sup>1</sup></a><a href="/tags/%E6%96%87%E6%98%8E/" style="font-size: 1.05rem;">文明<sup>6</sup></a><a href="/tags/%E6%96%87%E6%98%8E5/" style="font-size: 1.05rem;">文明5<sup>3</sup></a><a href="/tags/%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF/" style="font-size: 1.05rem;">现代艺术<sup>2</sup></a><a href="/tags/%E7%94%9F%E6%97%A5/" style="font-size: 1.05rem;">生日<sup>1</sup></a><a href="/tags/%E7%99%BE%E6%B8%B8/" style="font-size: 1.05rem;">百游<sup>1</sup></a><a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 1.05rem;">统计<sup>1</sup></a><a href="/tags/%E7%BD%97%E5%B0%BC/" style="font-size: 1.05rem;">罗尼<sup>1</sup></a><a href="/tags/%E7%BD%97%E7%BA%B3%E5%B0%94%E5%A4%9A/" style="font-size: 1.05rem;">罗纳尔多<sup>1</sup></a><a href="/tags/%E8%91%A3%E5%8D%93/" style="font-size: 1.05rem;">董卓<sup>1</sup></a><a href="/tags/%E8%B6%A3%E9%97%BB/" style="font-size: 1.05rem;">趣闻<sup>1</sup></a><a href="/tags/%E9%80%80%E5%BD%B9/" style="font-size: 1.05rem;">退役<sup>1</sup></a><a href="/tags/%E9%81%93%E5%90%AC%E9%80%94%E8%AF%B4/" style="font-size: 1.05rem;">道听途说<sup>1</sup></a><a href="/tags/%E9%A2%84%E5%94%AE/" style="font-size: 1.05rem;">预售<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div id="categoryBar"><div class="category-bar" id="category-bar"><div id="catalog-bar"><div id="catalog-list"><div class="catalog-list-item" id="首页"><a href="/">首页</a></div>
+    <div class="catalog-list-item" id="/categories/巴西/">
+      <a href="/categories/巴西/">
+        巴西
+      </a>
+    </div>
     
+    <div class="catalog-list-item" id="/categories/游戏/">
+      <a href="/categories/游戏/">
+        游戏
+      </a>
+    </div>
     
+    <div class="catalog-list-item" id="/categories/桌面游戏/">
+      <a href="/categories/桌面游戏/">
+        桌面游戏
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/巴西/罗纳尔多/">
+      <a href="/categories/巴西/罗纳尔多/">
+        罗纳尔多
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游感悟/">
+      <a href="/categories/桌面游戏/桌游感悟/">
+        桌游感悟
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/生活/">
+      <a href="/categories/生活/">
+        生活
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游活动/">
+      <a href="/categories/桌面游戏/桌游活动/">
+        桌游活动
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/">
+      <a href="/categories/软件开发/">
+        软件开发
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游开箱照/">
+      <a href="/categories/桌面游戏/桌游开箱照/">
+        桌游开箱照
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/geek研究/">
+      <a href="/categories/桌面游戏/geek研究/">
+        geek研究
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/计算机网络/">
+      <a href="/categories/软件开发/计算机网络/">
+        计算机网络
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/生活/灵光一现/">
+      <a href="/categories/生活/灵光一现/">
+        灵光一现
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/物理引擎/">
+      <a href="/categories/软件开发/物理引擎/">
+        物理引擎
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/生活/旅行/">
+      <a href="/categories/生活/旅行/">
+        旅行
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游介绍/">
+      <a href="/categories/桌面游戏/桌游介绍/">
+        桌游介绍
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/编程语言/">
+      <a href="/categories/软件开发/编程语言/">
+        编程语言
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/golang/">
+      <a href="/categories/软件开发/golang/">
+        golang
+      </a>
+    </div>
+    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/2012/08/08/%E8%BF%91%E6%9C%9F%E4%B8%80%E4%BA%9B%E4%BA%8B/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">生活</div><a class="unvisited-post" href="/2012/08/08/%E8%BF%91%E6%9C%9F%E4%B8%80%E4%BA%9B%E4%BA%8B/" title="近期一些事">未读</a></div><a class="article-title" href="/2012/08/08/%E8%BF%91%E6%9C%9F%E4%B8%80%E4%BA%9B%E4%BA%8B/" title="近期一些事">近期一些事</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-08-07T16:00:00.000Z" title="发表于 2012-08-08 00:00:00" time="2012-08-08 00:00:00">2012-08-08</time><time class="time_hidden" datetime="2022-11-25T07:24:18.893Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/wzh/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>wzh</span></a><a class="article-meta__tags" href="/tags/cjr/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>cjr</span></a><a class="article-meta__tags" href="/tags/%E5%AE%9E%E4%B9%A0/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>实习</span></a><a class="article-meta__tags" href="/tags/%E5%BE%AE%E8%BD%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>微软</span></a><a class="article-meta__tags" href="/tags/a-game-of-thrones/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>a game of thrones</span></a><a class="article-meta__tags" href="/tags/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>权力的游戏</span></a><a class="article-meta__tags" href="/tags/mage-knight/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>mage knight</span></a><a class="article-meta__tags" href="/tags/%E5%88%98%E7%BF%94/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>刘翔</span></a><a class="article-meta__tags" href="/tags/%E5%A5%A5%E8%BF%90%E4%BC%9A/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>奥运会</span></a><a class="article-meta__tags" href="/tags/%E5%B7%B4%E8%A5%BF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>巴西</span></a><a class="article-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%9A%84%E5%AE%B6/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>游戏人的家</span></a><a class="article-meta__tags" href="/tags/%E9%AD%94%E6%B3%95%E9%AA%91%E5%A3%AB/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>魔法骑士</span></a></span></div><div class="content">近期最火爆的毫无疑问是刘翔摔倒，以至于跳水丢金、女排淘汰都看不见报导，看了新浪的老梁的视频，说得在情在理，刘翔毫无疑问是这个事件的受害者，比赛也输了，跟腱也断了，被指责了4年还会继续下去。然而主流媒体方面却和四年前截然相反，几乎是清一色的赞美声，这也是老梁在视频里说这是一出戏的一个论据，回想赛前，其实媒体已经有报导说刘翔伤势会影响比赛了，通过这样一种放出风声的方法，实际上给观众打了预防针。正如老梁说的，刘翔被各方力量推向赛场，形成了跑也得跑不跑也得跑的局面，而这一场赌博，最好的情况也只是减轻中国代表团的舆论压力，事实上刘翔为此付出了惨痛的代价，跟腱断裂对于一个运动员意味着什么，大家都清楚，刘翔还想回到巅峰已经几乎不可能（并不是我唱衰，事实如此），刘翔也算幸运的了，比起那些因伤退役的运动员，毕竟他曾经有过辉煌。这一事件还是暴露了媒体报导时的一些顽疾，忽视个人利益，强调道德因素等等。报导后续肯定还会出，详细情况也只能再看了。最后祝愿刘翔早日康复。
 
-  </div>
-</body>
+再来说说工作，boss出国了，这周应该是回来了，可是这两天都没出现，加上今天台风来袭（公司发邮件说不用上班了。。。所以我才有空在这里码字），我 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2012/07/15/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E5%9C%B0%E4%B8%8B%E5%BC%80%E7%AE%B1%E7%85%A7/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游开箱照</div><a class="unvisited-post" href="/2012/07/15/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E5%9C%B0%E4%B8%8B%E5%BC%80%E7%AE%B1%E7%85%A7/" title="小小世界地下开箱照">未读</a></div><a class="article-title" href="/2012/07/15/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E5%9C%B0%E4%B8%8B%E5%BC%80%E7%AE%B1%E7%85%A7/" title="小小世界地下开箱照">小小世界地下开箱照</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-07-14T16:00:00.000Z" title="发表于 2012-07-15 00:00:00" time="2012-07-15 00:00:00">2012-07-15</time><time class="time_hidden" datetime="2022-11-25T07:24:18.893Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/small-world/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>small world</span></a><a class="article-meta__tags" href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>小小世界</span></a><a class="article-meta__tags" href="/tags/%E5%BC%80%E7%AE%B1/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开箱</span></a><a class="article-meta__tags" href="/tags/expansion/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>expansion</span></a><a class="article-meta__tags" href="/tags/%E6%89%A9%E5%B1%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>扩展</span></a><a class="article-meta__tags" href="/tags/underground/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>underground</span></a><a class="article-meta__tags" href="/tags/%E5%9C%B0%E4%B8%8B/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>地下</span></a></span></div><div class="content">老妈从美国带回来的东西第二弹。。。小小世界全制霸好难啊。
 
-</html>
+没看过规则，据说可以和原版一起玩，真爽啊，30个种族哈哈，再加三个小扩展，就有40多个种族了，50多种能力。。。加上隧道后，难道支持10人地图？
+
+ 未拆封膜属性
+ 盒子正面，和原版一样一堆种族在一起
+
+
+ 盒子反面
+ 里面的东西
+ 完美收纳，dow的风格
+ 规则说明书16页
+ dow的游戏介绍
+ 游戏流程
+ 种族一览
+ 特殊能力一览
+ 7张token版
+ 2人地图
+ 3人地图
+ 4人地图
+ 5人地图
+ 所有特殊能力
+ 所有种族
+ 回合标志
+ 黑山
+ 盾牌
+ 复仇
+ 银锤子
+ 炎魔
+ 幽灵
+ 女王
+ 远古伟人
+ 魔术包
+ 火山
+ 稀世珍宝
+ 名胜古迹
+ 新设计的收纳盒，有个坡度，拿起来方便
+ 通通放进去啦
+ token的尸体
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2012/07/07/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E4%B8%89%E4%B8%AA%E5%B0%8F%E6%89%A9%E5%B1%95%E5%BC%80%E7%AE%B1%E7%85%A7/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游开箱照</div><a class="unvisited-post" href="/2012/07/07/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E4%B8%89%E4%B8%AA%E5%B0%8F%E6%89%A9%E5%B1%95%E5%BC%80%E7%AE%B1%E7%85%A7/" title="小小世界三个小扩展开箱照">未读</a></div><a class="article-title" href="/2012/07/07/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C%E4%B8%89%E4%B8%AA%E5%B0%8F%E6%89%A9%E5%B1%95%E5%BC%80%E7%AE%B1%E7%85%A7/" title="小小世界三个小扩展开箱照">小小世界三个小扩展开箱照</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-07-06T16:00:00.000Z" title="发表于 2012-07-07 00:00:00" time="2012-07-07 00:00:00">2012-07-07</time><time class="time_hidden" datetime="2022-11-25T07:24:18.892Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/small-world/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>small world</span></a><a class="article-meta__tags" href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>小小世界</span></a><a class="article-meta__tags" href="/tags/%E5%BC%80%E7%AE%B1/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开箱</span></a><a class="article-meta__tags" href="/tags/expansion/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>expansion</span></a><a class="article-meta__tags" href="/tags/%E6%89%A9%E5%B1%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>扩展</span></a></span></div><div class="content">妈妈从美国带回来的桌游之一，撒花！
+
+ 诅咒-盒子正面
+
+
+ 诅咒-盒子反面
+ 诅咒-规则
+ 诅咒-种族-狗头人+哥布林
+ 诅咒-能力
+ 诅咒-全家福
+ 女士-盒子正面
+ 女士-盒子反面
+ 女士-规则
+ 女士-种族-白女士+女牧师+吉普赛人
+ 女士-能力
+ 女士-全家福
+ 别害怕-盒子正面
+ 别害怕-盒子反面
+ 别害怕-说明书正面
+ 别害怕-说明书反面
+ 别害怕-附送的收纳
+ 别害怕-多的金币token
+ 别害怕-各个能力
+ 别害怕-各个种族
+ 别害怕-全家福
+ 三个小扩展收纳到一起
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2012/07/07/%E5%BE%AE%E8%BD%AF%E5%AE%9E%E4%B9%A0%E4%B8%A4%E5%91%A8%E5%88%9D%E4%BD%93%E9%AA%8C/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">生活</div><a class="unvisited-post" href="/2012/07/07/%E5%BE%AE%E8%BD%AF%E5%AE%9E%E4%B9%A0%E4%B8%A4%E5%91%A8%E5%88%9D%E4%BD%93%E9%AA%8C/" title="微软实习两周初体验">未读</a></div><a class="article-title" href="/2012/07/07/%E5%BE%AE%E8%BD%AF%E5%AE%9E%E4%B9%A0%E4%B8%A4%E5%91%A8%E5%88%9D%E4%BD%93%E9%AA%8C/" title="微软实习两周初体验">微软实习两周初体验</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-07-06T16:00:00.000Z" title="发表于 2012-07-07 00:00:00" time="2012-07-07 00:00:00">2012-07-07</time><time class="time_hidden" datetime="2022-11-25T07:24:18.892Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/intern/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>intern</span></a><a class="article-meta__tags" href="/tags/Microsoft/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Microsoft</span></a><a class="article-meta__tags" href="/tags/%E5%AE%9E%E4%B9%A0/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>实习</span></a><a class="article-meta__tags" href="/tags/%E5%BE%AE%E8%BD%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>微软</span></a></span></div><div class="content">人生中的第一次总是让人兴奋，本来这篇应当是上周发的，可是上周boss出差，周五又搬家，几乎就是装了装软件熟悉了一下环境，认识认识同事（其实到现在还没认全，没办法我们这个组太大了），打打酱油就过去了。
+
+进入第二周，boss回来了，我们搬到了一个新环境，本来看上去空空的办公室在两天之内被填满了，不得不佩服微软招人的速度。。。
+
+进入正题，先说一下微软的环境。所有办公都在Building01，一共有5楼，每一楼都分long wing和short wing，然后每个wing都有两片办公区域，中间有休息的地方，茶水间里面提供各种饮料食品，这些应该说大公司都会有。我就说几个我觉得比较让我满意的地方，首先是所有洗手的地方又有再生纸可以吸干水，然后就是卫生间居然是香的。。。马桶有一次性的垫子，另外很多墙壁上市可以写字的，看到有些墙上还注明不要擦，最让我感到满意的是工作人员的负责，清洁工会巡逻一样几乎看到脏了就会擦干净，你要是有什么需求他们响应也很快。再说用餐环境，说实话微软人实在太多，餐厅在高峰期还是有点拥挤的，员工也很有素质，用餐完毕后会把椅子移回去。食物的质量只能说一般，价格的话大荤略贵，其他都 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2012/07/06/20120704%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E6%88%98%E6%8A%A5/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游活动</div><a class="unvisited-post" href="/2012/07/06/20120704%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E6%88%98%E6%8A%A5/" title="20120704权力的游戏战报">未读</a></div><a class="article-title" href="/2012/07/06/20120704%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E6%88%98%E6%8A%A5/" title="20120704权力的游戏战报">20120704权力的游戏战报</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-07-05T16:00:00.000Z" title="发表于 2012-07-06 00:00:00" time="2012-07-06 00:00:00">2012-07-06</time><time class="time_hidden" datetime="2022-11-25T07:24:18.892Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%88%98%E6%8A%A5/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>战报</span></a><a class="article-meta__tags" href="/tags/a-game-of-thrones/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>a game of thrones</span></a><a class="article-meta__tags" href="/tags/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>权力的游戏</span></a></span></div><div class="content">话说天下大事合久必分，分久必合。在战争平息了多年之后，王国内部已经出现了些许隐忧，而旧王之死更是意味着维斯特洛大陆又将掀起一场血雨腥风。这一次，六位列王同时揭竿而起，参与到这一场权力的游戏中来。
+
+他们是：
+
+来自龙石岛的黄色宝冠雄鹿家族，起始拥有政权与秩序的象征铁王座，王权暂代者暨原风暴王国之主 —— 笑诚·拜拉席恩
+
+来自派克岛的黑色凶猛海怪家族，起始拥有战争与力量的象征瓦雷利亚钢剑，铁民湾群枭之首 —— 仙雾·葛雷乔伊
+
+来自兰尼斯港的红色狡诈雄狮家族，起始拥有情报与阴谋的象征信鸦，西境守护凯岩王国之主 —— 紫晗·兰尼斯特
+
+来自临冬城的白色冰原奔狼家族，北境守护北境王国之主 —— D哥·史塔克
+
+来自高庭的绿色黄金玫瑰家族，南境守护河湾王国之主 —— 冀尔·提利尔
+
+来自阳戟城的橙色长枪贯日家族，多恩王国之主 —— 小受·马泰尔
+
+其中兰尼斯特、提利尔、史塔克家族皆为新登基的国王，没有经过上一次战争的洗礼。
+
+在开战前的列王会议中，六位国王一起向新旧诸神起誓，谁能首先控制七座要塞或城堡，其他列王就应当立即臣服，偃旗息鼓，刀剑入库。或者，十年期限一到，则各位也再不劳民伤财，止干 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2012/06/05/%E5%B8%AD%E5%BE%B7%E6%A2%85%E5%B0%94%E7%9A%84%E6%96%87%E6%98%8E%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游开箱照</div><a class="unvisited-post" href="/2012/06/05/%E5%B8%AD%E5%BE%B7%E6%A2%85%E5%B0%94%E7%9A%84%E6%96%87%E6%98%8E%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1/" title="席德梅尔的文明桌游开箱">未读</a></div><a class="article-title" href="/2012/06/05/%E5%B8%AD%E5%BE%B7%E6%A2%85%E5%B0%94%E7%9A%84%E6%96%87%E6%98%8E%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1/" title="席德梅尔的文明桌游开箱">席德梅尔的文明桌游开箱</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-06-04T16:00:00.000Z" title="发表于 2012-06-05 00:00:00" time="2012-06-05 00:00:00">2012-06-05</time><time class="time_hidden" datetime="2022-11-25T07:24:18.892Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%96%87%E6%98%8E/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>文明</span></a><a class="article-meta__tags" href="/tags/%E5%BC%80%E7%AE%B1/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开箱</span></a><a class="article-meta__tags" href="/tags/civilization/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>civilization</span></a></span></div><div class="content">作为一个文明爱好者和桌游爱好者，入手这货简直是一定的，可是错过了团购，就只能等二手了。。。收了个南京大学的人的二手，质量还不错。不过最近是没空看规则了。。。
+
+ 照例 先上全家福
+
+
+ 盒子正面，新天鹅堡的中文代理
+ 说明书
+ 32页啊有木有
+ 速查表
+ 罗马-凯撒
+ 中国-武则天
+ 俄国-凯瑟琳
+ 德国-俾斯麦
+ 埃及-克里奥佩特拉
+ 美国-林肯
+ 起始地形版块
+ 地形版块
+ 市场面板
+ 军队模型和探险家模型
+ 起始玩家指示物
+ 建筑指示物
+ 奇迹指示物
+ 伟人指示物
+ 城市指示物
+ 文化等级指示物
+ 军事科技指示物
+ 聚落、部落、资源、伤害、文化、金钱指示物和购买证明
+ 政治制度卡
+ 起始设定卡
+ 奇迹卡
+ 文化事件卡
+ 科技卡，4套，还有一张科技胜利卡
+ 战斗加成卡
+ 军队卡
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2012/05/19/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E8%AF%A6%E5%B0%BD%E5%BC%80%E7%AE%B1/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游开箱照</div><a class="unvisited-post" href="/2012/05/19/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E8%AF%A6%E5%B0%BD%E5%BC%80%E7%AE%B1/" title="权力的游戏详尽开箱">未读</a></div><a class="article-title" href="/2012/05/19/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E8%AF%A6%E5%B0%BD%E5%BC%80%E7%AE%B1/" title="权力的游戏详尽开箱">权力的游戏详尽开箱</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-05-18T16:00:00.000Z" title="发表于 2012-05-19 00:00:00" time="2012-05-19 00:00:00">2012-05-19</time><time class="time_hidden" datetime="2022-11-25T07:24:18.891Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%BC%80%E7%AE%B1/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开箱</span></a><a class="article-meta__tags" href="/tags/a-game-of-thrones/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>a game of thrones</span></a><a class="article-meta__tags" href="/tags/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>冰与火之歌</span></a><a class="article-meta__tags" href="/tags/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>权力的游戏</span></a><a class="article-meta__tags" href="/tags/%E7%89%88%E5%9B%BE/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>版图</span></a></span></div><div class="content">上一篇的开箱过于简略。。。这游戏配件实在太多，所以为了让徘徊在入坑边缘的同学不再犹豫，我将把几乎所有的细节都拍一遍。
+
+ 所有东西全家福（真够多的）
+
+
+ 盒子正面可以看见游人码头的图案
+ 打开盒子后是规则说明书
+ 内部的东西
+ 六折的维斯特洛版图，折的方式很奇怪
+ 拆下token后的尸体
+ 一堆权利标记
+ 购买证明，野人进军标记，回合标记
+ 在人数不够时的中立城堡
+ 各个家族的挡板正面
+ 各个家族的挡板反面
+ 利剑，渡鸦，铁王座，最后一个是人数不够时用来盖住宫廷势力条的
+ 维斯特洛卡，野人入侵卡
+ 第一阶段的维斯特洛卡
+ 第二阶段的维斯特洛卡
+ 第三阶段的维斯特洛卡
+ 野人入侵奖惩
+ 兰尼斯特家族将领（每个家族七个将领的战力都是0112234，技能不同）
+ 马泰尔家族将领
+ 格雷乔伊家族将领
+ 史塔克家族将领
+ 拜拉席恩家族将领
+ 提利尔家族将领
+ 家族卡背面
+ 战斗修正卡，rp很重要啊
+ 内衬一般
+ 底部6包各个家族的token
+ 近照家族token（以下以格雷乔伊家族为例）
+ 主城守卫军，补给标记，胜利标记，三个势力条标记
+ 指令标记，其中有五种特殊指令
+ 军队token，士兵1 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2012/05/15/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E7%89%88%E5%9B%BE%E7%89%88%E5%BC%80%E7%AE%B1%E7%85%A7%EF%BC%88%E6%9C%9F%E5%BE%85%E5%BC%80%E4%B8%80%E5%B1%80%E5%95%8A%EF%BC%89/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游开箱照</div><a class="unvisited-post" href="/2012/05/15/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E7%89%88%E5%9B%BE%E7%89%88%E5%BC%80%E7%AE%B1%E7%85%A7%EF%BC%88%E6%9C%9F%E5%BE%85%E5%BC%80%E4%B8%80%E5%B1%80%E5%95%8A%EF%BC%89/" title="权力的游戏版图版开箱照（期待开一局啊）">未读</a></div><a class="article-title" href="/2012/05/15/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F%E7%89%88%E5%9B%BE%E7%89%88%E5%BC%80%E7%AE%B1%E7%85%A7%EF%BC%88%E6%9C%9F%E5%BE%85%E5%BC%80%E4%B8%80%E5%B1%80%E5%95%8A%EF%BC%89/" title="权力的游戏版图版开箱照（期待开一局啊）">权力的游戏版图版开箱照（期待开一局啊）</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-05-14T16:00:00.000Z" title="发表于 2012-05-15 00:00:00" time="2012-05-15 00:00:00">2012-05-15</time><time class="time_hidden" datetime="2022-11-25T07:24:18.891Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%BC%80%E7%AE%B1/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开箱</span></a><a class="article-meta__tags" href="/tags/a-game-of-thrones/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>a game of thrones</span></a><a class="article-meta__tags" href="/tags/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>冰与火之歌</span></a><a class="article-meta__tags" href="/tags/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>权力的游戏</span></a><a class="article-meta__tags" href="/tags/%E7%89%88%E5%9B%BE/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>版图</span></a></span></div><div class="content">作为一个版图控和新的冰与火的粉丝，一直就很想入冰与火的游戏，无奈听说第二版的版图有点渣，一直憋着，直到听说官方补发了新版图，恰逢上周心情大好，就毫不犹豫的入了一套，顺带还买了两件T恤（格雷乔伊和兰尼斯特）。
+
+简单介绍下吧（粗粗地看过一遍规则），这是一个嘴炮游戏，外交是十分重要的，尤其是开始就处于夹击下的兰尼斯特和拜拉席恩，同盟的建立是基于口头的约定，同盟的瓦解则不需要任何理由，backstab是完全允许的，不过看重荣誉的人未必不能赢的胜利。游戏分10个回合，结束后拥有要塞或城堡最多的玩家获胜，当游戏过程中有玩家控制7个要塞或城堡时就立即获胜。
+
+由于这游戏最完美是6人局，所以估计要推的难度颇大，估计退而求其次能找到4人就不错了，最好能有是冰与火的粉丝，否则估计会郁闷。附送一篇精彩的战报：传送门
+
+&nbsp;
+
+ 盒子正面
+
+
+ 补发的版图，感觉和原来的没区别，不过这样我就有两个了
+ 盒子背面
+ 规则书，32页啊
+ 一些token，有铁王座，钢剑，渡鸦
+ 指令token
+ 卡牌，不多，每个家族估计就10张
+ 家族挡板
+ 军队token，很形象啊
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2012/05/08/%E5%90%A6%E6%9E%81%E6%B3%B0%E6%9D%A5%EF%BC%9F/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">生活</div><a class="unvisited-post" href="/2012/05/08/%E5%90%A6%E6%9E%81%E6%B3%B0%E6%9D%A5%EF%BC%9F/" title="否极泰来？">未读</a></div><a class="article-title" href="/2012/05/08/%E5%90%A6%E6%9E%81%E6%B3%B0%E6%9D%A5%EF%BC%9F/" title="否极泰来？">否极泰来？</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-05-07T16:00:00.000Z" title="发表于 2012-05-08 00:00:00" time="2012-05-08 00:00:00">2012-05-08</time><time class="time_hidden" datetime="2022-11-25T07:24:18.891Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/wzh/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>wzh</span></a><a class="article-meta__tags" href="/tags/intern/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>intern</span></a><a class="article-meta__tags" href="/tags/Microsoft/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Microsoft</span></a><a class="article-meta__tags" href="/tags/%E5%AE%9E%E4%B9%A0/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>实习</span></a><a class="article-meta__tags" href="/tags/%E5%BE%AE%E8%BD%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>微软</span></a><a class="article-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>面试</span></a><a class="article-meta__tags" href="/tags/%E9%A2%86%E5%9C%9F/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>领土</span></a></span></div><div class="content">话说前几星期是各种不顺，作业还多到吐血，不过一切都似乎在6号停止了，最后的郁闷是自信满满的二面结束后却被微软HR姐姐告知让我等通知，昨天上课的时候突然收到微软HR电话，心里有一些小激动，在被告知可以去实习后似乎前几个星期的阴霾一扫而空，轻松了许多。然后好好地玩了一天，刚刚又和wzh玩了3局领土，难道这就是传说中的否极泰来？或许吧。
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2012/05/02/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%9520120501/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">生活</div><div class="article-categories-original">灵光一现</div><a class="unvisited-post" href="/2012/05/02/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%9520120501/" title="一些想法20120501">未读</a></div><a class="article-title" href="/2012/05/02/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%9520120501/" title="一些想法20120501">一些想法20120501</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2012-05-01T16:00:00.000Z" title="发表于 2012-05-02 00:00:00" time="2012-05-02 00:00:00">2012-05-02</time><time class="time_hidden" datetime="2022-11-25T07:24:18.891Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%84%9F%E6%82%9F/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>感悟</span></a><a class="article-meta__tags" href="/tags/idea/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>idea</span></a><a class="article-meta__tags" href="/tags/thoughts/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>thoughts</span></a></span></div><div class="content">我发现自己洗澡的时候思维各种活跃啊，难道这就是传说中的27分钟思考3分钟洗干净么？
+
+1.最近在看分词 突然想到一个问题 既然验证码能帮助识别识别字母  为什么我们不能用验证码来帮助建立分词数据库呢 群众的力量是伟大的啊
+2.当一个系统设计出来之后，如果100个错误中只有一个是因为系统bug引起的，其他都是因为一些不可控因素引起的，那么这个bug还有必要解决么？
+如果需要的话，看下面这个例子
+例如，某种语言，当一个人请求别人重说一遍刚刚的话，100次中只有一次是因为歧义造成的，其他99次都是因为说话人口齿不清、语速太快或者是听的人走神了之类的原因，那这个语言需要被修正么？
+如果不需要，为什么呢？
+
+
+
+3.人应当尽量避免陷入储存、搜索、调用的思维模式，这种模式对人的创造性杀伤巨大
+
+
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/6/#content-inner"><i class="anzhiyufont anzhiyu-icon-chevron-left fa-fw" style="font-weight: inherit; font-size: 1rem;"></i><div class="pagination_tips_prev">上页</div></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#content-inner">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#content-inner">11</a><a class="extend next" rel="next" href="/page/8/#content-inner"><div class="pagination_tips_next">下页</div><i style="font-weight: inherit; font-size: 1rem;" class="anzhiyufont anzhiyu-icon-chevron-right fa-fw"></i></a><div class="toPageGroup"><input id="toPageText" oninput="value=value.replace(/[^0-9]/g,'')" maxlength="3" onkeyup="this.value=this.value.replace(/[^u4e00-u9fa5w]/g,'')" aria-label="toPage"><a id="toPageButton" onclick="anzhiyu.toPage()"><i class="anzhiyufont anzhiyu-icon-angles-right" style="font-weight: inherit; font-size: 1rem;"></i></a></div></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">一个桌游玩家，程序猿，足球迷</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><h1 class="author-info__name">仙雾</h1><div class="author-info__desc">一个桌游玩家，程序猿，足球迷的生活</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/titanxxh" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/2617080" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="anzhiyufont anzhiyu-icon-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%B4%E8%A5%BF/"><span class="card-category-list-name">巴西</span><span class="card-category-list-count">4</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%B4%E8%A5%BF/%E7%BD%97%E7%BA%B3%E5%B0%94%E5%A4%9A/"><span class="card-category-list-name">罗纳尔多</span><span class="card-category-list-count">2</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">桌面游戏</span><span class="card-category-list-count">63</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/geek%E7%A0%94%E7%A9%B6/"><span class="card-category-list-name">geek研究</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"><span class="card-category-list-name">桌游介绍</span><span class="card-category-list-count">22</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/"><span class="card-category-list-name">桌游开箱照</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/"><span class="card-category-list-name">桌游感悟</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8/"><span class="card-category-list-name">桌游活动</span><span class="card-category-list-count">12</span></a></li></ul></li>
+            </ul></div><div class="sticky_layout"><div class="card-widget"><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/><div class="card-webinfo"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-file-lines"></i><div class="item-name">文章总数 :</div></div><div class="item-count">105</div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-stopwatch"></i><div class="item-name">建站天数 :</div></div><div class="item-count" id="runtimeshow" data-publishDate="2021-03-31T16:00:00.000Z"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-font"></i><div class="item-name">全站字数 :</div></div><div class="item-count">125.5k</div></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:titanxxh@gmail.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.facebook.com/xxhxxh" title="facebook"><i class="anzhiyufont anzhiyu-icon-facebook1"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/titanxxh" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/2617080" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh?igsh=MmVlMjlkMTBhMg==" title="Instagram"><i class="anzhiyufont anzhiyu-icon-instagram"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAA8fxaGlIMqjTGijfwkLpQKuWByJEu6zxpw9P9KrZ0JMc?from_tab_name=main" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2011 - 2024 By <a class="footer-bar-link" href="/" title="仙雾" target="_blank">仙雾</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">105</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">267</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">17</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">旅游</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/" title="伊比利亚蜜月"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="伊比利亚蜜月"/><span class="back-menu-item-text">伊比利亚蜜月</span></a><a class="back-menu-item" href="https://titanxxh.com/2018/09/11/russia-2018/" title="俄罗斯世界杯"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="俄罗斯世界杯"/><span class="back-menu-item-text">俄罗斯世界杯</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span></div></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("09/18/2011 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2011 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 仙雾 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><script>if (typeof gsap === "object") {
+  getScript("/js/anzhiyu/people.js", {defer:true})
+} else {
+  getScript("https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/gsap/gsap.min.js").then(()=>{
+    getScript("/js/anzhiyu/people.js", {defer:true})
+  });
+}</script><input type="hidden" name="page-type" id="page-type" value="anzhiyu"></div><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

@@ -1,1152 +1,620 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Meeple Life - 一个桌游玩家，程序猿，足球迷的生活</title><meta name="keywords" content="boardgame, programming, football"><meta name="author" content="仙雾"><meta name="copyright" content="仙雾"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Meeple Life"><meta name="application-name" content="Meeple Life"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="website"><meta property="og:title" content="Meeple Life"><meta property="og:url" content="http://titanxxh.com/page/3/index.html"><meta property="og:site_name" content="Meeple Life"><meta property="og:description" content="titanxxh&amp;#39;s blog | boardgame | programming | football"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta property="article:author" content="仙雾"><meta property="article:tag" content="boardgame, programming, football"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta name="description" content="titanxxh&amp;#39;s blog | boardgame | programming | football"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://titanxxh.com/page/3/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: {"skills":["桌游老司机","巴西死忠","ISTJ"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Meeple Life',
+  title: 'Meeple Life',
+  postAI: '',
+  pageFillDescription: '',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-27 04:49:10',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-
-<html lang="en">
-  
-
-    <head>
-      <meta charset="utf-8" />
-       
-      <meta name="keywords" content="boardgame, programming, football" />
-       
-      <meta name="description" content="titanxxh&#39;s blog | boardgame | programming" />
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
       
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
-      <title> Meeple Life</title>
-  <meta name="generator" content="hexo-theme-ayer">
+        get: key => {
+          const itemStr = localStorage.getItem(key)
       
-      <link rel="shortcut icon" href="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/favicon.ico" />
-       
-<link rel="stylesheet" href="/dist/main.css">
-
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
       
-<link rel="stylesheet" href="/css/fonts/remixicon.css">
-
-      
-<link rel="stylesheet" href="/css/custom.css">
- 
-      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
-       
- 
-
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
-      <!-- mermaid -->
-      
-      <style>
-        .swal2-styled.swal2-confirm {
-          font-size: 1.6rem;
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
-      </style>
-    <link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
-</head>
-  </html>
-</html>
-
-
-<body>
-  <div id="app">
+      }
     
-      
-    <main class="content on">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover2.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">Meeple Life</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-
-
-<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
-
-
-<!-- Subtitle -->
-
-  <script>
-    try {
-      var typed = new Typed("#subtitle", {
-        strings: ['What I cannot create I cannot understand.', '', ''],
-        startDelay: 0,
-        typeSpeed: 50,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-      });
-    } catch (err) {
-      console.log(err)
-    }
-  </script>
-  
-<div id="main">
-  <section class="outer">
-  
-  <ul class="ads">
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5ccc.jpg" width="300" alt="云服务器限时秒杀">
-            </a>
-        </li>
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8630075">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5cd7.png" width="300" alt="vultr优惠vps">
-            </a>
-        </li>
-    
-</ul>
-  
-  
-  
-
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
-</div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
         })
-        .catch(console.error)
-</script>
 
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
-  
-  <article class="articles">
-    
-    
-    
-    
-    <article
-  id="post-ora-et-labora-chinese-edition-opening-box"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2016/02/18/ora-et-labora-chinese-edition-opening-box/"
-    >祈祷与工作中文版开箱</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2016/02/18/ora-et-labora-chinese-edition-opening-box/" class="article-date">
-  <time datetime="2016-02-17T16:30:21.000Z" itemprop="datePublished">2016-02-18</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/">桌游开箱照</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>仙雾最喜欢的游戏，没有之一的祈祷与工作出中文版啦！本文将放出开箱照，同时对比中文版和11年的英文版的配件质量。</p>
-<h2 id="开箱照"><a href="#开箱照" class="headerlink" title="开箱照"></a>开箱照</h2><p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/3PGNOwhq.jpg"><br> 盒子正面，下面可以看出获得的奖项</p> 
-      <a class="article-more-link" href="/2016/02/18/ora-et-labora-chinese-edition-opening-box/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ora-et-labora/" rel="tag">ora et labora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%B9%E6%AF%94/" rel="tag">对比</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/" rel="tag">祈祷与工作</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-journey-to-tanzania-with-photos"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2016/02/17/journey-to-tanzania-with-photos/"
-    >图说坦桑尼亚之旅</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2016/02/17/journey-to-tanzania-with-photos/" class="article-date">
-  <time datetime="2016-02-17T08:35:46.000Z" itemprop="datePublished">2016-02-17</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <img src="https://www.ultimatekilimanjaro.com/maps/parkmap1.jpg" class="" title="[Safari Map]">
-
-<p>从乞力马扎罗到曼雅拉湖，从塞伦盖蒂到恩戈罗恩戈罗火山口，不太想用记流水账的方式来回顾这次旅程，所以仙雾从自己拍摄的2000多张照片中精选了37张，本文就随着这37张图来回顾最令自己心动的那些瞬间。</p> 
-      <a class="article-more-link" href="/2016/02/17/journey-to-tanzania-with-photos/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kilimanjaro/" rel="tag">kilimanjaro</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lake-manyara/" rel="tag">lake manyara</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ngorongoro/" rel="tag">ngorongoro</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/serengeti/" rel="tag">serengeti</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tanzania/" rel="tag">tanzania</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/"
-    >[仙雾的Essen2015]4.Pi mal Pflaumen游戏概览&amp;开箱&amp;评测</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/" class="article-date">
-  <time datetime="2016-01-22T14:00:46.000Z" itemprop="datePublished">2016-01-22</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/">桌游介绍</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/images/pic2635730_md.jpg"><br> Pi mal Pflaumen，德语π*李子的意思</p>
-<p>李子的是一个抽象类游戏，不过还是套了一个背景，但是看完说明书，我必须要吐槽一下这是我看过的最扯淡的背景介绍。</p>
-<p>说明书上写到，17、18世纪是科学的世纪（简直废话），有两位伟大的人物出现了，他们是莱昂哈德·欧拉（欧拉公式知道吧）和玛丽亚·西比拉·梅里安（一个博物学家naturalist和一个艺术家，见下图），但是说明书对于为何会选取这两个人物完全没提到，反倒是加了一句话说这俩人还真有关系，根据仙雾的搜索，所有的和这俩人相关的网页都指向了这本说明书，只有一个德语的维基百科中提到了说欧拉的第二任妻子是梅里安的外孙女，天真的我还以为会有什么惊天动地的故事。。。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Vea0TCNr.jpg"><br> Maria Sibylla Merian的作品的特点就是会把毛毛虫进化成蝶的不同时期的不同形态融合进同一张图里</p>
-<p>游戏分三个阶段（卡牌背面的虫、蛹、蝶），每个阶段玩家打出卡，然后选取卡，通过完成水果的组套任务来得分，最后分数最高的人获胜。游戏支持3-5人，一局时间不长，在半小时左右，是个等人时候的不错之选。</p> 
-      <a class="article-more-link" href="/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen/" rel="tag">Essen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen2015/" rel="tag">Essen2015</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pi-mal-Pflaumen/" rel="tag">Pi mal Pflaumen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A6%82%E8%A7%88/" rel="tag">概览</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%84/" rel="tag">测评</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-essen2015-3-codenames-rule-intro-review"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2016/01/19/essen2015-3-codenames-rule-intro-review/"
-    >[仙雾的Essen2015]3.Codenames游戏概览&amp;评测</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2016/01/19/essen2015-3-codenames-rule-intro-review/" class="article-date">
-  <time datetime="2016-01-19T14:00:46.000Z" itemprop="datePublished">2016-01-19</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/">桌游介绍</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/images/pic2582929_md.jpg"><br> VC真的是鬼才，什么种类都逃不掉</p>
-<p>乌老师在中重策工放的道路上越走越远，而Vlaada Chvátil设计的游戏则不论是机制还是重度的多样性上都完爆了其他设计师。从TTA到银河卡车，从MK到Codenames，VC完美展现了自己设计鬼才的实力。</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2716212_md.jpg"><br> 现在都流行设计师Cos封面</p>
-<p>Codenames是一个猜词游戏，玩家分成两队，分别由一个队长带领，队长每轮会提示一个单词作为“行动代号”，队员则要猜出所有己方的特工代号才能获胜，如果不幸猜到刺客的代号则立即失败。</p> 
-      <a class="article-more-link" href="/2016/01/19/essen2015-3-codenames-rule-intro-review/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codenames/" rel="tag">Codenames</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen/" rel="tag">Essen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen2015/" rel="tag">Essen2015</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A6%82%E8%A7%88/" rel="tag">概览</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%84/" rel="tag">测评</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-ora-et-labora-rule-intro"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2016/01/19/ora-et-labora-rule-intro/"
-    >祈祷与工作游戏概览&amp;规则介绍</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2016/01/19/ora-et-labora-rule-intro/" class="article-date">
-  <time datetime="2016-01-19T13:30:21.000Z" itemprop="datePublished">2016-01-19</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/">桌游介绍</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>仙雾最喜欢的游戏，没有之一的祈祷与工作出中文版啦！所以这里准备认真介绍一下这款乌老师的集大成之作。</p>
-<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/images/pic1165426_md.jpg"></p>
-<p>Ora et Labora（拉丁文的祈祷与工作的意思）是一个关于中世纪修道院经济的游戏（乌老师对中世纪背景是真爱啊）。中世纪的修道院中当然有祷告，但更多的是修道院内外艰苦的工作。玩家扮演修道院的管理者，派你的院长和两个助理到生产货物的建筑中工作。游戏一开始玩家只有一块2x5的家园板块，但随着游戏的进行，玩家可以购入扩展的地形。整局游戏会暂停5次，玩家在暂停后可以建造居民点，玩家应该尽可能将其造在周围定居值高的位置。祈祷与工作中提供了2种游戏变体——法国变体和爱尔兰变体，玩家可以自行选择使用哪种。</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2707911_md.jpg"><br> 国外geek Gustav Petru手工制作的牧师</p> 
-      <a class="article-more-link" href="/2016/01/19/ora-et-labora-rule-intro/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ora-et-labora/" rel="tag">ora et labora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A6%82%E8%A7%88/" rel="tag">概览</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/" rel="tag">祈祷与工作</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-essen2015-2-7wonders-duel-rule-intro-review"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2015/12/01/essen2015-2-7wonders-duel-rule-intro-review/"
-    >[仙雾的Essen2015]2.7 Wonders: Duel游戏概览&amp;评测</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2015/12/01/essen2015-2-7wonders-duel-rule-intro-review/" class="article-date">
-  <time datetime="2015-12-01T13:05:28.000Z" itemprop="datePublished">2015-12-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/">桌游介绍</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><img src="https://cf.geekdo-images.com/images/pic2703758_md.jpg"><br> 先来一发国外geek的cosplay镇帖</p>
-<p>在忙碌完自己的论文后，第二期的仙雾Essen2015，选择介绍一个在做前瞻时候遗漏掉的但是却很火的游戏——7 Wonders: Duel，也就是我们俗称的七大两人版。总体来说七大两人版有非常多的设计上的优化，并且游戏体验很好，三种胜利方式设置的很不错，军事和科技有些困难却又不是遥不可及，属于两人游戏中的佳作。</p>
-<blockquote>
-<p>  <em>“The beginning does not hint at the end.”</em><br>  Herodotus</p>
-</blockquote>
-<p>“开始不曾暗示结果。”来自于“历史之父”希罗多德的这句话设计师将其写在了说明书最开始。这似乎是对那些创造了人类历史上伟大奇迹的远古文明下的判词，也似乎是在向玩家传递一个声音——七大对决这款游戏的过程充满了变数。（然而仙雾并没有搜索到这句话的出处，难道是设计师瞎编的？）</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2704957_md.jpg"><br> 设计师Bruno Cathala和Antoine Bauza</p>
-<p>七大对决的设计师是Antoine Bauza和Bruno Cathala，前者就是七大奇迹原版和东海道的设计师，而后者也设计了Abyss和Five Tribes。可以说双方在设计轻策游戏上还是比较有经验的，这次合作发布两人游戏，效果也很好，期待他们的后续作品。</p>
-<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p>七大对决以七大奇迹原版的世界观为背景，借用了很多其中的机制，但是根据两人游戏的特点进行了改变，增强了竞技性和互动性。</p>
-<p>玩家扮演一个文明的领袖，在三个时代中，玩家利用卡牌来获取金币、巩固军事、发展科技、建造建筑和奇迹来发展自己的文明。</p>
-<p>游戏的过程中玩家可以通过军事胜利或者科技胜利来直接赢得游戏，如果在三个时代结束后没有玩家能直接获胜，那么统计分数总和最高的玩家获胜。</p> 
-      <a class="article-more-link" href="/2015/12/01/essen2015-2-7wonders-duel-rule-intro-review/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen/" rel="tag">Essen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen2015/" rel="tag">Essen2015</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/object-Object/" rel="tag">[object Object]</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A6%82%E8%A7%88/" rel="tag">概览</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%84/" rel="tag">测评</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-essen2015-1-among-nobles-rule-intro-review"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2015/11/09/essen2015-1-among-nobles-rule-intro-review/"
-    >[仙雾的Essen2015]1.Among Nobles游戏概览&amp;开箱&amp;评测</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2015/11/09/essen2015-1-among-nobles-rule-intro-review/" class="article-date">
-  <time datetime="2015-11-09T09:36:27.000Z" itemprop="datePublished">2015-11-09</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/">桌游介绍</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>小大的Essen新货终于到货，E大（居然去小大家围堵了，太丧心病狂！）、我和碗王周中就迫不及待地去A社开了几局新游戏，第一期的Essen2015就先详细介绍一下被称为今年最被低估的游戏——Among Nobles。</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2393416_md.jpg"><br> Among Nobles</p>
-<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p>Among Nobles是一个卡牌游戏，玩家在封建欧洲扮演一个家族，通过扩展自己的家族、利用联姻、战争和阴谋来赢取胜利。在游戏中，玩家可以控制欧洲历史上最有影响力和最有代表性的人物，比如拿破仑、查理一世、叶卡捷琳娜二世等等，激活人物卡牌上的一系列能力来进行行动，女性角色在结婚会加入其丈夫的家族，从而作为一对夫妇之后可以被同时激活。正确或错误的婚姻会决定游戏的输赢。游戏结束声望点数最多的玩家获得胜利。</p> 
-      <a class="article-more-link" href="/2015/11/09/essen2015-1-among-nobles-rule-intro-review/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Among-Nobles/" rel="tag">Among Nobles</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen/" rel="tag">Essen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen2015/" rel="tag">Essen2015</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1/" rel="tag">开箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E7%AE%B1%E7%85%A7/" rel="tag">开箱照</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A6%82%E8%A7%88/" rel="tag">概览</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%84/" rel="tag">测评</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-ora-et-labora-quantitative-analysis"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2015/11/01/ora-et-labora-quantitative-analysis/"
-    >祈祷与工作量化分析</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2015/11/01/ora-et-labora-quantitative-analysis/" class="article-date">
-  <time datetime="2015-11-01T14:30:27.000Z" itemprop="datePublished">2015-11-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/geek%E7%A0%94%E7%A9%B6/">geek研究</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>这篇其实是整理的以前篇旧文，那日一人无聊遂开一局solo，在玩的过程中想到了些分析建筑功效的方法，于是又计算了下，得出了一些结论。</p>
-<p>注1：以下所有的数据都是我估计得来的并不准确，重点是方法。</p>
-<p>注2：此方法并非只适用于solo，多人局也适用不过数据会有所更改，一般4人局拿一次资源估计只有4个左右。</p>
-<p>祈祷是一个非典型的工人放置游戏，它注重于构建一个多层的经济系统，让玩家完成一系列的转化从而走向胜利。由于游戏计分方式的多样性，使得对整个游戏的把握变得困难，当然也让玩家有了更多的选择。</p>
-<p>今天我们要研究的是solo中某个建筑的功效，那么如何评定一个建筑的功效呢？很显然，计算放置工人之后的收益是最简单的方法。为了简化问题，我只分析能直接产出分的建筑，但是正如前面所说，祈祷是一个多层的经济系统，大多数的时候一个建筑并不为你直接带来分数，或者说能带来分数的建筑的转化并不是一步就行的，那怎么办？建筑的效果一般都是付出一定的原料，得到一定的分数。我们统计收集到所有原料所需要的行动数量t，然后用转换后得到的分数除以t，就是使用该建筑的效果后平均一步的收益，再用这个收益和标准收益比较就能看出一个建筑的优劣了。</p> 
-      <a class="article-more-link" href="/2015/11/01/ora-et-labora-quantitative-analysis/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ora-et-labora/" rel="tag">ora et labora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/solo/" rel="tag">solo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%94%E7%A9%B6/" rel="tag">研究</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/" rel="tag">祈祷与工作</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-boardgame-life-6-the-design-concept-of-uwe-rosenberg"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/"
-    >[桌游人生]第六期.浅谈乌老师的游戏设计理念</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/" class="article-date">
-  <time datetime="2015-10-31T16:09:35.000Z" itemprop="datePublished">2015-11-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/">桌游感悟</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>本文首发于去年一刻馆的<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MjM5MjE5Mjk5Mg==&mid=200807065&idx=1&sn=48413c205d9020884676c3420f3e69eb&scene=4#wechat_redirect">微信公众平台</a>，也在<a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/3279289468?pid=57030011213&cid=0#57030011213">桌游吧</a>发过一遍，不过当时由于洞穴农夫和大农场没怎么玩所以就没怎么写，现在正好来更新一遍。</p>
-<h2 id="乌老师！"><a href="#乌老师！" class="headerlink" title="乌老师！"></a>乌老师！</h2><p><img src="https://cf.geekdo-images.com/images/pic537818_md.jpg"></p>
-<p><strong>Uwe Rosenberg</strong>，中文翻译BGG上给出的是乌·玫瑰山，但更多中国玩家喜欢亲切地称呼他为乌老师。关于乌老师的简介网上已经有太多，这里仙雾就不过多介绍了，有兴趣的玩家可以去Wiki上自行搜索。每每谈及乌老师设计的游戏，得到的评价往往褒贬不一，不喜欢的玩家往往能列出一个包含各种理由的清单，相信炒冷饭几乎会是所有人这份清单上的交集；而喜欢乌老师的玩家，特别是像仙雾这样的脑残粉，总是能在乌老师的每一款新游戏上看到自己所钟爱的那一部分，同时又对乌老师的每一个设计上的改变带来的惊喜兴奋不已。不论乌老师在玩家心中的地位如何，乌老师在桌游界的地位可以说是不容质疑，看看BGG的榜单，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/31260/agricola">Agricola</a>（农场主）第<strong>6</strong>，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/35677/le-havre">Le Havre</a>（港口）第<strong>15</strong>，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/39683/gates-loyang">At the Gates of Loyang</a>（洛阳城外）第190，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/70149/ora-et-labora">Ora et Labora</a>（祈祷与工作）第<strong>47</strong>，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/143693/glass-road">Glass Road</a>（玻璃之路）第176，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/102794/caverna-cave-farmers">Caverna: The Cave Farmers</a>（洞穴农夫）第<strong>3</strong>，<a target="_blank" rel="noopener" href="https://www.boardgamegeek.com/boardgame/159675/fields-arle">Fields of Arle</a>（两人大农场）第106，甚至是农场主和港口的两人版小游戏都能有不错的排名（108和604），虽然说排名不代表一切，但拥有如此多高排名的作品，至少说明这个设计师拥有着出色的设计理念，并多年来一直保持着极高的设计水准。说到乌老师的设计理念，仙雾一度怀疑他是否对中国的周易有所研究，不变中总是有所改变，而改变中也总蕴藏着某些不变，并且改变的比例总是恰到好处，而许多改变也的确是极大地提高了游戏的品质。</p>
-<p>纵观乌老师所设计的游戏，不论是一开始的被戏称为“饥饿三部曲”的农场主、港口和洛阳城外，还是后来的祈祷与工作、玻璃之路和洞穴农夫，不论它们的游戏机制如何，每一款都有着鲜明的乌老师的风格：可以进行单人游戏、不同人数时游戏体验良好、多路线选择、同样的经济类主题为背景，可以看出虽然时间过去了7年，乌老师最核心的设计理念其实一直保持不变。但在游戏的细节上，每一款都做出来许多值得称道的改变，接下来让仙雾挑选几款自己比较熟悉的游戏来进行分析。</p> 
-      <a class="article-more-link" href="/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Uwe-Rosenberg/" rel="tag">Uwe Rosenberg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B9%8C%E8%80%81%E5%B8%88/" rel="tag">乌老师</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E5%8F%97/" rel="tag">感受</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">感悟</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-essen2015-preview-3-old-and-new-games"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2015/10/08/essen2015-preview-3-old-and-new-games/"
-    >[仙雾的Essen2015]前瞻3——旧爱新作</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2015/10/08/essen2015-preview-3-old-and-new-games/" class="article-date">
-  <time datetime="2015-10-07T16:36:54.000Z" itemprop="datePublished">2015-10-08</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/">桌面游戏</a> / <a class="article-category-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/">桌游介绍</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="旧爱新作"><a href="#旧爱新作" class="headerlink" title="旧爱新作"></a>旧爱新作</h2><p>仙雾的艾森2015前瞻从本期开始，会连续推出几个章节，每个章节都会选取在<a href="https://titanxxh.com/blog/2015/09/17/xian-wu-de-essen2015-qian-zhan-0-chu-shai-hou-de-51kuan-xin-you-xi/">之前的文章</a>中列出的几款游戏进行较为详细的介绍。</p>
-<p>这一期的前瞻，仙雾介绍的游戏皆为自己偏好的设计师或者出版商的新作。乌老师今年甚是不给力，只有超轻度游戏<em>Hengist</em>（估计所有时间都花在明年的游戏上了，乌老师的游戏周期真是琢磨不透）；马丁的<em>Ships</em>和WYG的<em>Nippon</em>初看则应该保持了较高的水平。</p>
-<p>受限于各个游戏公开的资料的多寡，某些游戏无法进行详细介绍时，仙雾只能用脑补和文字进行介绍了。下文中，BGG资源一项：<strong>充足</strong>表示有规则和视频介绍，<strong>一般</strong>表示缺少规则或者视频，<strong>匮乏</strong>表示没有规则也没有视频。</p> 
-      <a class="article-more-link" href="/2015/10/08/essen2015-preview-3-old-and-new-games/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen/" rel="tag">Essen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essen2015/" rel="tag">Essen2015</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hengist/" rel="tag">Hengist</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nippon/" rel="tag">Nippon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ships/" rel="tag">Ships</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%9E%BB/" rel="tag">前瞻</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-  </article>
-  
-
-  
-  <nav class="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
-  </nav>
-  
-</section>
-</div>
-
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2011-2022
-        <i class="ri-heart-fill heart_icon"></i> 仙雾
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        
-        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-        <span class="division">|</span>
-        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-      </li>
-    </ul>
-  </div>
-</footer>    
-    </main>
-    <div class="float_btns">
-      <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-    </div>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" alt="Meeple Life"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%85%E8%A1%8C/">旅行</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/friends">友链</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh/">Instagram</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/friends">Links</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="Search">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-3.6.0.min.js"></script>
- 
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
-
-<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
-/>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
- <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
             }
-        })
-    }
-    viewer_init()
-</script> 
-<!-- MathJax -->
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
-
-<!-- ClickLove -->
-
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
- 
-<link rel="stylesheet" href="/css/clipboard.css">
- <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
         }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
- 
-<!-- CanvasBackground -->
-
-<script>
-  if (window.mermaid) {
-    mermaid.initialize({ theme: "forest" });
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
   }
-</script>
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
 
-
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">旅游</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/" title="伊比利亚蜜月"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="伊比利亚蜜月"/><span class="back-menu-item-text">伊比利亚蜜月</span></a><a class="back-menu-item" href="https://titanxxh.com/2018/09/11/russia-2018/" title="俄罗斯世界杯"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="俄罗斯世界杯"/><span class="back-menu-item-text">俄罗斯世界杯</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Meeple Life</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Birthday/" style="font-size: 1.05rem;">Birthday<sup>1</sup></a><a href="/tags/D%E5%93%A5/" style="font-size: 1.05rem;">D哥<sup>2</sup></a><a href="/tags/GamePlay/" style="font-size: 1.05rem;">GamePlay<sup>11</sup></a><a href="/tags/Ronaldo/" style="font-size: 1.05rem;">Ronaldo<sup>1</sup></a><a href="/tags/carcassonne/" style="font-size: 1.05rem;">carcassonne<sup>1</sup></a><a href="/tags/chinatown/" style="font-size: 1.05rem;">chinatown<sup>2</sup></a><a href="/tags/modern-art/" style="font-size: 1.05rem;">modern art<sup>2</sup></a><a href="/tags/small-world/" style="font-size: 1.05rem;">small world<sup>6</sup></a><a href="/tags/%E4%B8%89%E5%9B%BD%E6%9D%80/" style="font-size: 1.05rem;">三国杀<sup>3</sup></a><a href="/tags/%E4%B8%8A%E6%B5%B7%E4%BB%99%E5%89%91%E5%90%8E%E6%8F%B4%E4%BC%9A/" style="font-size: 1.05rem;">上海仙剑后援会<sup>1</sup></a><a href="/tags/%E4%BA%94%E6%AF%92%E5%85%BD/" style="font-size: 1.05rem;">五毒兽<sup>1</sup></a><a href="/tags/%E4%BB%99%E5%89%91/" style="font-size: 1.05rem;">仙剑<sup>1</sup></a><a href="/tags/%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0/" style="font-size: 1.05rem;">仙剑奇侠传<sup>6</sup></a><a href="/tags/%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0%E4%BA%94/" style="font-size: 1.05rem;">仙剑奇侠传五<sup>4</sup></a><a href="/tags/%E5%88%9D%E7%8E%A9%E6%84%9F%E5%8F%97/" style="font-size: 1.05rem;">初玩感受<sup>1</sup></a><a href="/tags/%E5%8D%A1%E5%8D%A1%E9%A2%82/" style="font-size: 1.05rem;">卡卡颂<sup>1</sup></a><a href="/tags/%E5%94%90%E4%BA%BA%E8%A1%97/" style="font-size: 1.05rem;">唐人街<sup>2</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 1.05rem;">回忆<sup>1</sup></a><a href="/tags/%E5%9B%9E%E6%94%BE/" style="font-size: 1.05rem;">回放<sup>1</sup></a><a href="/tags/%E5%B0%8F%E5%8F%97/" style="font-size: 1.05rem;">小受<sup>1</sup></a><a href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" style="font-size: 1.05rem;">小小世界<sup>6</sup></a><a href="/tags/%E6%83%85%E4%BA%BA%E8%8A%82/" style="font-size: 1.05rem;">情人节<sup>1</sup></a><a href="/tags/%E6%84%9F%E5%8F%97/" style="font-size: 1.05rem;">感受<sup>7</sup></a><a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 1.05rem;">感悟<sup>8</sup></a><a href="/tags/%E6%88%98%E6%96%97/" style="font-size: 1.05rem;">战斗<sup>1</sup></a><a href="/tags/%E6%88%AA%E5%9B%BE/" style="font-size: 1.05rem;">截图<sup>2</sup></a><a href="/tags/%E6%90%9E%E7%AC%91/" style="font-size: 1.05rem;">搞笑<sup>1</sup></a><a href="/tags/%E6%96%87%E6%98%8E/" style="font-size: 1.05rem;">文明<sup>6</sup></a><a href="/tags/%E6%96%87%E6%98%8E5/" style="font-size: 1.05rem;">文明5<sup>3</sup></a><a href="/tags/%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF/" style="font-size: 1.05rem;">现代艺术<sup>2</sup></a><a href="/tags/%E7%94%9F%E6%97%A5/" style="font-size: 1.05rem;">生日<sup>1</sup></a><a href="/tags/%E7%99%BE%E6%B8%B8/" style="font-size: 1.05rem;">百游<sup>1</sup></a><a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 1.05rem;">统计<sup>1</sup></a><a href="/tags/%E7%BD%97%E5%B0%BC/" style="font-size: 1.05rem;">罗尼<sup>1</sup></a><a href="/tags/%E7%BD%97%E7%BA%B3%E5%B0%94%E5%A4%9A/" style="font-size: 1.05rem;">罗纳尔多<sup>1</sup></a><a href="/tags/%E8%91%A3%E5%8D%93/" style="font-size: 1.05rem;">董卓<sup>1</sup></a><a href="/tags/%E8%B6%A3%E9%97%BB/" style="font-size: 1.05rem;">趣闻<sup>1</sup></a><a href="/tags/%E9%80%80%E5%BD%B9/" style="font-size: 1.05rem;">退役<sup>1</sup></a><a href="/tags/%E9%81%93%E5%90%AC%E9%80%94%E8%AF%B4/" style="font-size: 1.05rem;">道听途说<sup>1</sup></a><a href="/tags/%E9%A2%84%E5%94%AE/" style="font-size: 1.05rem;">预售<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div id="categoryBar"><div class="category-bar" id="category-bar"><div id="catalog-bar"><div id="catalog-list"><div class="catalog-list-item" id="首页"><a href="/">首页</a></div>
+    <div class="catalog-list-item" id="/categories/巴西/">
+      <a href="/categories/巴西/">
+        巴西
+      </a>
+    </div>
     
+    <div class="catalog-list-item" id="/categories/游戏/">
+      <a href="/categories/游戏/">
+        游戏
+      </a>
+    </div>
     
+    <div class="catalog-list-item" id="/categories/桌面游戏/">
+      <a href="/categories/桌面游戏/">
+        桌面游戏
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/巴西/罗纳尔多/">
+      <a href="/categories/巴西/罗纳尔多/">
+        罗纳尔多
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游感悟/">
+      <a href="/categories/桌面游戏/桌游感悟/">
+        桌游感悟
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/生活/">
+      <a href="/categories/生活/">
+        生活
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游活动/">
+      <a href="/categories/桌面游戏/桌游活动/">
+        桌游活动
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/">
+      <a href="/categories/软件开发/">
+        软件开发
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游开箱照/">
+      <a href="/categories/桌面游戏/桌游开箱照/">
+        桌游开箱照
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/geek研究/">
+      <a href="/categories/桌面游戏/geek研究/">
+        geek研究
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/计算机网络/">
+      <a href="/categories/软件开发/计算机网络/">
+        计算机网络
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/生活/灵光一现/">
+      <a href="/categories/生活/灵光一现/">
+        灵光一现
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/物理引擎/">
+      <a href="/categories/软件开发/物理引擎/">
+        物理引擎
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/生活/旅行/">
+      <a href="/categories/生活/旅行/">
+        旅行
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/桌面游戏/桌游介绍/">
+      <a href="/categories/桌面游戏/桌游介绍/">
+        桌游介绍
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/编程语言/">
+      <a href="/categories/软件开发/编程语言/">
+        编程语言
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/软件开发/golang/">
+      <a href="/categories/软件开发/golang/">
+        golang
+      </a>
+    </div>
+    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/2016/03/01/essen2015-5-nippon-intro-review/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游介绍</div><a class="unvisited-post" href="/2016/03/01/essen2015-5-nippon-intro-review/" title="[仙雾的Essen2015]5.Nippon介绍&amp;评测">未读</a></div><a class="article-title" href="/2016/03/01/essen2015-5-nippon-intro-review/" title="[仙雾的Essen2015]5.Nippon介绍&amp;评测">[仙雾的Essen2015]5.Nippon介绍&amp;评测</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2016-03-01T11:28:46.000Z" title="发表于 2016-03-01 19:28:46" time="2016-03-01 19:28:46">2016-03-01</time><time class="time_hidden" datetime="2022-11-25T07:24:18.905Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Essen/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen</span></a><a class="article-meta__tags" href="/tags/%E6%B5%8B%E8%AF%84/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>测评</span></a><a class="article-meta__tags" href="/tags/Essen2015/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen2015</span></a><a class="article-meta__tags" href="/tags/Nippon/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Nippon</span></a><a class="article-meta__tags" href="/tags/%E4%BB%8B%E7%BB%8D/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>介绍</span></a></span></div><div class="content">游戏介绍日本在明治时期是一个封闭的与世隔绝的封建社会，但是他们渴望改变，希望转变成一个现代化的国家。日本派出使者去国外学习，从西方带回了技术人员和学者，建立了铁路网络，从而以令人惊奇的速度完成了快速的工业革命。
 
-  </div>
-</body>
+Nippon这个游戏中玩家扮演了一个明治维新时期的大财阀，通过发展技术、建设新的工厂、运送商品到全国、出口商品至海外来提升自己的影响力，最后取得最多影响力的玩家获得胜利。
+Nippon的中文规则已经有玩家做过翻译了，所以本文就不做详细的介绍，只谈游戏的感受。
 
-</html>
+
+游戏评价游戏中玩家每次行动可以选择执行版图上的行动（一共有9种行动），或者进行一次结算阶段来产出煤，同时获得收入并发工资，工人的工资取决于你选取的工人的颜色，每种颜色需要3000的工资（这里工人应该是一个抽象的概念，否则无法理解这种设计背后对应的是什么含义），所以要求你选择行动时注意自己的工人颜色，同时要注意后续会供给上来的工人颜色，这算是一个比较难掌握的策略点，因为你很难预估那一堆会先被拿空。
+玩家的行动包括了提升煤的产量，提升科技等级，建造工厂，生产商品，完成订单，购买机器，建造轮船和火车以及游戏中最重要的放置商 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2016/02/18/ora-et-labora-chinese-edition-opening-box/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游开箱照</div><a class="unvisited-post" href="/2016/02/18/ora-et-labora-chinese-edition-opening-box/" title="祈祷与工作中文版开箱">未读</a></div><a class="article-title" href="/2016/02/18/ora-et-labora-chinese-edition-opening-box/" title="祈祷与工作中文版开箱">祈祷与工作中文版开箱</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2016-02-17T16:30:21.000Z" title="发表于 2016-02-18 00:30:21" time="2016-02-18 00:30:21">2016-02-18</time><time class="time_hidden" datetime="2022-11-25T07:24:18.905Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%BC%80%E7%AE%B1/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开箱</span></a><a class="article-meta__tags" href="/tags/ora-et-labora/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ora et labora</span></a><a class="article-meta__tags" href="/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>祈祷与工作</span></a><a class="article-meta__tags" href="/tags/%E5%AF%B9%E6%AF%94/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>对比</span></a></span></div><div class="content">仙雾最喜欢的游戏，没有之一的祈祷与工作出中文版啦！本文将放出开箱照，同时对比中文版和11年的英文版的配件质量。
+开箱照 盒子正面，下面可以看出获得的奖项
+
+
+ 盒子背面是游戏的简介，下方有LookoutGames和游人码头的图标 内部配件一览 全部的token抠下来之后
+对比图
+盒子正面的对比可以看到除了下方增加了许多荣誉以外，中间的画也有些许改变，添加了一只鹰，一只羊，货车上添加了MMXV，另外色彩变暗了些。
+   说明书的对比说明书的配置仍是4本不变，都进行了翻译。
+   轮盘组装方式的对比英文版的轮盘组装是用两个塑料的配件，一个需要插进另一个里面，不易拔出。中文版这采用了金属的螺丝，可以轻松拧下来。
+   玩家提示板的对比英文版的是一张薄薄的纸，而且爱尔兰和法国变体在同一页，甚至不合理。中文版分开做成纸板，一局游戏一人一小块板即可。
+   token切割对比英文版的切割简直无力吐槽，我这都算是好的。中文版切割很整齐。
+   家园板的对比又是一个英文版被吐槽的配件，英文版的实在太薄了。中文版的加厚至token一样。
+   卡牌对比卡牌区别不大。
+
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2016/02/17/journey-to-tanzania-with-photos/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">生活</div><div class="article-categories-original">旅行</div><a class="unvisited-post" href="/2016/02/17/journey-to-tanzania-with-photos/" title="图说坦桑尼亚之旅">未读</a></div><a class="article-title" href="/2016/02/17/journey-to-tanzania-with-photos/" title="图说坦桑尼亚之旅">图说坦桑尼亚之旅</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2016-02-17T08:35:46.000Z" title="发表于 2016-02-17 16:35:46" time="2016-02-17 16:35:46">2016-02-17</time><time class="time_hidden" datetime="2022-11-25T07:24:18.904Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/tanzania/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>tanzania</span></a><a class="article-meta__tags" href="/tags/ngorongoro/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ngorongoro</span></a><a class="article-meta__tags" href="/tags/serengeti/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>serengeti</span></a><a class="article-meta__tags" href="/tags/lake-manyara/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>lake manyara</span></a><a class="article-meta__tags" href="/tags/kilimanjaro/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>kilimanjaro</span></a></span></div><div class="content">
+
+从乞力马扎罗到曼雅拉湖，从塞伦盖蒂到恩戈罗恩戈罗火山口，不太想用记流水账的方式来回顾这次旅程，所以仙雾从自己拍摄的2000多张照片中精选了37张，本文就随着这37张图来回顾最令自己心动的那些瞬间。
+
+
+ 
+
+这首Baba Yetu是用斯瓦西里语（当地人的语言）写的，是文明4的主题曲，也是第一个拿到格莱美奖的游戏音乐，令我惊奇的是司机也听过这首歌。
+
+   The Longest Night&#x2F;最长一夜
+  
+  从上海飞往亚的斯亚贝巴的飞机上，由于与太阳同向飞行且速度差不多，本就0点登机的我们在飞机上又经历了12个小时的黑夜，感觉这一觉永远不该醒来，终于在快抵达的时候，用手机记录了下这40000英尺高空中昼夜交替的画面。
+
+   Uhuru Summit&#x2F;乌呼鲁峰
+  
+  乞力马扎罗山（斯瓦希里语：Kilimanjaro，意为“灿烂发光的山”）位于坦桑尼亚东北的乞力马扎罗区，临近肯尼亚边界，是非洲的最高山，常被称为“非洲屋脊”、“非洲之王”。其最高峰为基博峰（也称乌呼鲁峰），海拔5,895米（19,341英尺）。乞力马扎罗山的部分山区被指定为乞力马扎罗国家公园， ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游介绍</div><a class="unvisited-post" href="/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/" title="[仙雾的Essen2015]4.Pi mal Pflaumen游戏概览&amp;开箱&amp;评测">未读</a></div><a class="article-title" href="/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/" title="[仙雾的Essen2015]4.Pi mal Pflaumen游戏概览&amp;开箱&amp;评测">[仙雾的Essen2015]4.Pi mal Pflaumen游戏概览&amp;开箱&amp;评测</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2016-01-22T14:00:46.000Z" title="发表于 2016-01-22 22:00:46" time="2016-01-22 22:00:46">2016-01-22</time><time class="time_hidden" datetime="2022-11-25T07:24:18.904Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%BC%80%E7%AE%B1/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开箱</span></a><a class="article-meta__tags" href="/tags/Essen/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen</span></a><a class="article-meta__tags" href="/tags/%E6%A6%82%E8%A7%88/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>概览</span></a><a class="article-meta__tags" href="/tags/%E6%B5%8B%E8%AF%84/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>测评</span></a><a class="article-meta__tags" href="/tags/Essen2015/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen2015</span></a><a class="article-meta__tags" href="/tags/Pi-mal-Pflaumen/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Pi mal Pflaumen</span></a></span></div><div class="content">游戏总览 Pi mal Pflaumen，德语π*李子的意思
+李子的是一个抽象类游戏，不过还是套了一个背景，但是看完说明书，我必须要吐槽一下这是我看过的最扯淡的背景介绍。
+说明书上写到，17、18世纪是科学的世纪（简直废话），有两位伟大的人物出现了，他们是莱昂哈德·欧拉（欧拉公式知道吧）和玛丽亚·西比拉·梅里安（一个博物学家naturalist和一个艺术家，见下图），但是说明书对于为何会选取这两个人物完全没提到，反倒是加了一句话说这俩人还真有关系，根据仙雾的搜索，所有的和这俩人相关的网页都指向了这本说明书，只有一个德语的维基百科中提到了说欧拉的第二任妻子是梅里安的外孙女，天真的我还以为会有什么惊天动地的故事。。。
+ Maria Sibylla Merian的作品的特点就是会把毛毛虫进化成蝶的不同时期的不同形态融合进同一张图里
+游戏分三个阶段（卡牌背面的虫、蛹、蝶），每个阶段玩家打出卡，然后选取卡，通过完成水果的组套任务来得分，最后分数最高的人获胜。游戏支持3-5人，一局时间不长，在半小时左右，是个等人时候的不错之选。
+
+
+游戏配件游戏的配件只有119张牌和英德两份说明书。
+
+英德双语的 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2016/01/19/essen2015-3-codenames-rule-intro-review/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游介绍</div><a class="unvisited-post" href="/2016/01/19/essen2015-3-codenames-rule-intro-review/" title="[仙雾的Essen2015]3.Codenames游戏概览&amp;评测">未读</a></div><a class="article-title" href="/2016/01/19/essen2015-3-codenames-rule-intro-review/" title="[仙雾的Essen2015]3.Codenames游戏概览&amp;评测">[仙雾的Essen2015]3.Codenames游戏概览&amp;评测</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2016-01-19T14:00:46.000Z" title="发表于 2016-01-19 22:00:46" time="2016-01-19 22:00:46">2016-01-19</time><time class="time_hidden" datetime="2022-11-25T07:24:18.903Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Essen/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen</span></a><a class="article-meta__tags" href="/tags/%E6%A6%82%E8%A7%88/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>概览</span></a><a class="article-meta__tags" href="/tags/%E6%B5%8B%E8%AF%84/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>测评</span></a><a class="article-meta__tags" href="/tags/Essen2015/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen2015</span></a><a class="article-meta__tags" href="/tags/Codenames/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Codenames</span></a></span></div><div class="content">游戏总览 VC真的是鬼才，什么种类都逃不掉
+乌老师在中重策工放的道路上越走越远，而Vlaada Chvátil设计的游戏则不论是机制还是重度的多样性上都完爆了其他设计师。从TTA到银河卡车，从MK到Codenames，VC完美展现了自己设计鬼才的实力。
+ 现在都流行设计师Cos封面
+Codenames是一个猜词游戏，玩家分成两队，分别由一个队长带领，队长每轮会提示一个单词作为“行动代号”，队员则要猜出所有己方的特工代号才能获胜，如果不幸猜到刺客的代号则立即失败。
+
+
+游戏配件游戏配件极其简单：
+
+8张红色特工板
+8张蓝色特工板
+1张双面特工板
+7张无知群众板
+1张刺客板
+一叠身份提示卡
+一个身份提示卡支架
+一叠单词卡片（双面）
+一个1分钟沙漏
+
+游戏设置
+随机取出25张单词组成5x5的矩形。
+红蓝双方的队长坐在一侧，队员坐在对面。
+队长抽一张身份提示卡，以任意一面插入支架，只有队长能看到所有单词对应的颜色。
+根据身份提示卡四周的颜色，将双面特工板给对应的队长，他成为起始玩家需要多猜一个词。
+
+游戏流程
+起始的一方的队长先给出一个提示，然后必须做出一副扑克脸。
+己方队员经过讨论后，以点选 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2016/01/19/ora-et-labora-rule-intro/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游介绍</div><a class="unvisited-post" href="/2016/01/19/ora-et-labora-rule-intro/" title="祈祷与工作游戏概览&amp;规则介绍">未读</a></div><a class="article-title" href="/2016/01/19/ora-et-labora-rule-intro/" title="祈祷与工作游戏概览&amp;规则介绍">祈祷与工作游戏概览&amp;规则介绍</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2016-01-19T13:30:21.000Z" title="发表于 2016-01-19 21:30:21" time="2016-01-19 21:30:21">2016-01-19</time><time class="time_hidden" datetime="2022-11-25T07:24:18.904Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/ora-et-labora/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ora et labora</span></a><a class="article-meta__tags" href="/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>祈祷与工作</span></a><a class="article-meta__tags" href="/tags/%E6%A6%82%E8%A7%88/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>概览</span></a></span></div><div class="content">仙雾最喜欢的游戏，没有之一的祈祷与工作出中文版啦！所以这里准备认真介绍一下这款乌老师的集大成之作。
+游戏总览
+Ora et Labora（拉丁文的祈祷与工作的意思）是一个关于中世纪修道院经济的游戏（乌老师对中世纪背景是真爱啊）。中世纪的修道院中当然有祷告，但更多的是修道院内外艰苦的工作。玩家扮演修道院的管理者，派你的院长和两个助理到生产货物的建筑中工作。游戏一开始玩家只有一块2x5的家园板块，但随着游戏的进行，玩家可以购入扩展的地形。整局游戏会暂停5次，玩家在暂停后可以建造居民点，玩家应该尽可能将其造在周围定居值高的位置。祈祷与工作中提供了2种游戏变体——法国变体和爱尔兰变体，玩家可以自行选择使用哪种。
+ 国外geek Gustav Petru手工制作的牧师
+
+
+游戏设置
+轮盘与指针：根据游戏人数选择对应的资源轮盘（3人游戏、4人游戏、3或4人简短游戏，1或2人游戏）和轮盘指针（增长的慢的一面是2人游戏时使用的，另一面为其他时候使用）。
+建筑：玩家先决定法国变体还是爱尔兰变体。
+3人游戏将右下角标有4的建筑移除，两人游戏还需要将标有3+的也移除。
+将建筑翻至法国&#x2F;爱尔兰面。
+ ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2015/12/01/essen2015-2-7wonders-duel-rule-intro-review/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游介绍</div><a class="unvisited-post" href="/2015/12/01/essen2015-2-7wonders-duel-rule-intro-review/" title="[仙雾的Essen2015]2.7 Wonders: Duel游戏概览&amp;评测">未读</a></div><a class="article-title" href="/2015/12/01/essen2015-2-7wonders-duel-rule-intro-review/" title="[仙雾的Essen2015]2.7 Wonders: Duel游戏概览&amp;评测">[仙雾的Essen2015]2.7 Wonders: Duel游戏概览&amp;评测</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2015-12-01T13:05:28.000Z" title="发表于 2015-12-01 21:05:28" time="2015-12-01 21:05:28">2015-12-01</time><time class="time_hidden" datetime="2022-11-25T07:24:18.903Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Essen/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen</span></a><a class="article-meta__tags" href="/tags/%E6%A6%82%E8%A7%88/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>概览</span></a><a class="article-meta__tags" href="/tags/%E6%B5%8B%E8%AF%84/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>测评</span></a><a class="article-meta__tags" href="/tags/Essen2015/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen2015</span></a><a class="article-meta__tags" href="/tags/object-Object/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>[object Object]</span></a></span></div><div class="content"> 先来一发国外geek的cosplay镇帖
+在忙碌完自己的论文后，第二期的仙雾Essen2015，选择介绍一个在做前瞻时候遗漏掉的但是却很火的游戏——7 Wonders: Duel，也就是我们俗称的七大两人版。总体来说七大两人版有非常多的设计上的优化，并且游戏体验很好，三种胜利方式设置的很不错，军事和科技有些困难却又不是遥不可及，属于两人游戏中的佳作。
+
+  “The beginning does not hint at the end.”  Herodotus
+
+“开始不曾暗示结果。”来自于“历史之父”希罗多德的这句话设计师将其写在了说明书最开始。这似乎是对那些创造了人类历史上伟大奇迹的远古文明下的判词，也似乎是在向玩家传递一个声音——七大对决这款游戏的过程充满了变数。（然而仙雾并没有搜索到这句话的出处，难道是设计师瞎编的？）
+ 设计师Bruno Cathala和Antoine Bauza
+七大对决的设计师是Antoine Bauza和Bruno Cathala，前者就是七大奇迹原版和东海道的设计师，而后者也设计了Abyss和Five Tribes。可以说双方在设计轻策游戏上还是比较 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2015/11/09/essen2015-1-among-nobles-rule-intro-review/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游介绍</div><a class="unvisited-post" href="/2015/11/09/essen2015-1-among-nobles-rule-intro-review/" title="[仙雾的Essen2015]1.Among Nobles游戏概览&amp;开箱&amp;评测">未读</a></div><a class="article-title" href="/2015/11/09/essen2015-1-among-nobles-rule-intro-review/" title="[仙雾的Essen2015]1.Among Nobles游戏概览&amp;开箱&amp;评测">[仙雾的Essen2015]1.Among Nobles游戏概览&amp;开箱&amp;评测</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2015-11-09T09:36:27.000Z" title="发表于 2015-11-09 17:36:27" time="2015-11-09 17:36:27">2015-11-09</time><time class="time_hidden" datetime="2022-11-25T07:24:18.903Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%BC%80%E7%AE%B1/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开箱</span></a><a class="article-meta__tags" href="/tags/Essen/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen</span></a><a class="article-meta__tags" href="/tags/%E6%A6%82%E8%A7%88/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>概览</span></a><a class="article-meta__tags" href="/tags/%E5%BC%80%E7%AE%B1%E7%85%A7/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开箱照</span></a><a class="article-meta__tags" href="/tags/%E6%B5%8B%E8%AF%84/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>测评</span></a><a class="article-meta__tags" href="/tags/Essen2015/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Essen2015</span></a><a class="article-meta__tags" href="/tags/Among-Nobles/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Among Nobles</span></a></span></div><div class="content">小大的Essen新货终于到货，E大（居然去小大家围堵了，太丧心病狂！）、我和碗王周中就迫不及待地去A社开了几局新游戏，第一期的Essen2015就先详细介绍一下被称为今年最被低估的游戏——Among Nobles。
+ Among Nobles
+游戏总览Among Nobles是一个卡牌游戏，玩家在封建欧洲扮演一个家族，通过扩展自己的家族、利用联姻、战争和阴谋来赢取胜利。在游戏中，玩家可以控制欧洲历史上最有影响力和最有代表性的人物，比如拿破仑、查理一世、叶卡捷琳娜二世等等，激活人物卡牌上的一系列能力来进行行动，女性角色在结婚会加入其丈夫的家族，从而作为一对夫妇之后可以被同时激活。正确或错误的婚姻会决定游戏的输赢。游戏结束声望点数最多的玩家获得胜利。
+
+
+游戏配件
+1本规则书
+60张角色卡
+6张起始夫人卡
+6张起始领主卡
+16张I时代角色
+16张II时代角色
+16张III时代角色
+
+
+9张行省卡
+1张起始玩家卡
+45个金币token
+声望点数token
+50个1分的声望点数token
+50个5分的声望点数token
+
+
+5种颜色玩家token（黑白橙紫灰，色盲友好，好顶赞！）
+3个行动to ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2015/11/01/ora-et-labora-quantitative-analysis/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">geek研究</div><a class="unvisited-post" href="/2015/11/01/ora-et-labora-quantitative-analysis/" title="祈祷与工作量化分析">未读</a></div><a class="article-title" href="/2015/11/01/ora-et-labora-quantitative-analysis/" title="祈祷与工作量化分析">祈祷与工作量化分析</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2015-11-01T14:30:27.000Z" title="发表于 2015-11-01 22:30:27" time="2015-11-01 22:30:27">2015-11-01</time><time class="time_hidden" datetime="2022-11-25T07:24:18.902Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%A0%94%E7%A9%B6/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>研究</span></a><a class="article-meta__tags" href="/tags/ora-et-labora/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ora et labora</span></a><a class="article-meta__tags" href="/tags/solo/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>solo</span></a><a class="article-meta__tags" href="/tags/%E7%A5%88%E7%A5%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>祈祷与工作</span></a></span></div><div class="content">这篇其实是整理的以前篇旧文，那日一人无聊遂开一局solo，在玩的过程中想到了些分析建筑功效的方法，于是又计算了下，得出了一些结论。
+注1：以下所有的数据都是我估计得来的并不准确，重点是方法。
+注2：此方法并非只适用于solo，多人局也适用不过数据会有所更改，一般4人局拿一次资源估计只有4个左右。
+祈祷是一个非典型的工人放置游戏，它注重于构建一个多层的经济系统，让玩家完成一系列的转化从而走向胜利。由于游戏计分方式的多样性，使得对整个游戏的把握变得困难，当然也让玩家有了更多的选择。
+今天我们要研究的是solo中某个建筑的功效，那么如何评定一个建筑的功效呢？很显然，计算放置工人之后的收益是最简单的方法。为了简化问题，我只分析能直接产出分的建筑，但是正如前面所说，祈祷是一个多层的经济系统，大多数的时候一个建筑并不为你直接带来分数，或者说能带来分数的建筑的转化并不是一步就行的，那怎么办？建筑的效果一般都是付出一定的原料，得到一定的分数。我们统计收集到所有原料所需要的行动数量t，然后用转换后得到的分数除以t，就是使用该建筑的效果后平均一步的收益，再用这个收益和标准收益比较就能看出一个建筑的优劣了。 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">桌面游戏</div><div class="article-categories-original">桌游感悟</div><a class="unvisited-post" href="/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/" title="[桌游人生]第六期.浅谈乌老师的游戏设计理念">未读</a></div><a class="article-title" href="/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/" title="[桌游人生]第六期.浅谈乌老师的游戏设计理念">[桌游人生]第六期.浅谈乌老师的游戏设计理念</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2015-10-31T16:09:35.000Z" title="发表于 2015-11-01 00:09:35" time="2015-11-01 00:09:35">2015-11-01</time><time class="time_hidden" datetime="2022-11-25T07:24:18.902Z" title="更新于 2022-11-25 15:24:18" time="2022-11-25 15:24:18">2022-11-25</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%84%9F%E6%82%9F/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>感悟</span></a><a class="article-meta__tags" href="/tags/%E6%84%9F%E5%8F%97/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>感受</span></a><a class="article-meta__tags" href="/tags/Uwe-Rosenberg/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Uwe Rosenberg</span></a><a class="article-meta__tags" href="/tags/%E4%B9%8C%E8%80%81%E5%B8%88/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>乌老师</span></a></span></div><div class="content">本文首发于去年一刻馆的微信公众平台，也在桌游吧发过一遍，不过当时由于洞穴农夫和大农场没怎么玩所以就没怎么写，现在正好来更新一遍。
+乌老师！
+Uwe Rosenberg，中文翻译BGG上给出的是乌·玫瑰山，但更多中国玩家喜欢亲切地称呼他为乌老师。关于乌老师的简介网上已经有太多，这里仙雾就不过多介绍了，有兴趣的玩家可以去Wiki上自行搜索。每每谈及乌老师设计的游戏，得到的评价往往褒贬不一，不喜欢的玩家往往能列出一个包含各种理由的清单，相信炒冷饭几乎会是所有人这份清单上的交集；而喜欢乌老师的玩家，特别是像仙雾这样的脑残粉，总是能在乌老师的每一款新游戏上看到自己所钟爱的那一部分，同时又对乌老师的每一个设计上的改变带来的惊喜兴奋不已。不论乌老师在玩家心中的地位如何，乌老师在桌游界的地位可以说是不容质疑，看看BGG的榜单，Agricola（农场主）第6，Le Havre（港口）第15，At the Gates of Loyang（洛阳城外）第190，Ora et Labora（祈祷与工作）第47，Glass Road（玻璃之路）第176，Caverna: The Cave Farmers（洞穴农夫 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="anzhiyufont anzhiyu-icon-chevron-left fa-fw" style="font-weight: inherit; font-size: 1rem;"></i><div class="pagination_tips_prev">上页</div></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#content-inner">11</a><a class="extend next" rel="next" href="/page/4/#content-inner"><div class="pagination_tips_next">下页</div><i style="font-weight: inherit; font-size: 1rem;" class="anzhiyufont anzhiyu-icon-chevron-right fa-fw"></i></a><div class="toPageGroup"><input id="toPageText" oninput="value=value.replace(/[^0-9]/g,'')" maxlength="3" onkeyup="this.value=this.value.replace(/[^u4e00-u9fa5w]/g,'')" aria-label="toPage"><a id="toPageButton" onclick="anzhiyu.toPage()"><i class="anzhiyufont anzhiyu-icon-angles-right" style="font-weight: inherit; font-size: 1rem;"></i></a></div></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">一个桌游玩家，程序猿，足球迷</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><h1 class="author-info__name">仙雾</h1><div class="author-info__desc">一个桌游玩家，程序猿，足球迷的生活</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/titanxxh" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/2617080" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="anzhiyufont anzhiyu-icon-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%B4%E8%A5%BF/"><span class="card-category-list-name">巴西</span><span class="card-category-list-count">4</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%B4%E8%A5%BF/%E7%BD%97%E7%BA%B3%E5%B0%94%E5%A4%9A/"><span class="card-category-list-name">罗纳尔多</span><span class="card-category-list-count">2</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">桌面游戏</span><span class="card-category-list-count">63</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/geek%E7%A0%94%E7%A9%B6/"><span class="card-category-list-name">geek研究</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"><span class="card-category-list-name">桌游介绍</span><span class="card-category-list-count">22</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E5%BC%80%E7%AE%B1%E7%85%A7/"><span class="card-category-list-name">桌游开箱照</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/"><span class="card-category-list-name">桌游感悟</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8/"><span class="card-category-list-name">桌游活动</span><span class="card-category-list-count">12</span></a></li></ul></li>
+            </ul></div><div class="sticky_layout"><div class="card-widget"><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/><div class="card-webinfo"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-file-lines"></i><div class="item-name">文章总数 :</div></div><div class="item-count">105</div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-stopwatch"></i><div class="item-name">建站天数 :</div></div><div class="item-count" id="runtimeshow" data-publishDate="2021-03-31T16:00:00.000Z"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-font"></i><div class="item-name">全站字数 :</div></div><div class="item-count">125.5k</div></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:titanxxh@gmail.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.facebook.com/xxhxxh" title="facebook"><i class="anzhiyufont anzhiyu-icon-facebook1"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/titanxxh" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/2617080" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh?igsh=MmVlMjlkMTBhMg==" title="Instagram"><i class="anzhiyufont anzhiyu-icon-instagram"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAA8fxaGlIMqjTGijfwkLpQKuWByJEu6zxpw9P9KrZ0JMc?from_tab_name=main" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2011 - 2024 By <a class="footer-bar-link" href="/" title="仙雾" target="_blank">仙雾</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">105</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">267</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">17</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">旅游</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/" title="伊比利亚蜜月"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="伊比利亚蜜月"/><span class="back-menu-item-text">伊比利亚蜜月</span></a><a class="back-menu-item" href="https://titanxxh.com/2018/09/11/russia-2018/" title="俄罗斯世界杯"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="俄罗斯世界杯"/><span class="back-menu-item-text">俄罗斯世界杯</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span></div></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("09/18/2011 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2011 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 仙雾 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><script>if (typeof gsap === "object") {
+  getScript("/js/anzhiyu/people.js", {defer:true})
+} else {
+  getScript("https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/gsap/gsap.min.js").then(()=>{
+    getScript("/js/anzhiyu/people.js", {defer:true})
+  });
+}</script><input type="hidden" name="page-type" id="page-type" value="anzhiyu"></div><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
