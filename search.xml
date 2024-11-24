@@ -534,23 +534,23 @@
 
 <p>PS：这游戏比较热闹，请勿在需要安静的场合玩。</p>
 
-<p><img src="https://cf.geekdo-images.com/images/pic428828_md.jpg"><br> 小小世界</p>
+<p><img src="https://cf.geekdo-images.com/aoPM07XzoceB-RydLh08zA__original/img/bYLzrwZO9u-3h2wyU-PHc8aTOY4=/0x0/filters:format(jpeg)/pic428828.jpg"><br> 小小世界</p>
 <p>好了，回归正题，今天要给大家介绍的是一款比较欢乐的战斗桌游——<a title="小小世界BGG链接" href="https://boardgamegeek.com/boardgame/40692/small-world" target="_blank">小小世界</a>，正如游戏名字所描述的，这个游戏的版图实在太小了，以至于战争频发，不过有意思的是最后的输赢不是比拼军事实力，亦非领土数量，而是通过每回合获取收入，累积财富，最后钱多的获胜。南宋时期，汉人偏安江南，战局不利，可是人民生活富裕，经济相当繁荣，更是诞生了许多伟大发明。蒙古人的铁蹄踏遍亚洲大陆，领土面积一度达到最大，军事实力强大，这也是成功的方式之一。在小小世界里你就能体会到这一切，到底是疯狂敛财的矮人道高一尺，还是以战养战的兽人魔高一丈？让我们进入这个拥挤的世界吧！<span id="more"></span></p>
 
-<p><img src="https://cf.geekdo-images.com/images/pic1000145_md.jpg"><br> 小小世界的地图</p>
+<p><img src="https://cf.geekdo-images.com/PQ2kqosMmRUKGPMxsLHRUg__original/img/XSGRO67OjbaaD1efZOFhHDT8AVI=/0x0/filters:format(jpeg)/pic455932.jpg"><br> 小小世界的地图</p>
 <p>小小世界的地图有不同的地形（海，湖，农田，丘陵，高山，沼泽），每种地形又有不同的属性（金矿，地洞，水晶），这些都为每回合最后的敛财增加许多加成，有直接的也有间接的。</p>
 
-<p><img src="https://cf.geekdo-images.com/images/pic1091203_md.jpg"><br> 小小世界种族</p>
+<p><img src="https://cf.geekdo-images.com/u-YRwLfv-M1RibEUQI-vpw__original/img/A4Qu1O-zBjfoLEd99v0SNGxlDfI=/0x0/filters:format(jpeg)/pic866325.jpg"><br> 小小世界种族</p>
 <p>小小世界原版拥有14个种族，每个种族各有各的技能，有对战斗增强的（巨人攻打高山周围的区域需要的兵力可以减一），有每回合拿钱增加的（有水晶标志的区域法师每回合多拿一个金币，兽人每占领一个激活的区域可以多获得一个金币），也有增强自己兵力的（邪恶的巫师可以把别人落单的兵变成自己的）……</p>
 
-<p><img src="https://cf.geekdo-images.com/images/pic1091207_md.jpg"><br> 小小世界能力</p>
+<p><img src="https://cf.geekdo-images.com/28cu7jxpO0SU8242z3MPBg__imagepagezoom/img/8G_2ehb8BAJk527dPMYT0Nl8Afs=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic466854.jpg"><br> 小小世界能力</p>
 <p>小小世界原版有20种能力，种类繁多这里不一一说明了。</p>
 
 <p>基本规则很简单，玩家轮动，每回合分几个阶段。</p>
 
 <p>1.开始阶段</p>
 
-<p><img src="https://cf.geekdo-images.com/images/pic588035_md.jpg"><br> 小小世界选种族</p>
+<p><img src="https://cf.geekdo-images.com/NPBrqVXdY0AAhi5RK9SM3Q__original/img/GMSDA7RXDEQZkuUi1w8OnBPj6zI=/0x0/filters:format(jpeg)/pic428843.jpg"><br> 小小世界选种族</p>
 <p>版图旁边会有随机的几组种族和能力的搭配，第一回合必须选择一组，如果认为前面的不好，跳过前面的选后面的需要在前面的每一组上放置一个金币，提高他们对于后面玩家的诱惑力，不至于沦为鸡肋。然后拿取对应的兵力（种族右下角和能力左下角数字之和）。有时候一个种族被全灭后，如果还想征服，还是得需要从边缘入场。以后的回合中，开始阶段的时候玩家可以宣布自己的种族衰退（退场），跳过本回合的征服阶段，再到下个回合就又能选新种族入场了。（往往是一个种族完全扩张了才退场的）关于衰退最后详述。</p>
 
 <p>2.征服阶段</p>
@@ -4107,7 +4107,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
 <p>受限于各个游戏公开的资料的多寡，某些游戏无法进行详细介绍时，仙雾只能用脑补和文字进行介绍了。下文中，BGG资源一项：<strong>充足</strong>表示有规则和视频介绍，<strong>一般</strong>表示缺少规则或者视频，<strong>匮乏</strong>表示没有规则也没有视频。</p>
 <span id="more"></span>
 
-<h2 id="Haru-Ichiban"><a href="#Haru-Ichiban" class="headerlink" title="Haru Ichiban"></a><a href="https://www.boardgamegeek.com/boardgame/165662/haru-ichiban">Haru Ichiban</a></h2><p><img src="https://cf.geekdo-images.com/images/pic2277544_md.jpg"></p>
+<h2 id="Haru-Ichiban"><a href="#Haru-Ichiban" class="headerlink" title="Haru Ichiban"></a><a href="https://www.boardgamegeek.com/boardgame/165662/haru-ichiban">Haru Ichiban</a></h2><p><img src="https://cf.geekdo-images.com/sOwpuouKdVSYmpz9oIJv_g__imagepagezoom/img/c_8s4nHX8qAeVLUbEUODvICiUS4=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic2678962.jpg"></p>
 <ul>
 <li>美工：清新</li>
 <li>收纳：未知</li>
@@ -4118,7 +4118,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
 <p><em>Haru Ichiban</em> 一看就知道是日语，Haru是春，Ichiban是一番，按照作者给出的翻译，似乎说的是春天的第一股清风。虽然是日文名，但是作者是大名鼎鼎的<a href="https://www.boardgamegeek.com/boardgamedesigner/1727/bruno-cathala">Bruno Cathala</a>，也就是基岛（Cyclades）、五部落（Five Tribes）和深渊（Abyss）的设计师。不过相信我，没有人在预览艾森那500多个游戏列表的时候会注意到设计师的，大部分都是被简介和画风所吸引的，而这款游戏的小清新的画风正是最能吸引眼球的一种。</p>
 <p>游戏的规则很简单，每人有编号1-8的花朵，和一只青蛙。每回合双方秘密地选择一个花朵，同时展示数字小的一方成为小园丁，大的成为大园丁，放置自己的花朵到荷叶上。然后按照规则去操控春风和青蛙来移动荷叶，根据花朵形成的形状来得分，2*2的方块得一分，水平或者竖直的连续4个得2分，斜对角的连续4个得3分，任何方式连续的5个得5分并立即获胜。</p>
 <p>这款游戏本质上是一个抽象游戏，两名玩家在规则的约束下，去影响花的位置并按照组成的图案得分。设计师将这个枯燥的游戏机制配上了一个不错的背景——两名玩家需要借助春风和跳跃的青蛙来摆放自己的花，同时画师的设计——两个对坐在池塘两侧斗法的园丁和散布的荷叶，让我们感受了一丝禅意。</p>
-<h2 id="Fog-of-Love"><a href="#Fog-of-Love" class="headerlink" title="Fog of Love"></a><a href="https://www.boardgamegeek.com/boardgame/175324/fog-love">Fog of Love</a></h2><p><img src="https://cf.geekdo-images.com/images/pic2460503_md.jpg"></p>
+<h2 id="Fog-of-Love"><a href="#Fog-of-Love" class="headerlink" title="Fog of Love"></a><a href="https://www.boardgamegeek.com/boardgame/175324/fog-love">Fog of Love</a></h2><p><img src="https://cf.geekdo-images.com/FDOlU-KIv3iRKqHzC57-Qg__imagepagezoom/img/7JK_cNXPzKkKfV_ZqTvpcRd32xo=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic6353234.jpg"></p>
 <ul>
 <li>美工：简单</li>
 <li>收纳：未知</li>
@@ -4127,10 +4127,10 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
 <li>BGG资源：匮乏</li>
 </ul>
 <p>本次艾森让我们看到了一些关注点放在两性关系上的游戏涌现出来，而<em>Fog of Love</em>也是因此吸引了不少人的关注。在游戏封面上一男一女的剪影中写着标题和一句话——“A game about romance, relationship and … bluff”，一个关于浪漫、情感和虚张声势的游戏。</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2478545_md.jpg" alt="正在游戏的一对……男人？"></p>
+<p><img src="https://cf.geekdo-images.com/UVdZvrittpxcwBVXxouR1Q__imagepagezoom/img/LK-CCw_4Hcdl1huBTiv1vIdXa0I=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic2710188.jpg" alt="正在游戏的一对……男人？"></p>
 <p>由于BGG资源的匮乏，这里仙雾只能通过作者给出的描述来简单介绍下。Fog of Love是一个关于一场轰轰烈烈的爱情故事的游戏，双方从最初的一见钟情开始，经过尴尬、争吵、聚会、贴心的礼物、秘密绯闻、孩子、和解最后期望达成一个美满的结局。玩家将扮演一个有多种不同性格的人物，学习如何让这段感情继续，建立双方的默契同时要判断对方是真心还是假意。如同现实世界一样，玩家需要面对一系列重大的事件并作出关键决策，你得考虑清楚什么样得决定对自己最好，什么样的对双方更有利，同时也得注意对方的想法，因为你们的决定共同影响了最后的结局。在这个浪漫的游戏中，保持平衡、相信直觉、精确计算后的选择是通往成功的关键，你们可能共同胜利、失败或是……</p>
 <p>总之这看上去是一个情侣之间的小游戏，但45-90分钟的时间又似乎暗示着它不简单的背后。仙雾期待艾森上的它的表现。</p>
-<h2 id="…and-then-we-held-hands"><a href="#…and-then-we-held-hands" class="headerlink" title="…and then, we held hands."></a><a href="https://www.boardgamegeek.com/boardgame/153999/and-then-we-held-hands">…and then, we held hands.</a></h2><p><img src="https://cf.geekdo-images.com/images/pic2621938_md.jpg"></p>
+<h2 id="…and-then-we-held-hands"><a href="#…and-then-we-held-hands" class="headerlink" title="…and then, we held hands."></a><a href="https://www.boardgamegeek.com/boardgame/153999/and-then-we-held-hands">…and then, we held hands.</a></h2><p><img src="https://cf.geekdo-images.com/Ft08woV-KG3HHfO-ET6S4Q__original/img/x7YkL7sqFAt2LAxgPx3MEv3ZMNI=/0x0/filters:format(jpeg)/pic2717772.jpg"></p>
 <ul>
 <li>美工：清新</li>
 <li>收纳：未知</li>
@@ -4240,7 +4240,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
 <p>受限于各个游戏公开的资料的多寡，某些游戏无法进行详细介绍时，仙雾只能用脑补和文字进行介绍了。下文中，BGG资源一项：<strong>充足</strong>表示有规则和视频介绍，<strong>一般</strong>表示缺少规则或者视频，<strong>匮乏</strong>表示没有规则也没有视频。</p>
 <span id="more"></span>
 
-<h2 id="Hengist"><a href="#Hengist" class="headerlink" title="Hengist"></a><a href="https://www.boardgamegeek.com/boardgame/182875/hengist">Hengist</a></h2><p><img src="https://cf.geekdo-images.com/images/pic2649938_md.jpg"></p>
+<h2 id="Hengist"><a href="#Hengist" class="headerlink" title="Hengist"></a><a href="https://www.boardgamegeek.com/boardgame/182875/hengist">Hengist</a></h2><p><img src="https://cf.geekdo-images.com/mY6vS28jjXiAnvNa-0KJvw__imagepagezoom/img/A6AR6271Pxnoj2kb87mMsw3b-E8=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic2728136.jpg"></p>
 <ul>
 <li>美工：简洁</li>
 <li>收纳：无</li>
@@ -4249,11 +4249,11 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
 <li>BGG资源：一般</li>
 </ul>
 <p><em>Hengist</em>的背景是Hengist和他兄弟Horsa驾着龙船搜刮宝物，原因居然是他们老大给的不够……乌老师近年来生产力下降，只能用两人游戏来度过大型游戏开发期的空档（所以你懂的，明年就有乌老师的重策了）。相比于酝酿中的重策，这款二人游戏轻度的可以。</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2649940_md.jpg"></p>
+<p><img src="https://cf.geekdo-images.com/uakk91ejQ2KpJXEbupOZpQ__imagepagezoom/img/RkQurLLCi1uQuOmUIsLV7SNHRKI=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic2719245.jpg"></p>
 <p>游戏主要机制就是收集手牌，然后按照地形打出手牌去获得财宝。版图下方的财宝区域上盖着的是道路板块，随机通往该块版图下方的财宝，一开始处于未揭示状态，玩家可以去探险或者打出一张牌来偷看（侦查）一下，来决定走那条路。每打出一张侦查牌左边的版图就会放到右边，上面的人也就都损失了。</p>
 <p>游戏的策略度初看上去应该很低，主要在于决定是否要停留在靠前的版图上来拿大分（因为分数是递减放置的，而停在后面的地方有风险遇难）和手牌的应用。但毕竟是靠抽牌的游戏，所以随机性不小。</p>
 <p>PS：这个龙船设计的不错，越来越多的桌游往纸模？方向走了……</p>
-<h2 id="Ships"><a href="#Ships" class="headerlink" title="Ships"></a><a href="https://www.boardgamegeek.com/boardgame/153737/ships">Ships</a></h2><p><img src="https://cf.geekdo-images.com/images/pic2520170.jpg"></p>
+<h2 id="Ships"><a href="#Ships" class="headerlink" title="Ships"></a><a href="https://www.boardgamegeek.com/boardgame/153737/ships">Ships</a></h2><p><img src="https://cf.geekdo-images.com/dE3dzjw1XEQ4cOZ33heWiw__imagepagezoom/img/3GqJkKHlaLozf3xEyW4E8H78lQw=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic2721731.jpg"></p>
 <ul>
 <li>美工：写实</li>
 <li>收纳：未知</li>
@@ -4265,9 +4265,9 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
 <p><img src="https://cf.geekdo-images.com/images/pic2520166.jpg"></p>
 <p>（游戏版图主要是欧洲）</p>
 <p>游戏进行若干轮，玩家依次行动直到结束。游戏分为三个时代（桨帆船、帆船、蒸汽船），每个时代会有新的牌（其实就是额外的行动）。玩家的回合主要就是用使用行动点去执行行动（一共有<strong>8种</strong>……一种行动可以多次执行），其中最重要的行动就是造船，马丁特意画了个流程图来阐述。得分路线应该也是比较多的，看说明书至少有7个得分点。</p>
-<p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/9RiY01po.png"></p>
+<p><img src="https://cf.geekdo-images.com/m1FqHGF7BYBUNT1r5jec9g__imagepagezoom/img/-9usr-ubkx_vUrbdYlsBWfbxkEw=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic2733195.jpg"></p>
 <p>这个游戏的风格还是典型的马丁派，朴实刚健有深度，马丁在说明书最后说到他意识到很多文明类游戏把中心放在了大陆上，然后很多情况下海洋才是争夺的关键，所以才设计了这个游戏。重策游戏很难看看规则就搞明白，根据BGG上别人的<a href="https://www.boardgamegeek.com/thread/1440021/my-review-ships">Review</a>，即使是三个比较有经验的玩家第一局游戏也进行了三个半小时，说明游戏的复杂程度不低。此外该作者也提到了得分路线的多样性。总之Ships会成为仙雾必入的一款游戏。</p>
-<h2 id="Nippon"><a href="#Nippon" class="headerlink" title="Nippon"></a><a href="https://www.boardgamegeek.com/boardgame/154809/nippon">Nippon</a></h2><p><img src="https://cf.geekdo-images.com/images/pic2683981_md.jpg"></p>
+<h2 id="Nippon"><a href="#Nippon" class="headerlink" title="Nippon"></a><a href="https://www.boardgamegeek.com/boardgame/154809/nippon">Nippon</a></h2><p><img src="https://cf.geekdo-images.com/DVJamHS1e24-scuM8aRH8g__original/img/SZFgBrff-aSpci1q4PsLat9Z4sI=/0x0/filters:format(jpeg)/pic2683981.jpg"></p>
 <ul>
 <li>美工：简洁</li>
 <li>收纳：未知</li>
@@ -4335,20 +4335,20 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
     <title>[桌游人生]第六期.浅谈乌老师的游戏设计理念</title>
     <url>/2015/11/01/boardgame-life-6-the-design-concept-of-uwe-rosenberg/</url>
     <content><![CDATA[<p>本文首发于去年一刻馆的<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjE5Mjk5Mg==&mid=200807065&idx=1&sn=48413c205d9020884676c3420f3e69eb&scene=4#wechat_redirect">微信公众平台</a>，也在<a href="https://tieba.baidu.com/p/3279289468?pid=57030011213&cid=0#57030011213">桌游吧</a>发过一遍，不过当时由于洞穴农夫和大农场没怎么玩所以就没怎么写，现在正好来更新一遍。</p>
-<h2 id="乌老师！"><a href="#乌老师！" class="headerlink" title="乌老师！"></a>乌老师！</h2><p><img src="https://cf.geekdo-images.com/images/pic537818_md.jpg"></p>
+<h2 id="乌老师！"><a href="#乌老师！" class="headerlink" title="乌老师！"></a>乌老师！</h2><p><img src="https://cf.geekdo-images.com/3LC1yhKGgJsQjmnzpgpQQg__original/img/FpsW2d2InrRVFfl7CdMbmiWjsrI=/0x0/filters:format(jpeg)/pic537818.jpg"></p>
 <p><strong>Uwe Rosenberg</strong>，中文翻译BGG上给出的是乌·玫瑰山，但更多中国玩家喜欢亲切地称呼他为乌老师。关于乌老师的简介网上已经有太多，这里仙雾就不过多介绍了，有兴趣的玩家可以去Wiki上自行搜索。每每谈及乌老师设计的游戏，得到的评价往往褒贬不一，不喜欢的玩家往往能列出一个包含各种理由的清单，相信炒冷饭几乎会是所有人这份清单上的交集；而喜欢乌老师的玩家，特别是像仙雾这样的脑残粉，总是能在乌老师的每一款新游戏上看到自己所钟爱的那一部分，同时又对乌老师的每一个设计上的改变带来的惊喜兴奋不已。不论乌老师在玩家心中的地位如何，乌老师在桌游界的地位可以说是不容质疑，看看BGG的榜单，<a href="https://www.boardgamegeek.com/boardgame/31260/agricola">Agricola</a>（农场主）第<strong>6</strong>，<a href="https://www.boardgamegeek.com/boardgame/35677/le-havre">Le Havre</a>（港口）第<strong>15</strong>，<a href="https://www.boardgamegeek.com/boardgame/39683/gates-loyang">At the Gates of Loyang</a>（洛阳城外）第190，<a href="https://www.boardgamegeek.com/boardgame/70149/ora-et-labora">Ora et Labora</a>（祈祷与工作）第<strong>47</strong>，<a href="https://www.boardgamegeek.com/boardgame/143693/glass-road">Glass Road</a>（玻璃之路）第176，<a href="https://www.boardgamegeek.com/boardgame/102794/caverna-cave-farmers">Caverna: The Cave Farmers</a>（洞穴农夫）第<strong>3</strong>，<a href="https://www.boardgamegeek.com/boardgame/159675/fields-arle">Fields of Arle</a>（两人大农场）第106，甚至是农场主和港口的两人版小游戏都能有不错的排名（108和604），虽然说排名不代表一切，但拥有如此多高排名的作品，至少说明这个设计师拥有着出色的设计理念，并多年来一直保持着极高的设计水准。说到乌老师的设计理念，仙雾一度怀疑他是否对中国的周易有所研究，不变中总是有所改变，而改变中也总蕴藏着某些不变，并且改变的比例总是恰到好处，而许多改变也的确是极大地提高了游戏的品质。</p>
 <p>纵观乌老师所设计的游戏，不论是一开始的被戏称为“饥饿三部曲”的农场主、港口和洛阳城外，还是后来的祈祷与工作、玻璃之路和洞穴农夫，不论它们的游戏机制如何，每一款都有着鲜明的乌老师的风格：可以进行单人游戏、不同人数时游戏体验良好、多路线选择、同样的经济类主题为背景，可以看出虽然时间过去了7年，乌老师最核心的设计理念其实一直保持不变。但在游戏的细节上，每一款都做出来许多值得称道的改变，接下来让仙雾挑选几款自己比较熟悉的游戏来进行分析。</p>
 <span id="more"></span>
 
-<h2 id="农场主"><a href="#农场主" class="headerlink" title="农场主"></a>农场主</h2><p><img src="https://cf.geekdo-images.com/images/pic769153_md.jpg"></p>
+<h2 id="农场主"><a href="#农场主" class="headerlink" title="农场主"></a>农场主</h2><p><img src="https://cf.geekdo-images.com/YCGWJMFwOI5efji2RJ2mSw__original/img/jC_He46LcIcKWU-kSwkYdr9Z45E=/0x0/filters:format(jpeg)/pic8093340.jpg"></p>
 <p>虽然农场主不是乌老师的开山之作，但是相信许多玩家都是通过农场主认识到乌老师的。作为乌老师的成名之作，在遥远的2007年，这款游戏的问世一举打破了波多黎各多年的统治，在将其赶下榜首的同时，也把自己送上了神坛。至今每当谈及农场主的时候，相信只要是老玩家，无一会不给出极高的评价。农场主作为一个经典的工人放置游戏，其中融入了一些比较新颖的细节设计，使得整个游戏的游戏性得到了极大的提升，比如可选行动会随着游戏的进程越来越多，独特的职业卡和次要发展卡，资源每回合都会累积等等。这些细节的设计相互之间也互有牵连，使得游戏整体上看上去没有突兀的感觉。举例来说，随着游戏进程的推进而加入的行动对玩家而言理应更加具有吸引力，但是为了保证前期的行动不至于变成鸡肋的废行动，资源的累积就显得非常必要；为了使玩家之间资源的争夺不至于过于凶猛，职业卡和次要发展卡的加入就让大家能够选择适合自己的游戏思路；最值得称赞的就是资源累积的方式，正是由于这样的设计使得游戏的平衡性设计大大简化，因为资源累积的设计本身就是自平衡的，当一个行动格上的资源不够有吸引力的时候玩家自然不会选择，而它总会累积到足够有吸引力的时候，另一方面，玩家可能并不会仅仅因为这个资源数量没有达到自己的期望而不选择它，而是考虑到下回合它的增长会使得其对其他玩家有相当大的吸引力，而仍然提前选择拿走资源，你很难等到完美的时机拿走合适的资源，这就让整个游戏中充满了一种不完美的美，我们的生活不也是如此么？成也萧何，败也萧何，固然职业卡和次要发展卡的加入使得游戏可重玩性大大提升，但是一些过于强大的单卡，或者是combo不可避免地破坏了游戏的平衡性，并且将大量抉择堆在游戏的初期的做法（类似于四季物语）也引起了较大的争议，对新玩家不够友好；喂养的设计似乎令玩家感到略为紧张，惩罚又过于严厉，让玩家感到沮丧；资源累积的设计虽然出色，但是在游戏的后期每回合补充的时候显得又过于繁琐，相信不少玩家都遇到过多名玩家一起帮忙补充资源以加快速度，反而重复添加或者是遗漏了某种资源的情景。总体来说，农场主仍然是许多玩家中不可超越的神作，更是乌老师所有作品的奠基之作，也是后世众多其他设计师借鉴的源泉。</p>
-<h2 id="港口"><a href="#港口" class="headerlink" title="港口"></a>港口</h2><p><img src="https://cf.geekdo-images.com/images/pic392682_md.jpg"></p>
+<h2 id="港口"><a href="#港口" class="headerlink" title="港口"></a>港口</h2><p><img src="https://cf.geekdo-images.com/y7Rqd3S6J7vyVhicR1bqTQ__original/img/tQFXv1w2R-J-1cjyaKG9LAS2UOs=/0x0/filters:format(jpeg)/pic6091101.jpg"></p>
 <p>到了2008年，乌老师更进一步，推出了自己的丰收三部曲的第二部——港口。曾几何时，农场主港口双双杀入BGG榜单的前五，成为许多乌粉口中津津乐道的光辉事迹。港口中很明显地能看到农场主的影子，但同样有值得一提的诸多改变。工人的数量被减少到了只有一个；玩家主要的资源——金钱可以向银行贷款；建筑是在一定范围内随机被翻出等等。乌老师自己似乎也觉察到了农场主存在的一些明显不足，并在港口中进了一些优化，比如喂养不再像农场主那么令人紧张，再不济还有贷款这种途径。此外，最明显的改变是资源补充的方式，将回合初始的大量资源一次性补充，平摊到每位玩家回合开始时候固定的补充两个资源，这就避免了农场主的重复&#x2F;遗漏补充，同时这个补充资源的行动变相地成为了游戏的一个节拍器，并且由于这个节拍器是七个节拍的，每位玩家的喂养节奏是一样的而行动次数却不尽相同，也就造就了每个玩家的节奏其实是不一样的，正是这样的设计帮助玩家错开了自己的行动思路。同样的，这种固定的资源补充节拍设计也有自己的缺陷，比如无法添加新的资源种类，资源累积的速度其实是个常量等等。也因此，港口在一些玩家心目中的地位能高于农场主，而另一些玩家却认为远不如农场主。</p>
-<h2 id="祈祷与工作"><a href="#祈祷与工作" class="headerlink" title="祈祷与工作"></a>祈祷与工作</h2><p><img src="https://cf.geekdo-images.com/images/pic1602653_md.jpg"></p>
+<h2 id="祈祷与工作"><a href="#祈祷与工作" class="headerlink" title="祈祷与工作"></a>祈祷与工作</h2><p><img src="https://cf.geekdo-images.com/MLvyN4VJ3QNXBKxli8XLiA__original/img/eDqWAa7vUdsYE6_LXVNzIdClbhw=/0x0/filters:format(jpeg)/pic5089618.jpg"></p>
 <p>之后的2009年，乌老师以洛阳城外这样一款略显轻量级的游戏结束了自己的丰收三部曲，这里仙雾不过多详述。在沉寂了两年之后，乌老师带着一款新的作品出现在了展会上，这就是仙雾个人最喜欢的Ora et Labora，仙雾和朋友们更喜欢把它叫做祈祷。如果要用两个字来概括祈祷与工作的设计的话，仙雾认为一定是优雅。在推新时，很多没有之前玩过乌老师游戏的玩家或许看到那个不大的轮盘时最多也就是好奇，甚至有些不解，但是对于乌老师的老玩家而言，一定会为这个天才设计而拍案叫绝，圆形真的是一个很完美的图形，人在经过世事的打磨后学会了圆通处世，而这个轮盘的设计似乎也受到了乌老师多年的打磨，最终形成了一个如此优雅的解决方案，只要轻轻拨动指针，一切都已完成（后来的卓尔金历或多或少也借鉴了这个思想吧）。这个设计很好地解决了农场主补充资源的繁琐，同时也结合了港口中节拍器的功能，并且使得在游戏中引入新的资源变得十分简单，诚然，这种轮盘式的设计也有自身的缺陷，比如农场主中同种类的资源可以有不同的增长速度，而这里就不行，但这不妨碍我们赞美这个优雅的设计。除了对资源增长做出了大的改进以外，在祈祷中，乌老师将建筑的相对位置这一概念引入了游戏，并在很大程度上改变了游戏的计分方式，同时也提升了玩家思考的层次，玩家除了要思考何时应当购买何种建筑还需要规划自己的建筑位置的摆放，以提高自己居民点的得分，这就要求玩家有更高的全局战略，也可能正是因为这个复杂性的提升，让乌老师摒弃了任何的随机因素，也同时控制了所有建筑的数量，以减轻玩家的思考负担。同样值得一提的是在以往乌老师游戏中常见的喂养阶段被取消，取而代之的是一个更为巧妙且更为灵活的居民点建造阶段，玩家再也不用因为喂养阶段的不足而感到沮丧，而且玩家在建造居民点的时候可以有所选择，即使暂时无法建造高分的居民点，也可以选择建造分数略低的居民点从而节省资源，转而提前为后面的游戏做准备，由于居民点得分主要还是看周围的建筑，因此该居民点本身并不会太过于影响最后的得分，这个设计就显得对玩家更为友好。祈祷与工作的另一个优点在于玩家互动上，在一个建筑被其他玩家抢先建造后，对你而言并非是一件坏事，因为你仍然可以使用该建筑，甚至可以在该玩家之前就享受到这个建筑的好处，此外你还能节省下建造该建筑的资源，但另一方面，你会让对手更快地完成工人的轮换同时也降低自己工人轮换的速度。最后，我个人认为祈祷最出彩的一点就是对落后玩家友好，前期发展不顺的时候（比如建筑被抢，发展路线受扰），很多游戏该玩家基本就退出了竞争，但是在本游戏中，在最后的阶段之前，你仍然有机会将手中的资源合理地分配，兑换成分数并迎头赶上。正是因为各种各样的原因，祈祷与工作成为了仙雾最喜欢的游戏、开局时间最多的游戏（没有之一），也是仙雾在BGG上少数几个给满分的游戏之一，一个游戏得高分可能是设计新颖、机制完善、游戏体验好等等的理由，但是若是一个游戏给满分，我想只有一个原因，那就是这位玩家深深的爱，如果说在对的时间爱上了对的人称之为幸福，那么我想在对的时间遇上对的人玩到对的游戏那可以说是另一种幸福吧。</p>
-<h2 id="玻璃之路"><a href="#玻璃之路" class="headerlink" title="玻璃之路"></a>玻璃之路</h2><p><img src="https://cf.geekdo-images.com/images/pic1818805_md.jpg"></p>
+<h2 id="玻璃之路"><a href="#玻璃之路" class="headerlink" title="玻璃之路"></a>玻璃之路</h2><p><img src="https://cf.geekdo-images.com/qJCgEh5Icl7Ed1z2F56yxg__original/img/uz0zO0sycM6HZNA3HTWW7-_ur_Y=/0x0/filters:format(jpeg)/pic5895433.jpg"></p>
 <p>之后的一年，乌老师推出了农场主和港口的两人版小游戏，精简了原游戏的同时仍然不失策略，是和另一半闲暇时候开一局的好选择。2013年，乌老师一下子推出了两款作品，玻璃之路和洞穴农夫，其中玻璃之路由于游戏时长较短，仙雾和好友开了较多的局数。玻璃之路中，乌老师采用了和祈祷与工作中类似的建筑物建造的设计理念，并进行了简化，将建筑归为三类：转换型建筑、一次性建筑、得分建筑，并沿用了祈祷与工作的资源转换的思想，推动游戏进程。玻璃之路的新意在于，每个玩家不再需要将自己的资源一摞摞地放在自己面前，而是使用了类似于祈祷与工作中的轮盘来记录自己的资源数量，采用这一设计的更深层次原因是，游戏中高级资源的获取需要消耗基础资源各一个，而这恰好由指针转动一格这个动作来代替，是不是很优雅？此外玩家打出人物卡的规则设计也很巧妙，由于玩家每回合需要从15张人物卡中选择5张，但是只能主动打出其中的三张，而另外两张需要借助别人的行动打出，否则就浪费了，这就要求玩家合理选择自己所需要的人物的同时，要考虑其他玩家可能的选择，并在出人物卡的先后顺序上要注意；这一设计的另一个好处在于，先打出人物卡的玩家虽然有先手优势，可以优先选择自己想要的建筑，但是有更大的概率被被对手蹭到行动而降低行动的收益。玻璃之路的设计十分简明（可能乌老师的精力主要在洞穴农夫上吧），策略深度也不算太高，这个轻口味的游戏对于新玩家而言的确可以算是认识乌老师设计风格的入门作品。</p>
-<h2 id="洞穴农夫"><a href="#洞穴农夫" class="headerlink" title="洞穴农夫"></a>洞穴农夫</h2><p><img src="https://cf.geekdo-images.com/images/pic1799027_md.jpg"></p>
+<h2 id="洞穴农夫"><a href="#洞穴农夫" class="headerlink" title="洞穴农夫"></a>洞穴农夫</h2><p><img src="https://cf.geekdo-images.com/EAqbd46lFxo-7GumlO8U4w__original/img/oNM6bkDbjww-7nKZX-WYYmPxRws=/0x0/filters:format(jpeg)/pic5598833.jpg"></p>
 <p>第三！第三！虽然我不是一个排名控，但是看着乌老师的洞穴农夫一路往上冲，心里还是有点小激动的。洞穴农夫的设计基本上是以农场主为基础，去除了职业和次要发展卡，加入了很多的建筑一开始就直接可以让玩家购买（如同祈祷）；很多细节方面也简化了，比如圈地和喂养；同时使用打猎这样一个新设定，相当于玩家能有一个百搭一些的行动格，同时为了防止打猎过于不平衡，限制必须让武器等级最低的矮人先行动；此外得分其实也更为爽快，农场主又上限的得分被摒弃，偏门的发展同样可以刷出高分，也有利于区分玩家的策略路线。从这些细节可以看出，洞穴农夫的设计是沿袭了乌老师之前的游戏设计思路，真正的集大成者，所以就不奇怪它能够代替了农场主的位置成为现在乌老师排名最高的游戏了。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在本文即将结束的时候，我想引用我以前看到的一句话来表达我对乌老师游戏设计的感受。“游戏设计是一种艺术，所有的艺术都有其特有的语言。在游戏设计中，机制中的元素是这个语言的主要部分，他们就像单词一样，对我们普通人而言，我们只能用它们写出平常的文章，但对于莎士比亚（之于文学）、乌老师SF等（之于桌游）而言，他们却能使用之创造出杰作。”乌老师更加难能可贵的是，他不断地精益求精，将一个简单的机制逐步提炼、创新，逐渐变得完美而优雅，当我们回头看去，虽然它早已不再是最初的构想，却总能追根溯源。</p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>很早就想写一篇关于乌老师的游戏的文章，但是始终没有付诸行动，一是我的确没有深入地玩过每一个乌老师的游戏，比如洛阳城外只是看过介绍，我根本没玩过，自己也并不是什么桌游圈名人，只是个普通玩家，总觉得自己不够格；二是乌老师的游戏的确自成一派，写得不好容易引起两方面的炮轰。上个月看到一刻馆的寻人启事，思前想后还是决定尝试一下，但是由于之前家里搬家，也不是很有空来写文章，不过看着新书房里自己的桌游墙，总算是有了点动力，决定就写一写自己对乌老师游戏的浅见。此外我刻意省略了祈祷与工作的缺点部分，因为实在不忍心批评自己最爱的游戏，我要感谢在我最空余的大三大四的时候遇到了同样喜爱祈祷的朋友们，我还记得许多次我们游戏结束时，竟然都是平分，在一个得分达到几百的游戏中多次同分的确让人惊讶，同时我也为没有错过这样一个好游戏而感到幸运（<del>据我所知祈祷没有再版过，现在也几乎买不到。</del>好消息！祈祷与工作已经由游人代理中文版，预计明年初就能买到了，质量是像德文第二版那样有过提升的应该）。</p>
@@ -4368,7 +4368,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
     <title>[仙雾的Essen2015]1.Among Nobles游戏概览&amp;开箱&amp;评测</title>
     <url>/2015/11/09/essen2015-1-among-nobles-rule-intro-review/</url>
     <content><![CDATA[<p>小大的Essen新货终于到货，E大（居然去小大家围堵了，太丧心病狂！）、我和碗王周中就迫不及待地去A社开了几局新游戏，第一期的Essen2015就先详细介绍一下被称为今年最被低估的游戏——Among Nobles。</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2393416_md.jpg"><br> Among Nobles</p>
+<p><img src="https://cf.geekdo-images.com/7Ie4Ck5aiYZSAkCCpjsHOg__original/img/9LfuxzN4QPdok8Eziu0rpjeUmGw=/0x0/filters:format(jpeg)/pic2393416.jpg"><br> Among Nobles</p>
 <h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p>Among Nobles是一个卡牌游戏，玩家在封建欧洲扮演一个家族，通过扩展自己的家族、利用联姻、战争和阴谋来赢取胜利。在游戏中，玩家可以控制欧洲历史上最有影响力和最有代表性的人物，比如拿破仑、查理一世、叶卡捷琳娜二世等等，激活人物卡牌上的一系列能力来进行行动，女性角色在结婚会加入其丈夫的家族，从而作为一对夫妇之后可以被同时激活。正确或错误的婚姻会决定游戏的输赢。游戏结束声望点数最多的玩家获得胜利。</p>
 <span id="more"></span>
 
@@ -4532,9 +4532,9 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
   <entry>
     <title>[仙雾的Essen2015]3.Codenames游戏概览&amp;评测</title>
     <url>/2016/01/19/essen2015-3-codenames-rule-intro-review/</url>
-    <content><![CDATA[<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/images/pic2582929_md.jpg"><br> VC真的是鬼才，什么种类都逃不掉</p>
+    <content><![CDATA[<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/F_KDEu0GjdClml8N7c8Imw__original/img/gcX_EfjsRpB5fI4Ug4XV73G4jGI=/0x0/filters:format(jpeg)/pic2582929.jpg"><br> VC真的是鬼才，什么种类都逃不掉</p>
 <p>乌老师在中重策工放的道路上越走越远，而Vlaada Chvátil设计的游戏则不论是机制还是重度的多样性上都完爆了其他设计师。从TTA到银河卡车，从MK到Codenames，VC完美展现了自己设计鬼才的实力。</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2716212_md.jpg"><br> 现在都流行设计师Cos封面</p>
+<p><img src="https://cf.geekdo-images.com/-h1_LBVPhvCPnfcBRgwDwQ__original/img/wTDIP_gGC9oOCORuoXLpDBnnHBI=/0x0/filters:format(jpeg)/pic2716212.jpg"><br> 现在都流行设计师Cos封面</p>
 <p>Codenames是一个猜词游戏，玩家分成两队，分别由一个队长带领，队长每轮会提示一个单词作为“行动代号”，队员则要猜出所有己方的特工代号才能获胜，如果不幸猜到刺客的代号则立即失败。</p>
 <span id="more"></span>
 
@@ -4617,13 +4617,13 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
   <entry>
     <title>[仙雾的Essen2015]2.7 Wonders: Duel游戏概览&amp;评测</title>
     <url>/2015/12/01/essen2015-2-7wonders-duel-rule-intro-review/</url>
-    <content><![CDATA[<p><img src="https://cf.geekdo-images.com/images/pic2703758_md.jpg"><br> 先来一发国外geek的cosplay镇帖</p>
+    <content><![CDATA[<p><img src="https://cf.geekdo-images.com/-h1_LBVPhvCPnfcBRgwDwQ__original/img/wTDIP_gGC9oOCORuoXLpDBnnHBI=/0x0/filters:format(jpeg)/pic2716212.jpg"><br> 先来一发国外geek的cosplay镇帖</p>
 <p>在忙碌完自己的论文后，第二期的仙雾Essen2015，选择介绍一个在做前瞻时候遗漏掉的但是却很火的游戏——7 Wonders: Duel，也就是我们俗称的七大两人版。总体来说七大两人版有非常多的设计上的优化，并且游戏体验很好，三种胜利方式设置的很不错，军事和科技有些困难却又不是遥不可及，属于两人游戏中的佳作。</p>
 <blockquote>
 <p>  <em>“The beginning does not hint at the end.”</em><br>  Herodotus</p>
 </blockquote>
 <p>“开始不曾暗示结果。”来自于“历史之父”希罗多德的这句话设计师将其写在了说明书最开始。这似乎是对那些创造了人类历史上伟大奇迹的远古文明下的判词，也似乎是在向玩家传递一个声音——七大对决这款游戏的过程充满了变数。（然而仙雾并没有搜索到这句话的出处，难道是设计师瞎编的？）</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2704957_md.jpg"><br> 设计师Bruno Cathala和Antoine Bauza</p>
+<p><img src="https://cf.geekdo-images.com/-h1_LBVPhvCPnfcBRgwDwQ__original/img/wTDIP_gGC9oOCORuoXLpDBnnHBI=/0x0/filters:format(jpeg)/pic2716212.jpg"><br> 设计师Bruno Cathala和Antoine Bauza</p>
 <p>七大对决的设计师是Antoine Bauza和Bruno Cathala，前者就是七大奇迹原版和东海道的设计师，而后者也设计了Abyss和Five Tribes。可以说双方在设计轻策游戏上还是比较有经验的，这次合作发布两人游戏，效果也很好，期待他们的后续作品。</p>
 <h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p>七大对决以七大奇迹原版的世界观为背景，借用了很多其中的机制，但是根据两人游戏的特点进行了改变，增强了竞技性和互动性。</p>
 <p>玩家扮演一个文明的领袖，在三个时代中，玩家利用卡牌来获取金币、巩固军事、发展科技、建造建筑和奇迹来发展自己的文明。</p>
@@ -4640,7 +4640,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
 <li>12张奇迹卡</li>
 <li>4个军事效果标记</li>
 <li>10个发展标记</li>
-<li>1个冲突指示物(下图为国外玩家上色后的样子)<br><img src="https://cf.geekdo-images.com/images/pic2757859_md.jpg"></li>
+<li>1个冲突指示物(下图为国外玩家上色后的样子)<br><img src="https://cf.geekdo-images.com/XYZJkStf7pqkhHyT5vnDCA__original/img/OYHhVBcButgdi3-BexY8EMGlUzw=/0x0/filters:format(jpeg)/pic2757859.jpg"></li>
 <li>31个钱币标记<ul>
 <li>14个标记面值1</li>
 <li>10个标记面值3</li>
@@ -4718,9 +4718,9 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
     <title>祈祷与工作游戏概览&amp;规则介绍</title>
     <url>/2016/01/19/ora-et-labora-rule-intro/</url>
     <content><![CDATA[<p>仙雾最喜欢的游戏，没有之一的祈祷与工作出中文版啦！所以这里准备认真介绍一下这款乌老师的集大成之作。</p>
-<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/images/pic1165426_md.jpg"></p>
+<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/MLvyN4VJ3QNXBKxli8XLiA__original/img/eDqWAa7vUdsYE6_LXVNzIdClbhw=/0x0/filters:format(jpeg)/pic5089618.jpg"></p>
 <p>Ora et Labora（拉丁文的祈祷与工作的意思）是一个关于中世纪修道院经济的游戏（乌老师对中世纪背景是真爱啊）。中世纪的修道院中当然有祷告，但更多的是修道院内外艰苦的工作。玩家扮演修道院的管理者，派你的院长和两个助理到生产货物的建筑中工作。游戏一开始玩家只有一块2x5的家园板块，但随着游戏的进行，玩家可以购入扩展的地形。整局游戏会暂停5次，玩家在暂停后可以建造居民点，玩家应该尽可能将其造在周围定居值高的位置。祈祷与工作中提供了2种游戏变体——法国变体和爱尔兰变体，玩家可以自行选择使用哪种。</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2707911_md.jpg"><br> 国外geek Gustav Petru手工制作的牧师</p>
+<p><img src="https://cf.geekdo-images.com/GYMFy2dQlijzcWJd7W0VSw__original/img/NBhMgVtrx57_RDcFiBleFfe5uUY=/0x0/filters:format(jpeg)/pic1516789.jpg"><br> 国外geek手工制作的牧师</p>
 <span id="more"></span>
 
 <h2 id="游戏设置"><a href="#游戏设置" class="headerlink" title="游戏设置"></a>游戏设置</h2><ol>
@@ -4822,7 +4822,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
   <entry>
     <title>[仙雾的Essen2015]4.Pi mal Pflaumen游戏概览&amp;开箱&amp;评测</title>
     <url>/2016/01/22/essen2015-4-pi-mal-pflaumen-rule-intro-opening-box-review/</url>
-    <content><![CDATA[<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/images/pic2635730_md.jpg"><br> Pi mal Pflaumen，德语π*李子的意思</p>
+    <content><![CDATA[<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/I6SKl8Okk_LyPTEycbovmg__original/img/k9i7AXmeMBfjm0IfMB0x3nSvQD0=/0x0/filters:format(jpeg)/pic3071544.jpg"><br> Pi mal Pflaumen，德语π*李子的意思</p>
 <p>李子的是一个抽象类游戏，不过还是套了一个背景，但是看完说明书，我必须要吐槽一下这是我看过的最扯淡的背景介绍。</p>
 <p>说明书上写到，17、18世纪是科学的世纪（简直废话），有两位伟大的人物出现了，他们是莱昂哈德·欧拉（欧拉公式知道吧）和玛丽亚·西比拉·梅里安（一个博物学家naturalist和一个艺术家，见下图），但是说明书对于为何会选取这两个人物完全没提到，反倒是加了一句话说这俩人还真有关系，根据仙雾的搜索，所有的和这俩人相关的网页都指向了这本说明书，只有一个德语的维基百科中提到了说欧拉的第二任妻子是梅里安的外孙女，天真的我还以为会有什么惊天动地的故事。。。</p>
 <p><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/Vea0TCNr.jpg"><br> Maria Sibylla Merian的作品的特点就是会把毛毛虫进化成蝶的不同时期的不同形态融合进同一张图里</p>
@@ -5100,7 +5100,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
     <title>[仙雾的Essen2015]5.Nippon介绍&amp;评测</title>
     <url>/2016/03/01/essen2015-5-nippon-intro-review/</url>
     <content><![CDATA[<h2 id="游戏介绍"><a href="#游戏介绍" class="headerlink" title="游戏介绍"></a>游戏介绍</h2><p>日本在明治时期是一个封闭的与世隔绝的封建社会，但是他们渴望改变，希望转变成一个现代化的国家。日本派出使者去国外学习，从西方带回了技术人员和学者，建立了铁路网络，从而以令人惊奇的速度完成了快速的工业革命。</p>
-<p><img src="https://cf.geekdo-images.com/images/pic2683981_md.jpg"></p>
+<p><img src="https://cf.geekdo-images.com/DVJamHS1e24-scuM8aRH8g__original/img/SZFgBrff-aSpci1q4PsLat9Z4sI=/0x0/filters:format(jpeg)/pic2683981.jpg"></p>
 <p>Nippon这个游戏中玩家扮演了一个明治维新时期的大财阀，通过发展技术、建设新的工厂、运送商品到全国、出口商品至海外来提升自己的影响力，最后取得最多影响力的玩家获得胜利。</p>
 <p>Nippon的中文规则已经有玩家做过翻译了，所以本文就不做详细的介绍，只谈游戏的感受。</p>
 <span id="more"></span>
@@ -5127,7 +5127,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
   <entry>
     <title>[仙雾的Essen2015]6.Mombasa介绍&amp;评测</title>
     <url>/2016/03/03/essen2015-6-mombasa-intro-review/</url>
-    <content><![CDATA[<h2 id="游戏介绍"><a href="#游戏介绍" class="headerlink" title="游戏介绍"></a>游戏介绍</h2><p><img src="https://cf.geekdo-images.com/images/pic2611318_md.jpg"></p>
+    <content><![CDATA[<h2 id="游戏介绍"><a href="#游戏介绍" class="headerlink" title="游戏介绍"></a>游戏介绍</h2><p><img src="https://cf.geekdo-images.com/VceWk5QVkgIp6rWDl5qHKQ__original/img/8lLnp9nod-NhjaoUobcZ3vvb7Mg=/0x0/filters:format(jpeg)/pic2611318.jpg"></p>
 <p>蒙巴萨（Mombasa）是肯尼亚的第二大城市，风光秀丽，也是非洲东岸的最大港口，郑和下西洋也曾到过此地。不过飞马社的这款游戏的背景却设置在人类历史上一个十分黑暗的时代，以至于规则书中也避开不谈。欧洲人不愿谈，我们还是可以说说的，这黑暗的时代就是殖民主义时代。资本主义国家采取军事、政治和经济手段，占领、奴役和剥削弱小国家、民族和落后地区，将其变为殖民地、半殖民地的侵略政策。</p>
 <p>游戏中设计师并没有把一些细节的模拟放进游戏中，只是让玩家扮演投资客，在非洲大陆上的四家公司进行投资并购买股份，也让游戏尽量脱离于历史背景，而转变为一个中度的经济游戏。</p>
 <p>和Nippon一样，游戏的中文规则在一刻馆的群内有玩家翻译，这里就不再赘述。</p>
@@ -5152,9 +5152,9 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
       </tags>
   </entry>
   <entry>
-    <title>[仙雾的Essen2015]7.Signore介绍&amp;评测</title>
+    <title>[仙雾的Essen2015]7.Signorie介绍&amp;评测</title>
     <url>/2016/03/31/essen2015-7-signore-intro-review/</url>
-    <content><![CDATA[<h2 id="游戏介绍"><a href="#游戏介绍" class="headerlink" title="游戏介绍"></a>游戏介绍</h2><p><img src="https://cf.geekdo-images.com/images/pic2684003_md.jpg"></p>
+    <content><![CDATA[<h2 id="游戏介绍"><a href="#游戏介绍" class="headerlink" title="游戏介绍"></a>游戏介绍</h2><p><img src="https://cf.geekdo-images.com/Nq7RZa78giIv6IdfPWCMvQ__original/img/Yu4EM1Xl6KgxdSrrROspBLMKn3U=/0x0/filters:format(jpeg)/pic2684003.jpg"></p>
 <p>15世纪的意大利是一个伟大的国度，同时也充满阴谋。混乱的政治环境孕育了一种新的形式的政府（贵族制），同时许多野心勃勃的贵族家庭也日益壮大。<br>在阴影中酝酿多年之后，时机终于来临，轮到他们来控制城市，同时这也塑造了意大利的未来，他们的故事将被载入史册。</p>
 <p>在Signorie中，玩家扮演一个贵族势力，你是文艺复兴时期一个著名家族的领主，通过与六个最负盛名的家族联姻来增加自己的影响力同时构建一个强大的王朝。</p>
 <p>你必须聪明地选择你子嗣的命运，让家族中的男性获得三种之一的锻炼（军事上、宗教上和政治上），并在合适的时机将他们送去合适的城市进行外交任务，或者策略地为他们安排一场政治联姻。</p>
@@ -5177,7 +5177,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
         <tag>测评</tag>
         <tag>Essen2015</tag>
         <tag>介绍</tag>
-        <tag>Signore</tag>
+        <tag>Signorie</tag>
       </tags>
   </entry>
   <entry>
@@ -5209,7 +5209,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
   <entry>
     <title>[仙雾的Essen2015]8....and then, we held hands游戏概览&amp;开箱&amp;评测</title>
     <url>/2016/04/20/essen2015-8-and-then-we-held-hands-rule-intro-opening-box-review/</url>
-    <content><![CDATA[<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/images/pic2621938_md.jpg"></p>
+    <content><![CDATA[<h2 id="游戏总览"><a href="#游戏总览" class="headerlink" title="游戏总览"></a>游戏总览</h2><p><img src="https://cf.geekdo-images.com/Ft08woV-KG3HHfO-ET6S4Q__original/img/x7YkL7sqFAt2LAxgPx3MEv3ZMNI=/0x0/filters:format(jpeg)/pic2717772.jpg"></p>
 <p><a href="https://www.boardgamegeek.com/boardgame/153999/and-then-we-held-hands">…and then, we held hands</a>（简称为牵小手）是一个非语言的俩人合作游戏，两个玩家在游戏中目标是拯救这段即将破裂的感情。玩家看事物的角度会随着他们所处的位置不断变化，你们需要合作来取得自己内心以及两人之间的情感的平衡，从而修补裂痕。</p>
 <p>游戏中玩家需要通过在回合结束时站在对应的节点上来完成一系列目标任务，一旦所有任务完成，玩家必须同时进入到中圈来获得最后的胜利。</p>
 <p>游戏中玩家不允许讨论关于游戏的内容，他们必须独自考虑自己和同伴的卡牌和可能的移动，不让自己和同伴卡住以致于输掉游戏，游戏之外的谈话是允许的。作为一个额外的挑战，游戏可以在双方完全沉默的情况下进行。</p>
@@ -5813,7 +5813,7 @@ const int kinematicboxCollidesWith = COL_AIRBOX;
       </tags>
   </entry>
   <entry>
-    <title>7-wonders-duel-pantheon-agora</title>
+    <title>七大奇迹对决全扩——拥抱不确定性</title>
     <url>/2024/11/09/7-wonders-duel-pantheon-agora/</url>
     <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>最近<a href="https://boardgamegeek.com/boardgame/421006/the-lord-of-the-rings-duel-for-middle-earth">魔戒中洲对决</a>上市了，粗粗体验了几把，感觉相比于前作还是少了点味道，可能更适合带小朋友玩，毕竟所有缺的资源都是1块钱买，减少了计算量。<br>所以相比于跟风蹭热度推荐这个魔戒中洲对决，我还是更喜欢它的前作，也是个人认为最佳的二人轻策，它就是<a href="https://boardgamegeek.com/boardgame/173346/7-wonders-duel">七大奇迹对决</a>（全扩）。<br><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/7wd%2F2pgames.jpg"><br>这可不是我自嗨，在BGG的排行上如果仅列出2人游戏的话，排在它前面的只有当年的BGG一哥——冷战热斗。<br><img src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/7wd%2Frank11.jpg"><br>有人说，这游戏都出来快十年了，你现在来说这个是不是有太晚了？所以这里还有个很重要的原因是因为，我最近一直在BGA这个平台玩这个游戏，目前的elo达到了新高（652，世界第11），对这个游戏的理解感觉又上了个层次，之前虽然在B站也做过几期<a href="https://space.bilibili.com/2617080/channel/collectiondetail?sid=4232075&spm_id_from=333.788.0.0">复盘视频</a>，但是现在看来，当时的很多理解都是有问题的。</p>
 <h2 id="全扩的七决才是真正的七决"><a href="#全扩的七决才是真正的七决" class="headerlink" title="全扩的七决才是真正的七决"></a>全扩的七决才是真正的七决</h2><p>首先你光是观察游戏的版图上留的卡槽的位置你就知道，这玩意就是一起设计的，只不过无耻的拆开卖了，和游戏分DLC挤牙膏一个套路，当然这回挤得是真香。</p>
