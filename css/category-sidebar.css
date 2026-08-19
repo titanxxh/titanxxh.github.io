@@ -1,0 +1,4 @@
+/* Keep nested sidebar categories readable within the narrow aside card. */
+#aside-content .card-categories li.card-category-list-item {
+  flex: 0 0 100%;
+}
