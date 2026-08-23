@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-08-21T17:20:52.942Z</updated>
+  <updated>2026-08-22T09:45:06.240Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://titanxxh.com/2024/11/09/7-wonders-duel-pantheon-agora/"/>
     <id>http://titanxxh.com/2024/11/09/7-wonders-duel-pantheon-agora/</id>
     <published>2024-11-09T04:11:16.000Z</published>
-    <updated>2026-08-21T17:20:52.942Z</updated>
+    <updated>2026-08-22T09:45:06.240Z</updated>
     
     
       
@@ -39,11 +39,11 @@
     
     <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
     
-    <category term="7 Wonders Duel" scheme="http://titanxxh.com/tags/7-Wonders-Duel/"/>
+    <category term="7 Wonders Duel" scheme="http://titanxxh.com/tags/7-wonders-duel/"/>
     
-    <category term="Pantheon" scheme="http://titanxxh.com/tags/Pantheon/"/>
+    <category term="Pantheon" scheme="http://titanxxh.com/tags/pantheon/"/>
     
-    <category term="Agora" scheme="http://titanxxh.com/tags/Agora/"/>
+    <category term="Agora" scheme="http://titanxxh.com/tags/agora/"/>
     
   </entry>
   
@@ -52,7 +52,7 @@
     <link href="http://titanxxh.com/2022/11/21/from-boy-to-father-only-a-few-world-cups/"/>
     <id>http://titanxxh.com/2022/11/21/from-boy-to-father-only-a-few-world-cups/</id>
     <published>2022-11-21T07:40:07.000Z</published>
-    <updated>2026-08-21T17:20:52.951Z</updated>
+    <updated>2026-08-22T04:11:40.444Z</updated>
     
     
       
@@ -87,7 +87,7 @@
     <link href="http://titanxxh.com/2021/10/30/small-world-big-world/"/>
     <id>http://titanxxh.com/2021/10/30/small-world-big-world/</id>
     <published>2021-10-30T14:00:07.000Z</published>
-    <updated>2026-08-21T17:20:52.950Z</updated>
+    <updated>2026-08-22T09:45:38.301Z</updated>
     
     
       
@@ -121,7 +121,7 @@
     <link href="http://titanxxh.com/2021/04/26/golang-time-shift-fault-injection/"/>
     <id>http://titanxxh.com/2021/04/26/golang-time-shift-fault-injection/</id>
     <published>2021-04-26T12:43:40.000Z</published>
-    <updated>2026-08-21T17:20:52.957Z</updated>
+    <updated>2026-08-22T09:25:50.337Z</updated>
     
     
       
@@ -145,7 +145,7 @@
     
     <category term="chaos-mesh" scheme="http://titanxxh.com/tags/chaos-mesh/"/>
     
-    <category term="vDSO" scheme="http://titanxxh.com/tags/vDSO/"/>
+    <category term="vDSO" scheme="http://titanxxh.com/tags/vdso/"/>
     
     <category term="time" scheme="http://titanxxh.com/tags/time/"/>
     
@@ -160,7 +160,7 @@
     <link href="http://titanxxh.com/2021/03/31/golang-dynamic-injection/"/>
     <id>http://titanxxh.com/2021/03/31/golang-dynamic-injection/</id>
     <published>2021-03-31T14:46:59.000Z</published>
-    <updated>2026-08-21T17:20:52.959Z</updated>
+    <updated>2026-08-22T09:19:06.070Z</updated>
     
     
       
@@ -197,7 +197,7 @@
     <link href="http://titanxxh.com/2020/12/26/simple-data-compression/"/>
     <id>http://titanxxh.com/2020/12/26/simple-data-compression/</id>
     <published>2020-12-26T15:32:43.000Z</published>
-    <updated>2026-08-21T17:20:52.954Z</updated>
+    <updated>2026-08-22T09:47:42.427Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -214,8 +214,6 @@
     <category term="技术&amp;开发" scheme="http://titanxxh.com/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
     
     
-    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
-    
     <category term="lz77" scheme="http://titanxxh.com/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/tags/huffman/"/>
@@ -226,6 +224,8 @@
     
     <category term="bwt" scheme="http://titanxxh.com/tags/bwt/"/>
     
+    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
+    
   </entry>
   
   <entry>
@@ -233,7 +233,7 @@
     <link href="http://titanxxh.com/2020/12/01/2020-gopherchina-review/"/>
     <id>http://titanxxh.com/2020/12/01/2020-gopherchina-review/</id>
     <published>2020-12-01T13:41:55.000Z</published>
-    <updated>2026-08-22T01:54:17.917Z</updated>
+    <updated>2026-08-22T09:25:50.336Z</updated>
     
     
       
@@ -264,7 +264,7 @@
     <link href="http://titanxxh.com/2020/06/07/iberia-honeymoon-barcelona/"/>
     <id>http://titanxxh.com/2020/06/07/iberia-honeymoon-barcelona/</id>
     <published>2020-06-06T23:07:07.000Z</published>
-    <updated>2026-08-21T17:20:52.942Z</updated>
+    <updated>2026-08-22T09:19:06.070Z</updated>
     
     
       
@@ -306,7 +306,7 @@
     <link href="http://titanxxh.com/2020/06/06/iberia-honeymoon-granada/"/>
     <id>http://titanxxh.com/2020/06/06/iberia-honeymoon-granada/</id>
     <published>2020-06-05T17:55:46.000Z</published>
-    <updated>2026-08-21T17:20:52.951Z</updated>
+    <updated>2026-08-22T09:47:42.427Z</updated>
     
     
       
@@ -346,7 +346,7 @@
     <link href="http://titanxxh.com/2020/01/29/iberia-honeymoon-seville-ronda/"/>
     <id>http://titanxxh.com/2020/01/29/iberia-honeymoon-seville-ronda/</id>
     <published>2020-01-29T14:55:46.000Z</published>
-    <updated>2026-08-21T17:20:52.941Z</updated>
+    <updated>2026-08-22T09:42:21.190Z</updated>
     
     
       
@@ -384,7 +384,7 @@
     <link href="http://titanxxh.com/2020/01/24/my-year-2019/"/>
     <id>http://titanxxh.com/2020/01/24/my-year-2019/</id>
     <published>2020-01-24T09:55:46.000Z</published>
-    <updated>2026-08-21T17:20:52.940Z</updated>
+    <updated>2026-08-22T09:19:06.069Z</updated>
     
     
       
@@ -420,7 +420,7 @@
     <link href="http://titanxxh.com/2019/12/15/iberia-honeymoon-sintra-lisboa/"/>
     <id>http://titanxxh.com/2019/12/15/iberia-honeymoon-sintra-lisboa/</id>
     <published>2019-12-15T05:55:46.000Z</published>
-    <updated>2026-08-21T17:20:52.952Z</updated>
+    <updated>2026-08-22T09:43:13.950Z</updated>
     
     
       
@@ -458,7 +458,7 @@
     <link href="http://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/"/>
     <id>http://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/</id>
     <published>2019-08-19T17:55:46.000Z</published>
-    <updated>2026-08-21T17:20:52.943Z</updated>
+    <updated>2026-08-22T09:25:50.335Z</updated>
     
     
       
@@ -500,7 +500,7 @@
     <link href="http://titanxxh.com/2018/09/11/russia-2018/"/>
     <id>http://titanxxh.com/2018/09/11/russia-2018/</id>
     <published>2018-09-10T19:55:46.000Z</published>
-    <updated>2026-08-21T17:20:52.948Z</updated>
+    <updated>2026-08-22T09:19:06.069Z</updated>
     
     
       
@@ -536,7 +536,7 @@
     <link href="http://titanxxh.com/2017/05/01/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F-%E7%AC%AC%E4%B8%83%E6%9C%9F-%E5%86%9C%E5%9C%BA%E4%B8%BB%E7%9A%84%E6%9C%AF%E4%B8%8E%E9%81%93/"/>
     <id>http://titanxxh.com/2017/05/01/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F-%E7%AC%AC%E4%B8%83%E6%9C%9F-%E5%86%9C%E5%9C%BA%E4%B8%BB%E7%9A%84%E6%9C%AF%E4%B8%8E%E9%81%93/</id>
     <published>2017-05-01T11:08:30.000Z</published>
-    <updated>2026-08-21T17:20:52.944Z</updated>
+    <updated>2026-08-22T09:42:46.433Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;疲劳期&quot;&gt;&lt;a href=&quot;#疲劳期&quot; class=&quot;headerlink&quot; title=&quot;疲劳期&quot;&gt;&lt;/a&gt;疲劳期&lt;/h2&gt;&lt;p&gt;时间永远是最大的敌人，无论曾经多么热爱，不得不承认总是有疲劳的那一天，盛极必衰物极必反也是这个道理。从某种意义上来说，对一件事物的热爱程度我感觉也有点像这个&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%8A%80%E6%9C%AF%E6%88%90%E7%86%9F%E5%BA%A6%E6%9B%B2%E7%BA%BF&quot;&gt;技术成熟度曲线&lt;/a&gt;。&lt;br&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/17-5-1/Gartner-Hype-Cycle-v2.png?imageMogr2/thumbnail/600x&quot;&gt;&lt;br&gt;随着时间的推移，桌游玩家对桌游的热爱程度大致上和这个曲线也差不多。从一开始入坑时看着啥都新鲜，疯狂追逐新游戏；到热情渐渐冷却，发现现在的新桌游设计的套路，玩啥游戏脑海里都是一些经典老游戏的影子；然后就是一个低谷，觉得越来越少有游戏能称得上好玩。不过正是经历了这样的一个过程，洗尽铅华后，玩家反而愿意回头看看那些老游戏，那些当年由于过度追新而未来得及深究的经典——比如&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/31260/agricola&quot;&gt;Agricola（农场主）&lt;/a&gt;。于是今天就让我们来好好聊一聊这款曾经的桌游界扛鼎之作。&lt;/p&gt;
@@ -553,11 +553,11 @@
     
     <category term="感受" scheme="http://titanxxh.com/tags/%E6%84%9F%E5%8F%97/"/>
     
-    <category term="Agricola" scheme="http://titanxxh.com/tags/Agricola/"/>
+    <category term="Agricola" scheme="http://titanxxh.com/tags/agricola/"/>
     
     <category term="农场主" scheme="http://titanxxh.com/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/"/>
     
-    <category term="Uwe Rosenberg" scheme="http://titanxxh.com/tags/Uwe-Rosenberg/"/>
+    <category term="Uwe Rosenberg" scheme="http://titanxxh.com/tags/uwe-rosenberg/"/>
     
     <category term="乌老师" scheme="http://titanxxh.com/tags/%E4%B9%8C%E8%80%81%E5%B8%88/"/>
     
@@ -568,7 +568,7 @@
     <link href="http://titanxxh.com/2017/01/01/%E4%BB%99%E9%9B%BE%E7%9A%842016%E6%A1%8C%E6%B8%B8%E6%80%BB%E7%BB%93/"/>
     <id>http://titanxxh.com/2017/01/01/%E4%BB%99%E9%9B%BE%E7%9A%842016%E6%A1%8C%E6%B8%B8%E6%80%BB%E7%BB%93/</id>
     <published>2017-01-01T13:37:24.000Z</published>
-    <updated>2026-08-21T17:20:52.959Z</updated>
+    <updated>2026-08-23T00:21:59.536Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;BG-stats&quot;&gt;&lt;a href=&quot;#BG-stats&quot; class=&quot;headerlink&quot; title=&quot;BG stats&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.bgstatsapp.com/&quot;&gt;BG stats&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;通过BG stats这个APP可以记录桌游的开局情况，同时还有统计功能，可以说是用来做年终回顾的最好帮手。&lt;/p&gt;
@@ -582,19 +582,19 @@
     <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
     
     
-    <category term="power grid" scheme="http://titanxxh.com/tags/power-grid/"/>
+    <category term="power grid" scheme="http://titanxxh.com/tags/power-grid-2/"/>
     
     <category term="总结" scheme="http://titanxxh.com/tags/%E6%80%BB%E7%BB%93/"/>
     
-    <category term="review" scheme="http://titanxxh.com/tags/review/"/>
+    <category term="review" scheme="http://titanxxh.com/tags/review-2/"/>
     
-    <category term="agricola" scheme="http://titanxxh.com/tags/agricola/"/>
+    <category term="agricola" scheme="http://titanxxh.com/tags/agricola-2/"/>
     
     <category term="pandemic legacy" scheme="http://titanxxh.com/tags/pandemic-legacy/"/>
     
     <category term="great western trail" scheme="http://titanxxh.com/tags/great-western-trail/"/>
     
-    <category term="codenames" scheme="http://titanxxh.com/tags/codenames/"/>
+    <category term="codenames" scheme="http://titanxxh.com/tags/codenames-2/"/>
     
   </entry>
   
@@ -603,7 +603,7 @@
     <link href="http://titanxxh.com/2016/04/20/essen2015-8-and-then-we-held-hands-rule-intro-opening-box-review/"/>
     <id>http://titanxxh.com/2016/04/20/essen2015-8-and-then-we-held-hands-rule-intro-opening-box-review/</id>
     <published>2016-04-19T16:10:06.000Z</published>
-    <updated>2026-08-21T17:20:52.949Z</updated>
+    <updated>2026-08-22T09:19:06.069Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/Ft08woV-KG3HHfO-ET6S4Q__original/img/x7YkL7sqFAt2LAxgPx3MEv3ZMNI=/0x0/filters:format(jpeg)/pic2717772.jpg&quot;&gt;&lt;/p&gt;
@@ -620,13 +620,13 @@
     
     <category term="开箱" scheme="http://titanxxh.com/tags/%E5%BC%80%E7%AE%B1/"/>
     
-    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    <category term="Essen" scheme="http://titanxxh.com/tags/essen/"/>
     
     <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
     
     <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
     
-    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/essen2015/"/>
     
     <category term="and then we held hands" scheme="http://titanxxh.com/tags/and-then-we-held-hands/"/>
     
@@ -637,7 +637,7 @@
     <link href="http://titanxxh.com/2016/04/18/travelling-beijing-alone/"/>
     <id>http://titanxxh.com/2016/04/18/travelling-beijing-alone/</id>
     <published>2016-04-18T09:55:46.000Z</published>
-    <updated>2026-08-21T17:20:52.943Z</updated>
+    <updated>2026-08-22T09:41:14.832Z</updated>
     
     
     <summary type="html">&lt;p&gt;想着马上就要正式工作了，于是乎上周就一个人溜去北京玩了。其实早在去年来北京开会的时候就想着要来帝都好好玩一次，因为上一次来北京还是我很小不记事的时候来的，可惜去年那次时间非常有限只去了趟故宫和国家博物馆。作为入职前最后的放松，一个人的旅游自由且惬意。&lt;/p&gt;
@@ -666,7 +666,7 @@
     <link href="http://titanxxh.com/2016/03/31/essen2015-7-signore-intro-review/"/>
     <id>http://titanxxh.com/2016/03/31/essen2015-7-signore-intro-review/</id>
     <published>2016-03-31T11:53:06.000Z</published>
-    <updated>2026-08-21T17:20:52.942Z</updated>
+    <updated>2026-08-22T09:25:50.335Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;游戏介绍&quot;&gt;&lt;a href=&quot;#游戏介绍&quot; class=&quot;headerlink&quot; title=&quot;游戏介绍&quot;&gt;&lt;/a&gt;游戏介绍&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/Nq7RZa78giIv6IdfPWCMvQ__original/img/Yu4EM1Xl6KgxdSrrROspBLMKn3U=/0x0/filters:format(jpeg)/pic2684003.jpg&quot;&gt;&lt;/p&gt;
@@ -683,15 +683,15 @@
     <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
     
     
-    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    <category term="Essen" scheme="http://titanxxh.com/tags/essen/"/>
     
     <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
     
-    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/essen2015/"/>
     
     <category term="介绍" scheme="http://titanxxh.com/tags/%E4%BB%8B%E7%BB%8D/"/>
     
-    <category term="Signorie" scheme="http://titanxxh.com/tags/Signorie/"/>
+    <category term="Signorie" scheme="http://titanxxh.com/tags/signorie/"/>
     
   </entry>
   
@@ -700,7 +700,7 @@
     <link href="http://titanxxh.com/2016/03/03/essen2015-6-mombasa-intro-review/"/>
     <id>http://titanxxh.com/2016/03/03/essen2015-6-mombasa-intro-review/</id>
     <published>2016-03-03T14:12:06.000Z</published>
-    <updated>2026-08-21T17:20:52.952Z</updated>
+    <updated>2026-08-22T09:19:06.068Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;游戏介绍&quot;&gt;&lt;a href=&quot;#游戏介绍&quot; class=&quot;headerlink&quot; title=&quot;游戏介绍&quot;&gt;&lt;/a&gt;游戏介绍&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/VceWk5QVkgIp6rWDl5qHKQ__original/img/8lLnp9nod-NhjaoUobcZ3vvb7Mg=/0x0/filters:format(jpeg)/pic2611318.jpg&quot;&gt;&lt;/p&gt;
@@ -715,15 +715,15 @@
     <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
     
     
-    <category term="Essen" scheme="http://titanxxh.com/tags/Essen/"/>
+    <category term="Essen" scheme="http://titanxxh.com/tags/essen/"/>
     
     <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
     
-    <category term="Essen2015" scheme="http://titanxxh.com/tags/Essen2015/"/>
+    <category term="Essen2015" scheme="http://titanxxh.com/tags/essen2015/"/>
     
     <category term="介绍" scheme="http://titanxxh.com/tags/%E4%BB%8B%E7%BB%8D/"/>
     
-    <category term="Mombasa" scheme="http://titanxxh.com/tags/Mombasa/"/>
+    <category term="Mombasa" scheme="http://titanxxh.com/tags/mombasa/"/>
     
   </entry>
   

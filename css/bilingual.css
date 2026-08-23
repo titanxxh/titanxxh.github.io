@@ -1,0 +1,76 @@
+.bilingual-nav-switch > a {
+  box-sizing: border-box;
+  gap: 0.3rem;
+  min-width: 48px;
+  width: auto !important;
+  padding: 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.bilingual-nav-switch > a > i {
+  font-size: 0.82rem;
+}
+
+#sidebar #sidebar-menus .bilingual-sidebar-switch a.menu-child {
+  margin: 0;
+  width: 100%;
+  padding: 4px 8px;
+  border: var(--style-border-always);
+  border-radius: 8px;
+  background: var(--anzhiyu-card-bg);
+  color: var(--anzhiyu-fontcolor);
+  font-size: 14px;
+}
+
+.bilingual-translation-note {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1.4rem;
+  padding: 0.8rem 1rem;
+  border: var(--style-border-always);
+  border-left: 4px solid var(--anzhiyu-main);
+  border-radius: 10px;
+  background: var(--anzhiyu-secondbg);
+  color: var(--anzhiyu-secondtext);
+  font-size: 0.9rem;
+}
+
+.bilingual-translation-note a {
+  color: var(--anzhiyu-main);
+  font-weight: 700;
+}
+
+html[lang="en"] #menu-translate {
+  display: none !important;
+}
+
+html[lang="en"] #home_top a.categoryButton {
+  white-space: nowrap;
+  font-size: 0.92rem;
+}
+
+html[lang="en"] #home_top .categoryButtonText {
+  padding-left: 14px;
+}
+
+html[lang="en"] #home_top .banner-button-text {
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  #page-header #nav #nav-right .bilingual-nav-switch {
+    margin-left: 0.35rem;
+  }
+
+  .bilingual-nav-switch > a {
+    min-width: 38px;
+    padding: 0 0.45rem;
+  }
+
+  .bilingual-nav-switch > a > i {
+    display: none;
+  }
+}
