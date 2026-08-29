@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/en/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/en/"/>
-  <updated>2026-08-22T12:37:57.006Z</updated>
+  <updated>2026-08-29T15:08:47.050Z</updated>
   <id>http://titanxxh.com/en/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola Development Diary] EP 1: Why Rebuild Agricola?</title>
+    <link href="http://titanxxh.com/en/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"/>
+    <id>http://titanxxh.com/en/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/</id>
+    <published>2026-02-22T07:15:32.000Z</published>
+    <updated>2026-08-29T15:08:47.050Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Agricola is more than a decade old. By today’s standards, it is not especially heavy. How hard could a complete digital version really be?&lt;/p&gt;
+&lt;p&gt;Its rulebook is not frighteningly thick. The trouble is that a lot of traps can fit inside one sentence. Take Hammer Crusher:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Immediately before you renovate to stone, you get 2 clay and 1 reed and you can take a “Build Rooms” action.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I glanced at that text and thought: what is so hard about this? Hand out the resources, let the player build, done. Once a program has to run it, the questions arrive immediately. Exactly when does it trigger? Can someone who cannot yet afford a stone renovation choose Renovation in the first place? How many more traps can you spot? I spotted none the first time. I will come back to them later.&lt;/p&gt;
+&lt;p&gt;This afternoon, I made the first commit to Open Agricola. Before I started, my thoughts kept returning to the card that had already caused me so much pain.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
+    
+    <category term="Board Game Reflections" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-reflections/"/>
+    
+    
+    <category term="Agricola" scheme="http://titanxxh.com/en/tags/agricola/"/>
+    
+    <category term="Board Game Arena" scheme="http://titanxxh.com/en/tags/board-game-arena/"/>
+    
+    <category term="BGA" scheme="http://titanxxh.com/en/tags/bga/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
+    
+    <category term="Open Source" scheme="http://titanxxh.com/en/tags/open-source/"/>
+    
+    <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
+    
+    <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
+    
+  </entry>
   
   <entry>
     <title>7 Wonders Duel with All Expansions: Embracing Uncertainty</title>
@@ -674,38 +713,6 @@
     <category term="Introduction" scheme="http://titanxxh.com/en/tags/introduction/"/>
     
     <category term="Signorie" scheme="http://titanxxh.com/en/tags/signorie/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[titanxxh&#39;s Essen 2015] 6. Mombasa: Introduction and Review</title>
-    <link href="http://titanxxh.com/en/2016/03/03/mombasa-introduction-and-review/"/>
-    <id>http://titanxxh.com/en/2016/03/03/mombasa-introduction-and-review/</id>
-    <published>2016-03-03T14:12:06.000Z</published>
-    <updated>2026-08-23T00:21:59.523Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;Game-Introduction&quot;&gt;&lt;a href=&quot;#Game-Introduction&quot; class=&quot;headerlink&quot; title=&quot;Game Introduction&quot;&gt;&lt;/a&gt;Game Introduction&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/VceWk5QVkgIp6rWDl5qHKQ__original/img/8lLnp9nod-NhjaoUobcZ3vvb7Mg=/0x0/filters:format(jpeg)/pic2611318.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Mombasa is Kenya’s second-largest city, a beautiful place and the largest port on Africa’s east coast. Zheng He’s voyages to the Western Oceans even reached it. The Pegasus Spiele game, however, is set during such a dark chapter of human history that its rulebook avoids discussing the subject. Europeans may prefer silence, but we can still name it: the age of colonialism, when capitalist powers used military, political, and economic means to occupy, enslave, and exploit weaker countries, peoples, and less-developed regions, turning them into colonies and semi-colonies.&lt;/p&gt;
-&lt;p&gt;The designer does not simulate those details. Players simply act as investors in four companies operating across Africa, buying shares and directing investment. This distances the game from its historical setting and turns it into a medium-weight economic game.&lt;/p&gt;
-&lt;p&gt;As with Nippon, a player translated the rules into Chinese in the Yih Guan group’s chat, so I will not repeat them here.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
-    
-    <category term="Board Game Introductions" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-introductions/"/>
-    
-    
-    <category term="Essen" scheme="http://titanxxh.com/en/tags/essen/"/>
-    
-    <category term="Review" scheme="http://titanxxh.com/en/tags/review/"/>
-    
-    <category term="Essen2015" scheme="http://titanxxh.com/en/tags/essen2015/"/>
-    
-    <category term="Introduction" scheme="http://titanxxh.com/en/tags/introduction/"/>
-    
-    <category term="Mombasa" scheme="http://titanxxh.com/en/tags/mombasa/"/>
     
   </entry>
   

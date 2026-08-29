@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-08-22T09:45:06.240Z</updated>
+  <updated>2026-08-29T15:09:04.940Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola 开发手记] EP 1：为什么要重做《农场主》</title>
+    <link href="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"/>
+    <id>http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/</id>
+    <published>2026-02-22T07:15:32.000Z</published>
+    <updated>2026-08-29T15:09:04.940Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;《农场主》已经是十多年前的老游戏了。放到今天看，它的重度也算不上特别高。真把它完整地做成数字版，到底能有多难？&lt;/p&gt;
+&lt;p&gt;《农场主》的规则书没有厚到吓人。麻烦的是，很多坑都挤在一句话里。比如 Hammer Crusher 这张牌：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在你翻修成石屋之前，立即获得 2 个泥土和 1 个芦苇，并可进行一次“扩建房屋”行动。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我当时扫了一眼，觉得这有什么难的：先发资源，再让玩家扩建，不就完了？真要交给程序，问题马上就来了。它应该在哪一步触发？本来付不起石屋费用的人，能不能先点下翻修？你还能看出几个坑？我第一次反正一个也没看出来。先卖个关子，后面再说。&lt;/p&gt;
+&lt;p&gt;今天下午，我给 Open Agricola 敲下了第一个提交。动手以前，脑子里反复冒出来的就是这张让我吃过大苦头的牌。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
+    
+    <category term="桌游感悟" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/"/>
+    
+    
+    <category term="农场主" scheme="http://titanxxh.com/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/"/>
+    
+    <category term="Board Game Arena" scheme="http://titanxxh.com/tags/board-game-arena/"/>
+    
+    <category term="BGA" scheme="http://titanxxh.com/tags/bga/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
+    
+    <category term="开源" scheme="http://titanxxh.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>七大奇迹对决全扩——拥抱不确定性</title>
@@ -37,13 +76,13 @@
     <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
     
     
-    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
-    
     <category term="7 Wonders Duel" scheme="http://titanxxh.com/tags/7-wonders-duel/"/>
     
     <category term="Pantheon" scheme="http://titanxxh.com/tags/pantheon/"/>
     
     <category term="Agora" scheme="http://titanxxh.com/tags/agora/"/>
+    
+    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
     
   </entry>
   
@@ -692,38 +731,6 @@
     <category term="介绍" scheme="http://titanxxh.com/tags/%E4%BB%8B%E7%BB%8D/"/>
     
     <category term="Signorie" scheme="http://titanxxh.com/tags/signorie/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[仙雾的Essen2015]6.Mombasa介绍&amp;评测</title>
-    <link href="http://titanxxh.com/2016/03/03/essen2015-6-mombasa-intro-review/"/>
-    <id>http://titanxxh.com/2016/03/03/essen2015-6-mombasa-intro-review/</id>
-    <published>2016-03-03T14:12:06.000Z</published>
-    <updated>2026-08-22T09:19:06.068Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;游戏介绍&quot;&gt;&lt;a href=&quot;#游戏介绍&quot; class=&quot;headerlink&quot; title=&quot;游戏介绍&quot;&gt;&lt;/a&gt;游戏介绍&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/VceWk5QVkgIp6rWDl5qHKQ__original/img/8lLnp9nod-NhjaoUobcZ3vvb7Mg=/0x0/filters:format(jpeg)/pic2611318.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;蒙巴萨（Mombasa）是肯尼亚的第二大城市，风光秀丽，也是非洲东岸的最大港口，郑和下西洋也曾到过此地。不过飞马社的这款游戏的背景却设置在人类历史上一个十分黑暗的时代，以至于规则书中也避开不谈。欧洲人不愿谈，我们还是可以说说的，这黑暗的时代就是殖民主义时代。资本主义国家采取军事、政治和经济手段，占领、奴役和剥削弱小国家、民族和落后地区，将其变为殖民地、半殖民地的侵略政策。&lt;/p&gt;
-&lt;p&gt;游戏中设计师并没有把一些细节的模拟放进游戏中，只是让玩家扮演投资客，在非洲大陆上的四家公司进行投资并购买股份，也让游戏尽量脱离于历史背景，而转变为一个中度的经济游戏。&lt;/p&gt;
-&lt;p&gt;和Nippon一样，游戏的中文规则在一刻馆的群内有玩家翻译，这里就不再赘述。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
-    
-    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
-    
-    
-    <category term="Essen" scheme="http://titanxxh.com/tags/essen/"/>
-    
-    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
-    
-    <category term="Essen2015" scheme="http://titanxxh.com/tags/essen2015/"/>
-    
-    <category term="介绍" scheme="http://titanxxh.com/tags/%E4%BB%8B%E7%BB%8D/"/>
-    
-    <category term="Mombasa" scheme="http://titanxxh.com/tags/mombasa/"/>
     
   </entry>
   

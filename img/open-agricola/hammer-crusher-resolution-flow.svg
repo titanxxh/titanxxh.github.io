@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2350" viewBox="0 0 1700 2350" role="img" aria-labelledby="title desc">
+  <title id="title">Hammer Crusher：先放行，再校验</title>
+  <desc id="desc">Hammer Crusher 在项目启动时的处理流程：允许暂时缺少资源的石屋翻修进入流程，赠送资源并处理可选扩建及其他玩家的卡牌效果，最后重新校验石屋翻修条件。紫色描边暗示这些步骤在 BGA 实现中修改了 Hammer Crusher 卡牌文件之外的共享主路径。</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101715"/>
+      <stop offset="0.55" stop-color="#17231f"/>
+      <stop offset="1" stop-color="#0d1312"/>
+    </linearGradient>
+    <linearGradient id="mainNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5e8ca"/>
+      <stop offset="1" stop-color="#e7cfa0"/>
+    </linearGradient>
+    <linearGradient id="decisionNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#315f56"/>
+      <stop offset="1" stop-color="#1e413b"/>
+    </linearGradient>
+    <linearGradient id="accentNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7a65a"/>
+      <stop offset="1" stop-color="#b77a35"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d6ad68"/>
+    </marker>
+    <marker id="arrowMuted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8ca59d"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans CJK SC", "Noto Sans", system-ui, sans-serif; }
+      .title { fill: #f8ecd2; font-size: 48px; font-weight: 800; letter-spacing: 1px; }
+      .subtitle { fill: #b8cbc3; font-size: 23px; font-weight: 500; }
+      .stage { fill: #d6ad68; font-size: 23px; font-weight: 700; letter-spacing: 1px; }
+      .zh-dark { fill: #25271f; font-size: 29px; font-weight: 750; }
+      .en-dark { fill: #5c5a4d; font-size: 19px; font-weight: 550; }
+      .zh-light { fill: #fff7e4; font-size: 27px; font-weight: 750; }
+      .en-light { fill: #cbe0d8; font-size: 18px; font-weight: 550; }
+      .edge { fill: none; stroke: #d6ad68; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .edge-muted { fill: none; stroke: #8ca59d; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowMuted); }
+      .shared-path-node { stroke: #c38cff; stroke-width: 7; }
+      .branch { fill: #d9bd87; font-size: 20px; font-weight: 750; }
+      .branch-muted { fill: #9db2aa; font-size: 20px; font-weight: 750; }
+      .note { fill: #c4d4cd; font-size: 20px; }
+    </style>
+  </defs>
+
+  <rect width="1700" height="2350" rx="38" fill="url(#background)"/>
+  <path d="M0 145 C330 35 690 95 960 30 C1260 -25 1480 15 1700 105 L1700 0 L0 0 Z" fill="#23342e" opacity="0.72"/>
+  <circle cx="1530" cy="160" r="210" fill="#c7954e" opacity="0.055"/>
+  <circle cx="170" cy="2160" r="260" fill="#4b8b7b" opacity="0.05"/>
+
+  <text x="850" y="82" text-anchor="middle" class="title">Hammer Crusher：先放行，再校验</text>
+  <text x="850" y="124" text-anchor="middle" class="subtitle">项目启动时的处理流程</text>
+
+  <text x="72" y="190" class="stage">① 可执行性</text>
+
+  <g filter="url(#shadow)">
+    <rect x="320" y="215" width="480" height="92" rx="26" fill="url(#mainNode)" stroke="#d6ad68" stroke-width="3"/>
+    <text x="560" y="273" text-anchor="middle" class="zh-dark">玩家选择“翻修”</text>
+  </g>
+
+  <path class="edge" d="M560 307 L560 329"/>
+
+  <g filter="url(#shadow)">
+    <path d="M560 330 L850 410 L560 490 L270 410 Z" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3"/>
+    <text x="560" y="419" text-anchor="middle" class="zh-light">当前资源已满足普通翻修？</text>
+  </g>
+
+  <text x="585" y="530" class="branch">是</text>
+  <path class="edge" d="M560 490 L560 665"/>
+
+  <text x="873" y="390" class="branch-muted">否</text>
+  <path class="edge-muted" d="M850 410 L950 410"/>
+
+  <!--
+    Violet outlines are intentionally left unexplained in EP 1. They mark behavior
+    that required Hammer Crusher-specific changes outside D14_HammerCrusher.php,
+    including the shared Renovation, Construct, and PlayerCards paths. A later
+    article can call back to these five boundary leaks.
+  -->
+  <g filter="url(#shadow)">
+    <path class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Renovation" d="M1180 330 L1410 410 L1180 490 L950 410 Z" fill="url(#decisionNode)"/>
+    <text x="1180" y="419" text-anchor="middle" class="zh-light">石屋仍是合法目标？</text>
+  </g>
+
+  <text x="1202" y="524" class="branch">是</text>
+  <path class="edge" d="M1180 490 L1180 540"/>
+
+  <g filter="url(#shadow)">
+    <rect x="965" y="540" width="430" height="112" rx="24" fill="url(#accentNode)" stroke="#efcb8e" stroke-width="3"/>
+    <text x="1180" y="590" text-anchor="middle" class="zh-light">Hammer Crusher 临时放行</text>
+    <text x="1180" y="627" text-anchor="middle" class="zh-light">即使资源暂时不足</text>
+  </g>
+
+  <text x="1440" y="390" class="branch-muted">否</text>
+  <path class="edge-muted" d="M1410 410 L1545 410 L1545 520"/>
+  <g filter="url(#shadow)">
+    <rect x="1420" y="520" width="250" height="96" rx="22" fill="#613934" stroke="#a96357" stroke-width="3"/>
+    <text x="1545" y="579" text-anchor="middle" class="zh-light">行动不可用</text>
+  </g>
+
+  <path class="edge" d="M965 620 L900 620 L655 690"/>
+
+  <text x="72" y="690" class="stage">② 触发与锁定</text>
+
+  <g filter="url(#shadow)">
+    <path d="M560 665 L885 750 L560 835 L235 750 Z" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3"/>
+    <text x="560" y="759" text-anchor="middle" class="zh-light">本次目标包含石屋？</text>
+  </g>
+
+  <text x="905" y="730" class="branch-muted">否</text>
+  <path class="edge-muted" d="M885 750 L1010 750"/>
+  <g filter="url(#shadow)">
+    <rect x="1010" y="694" width="470" height="112" rx="24" fill="#31413c" stroke="#65867c" stroke-width="3"/>
+    <text x="1245" y="744" text-anchor="middle" class="zh-light">常规泥屋翻修</text>
+    <text x="1245" y="781" text-anchor="middle" class="zh-light">Hammer Crusher 不触发</text>
+  </g>
+
+  <text x="586" y="873" class="branch">是</text>
+  <path class="edge" d="M560 835 L560 860"/>
+
+  <g filter="url(#shadow)">
+    <path d="M560 860 L805 930 L560 1000 L315 930 Z" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3"/>
+    <text x="560" y="940" text-anchor="middle" class="zh-light">使用 Hammer Crusher？</text>
+  </g>
+
+  <text x="586" y="1038" class="branch">是</text>
+  <path class="edge" d="M560 1000 L560 1045"/>
+
+  <text x="244" y="914" class="branch-muted">否</text>
+  <path class="edge-muted" d="M315 930 L145 930 L145 1980 L245 1980"/>
+
+  <g filter="url(#shadow)">
+    <rect x="305" y="1045" width="510" height="112" rx="25" fill="url(#mainNode)" stroke="#d6ad68" stroke-width="3"/>
+    <text x="560" y="1111" text-anchor="middle" class="zh-dark">锁定石屋目标，保存费用上下文</text>
+  </g>
+
+  <path class="edge" d="M560 1157 L560 1192"/>
+
+  <g filter="url(#shadow)">
+    <rect x="305" y="1192" width="510" height="132" rx="25" fill="url(#mainNode)" stroke="#d6ad68" stroke-width="3"/>
+    <text x="560" y="1252" text-anchor="middle" class="zh-dark">获得 2 泥土 + 1 芦苇</text>
+    <text x="560" y="1292" text-anchor="middle" class="zh-dark">结算资源引发的卡牌效果</text>
+  </g>
+
+  <text x="72" y="1384" class="stage">③ 嵌套行动</text>
+  <path class="edge" d="M560 1324 L560 1360"/>
+
+  <g filter="url(#shadow)">
+    <path d="M560 1360 L815 1435 L560 1510 L305 1435 Z" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3"/>
+    <text x="560" y="1445" text-anchor="middle" class="zh-light">执行额外扩建？</text>
+  </g>
+
+  <text x="585" y="1548" class="branch-muted">否</text>
+  <path class="edge-muted" d="M560 1510 L560 1895"/>
+
+  <text x="838" y="1415" class="branch">是</text>
+  <path class="edge" d="M815 1435 L935 1435"/>
+
+  <g filter="url(#shadow)">
+    <rect class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Construct" x="935" y="1382" width="500" height="106" rx="24" fill="url(#mainNode)"/>
+    <text x="1185" y="1447" text-anchor="middle" class="zh-dark">执行扩建（仍是一项真实行动）</text>
+  </g>
+
+  <path class="edge" d="M1185 1488 L1185 1525"/>
+
+  <g filter="url(#shadow)">
+    <path class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Construct Managers/PlayerCards" d="M1185 1525 L1480 1605 L1185 1685 L890 1605 Z" fill="url(#decisionNode)"/>
+    <text x="1185" y="1614" text-anchor="middle" class="zh-light">触发其他玩家的卡牌？</text>
+  </g>
+
+  <text x="900" y="1583" class="branch-muted">否</text>
+  <path class="edge-muted" d="M890 1605 L845 1605 L845 1845 L700 1895"/>
+
+  <text x="1210" y="1723" class="branch">是</text>
+  <path class="edge" d="M1185 1685 L1185 1720"/>
+
+  <g filter="url(#shadow)">
+    <rect class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Construct Managers/PlayerCards" x="925" y="1720" width="520" height="126" rx="25" fill="url(#accentNode)"/>
+    <text x="1185" y="1778" text-anchor="middle" class="zh-light">切换行动者 → 结算触发 → 切回</text>
+    <text x="1185" y="1818" text-anchor="middle" class="zh-light">始终保留原玩家的翻修上下文</text>
+  </g>
+
+  <path class="edge" d="M1185 1846 L1185 1870 L700 1910"/>
+
+  <text x="72" y="1910" class="stage">④ 回归与校验</text>
+
+  <g filter="url(#shadow)">
+    <path class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Construct Actions/Renovation" d="M560 1895 L875 1980 L560 2065 L245 1980 Z" fill="url(#decisionNode)"/>
+    <text x="560" y="1989" text-anchor="middle" class="zh-light">此刻仍满足石屋翻修前置？</text>
+  </g>
+
+  <text x="588" y="2103" class="branch">是</text>
+  <path class="edge" d="M560 2065 L560 2112"/>
+
+  <g filter="url(#shadow)">
+    <rect x="300" y="2112" width="520" height="112" rx="26" fill="url(#mainNode)" stroke="#d6ad68" stroke-width="3"/>
+    <text x="560" y="2180" text-anchor="middle" class="zh-dark">支付费用，完成石屋翻修</text>
+  </g>
+
+  <text x="900" y="1960" class="branch-muted">否</text>
+  <path class="edge-muted" d="M875 1980 L1010 1980"/>
+  <g filter="url(#shadow)">
+    <rect x="1010" y="1924" width="470" height="112" rx="24" fill="#613934" stroke="#a96357" stroke-width="3"/>
+    <text x="1245" y="1988" text-anchor="middle" class="zh-light">中止：重新规划或重开行动</text>
+  </g>
+
+  <rect x="340" y="2260" width="1020" height="52" rx="26" fill="#24352f" stroke="#50796d" stroke-width="2"/>
+  <text x="850" y="2294" text-anchor="middle" class="note">核心策略：允许进入复杂流程，但在真正支付前再次验证</text>
+</svg>

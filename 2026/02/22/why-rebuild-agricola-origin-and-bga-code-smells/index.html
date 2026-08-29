@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>[Open Agricola 开发手记] EP 1：为什么要重做《农场主》 | Meeple Life</title><meta name="keywords" content="农场主,Board Game Arena,BGA,Open Agricola,开源,软件架构,开发手记"><meta name="author" content="仙雾"><meta name="copyright" content="仙雾"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="[Open Agricola 开发手记] EP 1：为什么要重做《农场主》"><meta name="application-name" content="[Open Agricola 开发手记] EP 1：为什么要重做《农场主》"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="[Open Agricola 开发手记] EP 1：为什么要重做《农场主》"><meta property="og:url" content="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/index.html"><meta property="og:site_name" content="Meeple Life"><meta property="og:description" content="《农场主》已经是十多年前的老游戏了。放到今天看，它的重度也算不上特别高。真把它完整地做成数字版，到底能有多难？ 《农场主》的规则书没有厚到吓人。麻烦的是，很多坑都挤在一句话里。比如 Hammer Crusher 这张牌：  在你翻修成石屋之前，立即获得 2 个泥土和 1 个芦苇，并可进行一次“扩建房"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://titanxxh.com/img/open-agricola/open-agricola-origin-cover.webp"><meta property="article:author" content="仙雾"><meta property="article:tag" content="boardgame, programming, football"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://titanxxh.com/img/open-agricola/open-agricola-origin-cover.webp"><meta name="description" content="《农场主》已经是十多年前的老游戏了。放到今天看，它的重度也算不上特别高。真把它完整地做成数字版，到底能有多难？ 《农场主》的规则书没有厚到吓人。麻烦的是，很多坑都挤在一句话里。比如 Hammer Crusher 这张牌：  在你翻修成石屋之前，立即获得 2 个泥土和 1 个芦苇，并可进行一次“扩建房"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: undefined,
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Meeple Life',
+  title: '[Open Agricola 开发手记] EP 1：为什么要重做《农场主》',
+  postAI: '',
+  pageFillDescription: '总也玩不完的农场, BGA 让老游戏又活了, 从用户到开发者, Hammer Crusher 不是一次做完的, BGA 的答案和包袱, BGA 代码中的五类坏味道, 写在后面农场主已经是十多年前的老游戏了放到今天看它的重度也算不上特别高真把它完整地做成数字版到底能有多难农场主的规则书没有厚到吓人麻烦的是很多坑都挤在一句话里比如这张牌在你翻修成石屋之前立即获得个泥土和个芦苇并可进行一次扩建房屋行动我当时扫了一眼觉得这有什么难的先发资源再让玩家扩建不就完了真要交给程序问题马上就来了它应该在哪一步触发本来付不起石屋费用的人能不能先点下翻修你还能看出几个坑我第一次反正一个也没看出来先卖个关子后面再说今天下午我给敲下了第一个提交动手以前脑子里反复冒出来的就是这张让我吃过大苦头的牌总也玩不完的农场我刚入桌游坑不久就玩到了农场主那时候我真觉得它很重既要喂饱一家人又要种田养动物十四轮过完还得把一间破木屋收拾成像样的农庄它和我之前玩过的游戏都不太一样一局结束了脑子里的那局往往还没结束接下来几天都会忍不住复盘从上学时的面战到上将近局的慢速对局我的分数确实涨了但绝不是一路往上刚开始赢一局也就分出头计划被打乱时甚至只有多分后来偶尔能打到甚至突破然后又会卡在新的地方我在年的农场主的术与道里把这个过程写成了三重境界写到最后觉得最要紧的是行动效率不过直到现在我也不觉得自己已经玩完了这款游戏更不敢说完全看懂了它让老游戏又活了时代想稳定凑齐四个人并不容易很多对局还是以一周为单位推进的超慢局到了就简单多了想开一桌农场不用先在群里喊半天人对手多了对局开得也快各种没见过的卡组和奇怪局面跟着一起冒出来局数一多玩家也在一起变强以前只在固定群体里流传的经验放进更大的玩家池里很快就会被重新检验一个自认为已经很成熟的套路碰到更高水平的对手可能当场就被打回去重练我的均分还是会涨卡住再涨以前主要靠自己一局局试错现在推着我往前的还有全世界的农场主玩家不断更新的理解顺带一提老游戏就该慢慢没人玩了这句话放在农场主身上还真不成立到我动手写的这一天它仍然是上最热门的重策之一对局一多奇怪组合和规则争议自然跟着冒出来高手一样会被新局面难住所以这些年我一直在玩也一直有新东西可学从用户到开发者几年前随着扩进入一批中国玩家自告奋勇加入了农场主的开发团队我也是其中一员从年月到年月我高强度地提交了个最开始主要是把一批扩卡牌带进游戏后来工作很快就变成了修组合补真实对局里的边界再维护一些彼此耦合的混乱逻辑写一张牌很有成就感维护几十张会互相影响的牌则是另一种痛苦的感觉了也是在这里我第一次接触到了传说中最好的语言那时还没有只能硬着头皮一点点读一步步写痛苦程度因为本身就是程序员我一开始直接跳过了简单卡牌这些低垂的果实找表格里面还没有实现的复杂卡牌偏偏我选择的第二张卡牌就是开头提到的痛苦不是一次做完的现在回到开头那张牌是我印象最深的一张牌当时我也觉得它不过是在翻修前面插入一个小动作似乎半天就能做完然后我又被啪啪打脸了真正麻烦的是下面七件事翻修之前到底是在检查能否翻修之前还是玩家已经选择翻修但尚未支付资源的时候如果玩家本来不能翻修成石屋赠送的个泥土和个芦苇却刚好让他可以翻修系统要不要先放行一个眼下还不能做的行动如果赠送的资源本身还不够但加上其他卡牌的效果以后就够了系统又该怎样提前判断效果一旦启动怎样确保玩家最后必须翻修成石屋而不能改成砖屋如果玩家在额外扩建中花掉了翻修所需的资源导致石屋翻修的前置条件失效怎么办额外扩建触发其他玩家的卡牌时如果流程没有切换到正确的行动者怎么办切换回来以后如果翻修的前置条件已经不满足了整段流程又该怎么办它在年月第一次实现月因为边界问题被暂时关闭修完组合逻辑以后重新开放年月又被关掉月再修一次才放回来牌面总共就这一句话我却前后修了快一年牌没改是它碰上的组合越来越多之前没想到的坑一个个冒了出来当然这里面也有我的锅我没资格把责任全推给旧代码写这张牌时我只想着赶快让玩家玩到补一个特殊判断确实是眼前最省事的做法等下一张牌也这么干麻烦就来了以后再碰翻修或扩建我都得先把这些分支翻一遍生怕漏掉哪个的答案和包袱跑过海量真实对局这一点很值钱规则书没有写透的地方只要有人在实战里撞上程序就得给出答案卡牌什么时候触发多种支付怎样组合玩家取消以后怎么收场几张牌一起生效时谁先谁后它的界面也帮我回答了另一个很实际的问题每一步到底该让玩家看到什么选择什么代码则是另一回事就像一支踢了很多年的老球队战术板上难免留着历任教练的临时安排当时能赢球换支队却未必还能照着摆的代码给我的感觉就是这样很多写法都有来历也确实解决过问题但不适合原样搬进代码中的五类坏味道给定方向时我又把的实现翻了一遍最让我头疼的是下面五件事改一张卡经常得动好几个文件同一张牌的触发选择结算和恢复散在不同地方规则改了一处其他地方有没有跟上只能靠开发者自己找全公共代码里塞了太多具体卡牌的特殊判断翻修认识这张牌扩建又认识另一张牌各自绕一个分支这样的例外越积越多谁还敢轻易动公共流程状态很多卡牌自己的状态却没有统一写法复杂卡牌总要跨好几步保存选择和进度但这些东西该放哪叫什么什么时候清掉并没有一个清楚的约定卡牌生效顺序要靠人手工指定折扣替代支付和效果修正撞在一起时开发者得自己写卡牌之间的偏序关系加一张新牌常常还得把它和旧牌的关系补一遍漏写写反或者互相打架结算顺序就会出错烹饪触发尤其别扭烹饪与交换流程没有给烹饪后触发的卡牌留一个稳定入口以为例它检测到烹饪时不能直接发额外食物只能先把奖励记进卡牌状态等后面的通用响应窗口再补发本来一次能做完的事被拆成记录等待补发还出过卡牌没打出来就开始监听的我后来管这笔账叫扩展税新卡除了付自己的实现成本还得替过去留在公共流程里的例外买单卡池越大账越难算到最后加一张牌就再也不是改一个文件那么简单了写在后面绕了一圈还是回到开头我为什么要启动最直接的原因是想试试能不能从头搭一套更干净的架构以后加卡时别再继续交这笔扩展税另一点也很简单我正好想借一个自己熟悉又足够麻烦的项目试试到底能把开发推到哪一步还有一个现实原因参与开发并不等于拥有的农场主受平台和授权约束代码不能公开哪些扩展能加什么时候做我们说了不算这也不是的错商业平台要看授权和排期很正常可站在我这边还是会想要一套任何人都能阅读和验证的公开实现想加哪个扩展也能自己决定目前也仍未获得正式授权我已经给乌老师本人发过私信但还没有收到回复写到这里我又想起很多年前总结的行动效率在农场主里一手强牌照样可能打出低分写程序也一样一张卡半天做完项目未必真的快那些为了省事塞进公共流程的特判迟早会在下一次改动时找回来最后能做到哪一步我现在也没底不过要真想把更多卡牌和扩展装进去代码就不能再靠先把这一张做出来再说往前拱了不然折腾我一年的事只会再来一遍',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-08-29 23:09:04',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/category-sidebar.css"><link rel="stylesheet" href="/css/bilingual.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Meeple Life" type="application/atom+xml">
+<link rel="alternate" hreflang="zh-CN" href="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"><link rel="alternate" hreflang="en" href="http://titanxxh.com/en/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"><link rel="alternate" hreflang="x-default" href="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">旅游</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/2016/02/17/journey-to-tanzania-with-photos/index.html" title="坦桑尼亚看动物"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/9xA7xzU6.jpg" alt="坦桑尼亚看动物"/><span class="back-menu-item-text">坦桑尼亚看动物</span></a><a class="back-menu-item" href="https://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/" title="伊比利亚蜜月"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Iberia_regions_map.png/1200px-Iberia_regions_map.png" alt="伊比利亚蜜月"/><span class="back-menu-item-text">伊比利亚蜜月</span></a><a class="back-menu-item" href="https://titanxxh.com/2018/09/11/russia-2018/" title="俄罗斯世界杯"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://upload.wikimedia.org/wikipedia/en/thumb/6/67/2018_FIFA_World_Cup.svg/1200px-2018_FIFA_World_Cup.svg.png" alt="俄罗斯世界杯"/><span class="back-menu-item-text">俄罗斯世界杯</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Meeple Life</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button bilingual-nav-switch"><a class="site-page" href="/en/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/" hreflang="en" lang="en" title="Read this page in English" aria-label="Read this page in English" onclick="window.location.assign(this.href);return false;"><i class="anzhiyufont anzhiyu-icon-language"></i><span>EN</span></a></div><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/birthday/" style="font-size: 1.05rem;">Birthday<sup>1</sup></a><a href="/tags/D%E5%93%A5/" style="font-size: 1.05rem;">D哥<sup>2</sup></a><a href="/tags/gameplay/" style="font-size: 1.05rem;">GamePlay<sup>11</sup></a><a href="/tags/ronaldo/" style="font-size: 1.05rem;">Ronaldo<sup>1</sup></a><a href="/tags/carcassonne-2/" style="font-size: 1.05rem;">carcassonne<sup>1</sup></a><a href="/tags/chinatown-2/" style="font-size: 1.05rem;">chinatown<sup>2</sup></a><a href="/tags/modern-art-2/" style="font-size: 1.05rem;">modern art<sup>2</sup></a><a href="/tags/small-world-2/" style="font-size: 1.05rem;">small world<sup>6</sup></a><a href="/tags/%E4%B8%89%E5%9B%BD%E6%9D%80/" style="font-size: 1.05rem;">三国杀<sup>3</sup></a><a href="/tags/%E4%B8%8A%E6%B5%B7%E4%BB%99%E5%89%91%E5%90%8E%E6%8F%B4%E4%BC%9A/" style="font-size: 1.05rem;">上海仙剑后援会<sup>1</sup></a><a href="/tags/%E4%BA%94%E6%AF%92%E5%85%BD/" style="font-size: 1.05rem;">五毒兽<sup>1</sup></a><a href="/tags/%E4%BB%99%E5%89%91/" style="font-size: 1.05rem;">仙剑<sup>1</sup></a><a href="/tags/%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0/" style="font-size: 1.05rem;">仙剑奇侠传<sup>6</sup></a><a href="/tags/%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0%E4%BA%94/" style="font-size: 1.05rem;">仙剑奇侠传五<sup>4</sup></a><a href="/tags/%E5%88%9D%E7%8E%A9%E6%84%9F%E5%8F%97/" style="font-size: 1.05rem;">初玩感受<sup>1</sup></a><a href="/tags/%E5%8D%A1%E5%8D%A1%E9%A2%82/" style="font-size: 1.05rem;">卡卡颂<sup>1</sup></a><a href="/tags/%E5%94%90%E4%BA%BA%E8%A1%97/" style="font-size: 1.05rem;">唐人街<sup>2</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 1.05rem;">回忆<sup>1</sup></a><a href="/tags/%E5%9B%9E%E6%94%BE/" style="font-size: 1.05rem;">回放<sup>1</sup></a><a href="/tags/%E5%B0%8F%E5%8F%97/" style="font-size: 1.05rem;">小受<sup>1</sup></a><a href="/tags/%E5%B0%8F%E5%B0%8F%E4%B8%96%E7%95%8C/" style="font-size: 1.05rem;">小小世界<sup>6</sup></a><a href="/tags/%E6%83%85%E4%BA%BA%E8%8A%82/" style="font-size: 1.05rem;">情人节<sup>1</sup></a><a href="/tags/%E6%84%9F%E5%8F%97/" style="font-size: 1.05rem;">感受<sup>7</sup></a><a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 1.05rem;">感悟<sup>8</sup></a><a href="/tags/%E6%88%98%E6%96%97/" style="font-size: 1.05rem;">战斗<sup>1</sup></a><a href="/tags/%E6%88%AA%E5%9B%BE/" style="font-size: 1.05rem;">截图<sup>2</sup></a><a href="/tags/%E6%90%9E%E7%AC%91/" style="font-size: 1.05rem;">搞笑<sup>1</sup></a><a href="/tags/%E6%96%87%E6%98%8E/" style="font-size: 1.05rem;">文明<sup>6</sup></a><a href="/tags/%E6%96%87%E6%98%8E5/" style="font-size: 1.05rem;">文明5<sup>3</sup></a><a href="/tags/%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF/" style="font-size: 1.05rem;">现代艺术<sup>2</sup></a><a href="/tags/%E7%94%9F%E6%97%A5/" style="font-size: 1.05rem;">生日<sup>1</sup></a><a href="/tags/%E7%99%BE%E6%B8%B8/" style="font-size: 1.05rem;">百游<sup>1</sup></a><a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 1.05rem;">统计<sup>1</sup></a><a href="/tags/%E7%BD%97%E5%B0%BC/" style="font-size: 1.05rem;">罗尼<sup>1</sup></a><a href="/tags/%E7%BD%97%E7%BA%B3%E5%B0%94%E5%A4%9A/" style="font-size: 1.05rem;">罗纳尔多<sup>1</sup></a><a href="/tags/%E8%91%A3%E5%8D%93/" style="font-size: 1.05rem;">董卓<sup>1</sup></a><a href="/tags/%E8%B6%A3%E9%97%BB/" style="font-size: 1.05rem;">趣闻<sup>1</sup></a><a href="/tags/%E9%80%80%E5%BD%B9/" style="font-size: 1.05rem;">退役<sup>1</sup></a><a href="/tags/%E9%81%93%E5%90%AC%E9%80%94%E8%AF%B4/" style="font-size: 1.05rem;">道听途说<sup>1</sup></a><a href="/tags/%E9%A2%84%E5%94%AE/" style="font-size: 1.05rem;">预售<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/02/"><span class="card-archive-list-date">二月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">十一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/" itemprop="url">桌游&amp;爱好</a><i class="anzhiyufont anzhiyu-icon-angle-right post-meta-separator"></i><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/" itemprop="url">桌游感悟</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>农场主</span></a><a class="article-meta__tags" href="/tags/board-game-arena/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Board Game Arena</span></a><a class="article-meta__tags" href="/tags/bga/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>BGA</span></a><a class="article-meta__tags" href="/tags/open-agricola/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Open Agricola</span></a><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开源</span></a><a class="article-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>软件架构</span></a><a class="article-meta__tags" href="/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开发手记</span></a></span></div></div><h1 class="post-title" itemprop="name headline">[Open Agricola 开发手记] EP 1：为什么要重做《农场主》</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-02-22T07:15:32.000Z" title="发表于 2026-02-22 15:15:32">2026-02-22</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-08-29T15:09:04.940Z" title="更新于 2026-08-29 23:09:04">2026-08-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">2.8k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为上海"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>上海</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/img/open-agricola/open-agricola-origin-cover.webp"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"><div class="bilingual-translation-note"><i class="anzhiyufont anzhiyu-icon-language"></i><span>本文已有英文译文。<a href="/en/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/" onclick="window.location.assign(this.href);return false;">Read in English.</a></span></div><header><a class="post-meta-categories" href="/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/" itemprop="url">桌游&amp;爱好</a><a class="post-meta-categories" href="/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/" itemprop="url">桌游感悟</a><a href="/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/" tabindex="-1" itemprop="url">农场主</a><a href="/tags/board-game-arena/" tabindex="-1" itemprop="url">Board Game Arena</a><a href="/tags/bga/" tabindex="-1" itemprop="url">BGA</a><a href="/tags/open-agricola/" tabindex="-1" itemprop="url">Open Agricola</a><a href="/tags/%E5%BC%80%E6%BA%90/" tabindex="-1" itemprop="url">开源</a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/" tabindex="-1" itemprop="url">软件架构</a><a href="/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/" tabindex="-1" itemprop="url">开发手记</a><h1 id="CrawlerTitle" itemprop="name headline">[Open Agricola 开发手记] EP 1：为什么要重做《农场主》</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">仙雾</span><time itemprop="dateCreated datePublished" datetime="2026-02-22T07:15:32.000Z" title="发表于 2026-02-22 15:15:32">2026-02-22</time><time itemprop="dateCreated datePublished" datetime="2026-08-29T15:09:04.940Z" title="更新于 2026-08-29 23:09:04">2026-08-29</time></header><p>《农场主》已经是十多年前的老游戏了。放到今天看，它的重度也算不上特别高。真把它完整地做成数字版，到底能有多难？</p>
+<p>《农场主》的规则书没有厚到吓人。麻烦的是，很多坑都挤在一句话里。比如 Hammer Crusher 这张牌：</p>
+<blockquote>
+<p>在你翻修成石屋之前，立即获得 2 个泥土和 1 个芦苇，并可进行一次“扩建房屋”行动。</p>
+</blockquote>
+<p>我当时扫了一眼，觉得这有什么难的：先发资源，再让玩家扩建，不就完了？真要交给程序，问题马上就来了。它应该在哪一步触发？本来付不起石屋费用的人，能不能先点下翻修？你还能看出几个坑？我第一次反正一个也没看出来。先卖个关子，后面再说。</p>
+<p>今天下午，我给 Open Agricola 敲下了第一个提交。动手以前，脑子里反复冒出来的就是这张让我吃过大苦头的牌。</p>
+<span id="more"></span>
+
+<h2 id="总也玩不完的农场"><a href="#总也玩不完的农场" class="headerlink" title="总也玩不完的农场"></a>总也玩不完的农场</h2><p>我刚入桌游坑不久就玩到了《农场主》。那时候我真觉得它很重：既要喂饱一家人，又要种田养动物，十四轮过完还得把一间破木屋收拾成像样的农庄。它和我之前玩过的游戏都不太一样。一局结束了，脑子里的那局往往还没结束，接下来几天都会忍不住复盘。</p>
+<p>从上学时的面战，到 iOS 上将近 200 局的慢速对局，我的分数确实涨了，但绝不是一路往上。刚开始赢一局也就 40 分出头，计划被打乱时甚至只有 20 多分。后来偶尔能打到 50+，甚至突破 60，然后又会卡在新的地方。我在 2017 年的 <a href="/2017/05/01/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F-%E7%AC%AC%E4%B8%83%E6%9C%9F-%E5%86%9C%E5%9C%BA%E4%B8%BB%E7%9A%84%E6%9C%AF%E4%B8%8E%E9%81%93/">《农场主的术与道》</a> 里把这个过程写成了“三重境界”，写到最后，觉得最要紧的是 <strong>行动效率</strong>。不过直到现在，我也不觉得自己已经玩完了这款游戏，更不敢说完全看懂了它。</p>
+<h2 id="BGA-让老游戏又活了"><a href="#BGA-让老游戏又活了" class="headerlink" title="BGA 让老游戏又活了"></a>BGA 让老游戏又活了</h2><p>iOS 时代想稳定凑齐四个人并不容易，很多对局还是以一周为单位推进的超慢局。到了 BGA 就简单多了，想开一桌农场不用先在群里喊半天人。对手多了，对局开得也快，各种没见过的卡组和奇怪局面跟着一起冒出来。</p>
+<p>局数一多，玩家也在一起变强。以前只在固定群体里流传的经验，放进更大的玩家池里，很快就会被重新检验。一个自认为已经很成熟的套路，碰到更高水平的对手，可能当场就被打回去重练。我的均分还是会涨，卡住，再涨。以前主要靠自己一局局试错，现在推着我往前的，还有全世界的农场主玩家不断更新的理解。</p>
+<p>顺带一提，“老游戏就该慢慢没人玩了”这句话，放在《农场主》身上还真不成立。到我动手写 Open Agricola 的这一天，它仍然是 BGA 上最热门的重策之一。对局一多，奇怪组合和规则争议自然跟着冒出来，高手一样会被新局面难住。所以这些年我一直在玩，也一直有新东西可学。</p>
+<h2 id="从用户到开发者"><a href="#从用户到开发者" class="headerlink" title="从用户到开发者"></a>从用户到开发者</h2><p>几年前，随着 E 扩进入 BGA，一批中国玩家自告奋勇加入了《农场主》的开发团队，我也是其中一员。从 2023 年 9 月到 2024 年 6 月，我高强度地提交了 105 个 commit。最开始主要是把一批 E 扩卡牌带进游戏，后来工作很快就变成了修组合、补真实对局里的边界，再维护一些彼此耦合的混乱逻辑。写一张牌很有成就感，维护几十张会互相影响的牌，则是另一种痛苦的感觉了。也是在这里，我第一次接触到了传说中“最好的语言”——PHP，那时还没有 AI Agent，只能硬着头皮一点点读、一步步写，痛苦程度 x2。</p>
+<p>因为本身就是程序员，我一开始直接跳过了简单卡牌这些低垂的果实，找表格里面还没有实现的复杂卡牌。偏偏我选择的第二张卡牌，就是开头提到的 Hammer Crusher，痛苦 x3。</p>
+<h2 id="Hammer-Crusher-不是一次做完的"><a href="#Hammer-Crusher-不是一次做完的" class="headerlink" title="Hammer Crusher 不是一次做完的"></a>Hammer Crusher 不是一次做完的</h2><p>现在回到开头那张牌。Hammer Crusher 是我印象最深的一张牌，当时我也觉得，它不过是在“翻修”前面插入一个小动作，似乎半天就能做完——然后我又被啪啪打脸了。</p>
+<p>真正麻烦的是下面七件事：</p>
+<ol>
+<li>“翻修之前”到底是在检查能否翻修之前，还是玩家已经选择翻修、但尚未支付资源的时候；</li>
+<li>如果玩家本来不能翻修成石屋，赠送的 2 个泥土和 1 个芦苇却刚好让他可以翻修，系统要不要先放行一个眼下还不能做的行动；</li>
+<li>如果赠送的资源本身还不够，但加上其他卡牌的效果以后就够了，系统又该怎样提前判断；</li>
+<li>效果一旦启动，怎样确保玩家最后必须翻修成石屋，而不能改成砖屋；</li>
+<li>如果玩家在额外扩建中花掉了翻修所需的资源，导致石屋翻修的前置条件失效，怎么办；</li>
+<li>额外扩建触发其他玩家的卡牌时，如果流程没有切换到正确的行动者，怎么办；</li>
+<li>切换回来以后，如果翻修的前置条件已经不满足了，整段流程又该怎么办。</li>
+</ol>
+<p>它在 2023 年 3 月第一次实现，9 月因为边界问题被暂时关闭，修完组合逻辑以后重新开放；2024 年 1 月又被关掉，2 月再修一次才放回来。牌面总共就这一句话，我却前后修了快一年。牌没改，是它碰上的组合越来越多，之前没想到的坑一个个冒了出来。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/open-agricola/hammer-crusher-resolution-flow.svg" alt="Hammer Crusher 的处理流程：先临时放行石屋翻修，再依次处理赠送资源、额外扩建和行动者切换，最后重新校验翻修前置"></p>
+<p>当然，这里面也有我的锅，我没资格把责任全推给旧代码。写这张牌时，我只想着赶快让玩家玩到；补一个特殊判断，确实是眼前最省事的做法。等下一张牌也这么干，麻烦就来了。以后再碰翻修或扩建，我都得先把这些分支翻一遍，生怕漏掉哪个。</p>
+<h2 id="BGA-的答案和包袱"><a href="#BGA-的答案和包袱" class="headerlink" title="BGA 的答案和包袱"></a>BGA 的答案和包袱</h2><p>BGA 跑过海量真实对局，这一点很值钱。规则书没有写透的地方，只要有人在实战里撞上，程序就得给出答案：卡牌什么时候触发，多种支付怎样组合，玩家取消以后怎么收场，几张牌一起生效时谁先谁后。它的界面也帮我回答了另一个很实际的问题：每一步到底该让玩家看到什么、选择什么。</p>
+<p>代码则是另一回事。就像一支踢了很多年的老球队，战术板上难免留着历任教练的临时安排。当时能赢球，换支队却未必还能照着摆。BGA 的代码给我的感觉就是这样：很多写法都有来历，也确实解决过问题，但不适合原样搬进 Open Agricola。</p>
+<h2 id="BGA-代码中的五类坏味道"><a href="#BGA-代码中的五类坏味道" class="headerlink" title="BGA 代码中的五类坏味道"></a>BGA 代码中的五类坏味道</h2><p>给 Open Agricola 定方向时，我又把 BGA 的实现翻了一遍。最让我头疼的是下面五件事：</p>
+<ol>
+<li>改一张卡，经常得动好几个文件。同一张牌的触发、选择、结算和恢复散在不同地方。规则改了一处，其他地方有没有跟上，只能靠开发者自己找全。</li>
+<li>公共代码里塞了太多具体卡牌的特殊判断。翻修认识这张牌，扩建又认识另一张牌，各自绕一个分支。这样的例外越积越多，谁还敢轻易动公共流程？</li>
+<li>Global 状态很多，卡牌自己的状态却没有统一写法。复杂卡牌总要跨好几步保存选择和进度，但这些东西该放哪、叫什么、什么时候清掉，并没有一个清楚的约定。</li>
+<li>卡牌生效顺序要靠人手工指定。折扣、替代支付和效果修正撞在一起时，开发者得自己写卡牌之间的偏序关系。加一张新牌，常常还得把它和旧牌的关系补一遍；漏写、写反或者互相打架，结算顺序就会出错。</li>
+<li>烹饪触发尤其别扭。烹饪与交换流程没有给“烹饪后触发”的卡牌留一个稳定入口。以 D056 为例，它检测到烹饪时不能直接发额外食物，只能先把奖励记进卡牌状态，等后面的通用响应窗口再补发。本来一次能做完的事，被拆成“记录—等待—补发”，还出过卡牌没打出来就开始监听的 bug。</li>
+</ol>
+<p>我后来管这笔账叫 <strong>扩展税</strong>。新卡除了付自己的实现成本，还得替过去留在公共流程里的例外买单。卡池越大，账越难算，到最后加一张牌就再也不是改一个文件那么简单了。</p>
+<h2 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h2><p>绕了一圈，还是回到开头：我为什么要启动 Open Agricola？最直接的原因，是想试试能不能从头搭一套更干净的架构，以后加卡时别再继续交这笔 <strong>扩展税</strong>。另一点也很简单，我正好想借一个自己熟悉、又足够麻烦的项目，试试 Vibe Coding 到底能把开发推到哪一步。</p>
+<p>还有一个现实原因：参与开发并不等于拥有。BGA 的《农场主》受平台和授权约束，代码不能公开，哪些扩展能加、什么时候做，我们说了不算。这也不是 BGA 的错，商业平台要看授权和排期，很正常。可站在我这边，还是会想要一套任何人都能阅读和验证的公开实现，想加哪个扩展，也能自己决定。</p>
+<p>BTW，Open Agricola 目前也仍未获得正式授权；我已经给乌老师本人发过私信，但还没有收到回复。</p>
+<p>写到这里，我又想起很多年前总结的 <strong>行动效率</strong>。在《农场主》里，一手强牌照样可能打出低分；写程序也一样，一张卡半天做完，项目未必真的快。那些为了省事塞进公共流程的特判，迟早会在下一次改动时找回来。</p>
+<p>Open Agricola 最后能做到哪一步，我现在也没底。不过要真想把更多卡牌和扩展装进去，代码就不能再靠“先把这一张做出来再说”往前拱了。不然 Hammer Crusher 折腾我一年的事，只会再来一遍。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">仙雾</div><div class="post-copyright__author_desc">一个桌游玩家，程序猿，足球迷的生活</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/')">[Open Agricola 开发手记] EP 1：为什么要重做《农场主》</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=[Open Agricola 开发手记] EP 1：为什么要重做《农场主》&amp;url=http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/&amp;pic=/img/open-agricola/open-agricola-origin-cover.webp" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://titanxxh.com" target="_blank">Meeple Life</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>农场主<span class="tagsPageCount">4</span></a><a class="post-meta__box__tags" href="/tags/board-game-arena/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Board Game Arena<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/bga/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>BGA<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/open-agricola/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Open Agricola<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E5%BC%80%E6%BA%90/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>开源<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>软件架构<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>开发手记<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/img/open-agricola/open-agricola-origin-cover.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/11/09/7-wonders-duel-pantheon-agora/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/7wd%2F7-wonders-love.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">七大奇迹对决全扩——拥抱不确定性</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2011/12/09/20111208%E6%A1%8C%E6%B8%B8%E6%B4%BB%E5%8A%A8%E5%B0%8F%E8%AE%B0%E4%B8%A4%E6%B2%B3%E6%B5%81%E5%9F%9F%E5%86%9C%E5%9C%BA%E4%B8%BB/" title="20111208桌游活动小记(两河流域&amp;农场主)"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2011-12-09</div><div class="title">20111208桌游活动小记(两河流域&amp;农场主)</div></div></a></div><div><a href="/2012/05/01/%E6%88%98%E6%8A%A5%E4%B9%8B%E5%BA%86%E7%A5%9Dwzh%E8%80%83g%E7%BB%93%E6%9D%9F/" title="战报之庆祝wzh考G结束"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2012-05-01</div><div class="title">战报之庆祝wzh考G结束</div></div></a></div><div><a href="/2017/05/01/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F-%E7%AC%AC%E4%B8%83%E6%9C%9F-%E5%86%9C%E5%9C%BA%E4%B8%BB%E7%9A%84%E6%9C%AF%E4%B8%8E%E9%81%93/" title="[桌游人生]第七期.农场主的术与道"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/17-5-1/Gartner-Hype-Cycle-v2.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2017-05-01</div><div class="title">[桌游人生]第七期.农场主的术与道</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">一个桌游玩家，程序猿，足球迷</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><h1 class="author-info__name">仙雾</h1><div class="author-info__desc">一个桌游玩家，程序猿，足球迷的生活</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/titanxxh" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/2617080" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E4%B9%9F%E7%8E%A9%E4%B8%8D%E5%AE%8C%E7%9A%84%E5%86%9C%E5%9C%BA"><span class="toc-number">1.</span> <span class="toc-text">总也玩不完的农场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BGA-%E8%AE%A9%E8%80%81%E6%B8%B8%E6%88%8F%E5%8F%88%E6%B4%BB%E4%BA%86"><span class="toc-number">2.</span> <span class="toc-text">BGA 让老游戏又活了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E7%94%A8%E6%88%B7%E5%88%B0%E5%BC%80%E5%8F%91%E8%80%85"><span class="toc-number">3.</span> <span class="toc-text">从用户到开发者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hammer-Crusher-%E4%B8%8D%E6%98%AF%E4%B8%80%E6%AC%A1%E5%81%9A%E5%AE%8C%E7%9A%84"><span class="toc-number">4.</span> <span class="toc-text">Hammer Crusher 不是一次做完的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BGA-%E7%9A%84%E7%AD%94%E6%A1%88%E5%92%8C%E5%8C%85%E8%A2%B1"><span class="toc-number">5.</span> <span class="toc-text">BGA 的答案和包袱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BGA-%E4%BB%A3%E7%A0%81%E4%B8%AD%E7%9A%84%E4%BA%94%E7%B1%BB%E5%9D%8F%E5%91%B3%E9%81%93"><span class="toc-number">6.</span> <span class="toc-text">BGA 代码中的五类坏味道</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="toc-number">7.</span> <span class="toc-text">写在后面</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/" title="[Open Agricola 开发手记] EP 1：为什么要重做《农场主》"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/open-agricola/open-agricola-origin-cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[Open Agricola 开发手记] EP 1：为什么要重做《农场主》"/></a><div class="content"><a class="title" href="/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/" title="[Open Agricola 开发手记] EP 1：为什么要重做《农场主》">[Open Agricola 开发手记] EP 1：为什么要重做《农场主》</a><time datetime="2026-02-22T07:15:32.000Z" title="发表于 2026-02-22 15:15:32">2026-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/09/7-wonders-duel-pantheon-agora/" title="七大奇迹对决全扩——拥抱不确定性"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/7wd%2F7-wonders-love.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="七大奇迹对决全扩——拥抱不确定性"/></a><div class="content"><a class="title" href="/2024/11/09/7-wonders-duel-pantheon-agora/" title="七大奇迹对决全扩——拥抱不确定性">七大奇迹对决全扩——拥抱不确定性</a><time datetime="2024-11-09T04:11:16.000Z" title="发表于 2024-11-09 12:11:16">2024-11-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/21/from-boy-to-father-only-a-few-world-cups/" title="从男孩到父亲，不过几届世界杯"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/2002-2022/4-jerseys.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从男孩到父亲，不过几届世界杯"/></a><div class="content"><a class="title" href="/2022/11/21/from-boy-to-father-only-a-few-world-cups/" title="从男孩到父亲，不过几届世界杯">从男孩到父亲，不过几届世界杯</a><time datetime="2022-11-21T07:40:07.000Z" title="发表于 2022-11-21 15:40:07">2022-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/30/small-world-big-world/" title="小世界，大世界"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/small-world-big-world/busy-block.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小世界，大世界"/></a><div class="content"><a class="title" href="/2021/10/30/small-world-big-world/" title="小世界，大世界">小世界，大世界</a><time datetime="2021-10-30T14:00:07.000Z" title="发表于 2021-10-30 22:00:07">2021-10-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/26/golang-time-shift-fault-injection/" title="golang 下对时间漂移的故障注入"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://preview.redd.it/linux-vdso-virtual-dynamic-shared-object-v0-9jzmyjbhb19b1.png?width=1040&amp;format=png&amp;auto=webp&amp;s=f3d6639cc317e89b5bdb7e30387c1218511b4749" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="golang 下对时间漂移的故障注入"/></a><div class="content"><a class="title" href="/2021/04/26/golang-time-shift-fault-injection/" title="golang 下对时间漂移的故障注入">golang 下对时间漂移的故障注入</a><time datetime="2021-04-26T12:43:40.000Z" title="发表于 2021-04-26 20:43:40">2021-04-26</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:titanxxh@gmail.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.facebook.com/xxhxxh" title="facebook"><i class="anzhiyufont anzhiyu-icon-facebook1"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/meeple.png" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/titanxxh" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/2617080" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.instagram.com/titanxxh" title="Instagram"><i class="anzhiyufont anzhiyu-icon-instagram"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAA8fxaGlIMqjTGijfwkLpQKuWByJEu6zxpw9P9KrZ0JMc?from_tab_name=main" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2011 - 2026 By <a class="footer-bar-link" href="/" title="仙雾" target="_blank">仙雾</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">107</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">277</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">15</div></a></div><div class="sidebar-menu-item bilingual-sidebar-switch"><a class="menu-child" href="/en/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/" hreflang="en" lang="en" onclick="window.location.assign(this.href);return false;"><i class="anzhiyufont anzhiyu-icon-language"></i><span>Read this page in English</span></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">旅游</div><div class="back-menu-list"><a class="back-menu-item" href="https://titanxxh.com/2016/02/17/journey-to-tanzania-with-photos/index.html" title="坦桑尼亚看动物"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/9xA7xzU6.jpg" alt="坦桑尼亚看动物"/><span class="back-menu-item-text">坦桑尼亚看动物</span></a><a class="back-menu-item" href="https://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/" title="伊比利亚蜜月"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Iberia_regions_map.png/1200px-Iberia_regions_map.png" alt="伊比利亚蜜月"/><span class="back-menu-item-text">伊比利亚蜜月</span></a><a class="back-menu-item" href="https://titanxxh.com/2018/09/11/russia-2018/" title="俄罗斯世界杯"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://upload.wikimedia.org/wikipedia/en/thumb/6/67/2018_FIFA_World_Cup.svg/1200px-2018_FIFA_World_Cup.svg.png" alt="俄罗斯世界杯"/><span class="back-menu-item-text">俄罗斯世界杯</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("09/18/2011 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2011 By 安知鱼 V1.7.1",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 仙雾 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

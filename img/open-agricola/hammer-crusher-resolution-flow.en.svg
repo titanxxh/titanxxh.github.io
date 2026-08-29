@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2350" viewBox="0 0 1700 2350" role="img" aria-labelledby="title desc">
+  <title id="title">Hammer Crusher: Allow First, Validate Later</title>
+  <desc id="desc">Hammer Crusher resolution flow at the start of the project: provisionally allow a stone renovation while resources are short, grant resources, resolve an optional room build and other players' card effects, then validate the stone-renovation prerequisite again. Violet outlines hint at steps whose BGA implementation changed shared paths outside the Hammer Crusher card file.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101715"/>
+      <stop offset="0.55" stop-color="#17231f"/>
+      <stop offset="1" stop-color="#0d1312"/>
+    </linearGradient>
+    <linearGradient id="mainNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5e8ca"/>
+      <stop offset="1" stop-color="#e7cfa0"/>
+    </linearGradient>
+    <linearGradient id="decisionNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#315f56"/>
+      <stop offset="1" stop-color="#1e413b"/>
+    </linearGradient>
+    <linearGradient id="accentNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7a65a"/>
+      <stop offset="1" stop-color="#b77a35"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d6ad68"/>
+    </marker>
+    <marker id="arrowMuted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8ca59d"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans", system-ui, sans-serif; }
+      .title { fill: #f8ecd2; font-size: 40px; font-weight: 800; letter-spacing: 0.5px; }
+      .subtitle { fill: #b8cbc3; font-size: 23px; font-weight: 500; }
+      .stage { fill: #d6ad68; font-size: 23px; font-weight: 700; letter-spacing: 1px; }
+      .node-dark { fill: #25271f; font-size: 21px; font-weight: 750; }
+      .node-light { fill: #fff7e4; font-size: 20px; font-weight: 750; }
+      .edge { fill: none; stroke: #d6ad68; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .edge-muted { fill: none; stroke: #8ca59d; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowMuted); }
+      .shared-path-node { stroke: #c38cff; stroke-width: 7; }
+      .branch { fill: #d9bd87; font-size: 20px; font-weight: 750; }
+      .branch-muted { fill: #9db2aa; font-size: 20px; font-weight: 750; }
+      .note { fill: #c4d4cd; font-size: 20px; }
+    </style>
+  </defs>
+
+  <rect width="1700" height="2350" rx="38" fill="url(#background)"/>
+  <path d="M0 145 C330 35 690 95 960 30 C1260 -25 1480 15 1700 105 L1700 0 L0 0 Z" fill="#23342e" opacity="0.72"/>
+  <circle cx="1530" cy="160" r="210" fill="#c7954e" opacity="0.055"/>
+  <circle cx="170" cy="2160" r="260" fill="#4b8b7b" opacity="0.05"/>
+
+  <text x="850" y="82" text-anchor="middle" class="title">Hammer Crusher: Allow First, Validate Later</text>
+  <text x="850" y="124" text-anchor="middle" class="subtitle">Resolution flow at the start of the project</text>
+
+  <text x="72" y="190" class="stage">① ELIGIBILITY</text>
+
+  <g filter="url(#shadow)">
+    <rect x="320" y="215" width="480" height="92" rx="26" fill="url(#mainNode)" stroke="#d6ad68" stroke-width="3"/>
+    <text x="560" y="273" text-anchor="middle" class="node-dark">Choose Renovation</text>
+  </g>
+
+  <path class="edge" d="M560 307 L560 329"/>
+
+  <g filter="url(#shadow)">
+    <path d="M560 330 L850 410 L560 490 L270 410 Z" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3"/>
+    <text x="560" y="419" text-anchor="middle" class="node-light">Normally affordable now?</text>
+  </g>
+
+  <text x="585" y="530" class="branch">YES</text>
+  <path class="edge" d="M560 490 L560 665"/>
+
+  <text x="873" y="390" class="branch-muted">NO</text>
+  <path class="edge-muted" d="M850 410 L950 410"/>
+
+  <!--
+    Violet outlines are intentionally left unexplained in EP 1. They mark behavior
+    that required Hammer Crusher-specific changes outside D14_HammerCrusher.php,
+    including the shared Renovation, Construct, and PlayerCards paths. A later
+    article can call back to these five boundary leaks.
+  -->
+  <g filter="url(#shadow)">
+    <path class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Renovation" d="M1180 330 L1410 410 L1180 490 L950 410 Z" fill="url(#decisionNode)"/>
+    <text x="1180" y="419" text-anchor="middle" class="node-light">Is stone still a legal target?</text>
+  </g>
+
+  <text x="1202" y="524" class="branch">YES</text>
+  <path class="edge" d="M1180 490 L1180 540"/>
+
+  <g filter="url(#shadow)">
+    <rect x="965" y="540" width="430" height="112" rx="24" fill="url(#accentNode)" stroke="#efcb8e" stroke-width="3"/>
+    <text x="1180" y="590" text-anchor="middle" class="node-light">Temporary Hammer Crusher allowance</text>
+    <text x="1180" y="627" text-anchor="middle" class="node-light">Even if resources are currently short</text>
+  </g>
+
+  <text x="1440" y="390" class="branch-muted">NO</text>
+  <path class="edge-muted" d="M1410 410 L1545 410 L1545 520"/>
+  <g filter="url(#shadow)">
+    <rect x="1420" y="520" width="250" height="96" rx="22" fill="#613934" stroke="#a96357" stroke-width="3"/>
+    <text x="1545" y="579" text-anchor="middle" class="node-light">Action unavailable</text>
+  </g>
+
+  <path class="edge" d="M965 620 L900 620 L655 690"/>
+
+  <text x="72" y="690" class="stage">② TRIGGER &amp; LOCK</text>
+
+  <g filter="url(#shadow)">
+    <path d="M560 665 L885 750 L560 835 L235 750 Z" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3"/>
+    <text x="560" y="759" text-anchor="middle" class="node-light">Is stone the renovation target?</text>
+  </g>
+
+  <text x="905" y="730" class="branch-muted">NO</text>
+  <path class="edge-muted" d="M885 750 L1010 750"/>
+  <g filter="url(#shadow)">
+    <rect x="1010" y="694" width="470" height="112" rx="24" fill="#31413c" stroke="#65867c" stroke-width="3"/>
+    <text x="1245" y="744" text-anchor="middle" class="node-light">Regular clay renovation</text>
+    <text x="1245" y="781" text-anchor="middle" class="node-light">Hammer Crusher does not trigger</text>
+  </g>
+
+  <text x="586" y="873" class="branch">YES</text>
+  <path class="edge" d="M560 835 L560 860"/>
+
+  <g filter="url(#shadow)">
+    <path d="M560 860 L805 930 L560 1000 L315 930 Z" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3"/>
+    <text x="560" y="940" text-anchor="middle" class="node-light">Use the Hammer Crusher effect?</text>
+  </g>
+
+  <text x="586" y="1038" class="branch">YES</text>
+  <path class="edge" d="M560 1000 L560 1045"/>
+
+  <text x="244" y="914" class="branch-muted">NO</text>
+  <path class="edge-muted" d="M315 930 L145 930 L145 1980 L245 1980"/>
+
+  <g filter="url(#shadow)">
+    <rect x="305" y="1045" width="510" height="112" rx="25" fill="url(#mainNode)" stroke="#d6ad68" stroke-width="3"/>
+    <text x="560" y="1111" text-anchor="middle" class="node-dark">Lock stone target &amp; preserve cost context</text>
+  </g>
+
+  <path class="edge" d="M560 1157 L560 1192"/>
+
+  <g filter="url(#shadow)">
+    <rect x="305" y="1192" width="510" height="132" rx="25" fill="url(#mainNode)" stroke="#d6ad68" stroke-width="3"/>
+    <text x="560" y="1252" text-anchor="middle" class="node-dark">Gain 2 clay + 1 reed</text>
+    <text x="560" y="1292" text-anchor="middle" class="node-dark">Resolve card effects caused by the gain</text>
+  </g>
+
+  <text x="72" y="1384" class="stage">③ NESTED ACTION</text>
+  <path class="edge" d="M560 1324 L560 1360"/>
+
+  <g filter="url(#shadow)">
+    <path d="M560 1360 L815 1435 L560 1510 L305 1435 Z" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3"/>
+    <text x="560" y="1445" text-anchor="middle" class="node-light">Take the optional Build Rooms action?</text>
+  </g>
+
+  <text x="585" y="1548" class="branch-muted">NO</text>
+  <path class="edge-muted" d="M560 1510 L560 1895"/>
+
+  <text x="838" y="1415" class="branch">YES</text>
+  <path class="edge" d="M815 1435 L935 1435"/>
+
+  <g filter="url(#shadow)">
+    <rect class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Construct" x="935" y="1382" width="500" height="106" rx="24" fill="url(#mainNode)"/>
+    <text x="1185" y="1447" text-anchor="middle" class="node-dark">Build Rooms as a true action</text>
+  </g>
+
+  <path class="edge" d="M1185 1488 L1185 1525"/>
+
+  <g filter="url(#shadow)">
+    <path class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Construct Managers/PlayerCards" d="M1185 1525 L1480 1605 L1185 1685 L890 1605 Z" fill="url(#decisionNode)"/>
+    <text x="1185" y="1614" text-anchor="middle" class="node-light">Trigger another player's card?</text>
+  </g>
+
+  <text x="900" y="1583" class="branch-muted">NO</text>
+  <path class="edge-muted" d="M890 1605 L845 1605 L845 1845 L700 1895"/>
+
+  <text x="1210" y="1723" class="branch">YES</text>
+  <path class="edge" d="M1185 1685 L1185 1720"/>
+
+  <g filter="url(#shadow)">
+    <rect class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Construct Managers/PlayerCards" x="925" y="1720" width="520" height="126" rx="25" fill="url(#accentNode)"/>
+    <text x="1185" y="1778" text-anchor="middle" class="node-light">Switch actor → resolve effect → return</text>
+    <text x="1185" y="1818" text-anchor="middle" class="node-light">Preserve the original player's renovation context</text>
+  </g>
+
+  <path class="edge" d="M1185 1846 L1185 1870 L700 1910"/>
+
+  <text x="72" y="1910" class="stage">④ RETURN &amp; VALIDATE</text>
+
+  <g filter="url(#shadow)">
+    <path class="shared-path-node" data-code-scope="shared-main-path" data-bga-module="Actions/Construct Actions/Renovation" d="M560 1895 L875 1980 L560 2065 L245 1980 Z" fill="url(#decisionNode)"/>
+    <text x="560" y="1989" text-anchor="middle" class="node-light">Can the player still renovate to stone?</text>
+  </g>
+
+  <text x="588" y="2103" class="branch">YES</text>
+  <path class="edge" d="M560 2065 L560 2112"/>
+
+  <g filter="url(#shadow)">
+    <rect x="300" y="2112" width="520" height="112" rx="26" fill="url(#mainNode)" stroke="#d6ad68" stroke-width="3"/>
+    <text x="560" y="2180" text-anchor="middle" class="node-dark">Pay and complete stone renovation</text>
+  </g>
+
+  <text x="900" y="1960" class="branch-muted">NO</text>
+  <path class="edge-muted" d="M875 1980 L1010 1980"/>
+  <g filter="url(#shadow)">
+    <rect x="1010" y="1924" width="470" height="112" rx="24" fill="#613934" stroke="#a96357" stroke-width="3"/>
+    <text x="1245" y="1988" text-anchor="middle" class="node-light">Abort: replan or restart the action</text>
+  </g>
+
+  <rect x="340" y="2260" width="1020" height="52" rx="26" fill="#24352f" stroke="#50796d" stroke-width="2"/>
+  <text x="850" y="2294" text-anchor="middle" class="note">Core strategy: enter the complex flow, then validate again before payment</text>
+</svg>
