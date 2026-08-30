@@ -605,6 +605,8 @@
     
     <category term="power grid" scheme="http://titanxxh.com/en/tags/power-grid-2/"/>
     
+    <category term="Summary" scheme="http://titanxxh.com/en/tags/summary/"/>
+    
     <category term="review" scheme="http://titanxxh.com/en/tags/review-2/"/>
     
     <category term="agricola" scheme="http://titanxxh.com/en/tags/agricola-2/"/>
@@ -614,8 +616,6 @@
     <category term="great western trail" scheme="http://titanxxh.com/en/tags/great-western-trail/"/>
     
     <category term="codenames" scheme="http://titanxxh.com/en/tags/codenames-2/"/>
-    
-    <category term="Summary" scheme="http://titanxxh.com/en/tags/summary/"/>
     
   </entry>
   
