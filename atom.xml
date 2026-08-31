@@ -180,8 +180,6 @@
     
     <category term="golang" scheme="http://titanxxh.com/tags/golang/"/>
     
-    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
     <category term="chaos-mesh" scheme="http://titanxxh.com/tags/chaos-mesh/"/>
     
     <category term="vDSO" scheme="http://titanxxh.com/tags/vdso/"/>
@@ -191,6 +189,8 @@
     <category term="ptrace" scheme="http://titanxxh.com/tags/ptrace/"/>
     
     <category term="fault-injection" scheme="http://titanxxh.com/tags/fault-injection/"/>
+    
+    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
