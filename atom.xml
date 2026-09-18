@@ -76,13 +76,13 @@
     <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
     
     
-    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
-    
     <category term="7 Wonders Duel" scheme="http://titanxxh.com/tags/7-wonders-duel/"/>
     
     <category term="Pantheon" scheme="http://titanxxh.com/tags/pantheon/"/>
     
     <category term="Agora" scheme="http://titanxxh.com/tags/agora/"/>
+    
+    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
     
   </entry>
   
@@ -180,6 +180,8 @@
     
     <category term="golang" scheme="http://titanxxh.com/tags/golang/"/>
     
+    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
     <category term="chaos-mesh" scheme="http://titanxxh.com/tags/chaos-mesh/"/>
     
     <category term="vDSO" scheme="http://titanxxh.com/tags/vdso/"/>
@@ -189,8 +191,6 @@
     <category term="ptrace" scheme="http://titanxxh.com/tags/ptrace/"/>
     
     <category term="fault-injection" scheme="http://titanxxh.com/tags/fault-injection/"/>
-    
-    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
@@ -623,6 +623,8 @@
     
     <category term="power grid" scheme="http://titanxxh.com/tags/power-grid-2/"/>
     
+    <category term="总结" scheme="http://titanxxh.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
     <category term="review" scheme="http://titanxxh.com/tags/review-2/"/>
     
     <category term="agricola" scheme="http://titanxxh.com/tags/agricola-2/"/>
@@ -632,8 +634,6 @@
     <category term="great western trail" scheme="http://titanxxh.com/tags/great-western-trail/"/>
     
     <category term="codenames" scheme="http://titanxxh.com/tags/codenames-2/"/>
-    
-    <category term="总结" scheme="http://titanxxh.com/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
