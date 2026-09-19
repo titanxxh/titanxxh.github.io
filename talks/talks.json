@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "ai-makes-life-easier",
+    "title": "让 AI 干点脏活，把时间留给生活",
+    "date": "2026-09-19",
+    "summary": "用 AI 写几个贴合自己生活的小工具：把投资流水记到账本，把照片整理得更好，再把时间留给桌游和陪孩子。",
+    "event": "",
+    "language": "zh-CN",
+    "tags": [
+      "AI",
+      "Vibe Coding",
+      "生活"
+    ],
+    "example": false,
+    "href": "/talks/ai-makes-life-easier/"
+  },
+  {
+    "slug": "open-agricola-agent-harness",
+    "title": "为了实现农场主全扩，我遇到了哪些问题？",
+    "date": "2026-09-19",
+    "summary": "从复杂卡牌的实现，到指令、架构检查、测试与上线反馈：我怎样给 Open Agricola 的 AI Agent 建立项目级 Harness。",
+    "event": "",
+    "language": "zh-CN",
+    "tags": [
+      "AI Agent",
+      "Harness",
+      "桌游"
+    ],
+    "example": false,
+    "href": "/talks/open-agricola-agent-harness/"
+  }
+]
