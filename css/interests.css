@@ -1,0 +1,33 @@
+/* Keep the upstream two-row animation; fit crests, wordmarks and portraits. */
+#skills-tags-group-all .tags-group-icon {
+  overflow: hidden;
+}
+
+#skills-tags-group-all .tags-group-icon img {
+  width: 104px;
+  height: 92px;
+  object-fit: contain;
+}
+
+#skills-tags-group-all .tags-group-icon img[alt="Uwe Rosenberg"] {
+  width: 100px;
+  height: 108px;
+  object-fit: contain;
+}
+
+/* The original Agricola title has a square canvas with a central wordmark. */
+#skills-tags-group-all .tags-group-icon img[alt="Agricola"] {
+  width: 112px;
+  height: 40px;
+  object-fit: cover;
+}
+
+#about-page .skill-icon img {
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #skills-tags-group-all .tags-group-wrapper {
+    animation-play-state: paused;
+  }
+}

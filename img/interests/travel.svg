@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+  <title>Travel — a vintage suitcase with a mountain and sunset badge</title>
+  <path d="M35 28v-9a5 5 0 0 1 5-5h16a5 5 0 0 1 5 5v9" stroke="#253f3c" stroke-width="6"/>
+  <path d="M36 19h24" stroke="#f5d49c" stroke-width="3" stroke-linecap="round"/>
+  <rect x="12" y="26" width="72" height="56" rx="10" fill="#253f3c"/>
+  <rect x="12" y="23" width="72" height="56" rx="10" fill="#f9e5be"/>
+  <path d="M27 24v54M69 24v54" stroke="#ac633c" stroke-width="7"/>
+  <rect x="23" y="44" width="8" height="12" rx="2" fill="#edb954"/>
+  <rect x="65" y="44" width="8" height="12" rx="2" fill="#edb954"/>
+  <circle cx="48" cy="51" r="18" fill="#fff9e9" stroke="#253f3c" stroke-width="2"/>
+  <circle cx="53" cy="44" r="5" fill="#e58a4c"/>
+  <path d="m32 58 11-17 9 13 6-8 7 12a18 18 0 0 1-33 0Z" fill="#326559"/>
+  <path d="m43 41-4 7 4-2 4 2Z" fill="#fff9e9"/>
+  <path d="m49 58-4 4 4 5" stroke="#f9e5be" stroke-width="2" stroke-linecap="round"/>
+  <path d="M18 29h3M75 29h3M18 73h3M75 73h3" stroke="#d4a66b" stroke-width="3" stroke-linecap="round"/>
+</svg>

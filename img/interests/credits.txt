@@ -1,0 +1,52 @@
+兴趣图标与照片来源 / Interest image credits
+
+Brazil national team crest — Confederação Brasileira de Futebol.
+https://commons.wikimedia.org/wiki/File:Brazilian_Football_Confederation_logo.svg
+
+Ronaldo number 9 shirt — original SVG illustration created for this blog,
+inspired by Brazil's yellow shirt and green trim. No official kit branding.
+
+Earlier Ronaldo cartoon (no longer displayed) — Mauricio de Sousa / Mauricio de Sousa Produções.
+Published by Universo HQ, 6 April 2009.
+https://universohq.com/noticias/exclusivo-mauricio-de-sousa-revela-imagens-das-tiras-de-ronaldo-fenomeno/
+https://images.universohq.com/2009/06/TM_ilustr2.jpg
+Original downloaded unchanged; CSS frames Ronaldo on the left.
+
+Uwe Rosenberg cartoon — Klemens Franz / Lookout Games.
+Extracted from the publisher's Ora et Labora appendix, page 12 (credits).
+https://www.lookout-spiele.de/upload/en_ora.html_Appendix_OraEtLabora_EN.pdf
+Embedded illustration extracted as PNG; no redrawing or generated likeness.
+
+Earlier photo assets retained in the repository (no longer displayed):
+
+Ronaldo (2002) — Milly barzellai; Commons crop by Blackcat, later revision by NullReason.
+CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
+https://commons.wikimedia.org/wiki/File:Ronaldo_2002_cropped.jpg
+Original downloaded unchanged; square framing is applied through CSS.
+
+Uwe Rosenberg at Spiel 2009 — Frank Hommes.
+CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
+https://commons.wikimedia.org/wiki/File:Uwe_rosenberg_spiel09.jpg
+Commons 500px thumbnail; square framing is applied through CSS.
+
+Other active icons:
+
+Agricola — Lookout Games; title artwork distributed by Board Game Arena.
+https://boardgamearena.com/gamepanel?game=agricola
+https://x.boardgamearena.net/data/gamemedia/agricola/title/en.png?h=1654729701
+Original downloaded unchanged; empty canvas is framed through CSS.
+
+7 Wonders Duel — Repos Production / Asmodee.
+https://cdn.svc.asmodee.net/production-rprod/storage/games/7-wonders-duel/logo-7-wonders-duel-1593775765jrAEw.png
+
+Heroes of Might and Magic III — original game wordmark, via Wikimedia Commons.
+https://commons.wikimedia.org/wiki/File:Homm3-logo.svg
+
+Heroes of Might and Magic V — simplified game wordmark, via Wikimedia Commons.
+https://commons.wikimedia.org/wiki/File:Heroes_might_magic_v_logo_simple.svg
+
+Travel — original SVG illustration created for this blog: a vintage suitcase
+with a mountain and sunset badge.
+
+Game and football marks belong to their respective owners and identify the
+blog author's personal interests; no affiliation or endorsement is implied.
