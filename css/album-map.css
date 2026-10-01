@@ -1,0 +1,104 @@
+/* Grid/map switch on album detail pages; see source/js/album-map.js. */
+.album-map-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  margin: 0 0 12px;
+}
+
+.album-map-switch button {
+  padding: 4px 16px;
+  border: var(--style-border, 1px solid var(--anzhiyu-card-border));
+  border-radius: 8px;
+  background: var(--anzhiyu-card-bg);
+  color: var(--anzhiyu-fontcolor);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.album-map-switch button.active {
+  border-color: var(--anzhiyu-main);
+  background: var(--anzhiyu-main);
+  color: var(--anzhiyu-white);
+}
+
+#album_detail section.timeline[hidden],
+.album-map[hidden] {
+  display: none !important;
+}
+
+.album-map {
+  height: min(70vh, 640px);
+  border: var(--style-border, 1px solid var(--anzhiyu-card-border));
+  border-radius: 12px;
+  background: var(--anzhiyu-secondbg);
+  color: var(--anzhiyu-secondtext);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.album-map.leaflet-container {
+  display: block;
+}
+
+[data-theme="dark"] .album-map .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);
+}
+
+.album-map-marker {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  background: #ddd;
+}
+
+.album-map .leaflet-marker-pane .album-map-marker img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.album-map-marker span {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  padding: 0 5px;
+  border-radius: 10px;
+  background: var(--anzhiyu-main);
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.album-map-popup img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: zoom-in;
+}
+
+.album-map-popup p {
+  margin: 8px 0 4px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.album-map-popup .album-map-meta {
+  color: #888;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .album-map {
+    height: 60vh;
+  }
+}
