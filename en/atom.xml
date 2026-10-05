@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/en/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/en/"/>
-  <updated>2026-10-05T15:46:57.093Z</updated>
+  <updated>2026-10-05T16:59:00.212Z</updated>
   <id>http://titanxxh.com/en/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola Development Diary] EP 3: Two Weeks of Roadwork, Twelve Days of Traffic</title>
+    <link href="http://titanxxh.com/en/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/"/>
+    <id>http://titanxxh.com/en/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/</id>
+    <published>2026-08-21T15:49:07.000Z</published>
+    <updated>2026-10-05T16:59:00.212Z</updated>
+    
+    
+    <summary type="html">Two weeks of groundwork with nothing new to play, then twelve days in which 5–6 players and three expansions landed, and a rough measure of how much expansion tax Open Agricola still pays.</summary>
+    
+    
+    
+    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
+    
+    <category term="Board Game Reflections" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-reflections/"/>
+    
+    
+    <category term="Agricola" scheme="http://titanxxh.com/en/tags/agricola/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
+    
+    <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
+    
+    <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
+  </entry>
   
   <entry>
     <title>[Open Agricola Development Diary] EP 2: Hooked on Vibe Coding</title>
@@ -270,8 +299,6 @@
     <category term="Technology &amp; Development" scheme="http://titanxxh.com/en/categories/technology-development/"/>
     
     
-    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
-    
     <category term="lz77" scheme="http://titanxxh.com/en/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/en/tags/huffman/"/>
@@ -281,6 +308,8 @@
     <category term="modeling" scheme="http://titanxxh.com/en/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/en/tags/bwt/"/>
+    
+    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
     
   </entry>
   
@@ -681,35 +710,6 @@
     <category term="Essen2015" scheme="http://titanxxh.com/en/tags/essen2015/"/>
     
     <category term="and then we held hands" scheme="http://titanxxh.com/en/tags/and-then-we-held-hands/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Touring a City Alone</title>
-    <link href="http://titanxxh.com/en/2016/04/18/touring-a-city-alone/"/>
-    <id>http://titanxxh.com/en/2016/04/18/touring-a-city-alone/</id>
-    <published>2016-04-18T09:55:46.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;With full-time work about to begin, I slipped away to Beijing alone last week. I had wanted to explore the capital properly ever since attending a conference there the previous year. My only earlier visit had been when I was too young to remember anything, while last year’s schedule was so limited that I visited only the Forbidden City and the National Museum of China. As my final chance to relax before starting work, traveling alone felt free and pleasant.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/dBRUMVsX.jpg&quot;&gt;&lt;br&gt; Shamelessly borrowing a photograph of the Corner Tower to open the post—I really want an ultra-wide-angle lens.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/x1HtmutZ.jpg&quot;&gt;&lt;br&gt; A group portrait of my ticket stubs&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Life &amp; Travel" scheme="http://titanxxh.com/en/categories/life-travel/"/>
-    
-    <category term="Travel" scheme="http://titanxxh.com/en/categories/life-travel/travel/"/>
-    
-    
-    <category term="beijing" scheme="http://titanxxh.com/en/tags/beijing/"/>
-    
-    <category term="National Centre for the Performing Arts" scheme="http://titanxxh.com/en/tags/national-centre-for-the-performing-arts/"/>
-    
-    <category term="Capital Museum" scheme="http://titanxxh.com/en/tags/capital-museum/"/>
-    
-    <category term="Corner Tower" scheme="http://titanxxh.com/en/tags/corner-tower/"/>
     
   </entry>
   

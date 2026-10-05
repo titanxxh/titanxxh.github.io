@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-10-05T15:46:57.092Z</updated>
+  <updated>2026-10-05T16:59:07.703Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola 开发手记] EP 3：修路两周，通车十二天</title>
+    <link href="http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/"/>
+    <id>http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/</id>
+    <published>2026-08-21T15:49:07.000Z</published>
+    <updated>2026-10-05T16:59:07.703Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今晚，我把 Open Agricola 的 logo 换了。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/2026/06/01/vibe-coding-excitement-and-limits/&quot;&gt;上一篇&lt;/a&gt;收尾时我说，项目自己的 Harness 总算理出了一版，还想加更多人数和扩展，不过“后面能不能撑住，接着做才知道”。两个多月过去，可以回来交一部分卷了。&lt;/p&gt;
+&lt;p&gt;先报个数。上一篇落款以后，整个六月我只往主线合了 14 次。前 4 次没有一个新玩法，后 10 次里塞进了 5–6 人、Parent Cards（父母卡）、Through the Seasons（四季）和 Farmers of the Moor（沼泽农夫）。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/&quot;&gt;第一篇&lt;/a&gt;里我给 BGA 的代码算过一笔 &lt;strong&gt;扩展税&lt;/strong&gt;：新卡除了付自己的实现成本，还得替过去留在公共流程里的例外买单。当时话说得挺满，要从头搭一套更干净的架构，以后别再交这笔税。那这回到底少交了多少？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
+    
+    <category term="桌游感悟" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/"/>
+    
+    
+    <category term="农场主" scheme="http://titanxxh.com/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
+    
+    <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
+  </entry>
   
   <entry>
     <title>[Open Agricola 开发手记] EP 2：Vibe Coding 上头记</title>
@@ -214,6 +246,8 @@
     
     <category term="golang" scheme="http://titanxxh.com/tags/golang/"/>
     
+    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
     <category term="chaos-mesh" scheme="http://titanxxh.com/tags/chaos-mesh/"/>
     
     <category term="vDSO" scheme="http://titanxxh.com/tags/vdso/"/>
@@ -223,8 +257,6 @@
     <category term="ptrace" scheme="http://titanxxh.com/tags/ptrace/"/>
     
     <category term="fault-injection" scheme="http://titanxxh.com/tags/fault-injection/"/>
-    
-    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
@@ -287,6 +319,8 @@
     <category term="技术&amp;开发" scheme="http://titanxxh.com/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
     
     
+    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
+    
     <category term="lz77" scheme="http://titanxxh.com/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/tags/huffman/"/>
@@ -296,8 +330,6 @@
     <category term="modeling" scheme="http://titanxxh.com/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/tags/bwt/"/>
-    
-    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -360,9 +392,9 @@
     
     <category term="蜜月" scheme="http://titanxxh.com/tags/%E8%9C%9C%E6%9C%88/"/>
     
-    <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
-    
     <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
+    
+    <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
     
     <category term="巴塞罗那" scheme="http://titanxxh.com/tags/%E5%B7%B4%E5%A1%9E%E7%BD%97%E9%82%A3/"/>
     
@@ -402,9 +434,9 @@
     
     <category term="蜜月" scheme="http://titanxxh.com/tags/%E8%9C%9C%E6%9C%88/"/>
     
-    <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
-    
     <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
+    
+    <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
     
     <category term="格拉纳达" scheme="http://titanxxh.com/tags/%E6%A0%BC%E6%8B%89%E7%BA%B3%E8%BE%BE/"/>
     
@@ -442,9 +474,9 @@
     
     <category term="蜜月" scheme="http://titanxxh.com/tags/%E8%9C%9C%E6%9C%88/"/>
     
-    <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
-    
     <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
+    
+    <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
     
     <category term="塞维利亚" scheme="http://titanxxh.com/tags/%E5%A1%9E%E7%BB%B4%E5%88%A9%E4%BA%9A/"/>
     
@@ -518,11 +550,11 @@
     
     <category term="葡萄牙" scheme="http://titanxxh.com/tags/%E8%91%A1%E8%90%84%E7%89%99/"/>
     
-    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
-    
     <category term="里斯本" scheme="http://titanxxh.com/tags/%E9%87%8C%E6%96%AF%E6%9C%AC/"/>
     
     <category term="辛特拉" scheme="http://titanxxh.com/tags/%E8%BE%9B%E7%89%B9%E6%8B%89/"/>
+    
+    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
     
   </entry>
   
@@ -556,6 +588,8 @@
     
     <category term="葡萄牙" scheme="http://titanxxh.com/tags/%E8%91%A1%E8%90%84%E7%89%99/"/>
     
+    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
+    
     <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
     
     <category term="马德里" scheme="http://titanxxh.com/tags/%E9%A9%AC%E5%BE%B7%E9%87%8C/"/>
@@ -563,8 +597,6 @@
     <category term="波尔图" scheme="http://titanxxh.com/tags/%E6%B3%A2%E5%B0%94%E5%9B%BE/"/>
     
     <category term="托莱多" scheme="http://titanxxh.com/tags/%E6%89%98%E8%8E%B1%E5%A4%9A/"/>
-    
-    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
     
   </entry>
   
@@ -702,35 +734,6 @@
     <category term="Essen2015" scheme="http://titanxxh.com/tags/essen2015/"/>
     
     <category term="and then we held hands" scheme="http://titanxxh.com/tags/and-then-we-held-hands/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个人游一座城</title>
-    <link href="http://titanxxh.com/2016/04/18/travelling-beijing-alone/"/>
-    <id>http://titanxxh.com/2016/04/18/travelling-beijing-alone/</id>
-    <published>2016-04-18T09:55:46.000Z</published>
-    <updated>2026-08-22T09:41:14.832Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;想着马上就要正式工作了，于是乎上周就一个人溜去北京玩了。其实早在去年来北京开会的时候就想着要来帝都好好玩一次，因为上一次来北京还是我很小不记事的时候来的，可惜去年那次时间非常有限只去了趟故宫和国家博物馆。作为入职前最后的放松，一个人的旅游自由且惬意。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/dBRUMVsX.jpg&quot;&gt;&lt;br&gt;无耻地盗一张角楼图作来镇帖（好想要超广角镜头）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/x1HtmutZ.jpg&quot;&gt;&lt;br&gt;票根合影&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="生活&amp;旅行" scheme="http://titanxxh.com/categories/%E7%94%9F%E6%B4%BB%E6%97%85%E8%A1%8C/"/>
-    
-    <category term="旅行" scheme="http://titanxxh.com/categories/%E7%94%9F%E6%B4%BB%E6%97%85%E8%A1%8C/%E6%97%85%E8%A1%8C/"/>
-    
-    
-    <category term="beijing" scheme="http://titanxxh.com/tags/beijing/"/>
-    
-    <category term="国家大剧院" scheme="http://titanxxh.com/tags/%E5%9B%BD%E5%AE%B6%E5%A4%A7%E5%89%A7%E9%99%A2/"/>
-    
-    <category term="首都博物馆" scheme="http://titanxxh.com/tags/%E9%A6%96%E9%83%BD%E5%8D%9A%E7%89%A9%E9%A6%86/"/>
-    
-    <category term="角楼" scheme="http://titanxxh.com/tags/%E8%A7%92%E6%A5%BC/"/>
     
   </entry>
   
