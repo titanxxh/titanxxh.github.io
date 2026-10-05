@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-10-05T15:18:11.336Z</updated>
+  <updated>2026-10-05T15:46:57.092Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>[Open Agricola 开发手记] EP 2：Vibe Coding 上头记</title>
-    <link href="http://titanxxh.com/2026/06/30/vibe-coding-excitement-and-limits/"/>
-    <id>http://titanxxh.com/2026/06/30/vibe-coding-excitement-and-limits/</id>
-    <published>2026-06-29T17:48:32.000Z</published>
-    <updated>2026-10-05T15:18:11.336Z</updated>
+    <link href="http://titanxxh.com/2026/06/01/vibe-coding-excitement-and-limits/"/>
+    <id>http://titanxxh.com/2026/06/01/vibe-coding-excitement-and-limits/</id>
+    <published>2026-05-31T17:48:32.000Z</published>
+    <updated>2026-10-05T15:46:57.092Z</updated>
     
     
     <summary type="html">&lt;p&gt;刚开始做 Open Agricola 的这段时间，一个想法刚在浏览器里跑起来，就忍不住再试一个。本来只是想调一下界面，调着调着，又想加点信息展示，然后又增加了卡牌工坊，Agent 不在干活我感觉好像亏了一样，一不小心就搞到半夜。&lt;/p&gt;
@@ -110,13 +110,13 @@
     <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
     
     
+    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
+    
     <category term="7 Wonders Duel" scheme="http://titanxxh.com/tags/7-wonders-duel/"/>
     
     <category term="Pantheon" scheme="http://titanxxh.com/tags/pantheon/"/>
     
     <category term="Agora" scheme="http://titanxxh.com/tags/agora/"/>
-    
-    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
     
   </entry>
   

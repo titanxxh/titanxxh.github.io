@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/en/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/en/"/>
-  <updated>2026-10-05T15:18:11.338Z</updated>
+  <updated>2026-10-05T15:46:57.093Z</updated>
   <id>http://titanxxh.com/en/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>[Open Agricola Development Diary] EP 2: Hooked on Vibe Coding</title>
-    <link href="http://titanxxh.com/en/2026/06/30/vibe-coding-excitement-and-limits/"/>
-    <id>http://titanxxh.com/en/2026/06/30/vibe-coding-excitement-and-limits/</id>
-    <published>2026-06-29T17:48:32.000Z</published>
-    <updated>2026-10-05T15:18:11.338Z</updated>
+    <link href="http://titanxxh.com/en/2026/06/01/vibe-coding-excitement-and-limits/"/>
+    <id>http://titanxxh.com/en/2026/06/01/vibe-coding-excitement-and-limits/</id>
+    <published>2026-05-31T17:48:32.000Z</published>
+    <updated>2026-10-05T15:46:57.093Z</updated>
     
     
     <summary type="html">Building Open Agricola brought back the excitement of learning to program, then taught me how working features could accumulate into a project that was increasingly hard to maintain.</summary>
@@ -201,6 +201,8 @@
     
     <category term="golang" scheme="http://titanxxh.com/en/tags/golang/"/>
     
+    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
+    
     <category term="chaos-mesh" scheme="http://titanxxh.com/en/tags/chaos-mesh/"/>
     
     <category term="vDSO" scheme="http://titanxxh.com/en/tags/vdso/"/>
@@ -210,8 +212,6 @@
     <category term="ptrace" scheme="http://titanxxh.com/en/tags/ptrace/"/>
     
     <category term="fault-injection" scheme="http://titanxxh.com/en/tags/fault-injection/"/>
-    
-    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
     
   </entry>
   
@@ -240,11 +240,11 @@
     
     <category term="golang" scheme="http://titanxxh.com/en/tags/golang/"/>
     
-    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
-    
     <category term="reflection" scheme="http://titanxxh.com/en/tags/reflection/"/>
     
     <category term="plugin" scheme="http://titanxxh.com/en/tags/plugin/"/>
+    
+    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
     
   </entry>
   
