@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-10-05T16:59:07.703Z</updated>
+  <updated>2026-10-05T17:14:22.458Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/"/>
     <id>http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/</id>
     <published>2026-08-21T15:49:07.000Z</published>
-    <updated>2026-10-05T16:59:07.703Z</updated>
+    <updated>2026-10-05T17:14:22.458Z</updated>
     
     
     <summary type="html">&lt;p&gt;今晚，我把 Open Agricola 的 logo 换了。&lt;/p&gt;
@@ -142,13 +142,13 @@
     <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
     
     
-    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
-    
     <category term="7 Wonders Duel" scheme="http://titanxxh.com/tags/7-wonders-duel/"/>
     
     <category term="Pantheon" scheme="http://titanxxh.com/tags/pantheon/"/>
     
     <category term="Agora" scheme="http://titanxxh.com/tags/agora/"/>
+    
+    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
     
   </entry>
   
@@ -246,8 +246,6 @@
     
     <category term="golang" scheme="http://titanxxh.com/tags/golang/"/>
     
-    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
     <category term="chaos-mesh" scheme="http://titanxxh.com/tags/chaos-mesh/"/>
     
     <category term="vDSO" scheme="http://titanxxh.com/tags/vdso/"/>
@@ -257,6 +255,8 @@
     <category term="ptrace" scheme="http://titanxxh.com/tags/ptrace/"/>
     
     <category term="fault-injection" scheme="http://titanxxh.com/tags/fault-injection/"/>
+    
+    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
@@ -319,8 +319,6 @@
     <category term="技术&amp;开发" scheme="http://titanxxh.com/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
     
     
-    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
-    
     <category term="lz77" scheme="http://titanxxh.com/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/tags/huffman/"/>
@@ -330,6 +328,8 @@
     <category term="modeling" scheme="http://titanxxh.com/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/tags/bwt/"/>
+    
+    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -392,9 +392,9 @@
     
     <category term="蜜月" scheme="http://titanxxh.com/tags/%E8%9C%9C%E6%9C%88/"/>
     
-    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
-    
     <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
+    
+    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
     
     <category term="巴塞罗那" scheme="http://titanxxh.com/tags/%E5%B7%B4%E5%A1%9E%E7%BD%97%E9%82%A3/"/>
     
@@ -434,9 +434,9 @@
     
     <category term="蜜月" scheme="http://titanxxh.com/tags/%E8%9C%9C%E6%9C%88/"/>
     
-    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
-    
     <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
+    
+    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
     
     <category term="格拉纳达" scheme="http://titanxxh.com/tags/%E6%A0%BC%E6%8B%89%E7%BA%B3%E8%BE%BE/"/>
     
@@ -474,9 +474,9 @@
     
     <category term="蜜月" scheme="http://titanxxh.com/tags/%E8%9C%9C%E6%9C%88/"/>
     
-    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
-    
     <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
+    
+    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
     
     <category term="塞维利亚" scheme="http://titanxxh.com/tags/%E5%A1%9E%E7%BB%B4%E5%88%A9%E4%BA%9A/"/>
     
@@ -550,11 +550,11 @@
     
     <category term="葡萄牙" scheme="http://titanxxh.com/tags/%E8%91%A1%E8%90%84%E7%89%99/"/>
     
+    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
+    
     <category term="里斯本" scheme="http://titanxxh.com/tags/%E9%87%8C%E6%96%AF%E6%9C%AC/"/>
     
     <category term="辛特拉" scheme="http://titanxxh.com/tags/%E8%BE%9B%E7%89%B9%E6%8B%89/"/>
-    
-    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
     
   </entry>
   
@@ -588,8 +588,6 @@
     
     <category term="葡萄牙" scheme="http://titanxxh.com/tags/%E8%91%A1%E8%90%84%E7%89%99/"/>
     
-    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
-    
     <category term="西班牙" scheme="http://titanxxh.com/tags/%E8%A5%BF%E7%8F%AD%E7%89%99/"/>
     
     <category term="马德里" scheme="http://titanxxh.com/tags/%E9%A9%AC%E5%BE%B7%E9%87%8C/"/>
@@ -597,6 +595,8 @@
     <category term="波尔图" scheme="http://titanxxh.com/tags/%E6%B3%A2%E5%B0%94%E5%9B%BE/"/>
     
     <category term="托莱多" scheme="http://titanxxh.com/tags/%E6%89%98%E8%8E%B1%E5%A4%9A/"/>
+    
+    <category term="伊比利亚" scheme="http://titanxxh.com/tags/%E4%BC%8A%E6%AF%94%E5%88%A9%E4%BA%9A/"/>
     
   </entry>
   
