@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="950" viewBox="0 0 1800 950" role="img" aria-labelledby="title desc">
+  <title id="title">我的 Vibe Coding 学习曲线</title>
+  <desc id="desc">前端实现变容易，探索的兴奋让我登上愚昧之巅。自主推进中，局部功能能跑通，重复实现、职责和依赖混乱却让项目越来越难维护。整理架构、项目记忆和检查，让 Harness 初步连起来。</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1519"/>
+      <stop offset="0.58" stop-color="#17282b"/>
+      <stop offset="1" stop-color="#263b35"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e9bd70"/>
+      <stop offset="0.48" stop-color="#df8666"/>
+      <stop offset="1" stop-color="#70c6a1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#020606" flood-opacity="0.42"/>
+    </filter>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      text { font-family: "Noto Sans CJK SC", "Noto Sans", system-ui, sans-serif; }
+      .title { fill: #f5ead1; font-size: 48px; font-weight: 800; }
+      .subtitle { fill: #a9c0b8; font-size: 23px; font-weight: 500; }
+      .axis { fill: #91aaa1; font-size: 20px; font-weight: 600; }
+      .stage { font-size: 31px; font-weight: 800; }
+      .card-title { fill: #f8edd8; font-size: 24px; font-weight: 750; }
+      .card-note { fill: #b9cec6; font-size: 18px; font-weight: 500; }
+      .footer { fill: #dbc49a; font-size: 24px; font-weight: 750; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="950" rx="38" fill="url(#bg)"/>
+  <circle cx="1580" cy="120" r="260" fill="#efc77d" opacity="0.055"/>
+  <circle cx="180" cy="790" r="280" fill="#66b99b" opacity="0.045"/>
+
+  <text x="900" y="72" text-anchor="middle" class="title">Vibe Coding：从上头到开始清醒</text>
+  <text x="900" y="112" text-anchor="middle" class="subtitle">2026 年 2 月至 6 月初，一张主观的开发体验示意图</text>
+
+  <path d="M105 755 L105 170 M105 755 L1690 755" fill="none" stroke="#6f8c83" stroke-width="3" opacity="0.7"/>
+  <path d="M105 610 L1690 610 M105 465 L1690 465 M105 320 L1690 320" fill="none" stroke="#648078" stroke-width="2" stroke-dasharray="8 13" opacity="0.24"/>
+  <text x="43" y="480" text-anchor="middle" class="axis" transform="rotate(-90 43 480)">我觉得自己能驾驭项目的程度</text>
+  <text x="1690" y="798" text-anchor="end" class="axis">项目推进 / 工程理解</text>
+
+  <path d="M130 680 C280 610 360 225 545 225 C720 225 785 700 1030 704 C1240 707 1350 475 1660 315" fill="none" stroke="#050b0a" stroke-width="26" stroke-linecap="round" opacity="0.44"/>
+  <path d="M130 680 C280 610 360 225 545 225 C720 225 785 700 1030 704 C1240 707 1350 475 1660 315" fill="none" stroke="url(#line)" stroke-width="12" stroke-linecap="round" filter="url(#glow)"/>
+
+  <circle cx="545" cy="225" r="18" fill="#efbd69" stroke="#f9e2ac" stroke-width="5"/>
+  <circle cx="1030" cy="704" r="18" fill="#dc8466" stroke="#f2b49d" stroke-width="5"/>
+  <circle cx="1510" cy="390" r="18" fill="#70c6a1" stroke="#b7e4d1" stroke-width="5"/>
+
+  <text x="545" y="171" text-anchor="middle" class="stage" fill="#efc477">愚昧之巅</text>
+  <text x="1030" y="748" text-anchor="middle" class="stage" fill="#ed9b7f">绝望之谷</text>
+  <text x="1510" y="342" text-anchor="middle" class="stage" fill="#84d3b2">开悟之坡</text>
+
+  <g filter="url(#shadow)">
+    <rect x="135" y="505" width="270" height="96" rx="20" fill="#263a38" stroke="#77998e" stroke-width="3"/>
+    <text x="270" y="544" text-anchor="middle" class="card-title">前端门槛降低</text>
+    <text x="270" y="575" text-anchor="middle" class="card-note">想法更容易得到反馈</text>
+  </g>
+  <path d="M328 505 L374 422" fill="none" stroke="#829f96" stroke-width="3"/>
+
+  <g filter="url(#shadow)">
+    <rect x="278" y="285" width="310" height="96" rx="20" fill="#3a392f" stroke="#c19b5f" stroke-width="3"/>
+    <text x="433" y="324" text-anchor="middle" class="card-title">Skills 单任务有效</text>
+    <text x="433" y="355" text-anchor="middle" class="card-note">边界清楚时有帮助</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="620" y="145" width="360" height="102" rx="20" fill="#44362f" stroke="#d18b68" stroke-width="3"/>
+    <text x="800" y="185" text-anchor="middle" class="card-title">尝试让 Agent 自主推进</text>
+    <text x="800" y="217" text-anchor="middle" class="card-note">想把睡觉时间也用起来</text>
+  </g>
+  <path d="M650 247 L620 302" fill="none" stroke="#b07d65" stroke-width="3"/>
+
+  <g filter="url(#shadow)">
+    <rect x="745" y="545" width="315" height="100" rx="20" fill="#472e2d" stroke="#d87868" stroke-width="3"/>
+    <text x="902" y="585" text-anchor="middle" class="card-title">局部能跑，整体难改</text>
+    <text x="902" y="617" text-anchor="middle" class="card-note">重复实现、职责和依赖混乱</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1090" y="565" width="370" height="102" rx="20" fill="#313c38" stroke="#7a9e91" stroke-width="3"/>
+    <text x="1275" y="605" text-anchor="middle" class="card-title">整理项目记忆</text>
+    <text x="1275" y="637" text-anchor="middle" class="card-note">合并说明，让下一项任务找得到</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1370" y="185" width="310" height="102" rx="20" fill="#244139" stroke="#72bfa0" stroke-width="3"/>
+    <text x="1525" y="225" text-anchor="middle" class="card-title">Harness 初步连起来</text>
+    <text x="1525" y="257" text-anchor="middle" class="card-note">共用机制、边界检查和反馈</text>
+  </g>
+  <path d="M1500 287 L1508 355" fill="none" stroke="#72bfa0" stroke-width="3"/>
+
+  <rect x="535" y="842" width="730" height="60" rx="30" fill="#101a1b" stroke="#766c59" stroke-width="2" opacity="0.94"/>
+  <text x="900" y="881" text-anchor="middle" class="footer">局部任务完成，不等于整个项目容易维护</text>
+</svg>

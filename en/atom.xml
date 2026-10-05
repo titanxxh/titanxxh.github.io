@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/en/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/en/"/>
-  <updated>2026-08-29T15:08:47.050Z</updated>
+  <updated>2026-10-05T15:18:11.338Z</updated>
   <id>http://titanxxh.com/en/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola Development Diary] EP 2: Hooked on Vibe Coding</title>
+    <link href="http://titanxxh.com/en/2026/06/30/vibe-coding-excitement-and-limits/"/>
+    <id>http://titanxxh.com/en/2026/06/30/vibe-coding-excitement-and-limits/</id>
+    <published>2026-06-29T17:48:32.000Z</published>
+    <updated>2026-10-05T15:18:11.338Z</updated>
+    
+    
+    <summary type="html">Building Open Agricola brought back the excitement of learning to program, then taught me how working features could accumulate into a project that was increasingly hard to maintain.</summary>
+    
+    
+    
+    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
+    
+    <category term="Board Game Reflections" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-reflections/"/>
+    
+    
+    <category term="Agricola" scheme="http://titanxxh.com/en/tags/agricola/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
+    
+    <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
+    
+    <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
+    
+    <category term="Vibe Coding" scheme="http://titanxxh.com/en/tags/vibe-coding/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
+  </entry>
   
   <entry>
     <title>[Open Agricola Development Diary] EP 1: Why Rebuild Agricola?</title>
@@ -170,8 +201,6 @@
     
     <category term="golang" scheme="http://titanxxh.com/en/tags/golang/"/>
     
-    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
-    
     <category term="chaos-mesh" scheme="http://titanxxh.com/en/tags/chaos-mesh/"/>
     
     <category term="vDSO" scheme="http://titanxxh.com/en/tags/vdso/"/>
@@ -181,6 +210,8 @@
     <category term="ptrace" scheme="http://titanxxh.com/en/tags/ptrace/"/>
     
     <category term="fault-injection" scheme="http://titanxxh.com/en/tags/fault-injection/"/>
+    
+    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
     
   </entry>
   
@@ -209,11 +240,11 @@
     
     <category term="golang" scheme="http://titanxxh.com/en/tags/golang/"/>
     
+    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
+    
     <category term="reflection" scheme="http://titanxxh.com/en/tags/reflection/"/>
     
     <category term="plugin" scheme="http://titanxxh.com/en/tags/plugin/"/>
-    
-    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
     
   </entry>
   
@@ -679,40 +710,6 @@
     <category term="Capital Museum" scheme="http://titanxxh.com/en/tags/capital-museum/"/>
     
     <category term="Corner Tower" scheme="http://titanxxh.com/en/tags/corner-tower/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[titanxxh&#39;s Essen 2015] 7. Signorie Overview and Review</title>
-    <link href="http://titanxxh.com/en/2016/03/31/signorie-overview-and-review/"/>
-    <id>http://titanxxh.com/en/2016/03/31/signorie-overview-and-review/</id>
-    <published>2016-03-31T11:53:06.000Z</published>
-    <updated>2026-08-23T00:21:59.532Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/Nq7RZa78giIv6IdfPWCMvQ__original/img/Yu4EM1Xl6KgxdSrrROspBLMKn3U=/0x0/filters:format(jpeg)/pic2684003.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Fifteenth-century Italy was a great land, but also one filled with intrigue. Its chaotic political environment gave rise to a new form of government—the signoria—while many ambitious noble families grew steadily stronger.&lt;br&gt;After years of maneuvering in the shadows, their moment finally arrived. It was their turn to control the cities and shape Italy’s future; their stories would enter the history books.&lt;/p&gt;
-&lt;p&gt;In &lt;em&gt;Signorie&lt;/em&gt;, each player represents a noble power. You are lord of a celebrated Renaissance family, increasing your influence and building a mighty dynasty by arranging marriages with six of the most prestigious houses.&lt;/p&gt;
-&lt;p&gt;You must choose your children’s destinies wisely. Give the men of your family one of three forms of training—military, religious, or political—then send them on diplomatic missions to the right cities at the right time, or strategically arrange political marriages for them.&lt;/p&gt;
-&lt;p&gt;At the beginning of each round, roll twenty dice in five colors. Players take turns choosing a die from the common area. Its color determines the action available, while its number indicates the discount on that action. Hiring assistants improves the efficiency of a player’s actions.&lt;br&gt;The dice mechanism is simple yet somewhat innovative. Each player can take at most four actions per round. Money is always tight, so high-numbered dice are tempting, but their values require careful trade-offs: a player whose total exceeds 13 loses the round’s reward.&lt;/p&gt;
-&lt;p&gt;The player with the most Influence at the end wins.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
-    
-    <category term="Board Game Introductions" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-introductions/"/>
-    
-    
-    <category term="Essen" scheme="http://titanxxh.com/en/tags/essen/"/>
-    
-    <category term="Review" scheme="http://titanxxh.com/en/tags/review/"/>
-    
-    <category term="Essen2015" scheme="http://titanxxh.com/en/tags/essen2015/"/>
-    
-    <category term="Introduction" scheme="http://titanxxh.com/en/tags/introduction/"/>
-    
-    <category term="Signorie" scheme="http://titanxxh.com/en/tags/signorie/"/>
     
   </entry>
   
