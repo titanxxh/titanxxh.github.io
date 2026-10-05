@@ -40,11 +40,11 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
     
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
     <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
-    
-    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
     
   </entry>
   
@@ -72,13 +72,13 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
     
-    <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
-    
     <category term="Vibe Coding" scheme="http://titanxxh.com/tags/vibe-coding/"/>
     
     <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
+    <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
@@ -142,13 +142,13 @@
     <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
     
     
+    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
+    
     <category term="7 Wonders Duel" scheme="http://titanxxh.com/tags/7-wonders-duel/"/>
     
     <category term="Pantheon" scheme="http://titanxxh.com/tags/pantheon/"/>
     
     <category term="Agora" scheme="http://titanxxh.com/tags/agora/"/>
-    
-    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
     
   </entry>
   
@@ -246,6 +246,8 @@
     
     <category term="golang" scheme="http://titanxxh.com/tags/golang/"/>
     
+    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
     <category term="chaos-mesh" scheme="http://titanxxh.com/tags/chaos-mesh/"/>
     
     <category term="vDSO" scheme="http://titanxxh.com/tags/vdso/"/>
@@ -255,8 +257,6 @@
     <category term="ptrace" scheme="http://titanxxh.com/tags/ptrace/"/>
     
     <category term="fault-injection" scheme="http://titanxxh.com/tags/fault-injection/"/>
-    
-    <category term="源码" scheme="http://titanxxh.com/tags/%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
