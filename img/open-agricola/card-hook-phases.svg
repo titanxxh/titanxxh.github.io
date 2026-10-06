@@ -90,41 +90,41 @@
   <rect x="441.0" y="315" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <rect x="531.0" y="315" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <text x="1350" y="334" text-anchor="start" class="light-s" style="font-size:15px">翻修石屋前送资源，可扩建</text>
-  <text x="60" y="380" text-anchor="start" class="light" style="font-size:19px">切石工<tspan dx="8" class="light-s" style="font-size:13px;font-weight:500">Stonecutter</tspan></text>
+  <text x="60" y="380" text-anchor="start" class="light" style="font-size:19px">Stonecutter</text>
   <rect x="621.0" y="361" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <text x="1350" y="380" text-anchor="start" class="light-s" style="font-size:15px">改良、房间、翻修各少 1 石</text>
   <rect x="40" y="396" width="1620" height="46" rx="10" fill="#15241f"/>
-  <text x="60" y="426" text-anchor="start" class="light" style="font-size:19px">杂物间<tspan dx="8" class="light-s" style="font-size:13px;font-weight:500">Junk Room</tspan></text>
+  <text x="60" y="426" text-anchor="start" class="light" style="font-size:19px">Junk Room</text>
   <rect x="981.0" y="407" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <text x="1350" y="426" text-anchor="start" class="light-s" style="font-size:15px">建造改良后得 1 食物</text>
-  <text x="60" y="472" text-anchor="start" class="light" style="font-size:19px">篮子<tspan dx="8" class="light-s" style="font-size:13px;font-weight:500">Basket</tspan></text>
+  <text x="60" y="472" text-anchor="start" class="light" style="font-size:19px">Basket</text>
   <rect x="1071.0" y="453" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <text x="1350" y="472" text-anchor="start" class="light-s" style="font-size:15px">用完木头格，2 木换 3 食</text>
   <rect x="40" y="488" width="1620" height="46" rx="10" fill="#15241f"/>
-  <text x="60" y="518" text-anchor="start" class="light" style="font-size:19px">舞台工人<tspan dx="8" class="light-s" style="font-size:13px;font-weight:500">Stagehand</tspan></text>
+  <text x="60" y="518" text-anchor="start" class="light" style="font-size:19px">Stagehand</text>
   <rect x="1161.0" y="499" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <text x="1350" y="518" text-anchor="start" class="light-s" style="font-size:15px">对手用了流浪艺人，你可建造</text>
-  <text x="60" y="564" text-anchor="start" class="light" style="font-size:19px">烹饪扩建<tspan dx="8" class="light-s" style="font-size:13px;font-weight:500">Cookery Extension</tspan></text>
+  <text x="60" y="564" text-anchor="start" class="light" style="font-size:19px">Cookery Extension</text>
   <rect x="891.0" y="545" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <text x="1350" y="564" text-anchor="start" class="light-s" style="font-size:15px">收获时烹饪改良换双倍食物</text>
   <rect x="40" y="580" width="1620" height="46" rx="10" fill="#15241f"/>
-  <text x="60" y="610" text-anchor="start" class="light" style="font-size:19px">养父母<tspan dx="8" class="light-s" style="font-size:13px;font-weight:500">Adoptive Parents</tspan></text>
+  <text x="60" y="610" text-anchor="start" class="light" style="font-size:19px">Adoptive Parents</text>
   <rect x="1251.0" y="591" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <text x="1350" y="610" text-anchor="start" class="light-s" style="font-size:15px">新生儿当回合就能行动</text>
-  <text x="60" y="656" text-anchor="start" class="light" style="font-size:19px">懒惰播种者<tspan dx="8" class="light-s" style="font-size:13px;font-weight:500">Lazy Sowman</tspan></text>
+  <text x="60" y="656" text-anchor="start" class="light" style="font-size:19px">Lazy Sowman</text>
   <path d="M381.0 649.0 L741.0 649.0" stroke="#d7a65a" stroke-width="3" opacity="0.75"/>
   <rect x="351.0" y="637" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <rect x="531.0" y="637" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <rect x="711.0" y="637" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <text x="1350" y="656" text-anchor="start" class="light-s" style="font-size:15px">拒绝播种，再放一名工人</text>
   <rect x="40" y="672" width="1620" height="46" rx="10" fill="#15241f"/>
-  <text x="60" y="702" text-anchor="start" class="light" style="font-size:19px">泥瓦刀<tspan dx="8" class="light-s" style="font-size:13px;font-weight:500">Trowel</tspan></text>
+  <text x="60" y="702" text-anchor="start" class="light" style="font-size:19px">Trowel</text>
   <path d="M651.0 695.0 L1281.0 695.0" stroke="#d7a65a" stroke-width="3" opacity="0.75"/>
   <rect x="621.0" y="683" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <rect x="801.0" y="683" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <rect x="1251.0" y="683" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <text x="1350" y="702" text-anchor="start" class="light-s" style="font-size:15px">任何时候都能翻修成石屋</text>
-  <text x="60" y="748" text-anchor="start" class="light" style="font-size:19px">新学徒<tspan dx="8" class="light-s" style="font-size:13px;font-weight:500">Freshman</tspan></text>
+  <text x="60" y="748" text-anchor="start" class="light" style="font-size:19px">Freshman</text>
   <path d="M381.0 741.0 L1191.0 741.0" stroke="#d7a65a" stroke-width="3" opacity="0.75"/>
   <rect x="351.0" y="729" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>
   <rect x="441.0" y="729" width="60" height="24" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="2"/>

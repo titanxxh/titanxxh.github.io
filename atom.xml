@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-10-06T11:54:01.786Z</updated>
+  <updated>2026-10-06T11:57:27.329Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/"/>
     <id>http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/</id>
     <published>2026-08-21T15:49:07.000Z</published>
-    <updated>2026-10-06T11:54:01.786Z</updated>
+    <updated>2026-10-06T11:57:27.329Z</updated>
     
     
     <summary type="html">&lt;p&gt;今晚，我把 Open Agricola 的 logo 换了。&lt;/p&gt;
@@ -76,9 +76,9 @@
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
     
-    <category term="Vibe Coding" scheme="http://titanxxh.com/tags/vibe-coding/"/>
-    
     <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
+    <category term="Vibe Coding" scheme="http://titanxxh.com/tags/vibe-coding/"/>
     
   </entry>
   

@@ -70,9 +70,9 @@
     
     <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
     
-    <category term="Vibe Coding" scheme="http://titanxxh.com/en/tags/vibe-coding/"/>
-    
     <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
+    <category term="Vibe Coding" scheme="http://titanxxh.com/en/tags/vibe-coding/"/>
     
   </entry>
   
@@ -372,9 +372,9 @@
     
     <category term="Honeymoon" scheme="http://titanxxh.com/en/tags/honeymoon/"/>
     
-    <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
-    
     <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
+    
+    <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
     
     <category term="Barcelona" scheme="http://titanxxh.com/en/tags/barcelona/"/>
     
@@ -414,9 +414,9 @@
     
     <category term="Honeymoon" scheme="http://titanxxh.com/en/tags/honeymoon/"/>
     
-    <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
-    
     <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
+    
+    <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
     
     <category term="Granada" scheme="http://titanxxh.com/en/tags/granada/"/>
     
@@ -454,9 +454,9 @@
     
     <category term="Honeymoon" scheme="http://titanxxh.com/en/tags/honeymoon/"/>
     
-    <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
-    
     <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
+    
+    <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
     
     <category term="Seville" scheme="http://titanxxh.com/en/tags/seville/"/>
     
@@ -530,11 +530,11 @@
     
     <category term="Portugal" scheme="http://titanxxh.com/en/tags/portugal/"/>
     
-    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
-    
     <category term="Lisbon" scheme="http://titanxxh.com/en/tags/lisbon/"/>
     
     <category term="Sintra" scheme="http://titanxxh.com/en/tags/sintra/"/>
+    
+    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
     
   </entry>
   
@@ -568,6 +568,8 @@
     
     <category term="Portugal" scheme="http://titanxxh.com/en/tags/portugal/"/>
     
+    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
+    
     <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
     
     <category term="Madrid" scheme="http://titanxxh.com/en/tags/madrid/"/>
@@ -575,8 +577,6 @@
     <category term="Porto" scheme="http://titanxxh.com/en/tags/porto/"/>
     
     <category term="Toledo" scheme="http://titanxxh.com/en/tags/toledo/"/>
-    
-    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
     
   </entry>
   
