@@ -357,6 +357,8 @@
     <category term="Technology &amp; Development" scheme="http://titanxxh.com/en/categories/technology-development/"/>
     
     
+    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
+    
     <category term="lz77" scheme="http://titanxxh.com/en/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/en/tags/huffman/"/>
@@ -366,8 +368,6 @@
     <category term="modeling" scheme="http://titanxxh.com/en/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/en/tags/bwt/"/>
-    
-    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
     
   </entry>
   

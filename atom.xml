@@ -38,11 +38,11 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
     
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
     <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
-    
-    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
     
   </entry>
   
@@ -68,11 +68,11 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
     
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
     <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
-    
-    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
     
   </entry>
   
@@ -100,11 +100,11 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
     
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
     <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
-    
-    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
     
   </entry>
   
@@ -132,13 +132,13 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
     
-    <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
-    
     <category term="Vibe Coding" scheme="http://titanxxh.com/tags/vibe-coding/"/>
     
     <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
+    <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
@@ -173,11 +173,11 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
     
-    <category term="开源" scheme="http://titanxxh.com/tags/%E5%BC%80%E6%BA%90/"/>
-    
     <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
+    
+    <category term="开源" scheme="http://titanxxh.com/tags/%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   
@@ -379,8 +379,6 @@
     <category term="技术&amp;开发" scheme="http://titanxxh.com/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
     
     
-    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
-    
     <category term="lz77" scheme="http://titanxxh.com/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/tags/huffman/"/>
@@ -390,6 +388,8 @@
     <category term="modeling" scheme="http://titanxxh.com/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/tags/bwt/"/>
+    
+    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
