@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="0 0 1600 940" role="img" aria-labelledby="title desc">
+  <title id="title">运行时只有五种节点</title>
+  <desc id="desc">一个行动展开成一棵树，叶子写状态，上面四种只管怎么走</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101715"/><stop offset="0.55" stop-color="#17231f"/><stop offset="1" stop-color="#0d1312"/>
+    </linearGradient>
+    <linearGradient id="mainNode" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5e8ca"/><stop offset="1" stop-color="#e7cfa0"/></linearGradient>
+    <linearGradient id="decisionNode" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#315f56"/><stop offset="1" stop-color="#1e413b"/></linearGradient>
+    <linearGradient id="accentNode" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7a65a"/><stop offset="1" stop-color="#b77a35"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2b26"/><stop offset="1" stop-color="#121e1b"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.34"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d6ad68"/></marker>
+    <marker id="arrowMuted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8ca59d"/></marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7fd4a6"/></marker>
+    <style>
+      text { font-family: "Noto Sans CJK SC", "Noto Sans", system-ui, sans-serif; }
+      .title { fill: #f8ecd2; font-size: 44px; font-weight: 800; letter-spacing: 1px; }
+      .subtitle { fill: #b8cbc3; font-size: 22px; font-weight: 500; }
+      .stage { fill: #d6ad68; font-size: 23px; font-weight: 700; letter-spacing: 1px; }
+      .head { fill: #f1d7a3; font-size: 30px; font-weight: 800; }
+      .head-sub { fill: #9db2aa; font-size: 18px; font-weight: 500; }
+      .dark { fill: #25271f; font-size: 24px; font-weight: 750; }
+      .dark-s { fill: #5c5a4d; font-size: 17px; font-weight: 600; }
+      .light { fill: #fff7e4; font-size: 22px; font-weight: 750; }
+      .light-s { fill: #cbe0d8; font-size: 17px; font-weight: 550; }
+      .mono { fill: #fff7e4; font-size: 21px; font-weight: 750; font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace; }
+      .count { fill: #d6ad68; font-size: 19px; font-weight: 750; }
+      .example { fill: #9db2aa; font-size: 17px; font-weight: 550; }
+      .edge { fill: none; stroke: #d6ad68; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .edge-muted { fill: none; stroke: #8ca59d; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowMuted); }
+      .edge-green { fill: none; stroke: #7fd4a6; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowGreen); }
+      .bracket { fill: none; stroke: #8ca59d; stroke-width: 3; stroke-linecap: round; }
+      .note { fill: #c4d4cd; font-size: 20px; }
+      .pill { fill: #24352f; stroke: #50796d; stroke-width: 2; }
+      .pill-text { fill: #e9f1ec; font-size: 20px; font-weight: 700; }
+      .callout { fill: #1f3a33; stroke: #7fd4a6; stroke-width: 2.5; }
+      .callout-text { fill: #d8f3e4; font-size: 18px; font-weight: 700; }
+    </style>
+  </defs>
+  <rect width="1600" height="940" rx="38" fill="url(#background)"/>
+  <text x="800" y="76" text-anchor="middle" class="title">运行时只有五种节点</text>
+  <text x="800" y="116" text-anchor="middle" class="subtitle">一个行动展开成一棵树，叶子写状态，上面四种只管怎么走</text>
+  <g filter="url(#shadow)">  <rect x="60" y="160" width="480" height="340" rx="22" fill="url(#panel)" stroke="#50796d" stroke-width="3" />
+</g>
+  <text x="84" y="202" text-anchor="start" class="head" style="font-size:26px">行动</text>
+  <text x="516" y="202" text-anchor="end" class="mono" style="font-size:18px;fill:#d6ad68">ActionNode</text>
+  <g>  <rect x="230.0" y="266" width="140" height="52" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="3" />
+<text x="300.0" y="299.0" text-anchor="middle" class="dark" style="font-size:19px">拿 2 食物</text></g>
+  <text x="300.0" y="352" text-anchor="middle" class="callout-text" style="font-size:17px">✎ 写状态</text>
+  <text x="84" y="422" text-anchor="start" class="light-s" style="font-size:19px;fill:#e9f1ec">叶子。执行一个行动，整个引擎里只有它写状态</text>
+  <text x="84" y="480" text-anchor="start" class="example" style="font-size:18px">例：拿 2 食物</text>
+  <g filter="url(#shadow)">  <rect x="580" y="160" width="480" height="340" rx="22" fill="url(#panel)" stroke="#50796d" stroke-width="3" />
+</g>
+  <text x="604" y="202" text-anchor="start" class="head" style="font-size:26px">顺序</text>
+  <text x="1036" y="202" text-anchor="end" class="mono" style="font-size:18px;fill:#d6ad68">SequenceNode</text>
+    <rect x="744.0" y="226" width="152" height="44" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+  <text x="820.0" y="255" text-anchor="middle" class="mono" style="font-size:18px">SEQ</text>
+  <path d="M 820.0 270 L 670.0 312" class="edge-muted" style="stroke-width:3;"/>
+  <g>  <rect x="616.0" y="312" width="108" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3" />
+<text x="670.0" y="340.0" text-anchor="middle" class="dark" style="font-size:19px">1</text></g>
+  <path d="M 820.0 270 L 820.0 312" class="edge-muted" style="stroke-width:3;"/>
+  <g>  <rect x="766.0" y="312" width="108" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3" />
+<text x="820.0" y="340.0" text-anchor="middle" class="dark" style="font-size:19px">2</text></g>
+  <path d="M 820.0 270 L 970.0 312" class="edge-muted" style="stroke-width:3;"/>
+  <g>  <rect x="916.0" y="312" width="108" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3"  stroke-dasharray="9 7"/>
+<text x="970.0" y="340.0" text-anchor="middle" class="dark" style="font-size:19px">3</text></g>
+  <path d="M 730.0 333.0 L 760.0 333.0" class="edge" style="stroke-width:3"/>
+  <path d="M 880.0 333.0 L 910.0 333.0" class="edge" style="stroke-width:3"/>
+  <text x="970.0" y="380" text-anchor="middle" class="example">虚线 = 可选</text>
+  <text x="604" y="422" text-anchor="start" class="light-s" style="font-size:19px;fill:#e9f1ec">子节点按先后全部做完</text>
+  <text x="604" y="480" text-anchor="start" class="example" style="font-size:18px">例：先拿资源，再接一个可选的建房</text>
+  <g filter="url(#shadow)">  <rect x="1100" y="160" width="480" height="340" rx="22" fill="url(#panel)" stroke="#50796d" stroke-width="3" />
+</g>
+  <text x="1124" y="202" text-anchor="start" class="head" style="font-size:26px">并行</text>
+  <text x="1556" y="202" text-anchor="end" class="mono" style="font-size:18px;fill:#d6ad68">ParallelNode</text>
+    <rect x="1264.0" y="226" width="152" height="44" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+  <text x="1340.0" y="255" text-anchor="middle" class="mono" style="font-size:18px">PAR</text>
+  <path d="M 1340.0 270 L 1190.0 312" class="edge-muted" style="stroke-width:3;"/>
+  <g>  <rect x="1136.0" y="312" width="108" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3" />
+<text x="1190.0" y="340.0" text-anchor="middle" class="dark" style="font-size:19px">✓</text></g>
+  <path d="M 1340.0 270 L 1340.0 312" class="edge-muted" style="stroke-width:3;"/>
+  <g>  <rect x="1286.0" y="312" width="108" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3" />
+<text x="1340.0" y="340.0" text-anchor="middle" class="dark" style="font-size:19px">✓</text></g>
+  <path d="M 1340.0 270 L 1490.0 312" class="edge-muted" style="stroke-width:3;"/>
+  <g>  <rect x="1436.0" y="312" width="108" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3" />
+<text x="1490.0" y="340.0" text-anchor="middle" class="dark" style="font-size:19px">✓</text></g>
+  <path d="M 1250.0 333.0 L 1280.0 333.0" class="edge" style="stroke-width:3;marker-start:url(#arrow)"/>
+  <path d="M 1400.0 333.0 L 1430.0 333.0" class="edge" style="stroke-width:3;marker-start:url(#arrow)"/>
+  <text x="1340.0" y="380" text-anchor="middle" class="example">全都要做，顺序你定</text>
+  <text x="1124" y="422" text-anchor="start" class="light-s" style="font-size:19px;fill:#e9f1ec">子节点都要做，先后由玩家定</text>
+  <text x="1124" y="480" text-anchor="start" class="example" style="font-size:18px">例：同一时点几张牌一起触发，牌主选先后</text>
+  <g filter="url(#shadow)">  <rect x="60" y="536" width="480" height="340" rx="22" fill="url(#panel)" stroke="#50796d" stroke-width="3" />
+</g>
+  <text x="84" y="578" text-anchor="start" class="head" style="font-size:26px">互斥分支</text>
+  <text x="516" y="578" text-anchor="end" class="mono" style="font-size:18px;fill:#d6ad68">XorNode</text>
+    <rect x="224.0" y="602" width="152" height="44" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+  <text x="300.0" y="631" text-anchor="middle" class="mono" style="font-size:18px">XOR</text>
+  <path d="M 300.0 646 L 150.0 688" class="edge-muted" style="stroke-width:3;stroke-dasharray:8 7;opacity:.5"/>
+  <g opacity="0.38">  <rect x="96.0" y="688" width="108" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3" />
+<text x="150.0" y="716.0" text-anchor="middle" class="dark" style="font-size:19px">✗</text></g>
+  <path d="M 300.0 646 L 300.0 688" class="edge" style="stroke-width:3;"/>
+  <g>  <rect x="246.0" y="688" width="108" height="42" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="3" />
+<text x="300.0" y="716.0" text-anchor="middle" class="dark" style="font-size:19px">✓</text></g>
+  <path d="M 300.0 646 L 450.0 688" class="edge-muted" style="stroke-width:3;stroke-dasharray:8 7;opacity:.5"/>
+  <g opacity="0.38">  <rect x="396.0" y="688" width="108" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3" />
+<text x="450.0" y="716.0" text-anchor="middle" class="dark" style="font-size:19px">✗</text></g>
+  <text x="300.0" y="756" text-anchor="middle" class="example">三选一</text>
+  <text x="84" y="798" text-anchor="start" class="light-s" style="font-size:19px;fill:#e9f1ec">只走一条分支，选定后走到底</text>
+  <text x="84" y="856" text-anchor="start" class="example" style="font-size:18px">例：拿 1 木头，或者拿 1 芦苇</text>
+  <g filter="url(#shadow)">  <rect x="580" y="536" width="480" height="340" rx="22" fill="url(#panel)" stroke="#50796d" stroke-width="3" />
+</g>
+  <text x="604" y="578" text-anchor="start" class="head" style="font-size:26px">和 / 或</text>
+  <text x="1036" y="578" text-anchor="end" class="mono" style="font-size:18px;fill:#d6ad68">OrNode</text>
+    <rect x="744.0" y="602" width="152" height="44" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+  <text x="820.0" y="631" text-anchor="middle" class="mono" style="font-size:18px">OR</text>
+  <path d="M 820.0 646 L 670.0 688" class="edge" style="stroke-width:3;"/>
+  <g>  <rect x="616.0" y="688" width="108" height="42" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="3" />
+<text x="670.0" y="716.0" text-anchor="middle" class="dark" style="font-size:19px">✓</text></g>
+  <path d="M 820.0 646 L 820.0 688" class="edge" style="stroke-width:3;"/>
+  <g>  <rect x="766.0" y="688" width="108" height="42" rx="12" fill="url(#accentNode)" stroke="#f1d7a3" stroke-width="3" />
+<text x="820.0" y="716.0" text-anchor="middle" class="dark" style="font-size:19px">✓</text></g>
+  <path d="M 820.0 646 L 970.0 688" class="edge-muted" style="stroke-width:3;stroke-dasharray:8 7;opacity:.5"/>
+  <g opacity="0.38">  <rect x="916.0" y="688" width="108" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3" />
+<text x="970.0" y="716.0" text-anchor="middle" class="dark" style="font-size:19px">…</text></g>
+  <rect x="930.0" y="740" width="80" height="26" rx="13" class="pill"/>
+  <text x="970.0" y="758" text-anchor="middle" class="pill-text" style="font-size:15px">完成</text>
+  <text x="745.0" y="759" text-anchor="middle" class="example">做了两条，收手</text>
+  <text x="604" y="798" text-anchor="start" class="light-s" style="font-size:19px;fill:#e9f1ec">做一条或几条，每条最多一次，随时可以收手</text>
+  <text x="604" y="856" text-anchor="start" class="example" style="font-size:18px">例：打一张职业，和 / 或打一张小改良</text>
+  <g filter="url(#shadow)">  <rect x="1100" y="536" width="480" height="340" rx="22" fill="url(#panel)" stroke="#50796d" stroke-width="3" />
+</g>
+  <text x="1124" y="578" text-anchor="start" class="head" style="font-size:26px">标记，不是节点</text>
+  <g>  <rect x="1140" y="624" width="84" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3"  stroke-dasharray="9 7"/>
+<text x="1182.0" y="652.0" text-anchor="middle" class="dark" style="font-size:19px">leaf</text></g>
+  <text x="1236" y="652" text-anchor="start" class="light-s" style="font-size:18px">可选</text>
+  <g>  <rect x="1370" y="624" width="84" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3"  style="stroke:#e0735a;stroke-width:4"/>
+<text x="1412.0" y="652.0" text-anchor="middle" class="dark" style="font-size:19px">leaf</text></g>
+  <text x="1466" y="652" text-anchor="start" class="light-s" style="font-size:18px">强制</text>
+  <g>  <rect x="1140" y="698" width="84" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3"  style="stroke:#7fb2d4;stroke-width:4"/>
+<text x="1182.0" y="726.0" text-anchor="middle" class="dark" style="font-size:19px">leaf</text></g>
+  <text x="1214" y="696" text-anchor="middle" style="font-size:16px;fill:#7fb2d4;font-weight:700">⇄</text>
+  <text x="1236" y="726" text-anchor="start" class="light-s" style="font-size:18px">对手执行</text>
+  <g>  <rect x="1370" y="698" width="84" height="42" rx="12" fill="url(#mainNode)" stroke="#c9a66b" stroke-width="3"  style="stroke:#d6ad68;stroke-width:4"/>
+<text x="1412.0" y="726.0" text-anchor="middle" class="dark" style="font-size:19px">leaf</text></g>
+  <text x="1444" y="696" text-anchor="middle" class="count" style="font-size:18px">?</text>
+  <text x="1466" y="726" text-anchor="start" class="light-s" style="font-size:18px">等待输入</text>
+  <text x="1124" y="798" text-anchor="start" class="light-s" style="font-size:19px;fill:#e9f1ec">可选、强制、跨玩家、等待输入都是节点上的标记</text>
+  <text x="1124" y="856" text-anchor="start" class="example" style="font-size:18px">所以不会再长出第六种节点</text>
+</svg>

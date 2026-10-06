@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-10-06T13:02:08.234Z</updated>
+  <updated>2026-10-06T14:37:07.762Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola 开发手记] EP 5：引擎现在长什么样</title>
+    <link href="http://titanxxh.com/2026/10/06/what-the-engine-looks-like-now/"/>
+    <id>http://titanxxh.com/2026/10/06/what-the-engine-looks-like-now/</id>
+    <published>2026-10-06T06:00:00.000Z</published>
+    <updated>2026-10-06T14:37:07.762Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;现在合一个卡牌的 PR，我连 diff 都不点开。看一眼改动落在哪几个目录，和这次的任务对得上，就合了。半年前可不是这样，那时候 Agent 写完一张牌，我得把它写的每一段都翻一遍，看哪里又重复了、哪里又绕过去了。&lt;/p&gt;
+&lt;p&gt;中间差的不是我变懒了，是引擎和规矩变了。&lt;a href=&quot;/2026/10/01/how-the-full-expansion-got-done/&quot;&gt;上一篇&lt;/a&gt;讲牌是怎么做完的，这一篇我打算具体讲讲引擎现在长什么样，规矩写在哪，还有目前 human-in-the-loop 的部分还剩下什么。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
+    
+    <category term="桌游感悟" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/"/>
+    
+    
+    <category term="农场主" scheme="http://titanxxh.com/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
+    
+    <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
+  </entry>
   
   <entry>
     <title>[Open Agricola 开发手记] EP 4：全扩是怎么做完的</title>
@@ -349,6 +379,8 @@
     <category term="技术&amp;开发" scheme="http://titanxxh.com/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
     
     
+    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
+    
     <category term="lz77" scheme="http://titanxxh.com/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/tags/huffman/"/>
@@ -358,8 +390,6 @@
     <category term="modeling" scheme="http://titanxxh.com/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/tags/bwt/"/>
-    
-    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -695,41 +725,6 @@
     <category term="Uwe Rosenberg" scheme="http://titanxxh.com/tags/uwe-rosenberg/"/>
     
     <category term="乌老师" scheme="http://titanxxh.com/tags/%E4%B9%8C%E8%80%81%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>仙雾的2016桌游总结</title>
-    <link href="http://titanxxh.com/2017/01/01/%E4%BB%99%E9%9B%BE%E7%9A%842016%E6%A1%8C%E6%B8%B8%E6%80%BB%E7%BB%93/"/>
-    <id>http://titanxxh.com/2017/01/01/%E4%BB%99%E9%9B%BE%E7%9A%842016%E6%A1%8C%E6%B8%B8%E6%80%BB%E7%BB%93/</id>
-    <published>2017-01-01T13:37:24.000Z</published>
-    <updated>2026-08-23T00:21:59.536Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;BG-stats&quot;&gt;&lt;a href=&quot;#BG-stats&quot; class=&quot;headerlink&quot; title=&quot;BG stats&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.bgstatsapp.com/&quot;&gt;BG stats&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;通过BG stats这个APP可以记录桌游的开局情况，同时还有统计功能，可以说是用来做年终回顾的最好帮手。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/17-1-1/6578014-file_1483248458414_cfc3.png?imageMogr2/thumbnail/600x&quot;&gt;&lt;/p&gt;
-&lt;p&gt;整个2016年我一共开过105个不同的游戏，这个数量还是挺让自己感到惊讶的，不过目前BG stats不能很好的识别游戏和扩展之间的关系，把不能独立游戏的扩展也算成了单独的游戏这一点比较坑，好在我不太玩带扩展的游戏所以这一项数据应该还是比较准确的。同时我的H-index只有6，也就是说只有6个游戏开局次数达到了6次，所以2016年的10*10 challenge妥妥又失败了。不得不说由于近年来新游戏太多，BGG的数据库几乎在以每年1w+的速度增长，Essen展会现场的展厅数量也是逐年增多，追逐新游戏又是自己活动圈内人士（对，说的就是文总）的共识，加上工作后时间大幅减少，种种因素造成了近年来少有游戏能反复开局（怀念当祈祷与工作能开几十盘的大学时光啊）。&lt;/p&gt;
-&lt;p&gt;仔细分解下来，前四个月（入职前）开了158局游戏，当然农场主的网战占据了很大的比例，而入职后开局次数仅占35%，甚至还有5月和9月的0开局记录。。。目测这一情况在2017年会进一步恶化，所以2017年已经不打算进行10&lt;em&gt;10 challenge，而是改为100&lt;/em&gt;1的挑战了。在A社停止开放活动后，自己的活动据点就一直不固定了，目前看下来成山路应该是以后最常去的地方，主要是E大和我自己都比较近。游戏人数上，作为一个标准的德式玩家，4人游戏超过了半壁江山，可以看出国外父母带俩小孩的家庭构成对德式游戏的影响有多深。&lt;/p&gt;
-&lt;p&gt;E大、碗王和主编成为了本年度我的最佳基友（去年是小大、E大和碗王），在这里要感谢他们的陪伴，尤其是主编一人看规则，带我们玩Time story和瘟疫危机 Legacy，不过自从不去A社后也再没见到主编了T_T。。。碗王由于去了香港念书，所以后半年几乎就没见到，论见面最多的应该还是E大，今年在据点无定所的情况下，还在携程总部内进行了一次活动，参观了传说中上班跑步下班逗娃的高层的办公地点是什么样子的。当然也要感谢其他的小伙伴们以及编辑部的诸位，今年还见到了C酱，虽然人家是E大粉丝。。。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
-    
-    
-    <category term="power grid" scheme="http://titanxxh.com/tags/power-grid-2/"/>
-    
-    <category term="review" scheme="http://titanxxh.com/tags/review-2/"/>
-    
-    <category term="agricola" scheme="http://titanxxh.com/tags/agricola-2/"/>
-    
-    <category term="pandemic legacy" scheme="http://titanxxh.com/tags/pandemic-legacy/"/>
-    
-    <category term="great western trail" scheme="http://titanxxh.com/tags/great-western-trail/"/>
-    
-    <category term="codenames" scheme="http://titanxxh.com/tags/codenames-2/"/>
-    
-    <category term="总结" scheme="http://titanxxh.com/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   

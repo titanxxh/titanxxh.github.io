@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/en/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/en/"/>
-  <updated>2026-10-06T13:01:56.073Z</updated>
+  <updated>2026-10-06T14:37:53.624Z</updated>
   <id>http://titanxxh.com/en/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola Development Diary] EP 5: What the Engine Looks Like Now</title>
+    <link href="http://titanxxh.com/en/2026/10/06/what-the-engine-looks-like-now/"/>
+    <id>http://titanxxh.com/en/2026/10/06/what-the-engine-looks-like-now/</id>
+    <published>2026-10-06T06:00:00.000Z</published>
+    <updated>2026-10-06T14:37:53.624Z</updated>
+    
+    
+    <summary type="html">A map of the Open Agricola rules engine as it stands today, where the rules are written down, and what is still left for a human to do.</summary>
+    
+    
+    
+    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
+    
+    <category term="Board Game Reflections" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-reflections/"/>
+    
+    
+    <category term="Agricola" scheme="http://titanxxh.com/en/tags/agricola/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
+    
+    <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
+    
+    <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
+  </entry>
   
   <entry>
     <title>[Open Agricola Development Diary] EP 4: How the Full Expansion Got Done</title>
@@ -328,8 +357,6 @@
     <category term="Technology &amp; Development" scheme="http://titanxxh.com/en/categories/technology-development/"/>
     
     
-    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
-    
     <category term="lz77" scheme="http://titanxxh.com/en/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/en/tags/huffman/"/>
@@ -339,6 +366,8 @@
     <category term="modeling" scheme="http://titanxxh.com/en/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/en/tags/bwt/"/>
+    
+    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
     
   </entry>
   
@@ -670,41 +699,6 @@
     <category term="Agricola" scheme="http://titanxxh.com/en/tags/agricola/"/>
     
     <category term="Uwe Rosenberg" scheme="http://titanxxh.com/en/tags/uwe-rosenberg/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>titanxxh&#39;s 2016 Board Game Review</title>
-    <link href="http://titanxxh.com/en/2017/01/01/titanxxh-2016-board-game-review/"/>
-    <id>http://titanxxh.com/en/2017/01/01/titanxxh-2016-board-game-review/</id>
-    <published>2017-01-01T13:37:24.000Z</published>
-    <updated>2026-08-23T00:21:59.539Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;BG-Stats&quot;&gt;&lt;a href=&quot;#BG-Stats&quot; class=&quot;headerlink&quot; title=&quot;BG Stats&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.bgstatsapp.com/&quot;&gt;BG Stats&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The BG Stats app records board-game sessions and provides statistics, making it the perfect assistant for an annual review.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/17-1-1/6578014-file_1483248458414_cfc3.png?imageMogr2/thumbnail/600x&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Across 2016, I played 105 different games, a number that surprised even me. BG Stats currently does not recognize relationships between base games and expansions very well, however, counting non-standalone expansions as separate games. That is annoying, though I rarely play with expansions, so this figure should remain fairly accurate. My H-index was only 6, meaning just six games reached six plays, so the 2016 10 × 10 Challenge definitively failed again. There are simply too many new games these days. BGG’s database grows by almost 10,000+ titles every year, the number of halls at Essen increases annually, and chasing new releases is a consensus within my gaming circle—yes, President Wen, I mean you. Combined with the drastic loss of free time after beginning full-time work, these factors have made repeated plays increasingly rare. I miss my university years, when we could play &lt;em&gt;Ora et Labora&lt;/em&gt; dozens of times.&lt;/p&gt;
-&lt;p&gt;Breaking the numbers down, I played 158 sessions during the first four months, before starting the job, though online &lt;em&gt;Agricola&lt;/em&gt; accounted for a large share. After I joined the company, only 35 percent of the year’s plays remained; May and September both recorded zero sessions… This will probably deteriorate further in 2017, so instead of another 10 × 10 Challenge, I plan to attempt 100 × 1. After Club A stopped hosting open events, I never had a fixed venue. Chengshan Road now looks likely to become the place I visit most often, mainly because it is close to both E and me. As a standard Eurogamer, more than half my plays were at four players, demonstrating just how deeply the common overseas family structure of two parents and two children has influenced German-style games.&lt;/p&gt;
-&lt;p&gt;E, Bowl King, and the Editor-in-Chief became my best gaming buddies this year—last year it was Xiaoda, E, and Bowl King. I thank them for their company, especially the Editor-in-Chief, who read the rules alone and taught us &lt;em&gt;T.I.M.E Stories&lt;/em&gt; and &lt;em&gt;Pandemic Legacy&lt;/em&gt;. Sadly, after I stopped going to Club A, I never saw the Editor-in-Chief again T_T… Bowl King left to study in Hong Kong, so I barely saw him during the second half of the year. E was probably still the person I met most often. In a year without a regular venue, we even held one session inside Ctrip’s headquarters and visited the legendary senior executive’s office—the one whose routine is running at work and playing with his child after work. I also thank all our other friends and everyone on the editorial team. I even saw C this year, although she is really E’s fan…&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
-    
-    
-    <category term="power grid" scheme="http://titanxxh.com/en/tags/power-grid-2/"/>
-    
-    <category term="Summary" scheme="http://titanxxh.com/en/tags/summary/"/>
-    
-    <category term="review" scheme="http://titanxxh.com/en/tags/review-2/"/>
-    
-    <category term="agricola" scheme="http://titanxxh.com/en/tags/agricola-2/"/>
-    
-    <category term="pandemic legacy" scheme="http://titanxxh.com/en/tags/pandemic-legacy/"/>
-    
-    <category term="great western trail" scheme="http://titanxxh.com/en/tags/great-western-trail/"/>
-    
-    <category term="codenames" scheme="http://titanxxh.com/en/tags/codenames-2/"/>
     
   </entry>
   
