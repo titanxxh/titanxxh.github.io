@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-10-06T14:37:07.762Z</updated>
+  <updated>2026-10-06T15:07:21.172Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://titanxxh.com/2026/10/06/what-the-engine-looks-like-now/"/>
     <id>http://titanxxh.com/2026/10/06/what-the-engine-looks-like-now/</id>
     <published>2026-10-06T06:00:00.000Z</published>
-    <updated>2026-10-06T14:37:07.762Z</updated>
+    <updated>2026-10-06T15:07:21.172Z</updated>
     
     
     <summary type="html">&lt;p&gt;现在合一个卡牌的 PR，我连 diff 都不点开。看一眼改动落在哪几个目录，和这次的任务对得上，就合了。半年前可不是这样，那时候 Agent 写完一张牌，我得把它写的每一段都翻一遍，看哪里又重复了、哪里又绕过去了。&lt;/p&gt;
@@ -51,7 +51,7 @@
     <link href="http://titanxxh.com/2026/10/01/how-the-full-expansion-got-done/"/>
     <id>http://titanxxh.com/2026/10/01/how-the-full-expansion-got-done/</id>
     <published>2026-10-01T02:36:00.000Z</published>
-    <updated>2026-10-06T13:02:08.234Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
     <summary type="html">&lt;p&gt;Open Agricola 现状已经完成了预先的目标，包含了 revised 版本的全部已知扩展，README 第一行写着“支持全部的 Agricola 扩展”，这句话总算不是愿望了。&lt;/p&gt;
@@ -81,7 +81,7 @@
     <link href="http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/"/>
     <id>http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/</id>
     <published>2026-08-21T15:49:07.000Z</published>
-    <updated>2026-10-06T11:57:27.329Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
     <summary type="html">&lt;p&gt;今晚，我把 Open Agricola 的 logo 换了。&lt;/p&gt;
@@ -113,7 +113,7 @@
     <link href="http://titanxxh.com/2026/06/01/vibe-coding-excitement-and-limits/"/>
     <id>http://titanxxh.com/2026/06/01/vibe-coding-excitement-and-limits/</id>
     <published>2026-05-31T17:48:32.000Z</published>
-    <updated>2026-10-05T15:46:57.092Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
     <summary type="html">&lt;p&gt;刚开始做 Open Agricola 的这段时间，一个想法刚在浏览器里跑起来，就忍不住再试一个。本来只是想调一下界面，调着调着，又想加点信息展示，然后又增加了卡牌工坊，Agent 不在干活我感觉好像亏了一样，一不小心就搞到半夜。&lt;/p&gt;
@@ -136,9 +136,9 @@
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
     
-    <category term="Vibe Coding" scheme="http://titanxxh.com/tags/vibe-coding/"/>
-    
     <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
+    <category term="Vibe Coding" scheme="http://titanxxh.com/tags/vibe-coding/"/>
     
   </entry>
   
@@ -147,7 +147,7 @@
     <link href="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"/>
     <id>http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/</id>
     <published>2026-02-22T07:15:32.000Z</published>
-    <updated>2026-10-06T11:54:01.787Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
     <summary type="html">&lt;p&gt;《农场主》已经是十多年前的老游戏了。放到今天看，它的重度也算不上特别高。真把它完整地做成数字版，到底能有多难？&lt;/p&gt;
@@ -186,7 +186,7 @@
     <link href="http://titanxxh.com/2024/11/09/7-wonders-duel-pantheon-agora/"/>
     <id>http://titanxxh.com/2024/11/09/7-wonders-duel-pantheon-agora/</id>
     <published>2024-11-09T04:11:16.000Z</published>
-    <updated>2026-08-22T09:45:06.240Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
       
@@ -217,7 +217,7 @@
     <link href="http://titanxxh.com/2022/11/21/from-boy-to-father-only-a-few-world-cups/"/>
     <id>http://titanxxh.com/2022/11/21/from-boy-to-father-only-a-few-world-cups/</id>
     <published>2022-11-21T07:40:07.000Z</published>
-    <updated>2026-08-22T04:11:40.444Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
       
@@ -252,7 +252,7 @@
     <link href="http://titanxxh.com/2021/10/30/small-world-big-world/"/>
     <id>http://titanxxh.com/2021/10/30/small-world-big-world/</id>
     <published>2021-10-30T14:00:07.000Z</published>
-    <updated>2026-08-22T09:45:38.301Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -286,7 +286,7 @@
     <link href="http://titanxxh.com/2021/04/26/golang-time-shift-fault-injection/"/>
     <id>http://titanxxh.com/2021/04/26/golang-time-shift-fault-injection/</id>
     <published>2021-04-26T12:43:40.000Z</published>
-    <updated>2026-08-22T09:25:50.337Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -325,7 +325,7 @@
     <link href="http://titanxxh.com/2021/03/31/golang-dynamic-injection/"/>
     <id>http://titanxxh.com/2021/03/31/golang-dynamic-injection/</id>
     <published>2021-03-31T14:46:59.000Z</published>
-    <updated>2026-08-22T09:19:06.070Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -362,7 +362,7 @@
     <link href="http://titanxxh.com/2020/12/26/simple-data-compression/"/>
     <id>http://titanxxh.com/2020/12/26/simple-data-compression/</id>
     <published>2020-12-26T15:32:43.000Z</published>
-    <updated>2026-08-22T09:47:42.427Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -398,7 +398,7 @@
     <link href="http://titanxxh.com/2020/12/01/2020-gopherchina-review/"/>
     <id>http://titanxxh.com/2020/12/01/2020-gopherchina-review/</id>
     <published>2020-12-01T13:41:55.000Z</published>
-    <updated>2026-08-22T09:25:50.336Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -429,7 +429,7 @@
     <link href="http://titanxxh.com/2020/06/07/iberia-honeymoon-barcelona/"/>
     <id>http://titanxxh.com/2020/06/07/iberia-honeymoon-barcelona/</id>
     <published>2020-06-06T23:07:07.000Z</published>
-    <updated>2026-08-22T09:19:06.070Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -471,7 +471,7 @@
     <link href="http://titanxxh.com/2020/06/06/iberia-honeymoon-granada/"/>
     <id>http://titanxxh.com/2020/06/06/iberia-honeymoon-granada/</id>
     <published>2020-06-05T17:55:46.000Z</published>
-    <updated>2026-08-22T09:47:42.427Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -511,7 +511,7 @@
     <link href="http://titanxxh.com/2020/01/29/iberia-honeymoon-seville-ronda/"/>
     <id>http://titanxxh.com/2020/01/29/iberia-honeymoon-seville-ronda/</id>
     <published>2020-01-29T14:55:46.000Z</published>
-    <updated>2026-08-22T09:42:21.190Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -549,7 +549,7 @@
     <link href="http://titanxxh.com/2020/01/24/my-year-2019/"/>
     <id>http://titanxxh.com/2020/01/24/my-year-2019/</id>
     <published>2020-01-24T09:55:46.000Z</published>
-    <updated>2026-08-22T09:19:06.069Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
       
@@ -585,7 +585,7 @@
     <link href="http://titanxxh.com/2019/12/15/iberia-honeymoon-sintra-lisboa/"/>
     <id>http://titanxxh.com/2019/12/15/iberia-honeymoon-sintra-lisboa/</id>
     <published>2019-12-15T05:55:46.000Z</published>
-    <updated>2026-08-22T09:43:13.950Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
       
@@ -623,7 +623,7 @@
     <link href="http://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/"/>
     <id>http://titanxxh.com/2019/08/20/iberia-honeymoon-madrid-toledo-porto/</id>
     <published>2019-08-19T17:55:46.000Z</published>
-    <updated>2026-08-22T09:25:50.335Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
       
@@ -665,7 +665,7 @@
     <link href="http://titanxxh.com/2018/09/11/russia-2018/"/>
     <id>http://titanxxh.com/2018/09/11/russia-2018/</id>
     <published>2018-09-10T19:55:46.000Z</published>
-    <updated>2026-08-22T09:19:06.069Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
       
@@ -701,7 +701,7 @@
     <link href="http://titanxxh.com/2017/05/01/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F-%E7%AC%AC%E4%B8%83%E6%9C%9F-%E5%86%9C%E5%9C%BA%E4%B8%BB%E7%9A%84%E6%9C%AF%E4%B8%8E%E9%81%93/"/>
     <id>http://titanxxh.com/2017/05/01/%E6%A1%8C%E6%B8%B8%E4%BA%BA%E7%94%9F-%E7%AC%AC%E4%B8%83%E6%9C%9F-%E5%86%9C%E5%9C%BA%E4%B8%BB%E7%9A%84%E6%9C%AF%E4%B8%8E%E9%81%93/</id>
     <published>2017-05-01T11:08:30.000Z</published>
-    <updated>2026-08-22T09:42:46.433Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;疲劳期&quot;&gt;&lt;a href=&quot;#疲劳期&quot; class=&quot;headerlink&quot; title=&quot;疲劳期&quot;&gt;&lt;/a&gt;疲劳期&lt;/h2&gt;&lt;p&gt;时间永远是最大的敌人，无论曾经多么热爱，不得不承认总是有疲劳的那一天，盛极必衰物极必反也是这个道理。从某种意义上来说，对一件事物的热爱程度我感觉也有点像这个&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%8A%80%E6%9C%AF%E6%88%90%E7%86%9F%E5%BA%A6%E6%9B%B2%E7%BA%BF&quot;&gt;技术成熟度曲线&lt;/a&gt;。&lt;br&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/17-5-1/Gartner-Hype-Cycle-v2.png?imageMogr2/thumbnail/600x&quot;&gt;&lt;br&gt;随着时间的推移，桌游玩家对桌游的热爱程度大致上和这个曲线也差不多。从一开始入坑时看着啥都新鲜，疯狂追逐新游戏；到热情渐渐冷却，发现现在的新桌游设计的套路，玩啥游戏脑海里都是一些经典老游戏的影子；然后就是一个低谷，觉得越来越少有游戏能称得上好玩。不过正是经历了这样的一个过程，洗尽铅华后，玩家反而愿意回头看看那些老游戏，那些当年由于过度追新而未来得及深究的经典——比如&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/31260/agricola&quot;&gt;Agricola（农场主）&lt;/a&gt;。于是今天就让我们来好好聊一聊这款曾经的桌游界扛鼎之作。&lt;/p&gt;

@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/en/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/en/"/>
-  <updated>2026-10-06T14:37:53.624Z</updated>
+  <updated>2026-10-06T15:07:21.171Z</updated>
   <id>http://titanxxh.com/en/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://titanxxh.com/en/2026/10/06/what-the-engine-looks-like-now/"/>
     <id>http://titanxxh.com/en/2026/10/06/what-the-engine-looks-like-now/</id>
     <published>2026-10-06T06:00:00.000Z</published>
-    <updated>2026-10-06T14:37:53.624Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
     <summary type="html">A map of the Open Agricola rules engine as it stands today, where the rules are written down, and what is still left for a human to do.</summary>
@@ -50,7 +50,7 @@
     <link href="http://titanxxh.com/en/2026/10/01/how-the-full-expansion-got-done/"/>
     <id>http://titanxxh.com/en/2026/10/01/how-the-full-expansion-got-done/</id>
     <published>2026-10-01T02:36:00.000Z</published>
-    <updated>2026-10-06T13:01:56.073Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
     <summary type="html">How Open Agricola reached every Revised Edition expansion, which cards forced new engine mechanisms, and Hammer Crusher&#39;s seven pitfalls revisited one by one.</summary>
@@ -79,7 +79,7 @@
     <link href="http://titanxxh.com/en/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/"/>
     <id>http://titanxxh.com/en/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/</id>
     <published>2026-08-21T15:49:07.000Z</published>
-    <updated>2026-10-05T17:14:22.458Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
     <summary type="html">Two weeks of groundwork with nothing new to play, then twelve days in which 5–6 players and three expansions landed, and a rough measure of how much expansion tax Open Agricola still pays.</summary>
@@ -108,7 +108,7 @@
     <link href="http://titanxxh.com/en/2026/06/01/vibe-coding-excitement-and-limits/"/>
     <id>http://titanxxh.com/en/2026/06/01/vibe-coding-excitement-and-limits/</id>
     <published>2026-05-31T17:48:32.000Z</published>
-    <updated>2026-10-05T15:46:57.093Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
     <summary type="html">Building Open Agricola brought back the excitement of learning to program, then taught me how working features could accumulate into a project that was increasingly hard to maintain.</summary>
@@ -128,9 +128,9 @@
     
     <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
     
-    <category term="Vibe Coding" scheme="http://titanxxh.com/en/tags/vibe-coding/"/>
-    
     <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
+    <category term="Vibe Coding" scheme="http://titanxxh.com/en/tags/vibe-coding/"/>
     
   </entry>
   
@@ -139,7 +139,7 @@
     <link href="http://titanxxh.com/en/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"/>
     <id>http://titanxxh.com/en/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/</id>
     <published>2026-02-22T07:15:32.000Z</published>
-    <updated>2026-08-29T15:08:47.050Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
     <summary type="html">&lt;p&gt;Agricola is more than a decade old. By today’s standards, it is not especially heavy. How hard could a complete digital version really be?&lt;/p&gt;
@@ -178,7 +178,7 @@
     <link href="http://titanxxh.com/en/2024/11/09/7-wonders-duel-embracing-uncertainty/"/>
     <id>http://titanxxh.com/en/2024/11/09/7-wonders-duel-embracing-uncertainty/</id>
     <published>2024-11-09T04:11:16.000Z</published>
-    <updated>2026-08-22T12:37:57.006Z</updated>
+    <updated>2026-10-06T15:07:21.171Z</updated>
     
     
       
@@ -207,7 +207,7 @@
     <link href="http://titanxxh.com/en/2022/11/21/from-boy-to-father-only-a-few-world-cups/"/>
     <id>http://titanxxh.com/en/2022/11/21/from-boy-to-father-only-a-few-world-cups/</id>
     <published>2022-11-21T07:40:07.000Z</published>
-    <updated>2026-08-22T12:37:57.006Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
     <summary type="html">Twenty years of supporting Brazil, from the 2002 World Cup and Ronaldo to watching football with my daughter.</summary>
@@ -236,7 +236,7 @@
     <link href="http://titanxxh.com/en/2021/10/30/little-world-big-world/"/>
     <id>http://titanxxh.com/en/2021/10/30/little-world-big-world/</id>
     <published>2021-10-30T14:00:07.000Z</published>
-    <updated>2026-08-22T12:37:57.006Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -268,7 +268,7 @@
     <link href="http://titanxxh.com/en/2021/04/26/injecting-time-shift-faults-into-go-programs/"/>
     <id>http://titanxxh.com/en/2021/04/26/injecting-time-shift-faults-into-go-programs/</id>
     <published>2021-04-26T12:43:40.000Z</published>
-    <updated>2026-08-22T12:37:57.006Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -307,7 +307,7 @@
     <link href="http://titanxxh.com/en/2021/03/31/golang-dynamic-injection/"/>
     <id>http://titanxxh.com/en/2021/03/31/golang-dynamic-injection/</id>
     <published>2021-03-31T14:46:59.000Z</published>
-    <updated>2026-08-22T12:37:57.006Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -340,7 +340,7 @@
     <link href="http://titanxxh.com/en/2020/12/26/notes-on-compression-algorithms/"/>
     <id>http://titanxxh.com/en/2020/12/26/notes-on-compression-algorithms/</id>
     <published>2020-12-26T15:32:43.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -376,7 +376,7 @@
     <link href="http://titanxxh.com/en/2020/12/01/gopherchina-2020-personal-review/"/>
     <id>http://titanxxh.com/en/2020/12/01/gopherchina-2020-personal-review/</id>
     <published>2020-12-01T13:41:55.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -407,7 +407,7 @@
     <link href="http://titanxxh.com/en/2020/06/07/iberia-honeymoon-barcelona/"/>
     <id>http://titanxxh.com/en/2020/06/07/iberia-honeymoon-barcelona/</id>
     <published>2020-06-06T23:07:07.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -449,7 +449,7 @@
     <link href="http://titanxxh.com/en/2020/06/06/iberian-honeymoon-granada/"/>
     <id>http://titanxxh.com/en/2020/06/06/iberian-honeymoon-granada/</id>
     <published>2020-06-05T17:55:46.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.170Z</updated>
     
     
       
@@ -489,7 +489,7 @@
     <link href="http://titanxxh.com/en/2020/01/29/iberia-honeymoon-seville-ronda/"/>
     <id>http://titanxxh.com/en/2020/01/29/iberia-honeymoon-seville-ronda/</id>
     <published>2020-01-29T14:55:46.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
       
@@ -527,7 +527,7 @@
     <link href="http://titanxxh.com/en/2020/01/24/my-year-2019/"/>
     <id>http://titanxxh.com/en/2020/01/24/my-year-2019/</id>
     <published>2020-01-24T09:55:46.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
       
@@ -563,7 +563,7 @@
     <link href="http://titanxxh.com/en/2019/12/15/iberian-honeymoon-sintra-and-lisbon/"/>
     <id>http://titanxxh.com/en/2019/12/15/iberian-honeymoon-sintra-and-lisbon/</id>
     <published>2019-12-15T05:55:46.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
       
@@ -601,7 +601,7 @@
     <link href="http://titanxxh.com/en/2019/08/20/iberia-honeymoon-madrid-toledo-porto/"/>
     <id>http://titanxxh.com/en/2019/08/20/iberia-honeymoon-madrid-toledo-porto/</id>
     <published>2019-08-19T17:55:46.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
       
@@ -643,7 +643,7 @@
     <link href="http://titanxxh.com/en/2018/09/11/russia-2018/"/>
     <id>http://titanxxh.com/en/2018/09/11/russia-2018/</id>
     <published>2018-09-10T19:55:46.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
       
@@ -679,7 +679,7 @@
     <link href="http://titanxxh.com/en/2017/05/01/board-game-life-7-the-art-and-way-of-agricola/"/>
     <id>http://titanxxh.com/en/2017/05/01/board-game-life-7-the-art-and-way-of-agricola/</id>
     <published>2017-05-01T11:08:30.000Z</published>
-    <updated>2026-08-22T12:37:57.005Z</updated>
+    <updated>2026-10-06T15:07:21.169Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;The-Trough-of-Fatigue&quot;&gt;&lt;a href=&quot;#The-Trough-of-Fatigue&quot; class=&quot;headerlink&quot; title=&quot;The Trough of Fatigue&quot;&gt;&lt;/a&gt;The Trough of Fatigue&lt;/h2&gt;&lt;p&gt;Time is always the greatest enemy. No matter how deeply we once loved something, we have to admit that fatigue eventually arrives. What reaches an extreme must reverse; what flourishes must decline. In one sense, my love for something feels a little like this &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%8A%80%E6%9C%AF%E6%88%90%E7%86%9F%E5%BA%A6%E6%9B%B2%E7%BA%BF&quot;&gt;technology maturity curve&lt;/a&gt;.&lt;br&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/17-5-1/Gartner-Hype-Cycle-v2.png?imageMogr2/thumbnail/600x&quot;&gt;&lt;br&gt;As time passes, a board gamer’s enthusiasm for the hobby follows roughly the same curve. At first, everything looks fresh and the newcomer frantically chases new releases. Then passion gradually cools. Current designs begin to reveal familiar patterns, and every new game recalls some old classic. A trough follows, when fewer and fewer games seem genuinely fun. Yet only after passing through that process and washing away the glitter is a player willing to look back at older games: classics that were never explored deeply during the frantic pursuit of novelty—such as &lt;a href=&quot;https://www.boardgamegeek.com/boardgame/31260/agricola&quot;&gt;Agricola&lt;/a&gt;. So today, let us properly discuss this former titan of the board-game world.&lt;/p&gt;
