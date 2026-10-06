@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-10-06T11:57:27.329Z</updated>
+  <updated>2026-10-06T13:02:08.234Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola 开发手记] EP 4：全扩是怎么做完的</title>
+    <link href="http://titanxxh.com/2026/10/01/how-the-full-expansion-got-done/"/>
+    <id>http://titanxxh.com/2026/10/01/how-the-full-expansion-got-done/</id>
+    <published>2026-10-01T02:36:00.000Z</published>
+    <updated>2026-10-06T13:02:08.234Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Open Agricola 现状已经完成了预先的目标，包含了 revised 版本的全部已知扩展，README 第一行写着“支持全部的 Agricola 扩展”，这句话总算不是愿望了。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/&quot;&gt;第一篇&lt;/a&gt;开头我问过一句，十多年前的老游戏，真要完整做成数字版，到底能有多难。那会儿我脑海里只有对折腾了我一年的 Hammer Crusher 的引入的复杂度的大致的感知。现在一千张牌做完了，可以回头说说难在哪，又是怎么解决的了，是怎么从&lt;a href=&quot;/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/&quot;&gt;上一篇&lt;/a&gt;说的“看上去有那么点像样了”，到现在全扩上桌的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
+    
+    <category term="桌游感悟" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E6%84%9F%E6%82%9F/"/>
+    
+    
+    <category term="农场主" scheme="http://titanxxh.com/tags/%E5%86%9C%E5%9C%BA%E4%B8%BB/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
+    
+    <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
+    
+  </entry>
   
   <entry>
     <title>[Open Agricola 开发手记] EP 3：修路两周，通车十二天</title>
@@ -76,9 +106,9 @@
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
     
-    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
-    
     <category term="Vibe Coding" scheme="http://titanxxh.com/tags/vibe-coding/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
     
   </entry>
   
@@ -319,8 +349,6 @@
     <category term="技术&amp;开发" scheme="http://titanxxh.com/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
     
     
-    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
-    
     <category term="lz77" scheme="http://titanxxh.com/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/tags/huffman/"/>
@@ -330,6 +358,8 @@
     <category term="modeling" scheme="http://titanxxh.com/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/tags/bwt/"/>
+    
+    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -689,8 +719,6 @@
     
     <category term="power grid" scheme="http://titanxxh.com/tags/power-grid-2/"/>
     
-    <category term="总结" scheme="http://titanxxh.com/tags/%E6%80%BB%E7%BB%93/"/>
-    
     <category term="review" scheme="http://titanxxh.com/tags/review-2/"/>
     
     <category term="agricola" scheme="http://titanxxh.com/tags/agricola-2/"/>
@@ -701,39 +729,7 @@
     
     <category term="codenames" scheme="http://titanxxh.com/tags/codenames-2/"/>
     
-  </entry>
-  
-  <entry>
-    <title>[仙雾的Essen2015]8....and then, we held hands游戏概览&amp;开箱&amp;评测</title>
-    <link href="http://titanxxh.com/2016/04/20/essen2015-8-and-then-we-held-hands-rule-intro-opening-box-review/"/>
-    <id>http://titanxxh.com/2016/04/20/essen2015-8-and-then-we-held-hands-rule-intro-opening-box-review/</id>
-    <published>2016-04-19T16:10:06.000Z</published>
-    <updated>2026-08-22T09:19:06.069Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;游戏总览&quot;&gt;&lt;a href=&quot;#游戏总览&quot; class=&quot;headerlink&quot; title=&quot;游戏总览&quot;&gt;&lt;/a&gt;游戏总览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/Ft08woV-KG3HHfO-ET6S4Q__original/img/x7YkL7sqFAt2LAxgPx3MEv3ZMNI=/0x0/filters:format(jpeg)/pic2717772.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/153999/and-then-we-held-hands&quot;&gt;…and then, we held hands&lt;/a&gt;（简称为牵小手）是一个非语言的俩人合作游戏，两个玩家在游戏中目标是拯救这段即将破裂的感情。玩家看事物的角度会随着他们所处的位置不断变化，你们需要合作来取得自己内心以及两人之间的情感的平衡，从而修补裂痕。&lt;/p&gt;
-&lt;p&gt;游戏中玩家需要通过在回合结束时站在对应的节点上来完成一系列目标任务，一旦所有任务完成，玩家必须同时进入到中圈来获得最后的胜利。&lt;/p&gt;
-&lt;p&gt;游戏中玩家不允许讨论关于游戏的内容，他们必须独自考虑自己和同伴的卡牌和可能的移动，不让自己和同伴卡住以致于输掉游戏，游戏之外的谈话是允许的。作为一个额外的挑战，游戏可以在双方完全沉默的情况下进行。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
-    
-    <category term="桌游介绍" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/%E6%A1%8C%E6%B8%B8%E4%BB%8B%E7%BB%8D/"/>
-    
-    
-    <category term="开箱" scheme="http://titanxxh.com/tags/%E5%BC%80%E7%AE%B1/"/>
-    
-    <category term="Essen" scheme="http://titanxxh.com/tags/essen/"/>
-    
-    <category term="概览" scheme="http://titanxxh.com/tags/%E6%A6%82%E8%A7%88/"/>
-    
-    <category term="测评" scheme="http://titanxxh.com/tags/%E6%B5%8B%E8%AF%84/"/>
-    
-    <category term="Essen2015" scheme="http://titanxxh.com/tags/essen2015/"/>
-    
-    <category term="and then we held hands" scheme="http://titanxxh.com/tags/and-then-we-held-hands/"/>
+    <category term="总结" scheme="http://titanxxh.com/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   

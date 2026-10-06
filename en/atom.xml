@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/en/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/en/"/>
-  <updated>2026-10-05T17:14:22.458Z</updated>
+  <updated>2026-10-06T13:01:56.073Z</updated>
   <id>http://titanxxh.com/en/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola Development Diary] EP 4: How the Full Expansion Got Done</title>
+    <link href="http://titanxxh.com/en/2026/10/01/how-the-full-expansion-got-done/"/>
+    <id>http://titanxxh.com/en/2026/10/01/how-the-full-expansion-got-done/</id>
+    <published>2026-10-01T02:36:00.000Z</published>
+    <updated>2026-10-06T13:01:56.073Z</updated>
+    
+    
+    <summary type="html">How Open Agricola reached every Revised Edition expansion, which cards forced new engine mechanisms, and Hammer Crusher&#39;s seven pitfalls revisited one by one.</summary>
+    
+    
+    
+    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
+    
+    <category term="Board Game Reflections" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-reflections/"/>
+    
+    
+    <category term="Agricola" scheme="http://titanxxh.com/en/tags/agricola/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
+    
+    <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
+    
+    <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
+  </entry>
   
   <entry>
     <title>[Open Agricola Development Diary] EP 3: Two Weeks of Roadwork, Twelve Days of Traffic</title>
@@ -70,9 +99,9 @@
     
     <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
     
-    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
-    
     <category term="Vibe Coding" scheme="http://titanxxh.com/en/tags/vibe-coding/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
     
   </entry>
   
@@ -299,6 +328,8 @@
     <category term="Technology &amp; Development" scheme="http://titanxxh.com/en/categories/technology-development/"/>
     
     
+    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
+    
     <category term="lz77" scheme="http://titanxxh.com/en/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/en/tags/huffman/"/>
@@ -308,8 +339,6 @@
     <category term="modeling" scheme="http://titanxxh.com/en/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/en/tags/bwt/"/>
-    
-    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
     
   </entry>
   
@@ -372,9 +401,9 @@
     
     <category term="Honeymoon" scheme="http://titanxxh.com/en/tags/honeymoon/"/>
     
-    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
-    
     <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
+    
+    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
     
     <category term="Barcelona" scheme="http://titanxxh.com/en/tags/barcelona/"/>
     
@@ -414,9 +443,9 @@
     
     <category term="Honeymoon" scheme="http://titanxxh.com/en/tags/honeymoon/"/>
     
-    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
-    
     <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
+    
+    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
     
     <category term="Granada" scheme="http://titanxxh.com/en/tags/granada/"/>
     
@@ -454,9 +483,9 @@
     
     <category term="Honeymoon" scheme="http://titanxxh.com/en/tags/honeymoon/"/>
     
-    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
-    
     <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
+    
+    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
     
     <category term="Seville" scheme="http://titanxxh.com/en/tags/seville/"/>
     
@@ -530,11 +559,11 @@
     
     <category term="Portugal" scheme="http://titanxxh.com/en/tags/portugal/"/>
     
+    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
+    
     <category term="Lisbon" scheme="http://titanxxh.com/en/tags/lisbon/"/>
     
     <category term="Sintra" scheme="http://titanxxh.com/en/tags/sintra/"/>
-    
-    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
     
   </entry>
   
@@ -568,8 +597,6 @@
     
     <category term="Portugal" scheme="http://titanxxh.com/en/tags/portugal/"/>
     
-    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
-    
     <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
     
     <category term="Madrid" scheme="http://titanxxh.com/en/tags/madrid/"/>
@@ -577,6 +604,8 @@
     <category term="Porto" scheme="http://titanxxh.com/en/tags/porto/"/>
     
     <category term="Toledo" scheme="http://titanxxh.com/en/tags/toledo/"/>
+    
+    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
     
   </entry>
   
@@ -665,6 +694,8 @@
     
     <category term="power grid" scheme="http://titanxxh.com/en/tags/power-grid-2/"/>
     
+    <category term="Summary" scheme="http://titanxxh.com/en/tags/summary/"/>
+    
     <category term="review" scheme="http://titanxxh.com/en/tags/review-2/"/>
     
     <category term="agricola" scheme="http://titanxxh.com/en/tags/agricola-2/"/>
@@ -674,42 +705,6 @@
     <category term="great western trail" scheme="http://titanxxh.com/en/tags/great-western-trail/"/>
     
     <category term="codenames" scheme="http://titanxxh.com/en/tags/codenames-2/"/>
-    
-    <category term="Summary" scheme="http://titanxxh.com/en/tags/summary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[titanxxh&#39;s Essen 2015] 8. ...and then, we held hands: Overview, Unboxing, and Review</title>
-    <link href="http://titanxxh.com/en/2016/04/20/and-then-we-held-hands-overview-unboxing-review/"/>
-    <id>http://titanxxh.com/en/2016/04/20/and-then-we-held-hands-overview-unboxing-review/</id>
-    <published>2016-04-19T16:10:06.000Z</published>
-    <updated>2026-08-23T00:21:59.533Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;Game-Overview&quot;&gt;&lt;a href=&quot;#Game-Overview&quot; class=&quot;headerlink&quot; title=&quot;Game Overview&quot;&gt;&lt;/a&gt;Game Overview&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cf.geekdo-images.com/Ft08woV-KG3HHfO-ET6S4Q__original/img/x7YkL7sqFAt2LAxgPx3MEv3ZMNI=/0x0/filters:format(jpeg)/pic2717772.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.boardgamegeek.com/boardgame/153999/and-then-we-held-hands&quot;&gt;…and then, we held hands&lt;/a&gt;, which we simply call “Holding Hands,” is a nonverbal cooperative game for two players. Their goal is to save a relationship on the verge of collapse. Each player’s perspective changes continuously with their position, and the pair must cooperate to balance both their inner emotions and their shared relationship, repairing the rift between them.&lt;/p&gt;
-&lt;p&gt;Players complete a sequence of objectives by ending their turns on the corresponding nodes. Once every objective is complete, both must enter the central ring together to achieve final victory.&lt;/p&gt;
-&lt;p&gt;Players may not discuss the game itself. Each must independently consider both their own cards and their partner’s, anticipate possible movement, and avoid trapping either player and losing the game. Conversation unrelated to the game is allowed. For an additional challenge, the entire game can be played in complete silence.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
-    
-    <category term="Board Game Introductions" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-introductions/"/>
-    
-    
-    <category term="Unboxing" scheme="http://titanxxh.com/en/tags/unboxing/"/>
-    
-    <category term="Essen" scheme="http://titanxxh.com/en/tags/essen/"/>
-    
-    <category term="Overview" scheme="http://titanxxh.com/en/tags/overview/"/>
-    
-    <category term="Review" scheme="http://titanxxh.com/en/tags/review/"/>
-    
-    <category term="Essen2015" scheme="http://titanxxh.com/en/tags/essen2015/"/>
-    
-    <category term="and then we held hands" scheme="http://titanxxh.com/en/tags/and-then-we-held-hands/"/>
     
   </entry>
   
