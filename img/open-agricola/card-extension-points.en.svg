@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Twelve kinds of sockets the engine leaves for cards</title>
+  <desc id="desc">A new card looks for its place here first; only a miss counts as an infrastructure gap</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101715"/><stop offset="0.55" stop-color="#17231f"/><stop offset="1" stop-color="#0d1312"/>
+    </linearGradient>
+    <linearGradient id="mainNode" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5e8ca"/><stop offset="1" stop-color="#e7cfa0"/></linearGradient>
+    <linearGradient id="decisionNode" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#315f56"/><stop offset="1" stop-color="#1e413b"/></linearGradient>
+    <linearGradient id="accentNode" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7a65a"/><stop offset="1" stop-color="#b77a35"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2b26"/><stop offset="1" stop-color="#121e1b"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.34"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d6ad68"/></marker>
+    <marker id="arrowMuted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8ca59d"/></marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7fd4a6"/></marker>
+    <style>
+      text { font-family: "Noto Sans CJK SC", "Noto Sans", system-ui, sans-serif; }
+      .title { fill: #f8ecd2; font-size: 44px; font-weight: 800; letter-spacing: 1px; }
+      .subtitle { fill: #b8cbc3; font-size: 22px; font-weight: 500; }
+      .stage { fill: #d6ad68; font-size: 23px; font-weight: 700; letter-spacing: 1px; }
+      .head { fill: #f1d7a3; font-size: 30px; font-weight: 800; }
+      .head-sub { fill: #9db2aa; font-size: 18px; font-weight: 500; }
+      .dark { fill: #25271f; font-size: 24px; font-weight: 750; }
+      .dark-s { fill: #5c5a4d; font-size: 17px; font-weight: 600; }
+      .light { fill: #fff7e4; font-size: 22px; font-weight: 750; }
+      .light-s { fill: #cbe0d8; font-size: 17px; font-weight: 550; }
+      .mono { fill: #fff7e4; font-size: 21px; font-weight: 750; font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace; }
+      .count { fill: #d6ad68; font-size: 19px; font-weight: 750; }
+      .example { fill: #9db2aa; font-size: 17px; font-weight: 550; }
+      .edge { fill: none; stroke: #d6ad68; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .edge-muted { fill: none; stroke: #8ca59d; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowMuted); }
+      .edge-green { fill: none; stroke: #7fd4a6; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowGreen); }
+      .bracket { fill: none; stroke: #8ca59d; stroke-width: 3; stroke-linecap: round; }
+      .note { fill: #c4d4cd; font-size: 20px; }
+      .pill { fill: #24352f; stroke: #50796d; stroke-width: 2; }
+      .pill-text { fill: #e9f1ec; font-size: 20px; font-weight: 700; }
+      .callout { fill: #1f3a33; stroke: #7fd4a6; stroke-width: 2.5; }
+      .callout-text { fill: #d8f3e4; font-size: 18px; font-weight: 700; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" rx="38" fill="url(#background)"/>
+  <text x="800" y="76" text-anchor="middle" class="title">Twelve kinds of sockets the engine leaves for cards</text>
+  <text x="800" y="116" text-anchor="middle" class="subtitle">A new card looks for its place here first; only a miss counts as an infrastructure gap</text>
+  <g filter="url(#shadow)">  <rect x="60" y="160" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="96" cy="200" r="20" fill="url(#accentNode)"/>
+  <text x="96" y="207" text-anchor="middle" class="dark" style="font-size:19px">1</text>
+  <text x="126" y="208" text-anchor="start" class="light" style="font-size:21px">Declarative fields</text>
+  <text x="84" y="256" text-anchor="start" class="light-s" style="font-size:16px">56 fields on CardDefinition:</text>
+  <text x="84" y="284" text-anchor="start" class="light-s" style="font-size:16px">cost, prerequisites, passing,</text>
+  <text x="84" y="312" text-anchor="start" class="light-s" style="font-size:16px">identities, card-as-field</text>
+  <g filter="url(#shadow)">  <rect x="440" y="160" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="476" cy="200" r="20" fill="url(#accentNode)"/>
+  <text x="476" y="207" text-anchor="middle" class="dark" style="font-size:19px">2</text>
+  <text x="506" y="208" text-anchor="start" class="light" style="font-size:21px">Action-phase listeners</text>
+  <text x="464" y="256" text-anchor="start" class="light-s" style="font-size:16px">11 phases, see the previous</text>
+  <text x="464" y="284" text-anchor="start" class="light-s" style="font-size:16px">figure</text>
+  <g filter="url(#shadow)">  <rect x="820" y="160" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="856" cy="200" r="20" fill="url(#accentNode)"/>
+  <text x="856" y="207" text-anchor="middle" class="dark" style="font-size:19px">3</text>
+  <text x="886" y="208" text-anchor="start" class="light" style="font-size:21px">Lifecycle hooks</text>
+  <text x="844" y="256" text-anchor="start" class="light-s" style="font-size:16px">24 points across rounds and</text>
+  <text x="844" y="284" text-anchor="start" class="light-s" style="font-size:16px">harvests</text>
+  <g filter="url(#shadow)">  <rect x="1200" y="160" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="1236" cy="200" r="20" fill="url(#accentNode)"/>
+  <text x="1236" y="207" text-anchor="middle" class="dark" style="font-size:19px">4</text>
+  <text x="1266" y="208" text-anchor="start" class="light" style="font-size:21px">Compute hooks</text>
+  <text x="1224" y="256" text-anchor="start" class="light-s" style="font-size:16px">animal capacity, breeding</text>
+  <text x="1224" y="284" text-anchor="start" class="light-s" style="font-size:16px">thresholds, bonus points:</text>
+  <text x="1224" y="312" text-anchor="start" class="light-s" style="font-size:16px">thirty-odd</text>
+  <g filter="url(#shadow)">  <rect x="60" y="386" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="96" cy="426" r="20" fill="url(#accentNode)"/>
+  <text x="96" y="433" text-anchor="middle" class="dark" style="font-size:19px">5</text>
+  <text x="126" y="434" text-anchor="start" class="light" style="font-size:21px">Card state slot</text>
+  <text x="84" y="482" text-anchor="start" class="light-s" style="font-size:16px">cardStates[cardId]: counters,</text>
+  <text x="84" y="510" text-anchor="start" class="light-s" style="font-size:16px">flags, extra data</text>
+  <g filter="url(#shadow)">  <rect x="440" y="386" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="476" cy="426" r="20" fill="url(#accentNode)"/>
+  <text x="476" y="433" text-anchor="middle" class="dark" style="font-size:19px">6</text>
+  <text x="506" y="434" text-anchor="start" class="light" style="font-size:21px">State-writing leaves</text>
+  <text x="464" y="482" text-anchor="start" class="light-s" style="font-size:16px">gain · pay · exchange, about 30</text>
+  <text x="464" y="510" text-anchor="start" class="light-s" style="font-size:16px">special-effect kinds</text>
+  <g filter="url(#shadow)">  <rect x="820" y="386" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="856" cy="426" r="20" fill="url(#accentNode)"/>
+  <text x="856" y="433" text-anchor="middle" class="dark" style="font-size:19px">7</text>
+  <text x="886" y="434" text-anchor="start" class="light" style="font-size:21px">Payment pipeline</text>
+  <text x="844" y="482" text-anchor="start" class="light-s" style="font-size:16px">cost candidates, trades,</text>
+  <text x="844" y="510" text-anchor="start" class="light-s" style="font-size:16px">bonuses, virtual resources,</text>
+  <text x="844" y="538" text-anchor="start" class="light-s" style="font-size:16px">budgets, reserves</text>
+  <g filter="url(#shadow)">  <rect x="1200" y="386" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="1236" cy="426" r="20" fill="url(#accentNode)"/>
+  <text x="1236" y="433" text-anchor="middle" class="dark" style="font-size:19px">8</text>
+  <text x="1266" y="434" text-anchor="start" class="light" style="font-size:21px">Turn order &amp; anytime</text>
+  <text x="1224" y="482" text-anchor="start" class="light-s" style="font-size:16px">extra turns, turn replacement,</text>
+  <text x="1224" y="510" text-anchor="start" class="light-s" style="font-size:16px">anytime windows, cross-player</text>
+  <text x="1224" y="538" text-anchor="start" class="light-s" style="font-size:16px">triggers</text>
+  <g filter="url(#shadow)">  <rect x="60" y="612" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="96" cy="652" r="20" fill="url(#accentNode)"/>
+  <text x="96" y="659" text-anchor="middle" class="dark" style="font-size:19px">9</text>
+  <text x="126" y="660" text-anchor="start" class="light" style="font-size:21px">Deferred effects</text>
+  <text x="84" y="708" text-anchor="start" class="light-s" style="font-size:16px">future resources and workers,</text>
+  <text x="84" y="736" text-anchor="start" class="light-s" style="font-size:16px">scheduled offers</text>
+  <g filter="url(#shadow)">  <rect x="440" y="612" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="476" cy="652" r="20" fill="url(#accentNode)"/>
+  <text x="476" y="659" text-anchor="middle" class="dark" style="font-size:19px">10</text>
+  <text x="506" y="660" text-anchor="start" class="light" style="font-size:21px">Field abstraction</text>
+  <text x="464" y="708" text-anchor="start" class="light-s" style="font-size:16px">logical · farmyard · card fields</text>
+  <g filter="url(#shadow)">  <rect x="820" y="612" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="856" cy="652" r="20" fill="url(#accentNode)"/>
+  <text x="856" y="659" text-anchor="middle" class="dark" style="font-size:19px">11</text>
+  <text x="886" y="660" text-anchor="start" class="light" style="font-size:21px">Variant runtimes</text>
+  <text x="844" y="708" text-anchor="start" class="light-s" style="font-size:16px">5–6 players, Seasons, Parents,</text>
+  <text x="844" y="736" text-anchor="start" class="light-s" style="font-size:16px">Moor</text>
+  <g filter="url(#shadow)">  <rect x="1200" y="612" width="340" height="190" rx="22" fill="url(#decisionNode)" stroke="#76a99b" stroke-width="3" />
+</g>
+  <circle cx="1236" cy="652" r="20" fill="url(#accentNode)"/>
+  <text x="1236" y="659" text-anchor="middle" class="dark" style="font-size:19px">12</text>
+  <text x="1266" y="660" text-anchor="start" class="light" style="font-size:21px">Workshop cards</text>
+  <text x="1224" y="708" text-anchor="start" class="light-s" style="font-size:16px">same contract in a sandbox,</text>
+  <text x="1224" y="736" text-anchor="start" class="light-s" style="font-size:16px">whitelisted actions</text>
+</svg>

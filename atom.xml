@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/"/>
-  <updated>2026-10-05T17:14:22.458Z</updated>
+  <updated>2026-10-06T11:54:01.786Z</updated>
   <id>http://titanxxh.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/"/>
     <id>http://titanxxh.com/2026/08/21/two-weeks-of-roadwork-twelve-days-of-traffic/</id>
     <published>2026-08-21T15:49:07.000Z</published>
-    <updated>2026-10-05T17:14:22.458Z</updated>
+    <updated>2026-10-06T11:54:01.786Z</updated>
     
     
     <summary type="html">&lt;p&gt;今晚，我把 Open Agricola 的 logo 换了。&lt;/p&gt;
@@ -40,11 +40,11 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
     
-    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
-    
     <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
     
   </entry>
   
@@ -72,13 +72,13 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/tags/open-agricola/"/>
     
-    <category term="Vibe Coding" scheme="http://titanxxh.com/tags/vibe-coding/"/>
-    
-    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
-    
     <category term="软件架构" scheme="http://titanxxh.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/"/>
     
     <category term="开发手记" scheme="http://titanxxh.com/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0/"/>
+    
+    <category term="Vibe Coding" scheme="http://titanxxh.com/tags/vibe-coding/"/>
+    
+    <category term="AI Agent" scheme="http://titanxxh.com/tags/ai-agent/"/>
     
   </entry>
   
@@ -87,7 +87,7 @@
     <link href="http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/"/>
     <id>http://titanxxh.com/2026/02/22/why-rebuild-agricola-origin-and-bga-code-smells/</id>
     <published>2026-02-22T07:15:32.000Z</published>
-    <updated>2026-08-29T15:09:04.940Z</updated>
+    <updated>2026-10-06T11:54:01.787Z</updated>
     
     
     <summary type="html">&lt;p&gt;《农场主》已经是十多年前的老游戏了。放到今天看，它的重度也算不上特别高。真把它完整地做成数字版，到底能有多难？&lt;/p&gt;
@@ -142,13 +142,13 @@
     <category term="桌游&amp;爱好" scheme="http://titanxxh.com/categories/%E6%A1%8C%E6%B8%B8%E7%88%B1%E5%A5%BD/"/>
     
     
-    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
-    
     <category term="7 Wonders Duel" scheme="http://titanxxh.com/tags/7-wonders-duel/"/>
     
     <category term="Pantheon" scheme="http://titanxxh.com/tags/pantheon/"/>
     
     <category term="Agora" scheme="http://titanxxh.com/tags/agora/"/>
+    
+    <category term="七大奇迹对决" scheme="http://titanxxh.com/tags/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E5%AF%B9%E5%86%B3/"/>
     
   </entry>
   
@@ -319,6 +319,8 @@
     <category term="技术&amp;开发" scheme="http://titanxxh.com/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
     
     
+    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
+    
     <category term="lz77" scheme="http://titanxxh.com/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/tags/huffman/"/>
@@ -328,8 +330,6 @@
     <category term="modeling" scheme="http://titanxxh.com/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/tags/bwt/"/>
-    
-    <category term="压缩算法" scheme="http://titanxxh.com/tags/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -689,6 +689,8 @@
     
     <category term="power grid" scheme="http://titanxxh.com/tags/power-grid-2/"/>
     
+    <category term="总结" scheme="http://titanxxh.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
     <category term="review" scheme="http://titanxxh.com/tags/review-2/"/>
     
     <category term="agricola" scheme="http://titanxxh.com/tags/agricola-2/"/>
@@ -698,8 +700,6 @@
     <category term="great western trail" scheme="http://titanxxh.com/tags/great-western-trail/"/>
     
     <category term="codenames" scheme="http://titanxxh.com/tags/codenames-2/"/>
-    
-    <category term="总结" scheme="http://titanxxh.com/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
