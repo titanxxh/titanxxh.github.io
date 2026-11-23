@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/en/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/en/"/>
-  <updated>2026-10-06T15:07:21.171Z</updated>
+  <updated>2026-11-23T15:32:29.878Z</updated>
   <id>http://titanxxh.com/en/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola Development Diary] EP 6: All Expansions at the Table</title>
+    <link href="http://titanxxh.com/en/2026/10/26/all-expansions-at-the-table/"/>
+    <id>http://titanxxh.com/en/2026/10/26/all-expansions-at-the-table/</id>
+    <published>2026-10-25T16:00:00.000Z</published>
+    <updated>2026-11-23T15:32:29.878Z</updated>
+    
+    
+    <summary type="html">Open Agricola went public on my birthday. I sent one worker to renovate, and my opponent built a room, played a card, and sowed a field.</summary>
+    
+    
+    
+    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
+    
+    <category term="Board Game Reflections" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-reflections/"/>
+    
+    
+    <category term="Agricola" scheme="http://titanxxh.com/en/tags/agricola/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
+    
+    <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
+    
+  </entry>
   
   <entry>
     <title>[Open Agricola Development Diary] EP 5: What the Engine Looks Like Now</title>
@@ -37,11 +62,11 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
     
+    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
     <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
     
     <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
-    
-    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
     
   </entry>
   
@@ -66,11 +91,11 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
     
+    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
     <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
     
     <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
-    
-    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
     
   </entry>
   
@@ -95,11 +120,11 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
     
+    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
     <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
     
     <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
-    
-    <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
     
   </entry>
   
@@ -124,13 +149,13 @@
     
     <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
     
-    <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
-    
-    <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
-    
     <category term="Vibe Coding" scheme="http://titanxxh.com/en/tags/vibe-coding/"/>
     
     <category term="AI Agent" scheme="http://titanxxh.com/en/tags/ai-agent/"/>
+    
+    <category term="Software Architecture" scheme="http://titanxxh.com/en/tags/software-architecture/"/>
+    
+    <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
     
   </entry>
   
@@ -288,8 +313,6 @@
     
     <category term="golang" scheme="http://titanxxh.com/en/tags/golang/"/>
     
-    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
-    
     <category term="chaos-mesh" scheme="http://titanxxh.com/en/tags/chaos-mesh/"/>
     
     <category term="vDSO" scheme="http://titanxxh.com/en/tags/vdso/"/>
@@ -299,6 +322,8 @@
     <category term="ptrace" scheme="http://titanxxh.com/en/tags/ptrace/"/>
     
     <category term="fault-injection" scheme="http://titanxxh.com/en/tags/fault-injection/"/>
+    
+    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
     
   </entry>
   
@@ -357,8 +382,6 @@
     <category term="Technology &amp; Development" scheme="http://titanxxh.com/en/categories/technology-development/"/>
     
     
-    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
-    
     <category term="lz77" scheme="http://titanxxh.com/en/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/en/tags/huffman/"/>
@@ -368,6 +391,8 @@
     <category term="modeling" scheme="http://titanxxh.com/en/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/en/tags/bwt/"/>
+    
+    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
     
   </entry>
   
@@ -671,34 +696,6 @@
     <category term="Saint Petersburg" scheme="http://titanxxh.com/en/tags/saint-petersburg/"/>
     
     <category term="Moscow" scheme="http://titanxxh.com/en/tags/moscow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[A Life in Board Games] Episode 7: The Art and Way of Agricola</title>
-    <link href="http://titanxxh.com/en/2017/05/01/board-game-life-7-the-art-and-way-of-agricola/"/>
-    <id>http://titanxxh.com/en/2017/05/01/board-game-life-7-the-art-and-way-of-agricola/</id>
-    <published>2017-05-01T11:08:30.000Z</published>
-    <updated>2026-10-06T15:07:21.169Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;The-Trough-of-Fatigue&quot;&gt;&lt;a href=&quot;#The-Trough-of-Fatigue&quot; class=&quot;headerlink&quot; title=&quot;The Trough of Fatigue&quot;&gt;&lt;/a&gt;The Trough of Fatigue&lt;/h2&gt;&lt;p&gt;Time is always the greatest enemy. No matter how deeply we once loved something, we have to admit that fatigue eventually arrives. What reaches an extreme must reverse; what flourishes must decline. In one sense, my love for something feels a little like this &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%8A%80%E6%9C%AF%E6%88%90%E7%86%9F%E5%BA%A6%E6%9B%B2%E7%BA%BF&quot;&gt;technology maturity curve&lt;/a&gt;.&lt;br&gt;&lt;img src=&quot;https://titanxxh-1259211834.cos.ap-shanghai.myqcloud.com/17-5-1/Gartner-Hype-Cycle-v2.png?imageMogr2/thumbnail/600x&quot;&gt;&lt;br&gt;As time passes, a board gamer’s enthusiasm for the hobby follows roughly the same curve. At first, everything looks fresh and the newcomer frantically chases new releases. Then passion gradually cools. Current designs begin to reveal familiar patterns, and every new game recalls some old classic. A trough follows, when fewer and fewer games seem genuinely fun. Yet only after passing through that process and washing away the glitter is a player willing to look back at older games: classics that were never explored deeply during the frantic pursuit of novelty—such as &lt;a href=&quot;https://www.boardgamegeek.com/boardgame/31260/agricola&quot;&gt;Agricola&lt;/a&gt;. So today, let us properly discuss this former titan of the board-game world.&lt;/p&gt;
-&lt;p&gt;Agricola is a standard Eurogame that demands both short-term decisions and long-term strategy, and it excels at both. As in every traditional abstract strategy game, the outcome is theoretically determined from the beginning; there are simply too many game states for even a computer to calculate every decision. That does not prevent generation after generation of masters from continuing to explore their craft—although AlphaGo recently dealt humanity a heavy blow. Agricola is not a traditional abstract game. It contains randomness and hidden information, but limits both so that replayability increases without allowing the system to escape control. One might say it preserves the soul of the Eurogame as fully as possible.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
-    
-    <category term="Board Game Reflections" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-reflections/"/>
-    
-    
-    <category term="Reflections" scheme="http://titanxxh.com/en/tags/reflections/"/>
-    
-    <category term="Impressions" scheme="http://titanxxh.com/en/tags/impressions/"/>
-    
-    <category term="Agricola" scheme="http://titanxxh.com/en/tags/agricola/"/>
-    
-    <category term="Uwe Rosenberg" scheme="http://titanxxh.com/en/tags/uwe-rosenberg/"/>
     
   </entry>
   
