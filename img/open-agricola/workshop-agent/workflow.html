@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>宽栏门 · Wide Pasture Gate</title>
+<link rel="stylesheet" href="workflow.css">
+<script src="workflow.js" defer></script>
+</head>
+<body>
+<main>
+  <header><strong id="card-name"></strong><span id="counter"></span></header>
+  <nav><button type="button" id="previous"></button><div class="track" aria-hidden="true"></div><button type="button" id="next"></button></nav>
+  <div id="slide" aria-live="polite" aria-atomic="true">
+    <h1></h1>
+    <div class="flow">
+      <div><small id="from-role"></small><b id="from"></b></div>
+      <span class="route" aria-hidden="true"><i></i></span>
+      <div><small id="to-role"></small><b id="to"></b></div>
+    </div>
+    <p id="story"></p>
+    <pre id="excerpt" hidden><code></code></pre>
+    <ol id="highlights" class="calls"></ol>
+  </div>
+  <details><summary></summary><ol id="all-calls" class="calls"></ol></details>
+</main>
+</body>
+</html>

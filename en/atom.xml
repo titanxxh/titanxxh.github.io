@@ -6,7 +6,7 @@
   <link href="http://titanxxh.com/en/atom.xml" rel="self"/>
   
   <link href="http://titanxxh.com/en/"/>
-  <updated>2026-11-23T16:15:15.465Z</updated>
+  <updated>2026-11-25T15:40:19.649Z</updated>
   <id>http://titanxxh.com/en/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Open Agricola Development Diary] EP 8: Letting the Workshop Agent Write Its Own Cards</title>
+    <link href="http://titanxxh.com/en/2026/11/20/letting-the-workshop-agent-write-cards/"/>
+    <id>http://titanxxh.com/en/2026/11/20/letting-the-workshop-agent-write-cards/</id>
+    <published>2026-11-19T16:00:00.000Z</published>
+    <updated>2026-11-25T15:40:19.649Z</updated>
+    
+    
+    <summary type="html">Why did an extra wood on Fishing stump the old Workshop? I brought my usual card-writing prompt into the Workshop and tried the rebuild with five sheep.</summary>
+    
+    
+    
+    <category term="Board Games &amp; Hobbies" scheme="http://titanxxh.com/en/categories/board-games-hobbies/"/>
+    
+    <category term="Board Game Reflections" scheme="http://titanxxh.com/en/categories/board-games-hobbies/board-game-reflections/"/>
+    
+    
+    <category term="Agricola" scheme="http://titanxxh.com/en/tags/agricola/"/>
+    
+    <category term="Open Agricola" scheme="http://titanxxh.com/en/tags/open-agricola/"/>
+    
+    <category term="Development Diary" scheme="http://titanxxh.com/en/tags/development-diary/"/>
+    
+  </entry>
   
   <entry>
     <title>[Open Agricola Development Diary] EP 7: Taking a Hint on Solo Play and the Built-in Card Encyclopedia</title>
@@ -338,6 +363,8 @@
     
     <category term="golang" scheme="http://titanxxh.com/en/tags/golang/"/>
     
+    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
+    
     <category term="chaos-mesh" scheme="http://titanxxh.com/en/tags/chaos-mesh/"/>
     
     <category term="vDSO" scheme="http://titanxxh.com/en/tags/vdso/"/>
@@ -347,8 +374,6 @@
     <category term="ptrace" scheme="http://titanxxh.com/en/tags/ptrace/"/>
     
     <category term="fault-injection" scheme="http://titanxxh.com/en/tags/fault-injection/"/>
-    
-    <category term="Source Code" scheme="http://titanxxh.com/en/tags/source-code/"/>
     
   </entry>
   
@@ -407,8 +432,6 @@
     <category term="Technology &amp; Development" scheme="http://titanxxh.com/en/categories/technology-development/"/>
     
     
-    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
-    
     <category term="lz77" scheme="http://titanxxh.com/en/tags/lz77/"/>
     
     <category term="huffman" scheme="http://titanxxh.com/en/tags/huffman/"/>
@@ -418,6 +441,8 @@
     <category term="modeling" scheme="http://titanxxh.com/en/tags/modeling/"/>
     
     <category term="bwt" scheme="http://titanxxh.com/en/tags/bwt/"/>
+    
+    <category term="Compression Algorithms" scheme="http://titanxxh.com/en/tags/compression-algorithms/"/>
     
   </entry>
   
@@ -643,48 +668,6 @@
     <category term="Lisbon" scheme="http://titanxxh.com/en/tags/lisbon/"/>
     
     <category term="Sintra" scheme="http://titanxxh.com/en/tags/sintra/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Hao&amp;Jie] Honeymoon Journey — Iberia 2019: Madrid + Toledo + Porto</title>
-    <link href="http://titanxxh.com/en/2019/08/20/iberia-honeymoon-madrid-toledo-porto/"/>
-    <id>http://titanxxh.com/en/2019/08/20/iberia-honeymoon-madrid-toledo-porto/</id>
-    <published>2019-08-19T17:55:46.000Z</published>
-    <updated>2026-10-06T15:07:21.169Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">
-&lt;div style=&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;&gt;&lt;iframe</summary>
-        
-      
-    
-    
-    
-    <category term="Life &amp; Travel" scheme="http://titanxxh.com/en/categories/life-travel/"/>
-    
-    <category term="Travel" scheme="http://titanxxh.com/en/categories/life-travel/travel/"/>
-    
-    
-    <category term="vlog" scheme="http://titanxxh.com/en/tags/vlog/"/>
-    
-    <category term="Honeymoon" scheme="http://titanxxh.com/en/tags/honeymoon/"/>
-    
-    <category term="Portugal" scheme="http://titanxxh.com/en/tags/portugal/"/>
-    
-    <category term="Spain" scheme="http://titanxxh.com/en/tags/spain/"/>
-    
-    <category term="Madrid" scheme="http://titanxxh.com/en/tags/madrid/"/>
-    
-    <category term="Porto" scheme="http://titanxxh.com/en/tags/porto/"/>
-    
-    <category term="Toledo" scheme="http://titanxxh.com/en/tags/toledo/"/>
-    
-    <category term="Iberia" scheme="http://titanxxh.com/en/tags/iberia/"/>
     
   </entry>
   
